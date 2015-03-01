@@ -235,7 +235,7 @@ table.BBFormTable.PostJobFormTable {width: 100%;}
 	    z-index: 100;
 	    font-family: $icon-font-family;
 	    content: '\f0da';
-	    color: $elon-maroon;
+	    color: $form-header-row-background-color;
 	}
 	&:last-child::after {
 		content: '';
@@ -958,7 +958,7 @@ tbody[id*="tbdCart"] {
 		
 		tr.DonationGridHeader {
 			td.DonationGridHeaderCell {
-				background: $elon-maroon;
+				background: $form-header-row-background-color;
 				color: #fff;
 				padding: $table-cell-heading-padding;
 				border: 0;
@@ -3792,7 +3792,7 @@ input[type="text"].BBFormDisplayTextbox {
 }
 
 .BBEventRegSequenceMapCurrentStepItem {
-	background-color: $elon-maroon;
+	background-color: $form-header-row-background-color;
 	color: #fff;
 }
 
@@ -3963,7 +3963,7 @@ input[type="text"].BBFormDisplayTextbox {
 			&:after {
 				content: '*';
 				display: inline-block;
-				color: $elon-maroon;
+				color: $form-header-row-background-color;
 				font-weight: normal;
 				font-size: 14px;
 				padding-left: $icon-default-padding;

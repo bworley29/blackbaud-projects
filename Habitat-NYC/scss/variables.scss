@@ -7,11 +7,11 @@ $grid-gutter: 1.875em; //30px
 $grid-gutter-medium: 1.375rem; //22px
 $grid-gutter-small: 1.250rem; //20px 
 
-$body-font-family: $sans;
+$body-font-family: Arial,Helvetica,sans-serif;
 
-$alt-body-font: $serif;
+$alt-body-font: $body-font-family;
 
-$body-font-color: #535961;
+$body-font-color: #4e4e4e;
 
 $body-font-size: 1rem; 
 
@@ -37,16 +37,18 @@ $footer-font-color: #ffffff;
 $site-accent-color: #777777;                  					
 
 // $form-header-row-background-color - background color used on form header rows 
-$form-header-row-background-color: $elon-maroon;      		 
+$form-header-row-background-color: #edf4fa;      		 
 
 // $form-header-row-text-color - text color used on form header rows 
 $form-header-row-text-color: $content-primary-background-color;
 
 //
-$form-header-row-background-color-alt: lighten($form-header-row-background-color, 75%);
+$form-header-row-background-color-alt: darken($form-header-row-background-color, 75%);
 
 // $form-input-bottom-margin           						 
 $form-input-bottom-margin: 0.75rem;
+
+$form-reqired-asterisks: red;
 
 // $table-cell-heading-padding - default base padding around table headings and cells
 $table-cell-heading-padding: 0.45em;
@@ -73,15 +75,15 @@ $tab-inactive-background-color: #eaeaea;
 $subtle-border-color:  #dddddd;
 
 //
-$header-font-family: $alt-body-font;
+$header-font-family: $body-font-family;
 
 $header-color: #535961;               					    
 
 // $link-color - anchor link color 
-$link-color: #ec720b;                   					 
+$link-color: #194298;                   					 
 
 // $link-hover-color - anchor link hover state color 
-$link-hover-color: $elon-maroon;
+$link-hover-color: $link-color;
 
 // $icon-font-base - to use Fontawesome this font family must be used
 $icon-font-family: FontAwesome;
@@ -91,5 +93,14 @@ $icon-button-color-primary: #ec720b;
 //
 $icon-default-padding: 0.35em;
 
+
+
+$primary-btn-color: $link-color;
+//$secondary-btn-color: $dark-grey;
+//$tertiary-btn-color: $action;
+
+$btn-text-color: white;
+
+$btn-hover-color: $btn-text-color;
 
 

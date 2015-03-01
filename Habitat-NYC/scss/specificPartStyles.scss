@@ -134,7 +134,7 @@ tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] .Donation
 		&:after {
 			content: '*';
 			display: inline-block;
-			color: $elon-maroon;
+			color: $form-reqired-asterisks;
 			font-weight: normal;
 			font-size: 14px;
 			padding-left: $icon-default-padding;
@@ -193,20 +193,6 @@ table.BBFormTable.DonationFormTable {
 	// Giving Amount Label text
 	.donateGivAmtLblTxt { margin-left: 8px; color: #867f8c; }
 	
-	tbody[id*="tbdCart"] tr[id*="trAddToCart"] {
-		.DonationSubmitButton {
-			float: left;
-			margin-top: 12px;
-			background-color: #fff;
-			border-color: $elon-maroon;
-			color: $elon-maroon;
-			
-			&:hover {
-				background-color: $elon-maroon;
-				color: #fff;
-			}
-		}
-	}
 
 }
  

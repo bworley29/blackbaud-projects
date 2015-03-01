@@ -74,7 +74,7 @@ h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
   	background: transparent;
     text-transform: none !important;
 	height: auto;
-	color: $elon-maroon;
+	color: $header-color;
 	letter-spacing: -0.01em;
 	font-size: rem(36);
 	line-height: rem(42);
@@ -113,7 +113,7 @@ h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeadi
 */
 
 h4, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName,  *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading,  *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
-	color: $elon-maroon;
+	color: $header-color;
 	letter-spacing: -0.01em;
 	font-size: rem(24);
 	line-height: rem(30);
@@ -140,7 +140,7 @@ h5, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.Cla
 
 
 h6 {
-	color: $elon-maroon;
+	color: $header-color;
 	font-size: rem(18);
 	line-height: rem(24);
 	

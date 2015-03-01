@@ -2,13 +2,6 @@
                      ::6. Buttons
 ==========================================================================================*/
 
-$primary-btn-color: $elon-maroon;
-$secondary-btn-color: $dark-grey;
-$tertiary-btn-color: $action;
-
-$btn-text-color: white;
-
-$btn-hover-color: $btn-text-color;
 
 /*---------------------------------------------
                      ::6.1 Default Buttons
@@ -21,7 +14,7 @@ input[type="submit"], input[type="button"], input.BBFormSubmitButton, button, a.
 	height: auto;
 	font-size: rem(22);
 	font-weight: 400;
-	font-family: $serif;
+	font-family: $body-font-family;
 	padding: 0.54545em 20px;
 	text-transform: none;
 	text-align: center;
