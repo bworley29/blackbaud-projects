@@ -1,0 +1,84 @@
+/* Stylesheet Table of Contents
+ 
+     1. CSS Resets
+	     1.1 Normalize
+		   1.2 Admin Fixes
+		   1.3 Clearfix
+     2. Default Part Styles (minified....do not edit)
+     3. Page Layout and Structure
+           3.1 Responsive Grid
+		   3.2 Layout
+			   	3.2.1 Header
+			   	3.2.2 Main Nav
+			   	3.2.3 Breadcrumbs
+			   	3.2.4 Main Content
+			   	3.2.5 Footer
+		   3.3 Skip Link
+     4. Menus
+           4.1 Global Menu Styles
+           4.2 Main Horizontal Navigation
+           4.3 Sidebar Navigation
+           4.4 Breadcrumb Navigation
+           4.5 Footer Navigation
+     5. Text
+           5.1 Headers
+		        5.1.1 Part Headers
+           5.2 Links
+           5.3 Paragraphs
+           5.4 Form Field Typographgy
+           5.5 Lists
+     6. Buttons
+	 	   6.1 Default Buttons
+		   6.2 Primary Buttons
+		   6.3 Inline Buttons
+		   6.4 Cancel Buttons
+		   6.5 Disabled Buttons
+     7. Forms
+           7.1 Special Widths
+           7.2 Global Form Styles
+           7.3 Validation
+		   7.4 Date Pickers
+	 8. Pagination
+	 9. Progress Indicators
+	 10. Images
+     11. Tables
+	       11.1 Alternating Rows
+		   11.2 Header Rows
+		   11.3 Sortable Columns
+		   11.4 Borders
+		   11.5 Spacing
+     12. Other Global Class and ID Definitions
+           12.1 Global Classes
+           12.2 Replication Classes & ID's
+     13. Specific Parts & Styles
+           13.1 Page Title
+           13.2 Profile Display
+           13.3 Transaction Manager
+           13.4 Event Registration Form Classic
+     14. Print Styles
+     15. Responsive
+     	   15.1 Desktop
+     	   15.2 Tablet
+     	   15.3 Mobile
+
+======================================================*/
+ 
+@import 'bourbon';
+@import 'variables';					// variables.scss
+@import 'neat';
+@import 'mixins';
+@import 'reset';						// reset.scss 
+@import 'defaultPartStyles';			// defaultPartStyles.scss 
+@import 'pageLayout';					// pageLayout.scss 
+@import 'menus';						// menus.scss 
+@import 'text';							// text.scss 
+@import 'buttons';						// buttons 
+@import 'forms';						// forms.scss 
+@import 'pagination';					// pagination.scss 
+@import 'progressIndicator';			// progressIndicator.scss 
+@import 'images';						// images.scss 	
+@import 'tables';						// tables.scss 
+@import 'replicationClassesIDs';		// replicationClassesIDs.scss 
+@import 'specificPartStyles';			// specificPartStyles.scss 
+@import 'print';						// print.scss 
+@import 'responsive';					// responsive 

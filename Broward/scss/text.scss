@@ -1,0 +1,494 @@
+/*=========================================================================================
+                     ::5. TEXT
+==========================================================================================*/
+
+body { 
+	color: $body-font-color;
+	line-height: $body-line-height;
+	font-size: 100%;
+	font-family: $body-font-family;
+}
+
+// Font size overrides for existing stylesheet
+#wrapContent section[role="content"], .LoginLink {
+	font-size: $body-font-size;
+}
+
+/*---------------------------------------------
+                     ::5.1 Headers
+----------------------------------------------*/
+
+/*** All headings ***/
+h1, 
+h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th,
+h3, *.CalendarFormLegend, *.ListViewDateLabel, /* *.DetailCaption, */ *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemTitleName, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.NewsChannelItemTitle, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SurveySubTitle, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName,
+h4, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail,
+h5, 
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #00a4e4;
+  line-height: normal;
+  text-align: left;
+  font-family: $header-font-family;
+}
+
+h1  {
+	font: {
+		weight:400;
+		style: normal;
+		size: rem(48);
+	}
+	line-height: 1;
+	color: #00a4e4;
+	margin-bottom: 24px;
+}
+
+.logo h1 {
+	margin: 0;
+	border: 0;
+	
+	a {
+		display: block;
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+
+h2 , *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, .Ev2_TitleLabel, .Ev2_RegistrationEventTitle, .DiscussionGroupFormTitle, .EventItemTitleName, .SummaryGridEventTitle, .NewsChannelItemTitle, *.LoginSectionHeader, .DonorGrantListingHeading, .headerOneStyle {
+  font-size: rem(36);
+  line-height: 1;
+  font-weight: 400;
+  text-transform: capitalize;
+  background: transparent;
+  margin-bottom: 15px;
+  background: inherit;
+  font-family: $alt-body-font;
+  color: #005581;
+  height: auto;
+}
+
+
+*.BBFormTitle, *.SurveyTitle, *.ReportTitle, *.NCC_Forms_Title, *.SearchFormTitle, *.EventCalendarName, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.DiscussionGroupFormTitle, *.JobBoardFormTitle, *.EventSectionHeader, *.LoginSectionHeader, *.LoginFormTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.CalendarFormLegend, *.DirectoryFormTitle, *.CalendarFormLegend, *.ProfileFormTitle, *.DiscussionGroupHeadingCell, *.BBPollsFormTitle, *.NewsChannelFormTitle, *.FRSectionHeader, .NewsChannelItemTitle, .DonorGrantListingHeading {
+    margin:0;
+    padding: 0 0 rem(20);
+  }
+
+
+h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, *.SearchJobHeading, *.PostJobHeading, *.PostDiscussionTopicHeadingCell, .AdditionalDonation_Heading, .Ev2_SummaryHeader, .Ev2_RegistrantAddressHeader label, .Ev2_RegistrantHeader, .EventItemTitleDescription, .EventTicketsHeaderCell {
+  font: {
+  	size: rem(30);
+  	weight: 400;
+  	style: normal;
+    family: $alt-body-font;
+  	}
+  line-height: rem(36);
+  text-transform:capitalize;
+  margin-bottom: 20px;
+  display: inline-block;
+    padding: 0;
+  background: inherit;
+  height: auto;
+  color: #005581;
+}
+  
+h4, *.CalendarFormLegend, *.ListViewDateLabel, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName,  *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading,  *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion, .EventCalendarPartContainer .DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
+  font-size: rem(24);
+  line-height: rem(36);
+  margin-bottom: rem(25);
+  font-weight: 400;
+  font-family: $alt-body-font;
+  text-transform: uppercase;
+  color: #005581;
+}
+
+.EventCalendarPartContainer .DetailEventTitle {
+	padding-top: 15px;
+	display: block;
+	margin: 0;
+	
+	& + br { display: none; }
+}
+
+h5 {
+  font-size: rem(12);
+  line-height: 1;
+}
+
+
+h6 {
+  font-size: rem(11);
+  line-height: 1;
+  margin: 0.625rem 0;
+}
+
+article, aside { line-height: 1.3529rem; }
+
+/*---------------------------------------------
+                     ::5.1.1 Part Headers
+----------------------------------------------*/
+ 
+/*---------------------------------------------
+                     ::5.2 Links
+----------------------------------------------*/
+a, a:visited, a.LoginLink, a.PhotoLink, a.Album_BackToPhotosLink, a.Album_AlbumNameLink, a.Album_AlbumActionItem, a.BBLinkHelpIcon, a.PaymentPartClearLink, a.EventCalendarButtons, a.ListViewEventTitle, a.BBFormDisplayHelpImage, a.DiscussionTopicLink, a.DiscussionSearchLink, a.JobBoardSearchLink, a.JobBoardPostLink, a.JobResultsLink, a.BBNameLink, .BBNameLink:link, .DiscussionTopicLink:link, a.BBNameLink,  a.BBVolOpLink, .fc-content a, .fc-content a:visited, a.ChannelStoryDeleteButtonWAI, a.ChannelStoryEditButtonWAI {
+	@include link-style;
+	@include transition(background 0.3s ease 0s);
+}
+
+a {
+	h1, h2, h3, h4, h5, h6, p {
+		color: $link-color;
+		
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {font-family: $alt-body-font; }
+}
+
+a {
+	h1, h2, h3, h4, h5, h6 {font-family: $alt-body-font; }
+}
+
+.fc-content a, .fc-content a:visited {
+	color: #fff;	
+}
+
+a:hover, a.LoginLink:hover, a.PhotoLink:hover, a.Album_BackToPhotosLink:hover, a.Album_AlbumNameLink:hover, a.Album_AlbumActionItem:hover, a.BBLinkHelpIcon:hover, a.PaymentPartClearLink:hover, a.EventCalendarButtons:hover, a.ListViewEventTitle:hover, a.BBFormDisplayHelpImage:hover, a.DiscussionTopicLink:hover, a.DiscussionSearchLink:hover, a.JobBoardSearchLink:hover, a.JobBoardPostLink:hover, a.JobResultsLink:hover, .DiscussionTopicLink:hover, .fc-content a:hover {
+	@include link-hover-style; 
+}
+
+footer {
+
+	a.enews:after {
+		position: relative;
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		top: 5px;
+		left: 5px;
+		background: url('image/sprite.png') no-repeat 0 -272px;
+	}
+	.social {
+		a {
+			margin-right: 15px;
+			&.donate {
+				background:url('image/sprite.png') no-repeat;
+				display:block;
+				position:absolute;
+				top:5px;
+				left:170px;
+				margin-left:0;
+				width:90px;
+				height:73px;
+				overflow:hidden;
+				text-indent:-999999px;
+				
+				@media (max-width: 767px) {
+				
+					position: relative;
+					left: 0;
+					top: 0;
+					
+					}
+			}
+		}
+	}
+}
+#wrapContent section[role="content"] {line-height: $content-primary-line-height;}  
+ 
+/*---------------------------------------------
+                     ::5.3 Paragraphs
+----------------------------------------------*/
+p, table.BBListingTable p {
+	padding:0 ;
+	margin: 0 0 rem(24);
+	line-height:rem(23);
+	color: #272727;
+	font: {
+		family: $body-font-family;
+		size: $body-font-size;
+		weight: 400;	
+	}
+	white-space: normal;
+}
+
+.logo p, .banner p {margin: 0; padding:0;}
+
+.utility p {
+	font-family: $alt-body-font;
+	display: inline-block;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: rem(30);
+	margin: 0;
+	padding: 0 5px 0 0;
+	
+	//&:first-child { border-right: 1px solid #c6c2ba; }
+	
+	a {
+		display: block;
+		line-height: rem(30);
+		margin-right: 5px;
+		font-family: $alt-body-font;
+		font-weight: 900;
+		font-size: rem(12);
+		color: #c6c2ba;
+		text-decoration: none;
+		padding: 0 3px;
+	}
+}
+
+[class*="callOutBox"] {
+	h4 {
+		color: #262626;
+	    font-size: 24px;
+	    line-height: 30px;
+	    margin: 0 0 20px;
+	    max-height: 60px;
+	    padding: 0;
+	    text-overflow: ellipsis;
+	    text-transform: uppercase;
+	    font-weight: 400;
+	}
+	
+	p {
+		clear: both;
+	    margin-bottom: 24px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    font-weight: 700;
+	}
+}
+
+.blueBg {
+	h1, h2, h3, h4, h5, h6, p, a, li, dd, [class*="icon"] { color: #fff; }
+	
+	[class*="icon"] {
+		font-size: 33px;
+	    height: 33px;
+	    line-height: 1;
+	    margin-bottom: 15px;
+	    top: 2px;
+	    width: 36px;
+	    color: #a9d1fa;
+	}
+	h2 {
+		display: block;
+		width: 100%;
+		font: {
+			size: rem(48);
+			weight: 700;
+		}
+		line-height: 1;
+		text-align: center;
+		margin: 15px auto;
+		padding-bottom: 54px;
+		text-transform: uppercase;
+	}
+	
+	h4 {
+		color: #fff;
+	    font-size: 21px;
+	    line-height: 27px;
+	    margin-bottom: 8px;
+	    text-transform: uppercase;
+	}
+	
+	p {
+		color: #a9d1fa;
+		font-weight: 600;
+	}
+	
+	[class*="icon"] {
+		font-size: 33px;
+	    height: 33px;
+	    line-height: 45px;
+	    margin-bottom: 15px;
+	    top: 2px;
+	    width: 36px;
+	    position: absolute;
+	    left: 0;
+	    font-family: "SSPika";
+	}
+}
+
+
+footer {
+	h1, h2, h3, h4, h5, h6, p, a {
+		color: #fff;
+		font-family: $alt-body-font;
+		}
+	h5 {
+		font-weight:900;
+		font-size:rem(11);
+		letter-spacing:.18em;
+		text-transform:uppercase;
+	}
+	p {
+		font-size: rem(13);
+		line-height: rem(18);
+		margin-bottom: 30px;
+	}
+}
+p.skipLink 
+{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #000; 
+	cursor: help;
+}
+blockquote, q {
+	margin: 0 0 20px;
+	border-left: 5px solid #EEEEEE;
+	padding: 10px 20px;
+	
+	p {
+		font-size: 1.094rem;
+		line-height: 1.368rem;
+		margin: 0 0 0.625rem;
+	}
+}
+q:before, q:after {
+	content:'';
+}
+pre, code, kbd, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 1em;
+}
+pre {
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-all;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+    @include border-radius(4px);
+    font-size: 0.813rem;
+    line-height: 1.160rem;
+    padding: 9.5px;
+    margin: 0 0 0.625rem;
+}
+small {
+    font-size: 0.85em;
+}
+sub, sup {
+    font-size: 0.75rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+hr {
+	display: block; 
+	height: 1px; 
+	border: 0; 
+	margin: 0.938rem 0 1.250rem; 
+	padding: 0;
+}
+
+hr.templateHR {margin-top: 0;}
+
+address {
+	line-height: rem(18);
+	font-size: rem(13);
+	margin-bottom: 10px;
+	font-style: normal;
+}
+
+strong { font-weight: 700; font-style: inherit;}
+
+em {font-style: italic; font-weight: inherit;}
+
+/*other text classes */
+.text-left {text-align: left !important; }
+.text-right {text-align: right !important; }
+.text-center {	text-align: center !important; }
+.text-justify {	text-align: justify !important; }
+.hide {  display: none; }
+/*---------------------------------------------
+                     ::5.4 Form Fields Typography
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::5.5 Lists
+----------------------------------------------*/
+ul, ol {
+    margin:0 0 20px;
+	
+}
+
+.mainContent ul, .mainContent ol
+{
+	
+	li {
+		font-size: $body-font-size;
+	}
+	
+	padding: 0 0 0 1.15em;
+	font-weight: normal;
+	ul, ol {
+		padding-top: .75em;
+		padding-bottom: .75em;
+		
+	}
+}
+ul {
+    list-style: disc outside none;
+}
+ol {
+    list-style: decimal outside none;
+}
+ul.square {
+    list-style: square outside none;
+}
+ul.circle {
+    list-style: circle outside none;
+}
+ul ul, ul ol, ol ol, ol ul {
+    margin: 5px 0px;
+}
+ul ul li, ul ol li, ol ol li, ol ul li {
+    margin-bottom: 6px;
+}
+li {
+    line-height:rem(30.5);
+	color: $site-primary-color;
+	font: {
+		family: $body-font-family;
+		size: rem(18);
+		weight: 300;	
+	}
+}
+ul.large li {
+    line-height: 21px;
+}
+li p {
+    line-height: 21px;
+}
+
+#wrapContent section[role="content"] ul.myHomeProfileLinks {
+	margin-left: 0;
+	padding-left: 0;
+	
+	li {
+		background-image: none; 
+		padding-left: 0;
+		}
+}
+

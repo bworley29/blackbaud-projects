@@ -1,0 +1,1127 @@
+/* --- TABLE STYLES --- */
+
+.BBFormTable {width: 100%;}
+
+td.dInlineBlock {
+	display:table-cell;
+}
+/* --- IMAGE STYLES --- */
+
+img.ui-datepicker-trigger {
+	vertical-align: middle;
+}
+
+*.BBLinkHelpIcon img {
+	vertical-align:middle;
+}
+.imgBorder {
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #f79151;
+	padding:1px;
+	position: relative;
+}
+/* --- CUSTOM CLASSES ---*/
+
+.vaMiddle {
+	vertical-align:middle;
+}
+.taRight {
+	text-align:right;
+}
+.clearFloat {
+	clear: both;
+}
+.displayNone {
+	display:none;
+}
+.w100pImage, *.w100pImage img {
+	width: 100%;
+}
+/* --- BBNC FORM BRANDING OVERRIDES ---*/
+
+/* bbnc form border colors */
+
+*.MatchFinderEvenRowStyle, *.MatchFinderOddRowStyle, *.ReportEvenRowStyle, *.ReportOddRowStyle, *.SpellSuggestionList, *.CHFormTable fieldset div, *.DirectoryListingItem, *.ECardSectionSeparator, *.DetailCaptionContainer, *.EventItemRegistrationsTable tr, *.FRFormTable fieldset div, *.GivingSearchSearchForm, *.JobResultsEvenRowStyle, *.JobResultsOddRowStyle, *.BBMembershipBenefitsGridItem td, *.PaymentPartGrid, *.PaymentPartGrid tr, *.PaymentPartGrid th, *.PaymentPartGrid td, *.PagerContainerTable, *.TransactionManagerGrid, *.TransactionManagerGridHeaderCell, *.EventAttendeesGrid, *.ProfileFieldControlCell div, *.LoginFormCheckListContainer, *.NewsChannelStoryList, *.ClassPageRosterTable, *.ClassAveragesTable, *.UpcomingAssignmentsTable, *.TeacherAttendanceTable, *.FacultyClassRosterTable, *.ClassScheduleTable, *.TeamScheduleTable, *.StudentRecentlyGradedAssignmentsTable, *.StudentCumulativeGradesTable, *.StudentAttendanceTotalTable, *.StudentAttendanceRecentTable, *.TeamCoachesTable, *.TeamRosterTable {
+	border-color:#ccc;
+}
+
+/* bbnc form header row bgcolors & font colors */
+
+*.BBModalDialogTitle, *.CHDashBoardSectionHeading, *.ECardSectionSeparator, *.CalendarViewDayHeader, *.FRDashBoardSectionHeading, *.FRManagerDashBoardSectionHeading, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderRow, *.DirectoryListingHeading, *.DiscussionTopicListHeader td, *.SurveyAnswerTableHeaderRow td, *.BBDocumentDisplayHeaderRow, *.BBDocumentDisplayHeaderRow td, *.JobResultsListHeader, *.BBNotesNoteTopicCell, *.BBNotesNoteNameCell, *.BBNotesNoteLinkCell, *.BBNotesNoteDateCell, *.ReportListingHeading, *.BBVolOpJobListHeader, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderLabel, *.TransactionManagerSummaryHeaderValue, *.SubscriptionFormListHeader, *.BBVolOpJobListHeader td, *.DonationGridHeader td, *.PaymentPartGrid_Header, *.customDataTable th, *.NCCS_CartHeader td, *.NCCS_OrdersHeader td, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep {
+	background: $form-header-row-background-color;
+	text-shadow: 0 0 2px #000000;
+	color:#FFF;
+	padding:0.25em 0.5em;
+	text-align:left;
+	font-weight:normal;
+}
+*.CalendarViewDayHeader {
+	height:auto;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:1em;
+	font-family:inherit;
+	font-weight:normal;
+}
+/* bbnc form shading */
+
+*.BBListEvenRowStyle, *.CHFormTable fieldset div, *.EventAttendeesComplete, *.EventAttendeesCurrent, *.EventAttendeesFuture, *.EventAttendeesGrid, *.EventAttendeesOverallTotal, *.FRDonorListSetCaption, *.FRFormTable fieldset div, *.GivingSearchResultEvenRow, *.GivingSearchSearchForm, *.TransactionManagerDetailsEvenRow, *.TransactionManagerEvenRow, *.TransactionManagerSummaryDetailEvenRow, *.Scroller, #trEmailLists, *.DonationGridEvenRow, *.PaymentPartGrid_EvenRows, *.DiscussionTopicBody, *.UpcomingAssignmentsTable, *.FacultyClassRosterTable, *.StudentRecentlyGradedAssignmentsTable, *.StudentCumulativeGradesTable, *.StudentAttendanceTotalTable, *.StudentAttendanceRecentTable, *.customDataTable_rowShade {
+	background-color:#FFFFFF;
+	text-align: left;
+}
+/*--- CLEARFIX---*/
+
+*.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+*.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+*.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
+
+/*--- ADMIN FIXES --- */
+
+*.iefix {
+	/* IE hack */
+	background:none\9; /* Targets IE only */
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader();
+}
+
+header.row[role="banner"] #utility.columns table.QuickSearchFormTable {display: table !important;}
+
+	/*----------------------
+	 Mobile Part Styles
+	---------------------- */
+input[type="submit"], input[type="button"] {
+	//@include border-radius(0);
+}
+	
+input[type="text"], textarea, .BBFormTextArea, input[type="password"], input.BBFormTextbox, select.BBFormSelectList {margin-bottom: 1.7rem;}
+
+table.BBFormTable.LoginFormTable {
+	width: 100%;
+	
+	td[id*="LastName"].LoginFieldCaption + .BBFieldControlCell { margin-left: 0 !important;}
+}
+
+table.BBFormTable .BBFieldCaption, table.BBFormTable .BBFieldControlCell, tr[id*="trComments"] td.DonationFieldCaption + td {
+	display: block;
+	width: 100%;
+}
+
+table.BBFormTable .BBFieldCaption:after, table.BBFormTable .BBFieldControlCell:after, table.BBFormTable .BBFieldCaption:before, table.BBFormTable .BBFieldControlCell:before {
+	content:" ";
+	display:table;
+}
+
+table.BBFormTable .BBFieldCaption:after, table.BBFormTable .BBFieldControlCell:after {
+	clear: both;
+}
+
+td.hideEmptyTD {display: none !important;}
+
+fieldset {
+	border:none;
+	font-family:inherit;
+	font-size:1em;
+	padding:0;
+	margin:1em 0.5em;
+}
+label {
+	font-family:inherit;
+	font-size:1rem;
+}
+//label[for*="rdoGiftType"], label[for*="chkAnonymous"], label[for*="rdoPaymentOption"] {font-size: .75rem !important;}
+
+fieldset legend {
+	margin-top:1em;
+}
+/* global classes */
+
+.taCenter {
+	margin: 0 auto;
+}
+table.taCenter {
+	width: 100%;
+}
+.BBListingHeading {
+	border: 0 none;
+}
+[id*="tdDesignationOther"] {
+	padding: 0.5em 0;
+	text-align: right;
+	font-weight: bold;
+	display: block ;
+	width: 100% !important;
+	
+	input.BBFormTextbox {
+		max-width: 260px;
+		float: left;
+	}
+}
+.BBFieldCaption, label.BBFieldCaption {
+	float: none;
+	text-align: left;
+	white-space: normal;
+}
+.BBFieldControlCell {
+	padding: 0.5em;
+	vertical-align: center;
+	display: block;
+	width: 100%;
+}
+
+td:empty {display: none !important;}
+
+.BBFormTextbox, .BBFormTextboxWide, .BBFormTextArea, .ECardTextBox {
+	padding: 0.5em;
+	width: 80%;
+	-webkit-appearance: none;
+		border-radius:0;
+	border: 1px solid #BCBCBC;
+}
+.BBFormChecklist {
+	border: 0 none;
+}
+.hasDatepicker {
+	width: auto;
+}
+/* Directory Form */
+
+*.DirectoryListingTable, *.DirectoryFormTable {
+	width: 100%;
+}
+	*.DirectorySearchForm {width: auto;}
+
+.BBPager {
+	margin: 1em 0;
+}
+*.DirectoryFieldCaption {
+	padding-bottom: 6px;
+	width: 100% !important;
+	text-align: left;
+}
+*.DirectoryFieldCaption label {
+	position:absolute;
+}
+*.DirectoryFieldControlCell {
+	padding: 1.5em 0 1em;
+}
+
+.DirectoryFormSelectList {max-width: 250px;}
+
+#contentPrimary .BBListingHeadingLink {
+	text-decoration: none;
+	text-transform:none;
+	font-size: 1em;
+}
+*.DirectoryListingItem {
+	padding: 8px 0 8px 6px;
+}
+*.DirectoryNameLink {
+	display: block;
+	text-decoration: none;
+}
+a.DirectoryPagingButton {
+	margin: 1em auto;
+	width: 12%;
+	text-align:center;
+}
+a.DirectoryPagingButton {
+	width: 55px;
+	padding: 3px;
+}
+/* Donation Form */
+
+td.DonationListingHeading, td.DonationCaptureListingHeading {
+	background-color: transparent;
+	color: inherit;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 0 1em;
+	text-align: left;
+}
+td {
+	padding: 0;
+	vertical-align: top;
+}
+table {
+	border-collapse: collapse;
+}
+.DonationCaptureFieldCaption, .DonationFieldCaption {
+	background: none repeat scroll 0 0 transparent;
+	padding: 0 0 6px;
+	text-align: left;
+	vertical-align: top !important;
+	width: 0;
+}
+.DonationCaptureFieldCaption label, .DonationFieldCaption label, .DonationFieldCaption span {
+	position: relative;
+}
+.DonationCaptureFieldControlCell, .DonationFieldControlCell, .sDonationCaptureFieldControlCell, .DonationFieldCaption + td {
+	padding: 0.25em 0 1em;
+	display: block;
+	width: 100%;
+}
+.DonationFieldControlCell .DonationFieldControlCell {
+	padding: 6px 0;
+}
+
+tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"] {
+	width: auto;
+	margin-bottom: 1.75rem;
+	
+	td {
+		width: 100%;
+		display: block;
+		float: left;
+	}
+	td:first-child {padding-bottom: 12px;}
+}
+
+tr[id*="trAnonymous"] td.DonationFieldControlCell {padding-top: 0;}
+
+tr[id*="trGiftType"] table[id*="rdoGiftType"] {
+	margin-bottom: 1.75rem;	
+}
+
+/* Giving Levels */
+
+.DonationCaptureRequiredFieldMarker {
+	display: none;
+}
+td.BBFieldControlCell table[style] {
+	margin: 0 !important;
+}
+td.DonationFieldControlCell table[style] td {
+	vertical-align: middle;
+}
+
+div[id$="UpdatePanel"] table[id$="tblAmount"] td.DonationFieldControlCell
+{
+	display: table-cell;
+	width: auto;
+	padding-right: 5px;
+}
+
+tr[id*="trOther"] td:last-child > table td:first-child {
+	width: 9px !important;
+}
+
+input[type="text"], select, textarea {
+}
+span[id$="lblSymbol"] {
+	padding: 0 3px 0 0;
+}
+
+a.BBLinkHelpIcon {
+	font-size: 1em;
+	margin-left: 0;
+	display: inline-block;
+}
+a.BBLinkHelpIcon img {
+	vertical-align:middle !important;
+}
+td.DonationVerificationCell {
+	padding: 0;
+}
+.DonationCaptureTextArea, .DonationCaptureTextbox, .DonationCaptureTextboxWide {
+	width: 90%;
+}
+.DonationButtonCell {
+	text-align: center;
+}
+.DonationSubmitButton {
+	margin: 1em auto;
+}
+.DonationSelectList {
+	margin-top: 0.5em;
+}
+table[id$='tblAmount'] {
+	margin-top: 0.5em;
+}
+#divHeading {
+	background-color: transparent;
+    border: 0 none;
+    color: #91002C;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    height: auto;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    white-space: normal;
+}
+#divModalPage {
+	position: static;
+	overflow: visible;
+}
+#divContentPane {
+	position: static;
+	overflow: visible;
+}
+#divContentPane td {
+	width: auto !important;
+	font-size: 0.75em !important;
+}
+#divContentPane td img {
+	width:100%;
+	max-width:170px;
+}
+#divContentPane td + td {
+	width: 60% !important;
+}
+#dialogButtonsContainer {
+	display: none;
+}
+#tblOther {
+	margin: 1em 0 0;
+}
+div[id$=divFrequency] {
+	padding: 2em 0 1em;
+	position: relative;
+}
+div[id$=divFrequency] label {
+	position: absolute;
+	top: 0;
+}
+div[id$=divFrequency] input {
+	margin: 0.25em 0.25em 0.25em 0;
+	width: auto;
+}
+/* Hide Other Label
+
+input[id$='_rdoOther']+label {
+	display: none;
+}*/
+
+
+/* Event Calendar */
+
+.EventCalendarButtonBar {
+	visibility: hidden;
+	display: none;
+}
+.ListViewEventDate, .CalendarViewDayHeader {
+}
+.ListViewEventTitle {
+}
+.ListViewEventSubtitle {
+	font-weight: bold;
+}
+.ListViewEventItemContainer {
+}
+.ListViewEventTime {
+}
+.ListViewDateLabel {
+	display: block;
+	font-weight: bold;
+}
+.DetailCaption {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.DetailCaptionContainer {
+	padding: 0.5em;
+}
+/* Custom Event Calendar  */
+
+.CalendarViewCalendarContainer {
+	border: 0 none;
+}
+.CalendarViewTopLeft label, .CalendarViewTopLeft select, .CalendarViewTopRight input, .CalendarViewEventItemContainer, .CalendarViewTopRight .EventCalendarButtons, .CalendarViewTodayText, .CalendarViewBottomIcons, .CalendarViewCalendarContainer+table {
+	display: none;
+}
+#prevMonth, #nextMonth {
+	background: url("../image/leftArrow_wht.png") no-repeat scroll 50% 50% #022F54;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-moz-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+    height: 24px;
+    text-indent: -50000px;
+    width: 24px;
+}
+#nextMonth {
+	background-image: url("../image/rightArrow_wht.png");
+	float: right;
+}
+.CalendarViewDayHeader, .CalendarViewToday, .CalendarViewOtherMonthDay, .CalendarViewWeekendDay, .CalendarViewDay {
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	border:3px solid #ffffff;
+	height: auto;
+}
+.CalendarViewTopMiddle, .CalendarViewTopLeft, .CalendarViewTopRight {
+	padding: 0.5em 0;
+	vertical-align: middle;
+}
+.CalendarViewTopRight {
+	text-align: left !important;
+	width: 10%;
+}
+.CalendarViewTopLeft {
+	width: 10%;
+}
+.CalendarViewTopMiddle {
+}
+.CalendarViewDayHeader {
+	border: 0 none;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 0.5em 0;
+}
+.hasEvent {
+	background: #676767;
+	color: #ffffff;
+	font-weight: bold;
+}
+.hasEvent:hover, .hasEvent:active {
+	background: #cc0000;
+}
+.CalendarViewEventItemContainer {
+	position: absolute;
+	border: 3px solid #343434;
+	background: #ffffff;
+	padding: 0.25em;
+	box-shadow: 2px 4px 3px rgba(128, 128, 128, 0.6);
+	width: 85%;
+	color: #333333;
+}
+.CalendarViewEvent {
+	font-size: 0.92em;
+	font-weight: normal;
+	color: #333333;
+}
+.CalendarViewAllDayEvent {
+	border: 0 none;
+}
+.closeEventItem {
+	text-align: right;
+	color: #cc0000;
+	padding: 0.5em;
+}
+/* Event Listing Container */
+
+#printStartCV {
+	position: relative;
+}
+#EventListingContainer {
+	display: none;
+	border: 2px solid #676767;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e0e0e0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* W3C */
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0', GradientType=0 ); /* IE6-9 */
+	box-shadow: 2px 4px 4px rgba(128, 128, 128, 0.6);
+	width: 95%;
+	margin: 0 auto;
+	color: #333333;
+}
+.EventListing {
+	padding: 0.5em;
+}
+/* Event Registration Form/ eCard Form */
+
+table[id$="tblProgress"] {
+	background: #D5D5D5; /* Old browsers */
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #D5D5D5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* IE10+ */
+	background: linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#D5D5D5', GradientType=0 ); /* IE6-9 */
+	border-collapse: separate !important;
+    border: 1px solid #D5D5D5;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    margin: 0 0 2em;
+}
+table[id$="tblProgress"] th:first-child, table[id$="tblProgress"] td:first-child {
+	-webkit-border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+table[id$="tblProgress"] th:last-child, table[id$="tblProgress"] td:last-child {
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+}
+.EventProgressCellFuture, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep, .ECardFutureStep {
+	width: 18%;
+	padding: 0.25em 1%;
+	border: 0 none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	background-color: #01589B;
+	font-size: 0.92em;
+	color: #FFF;
+	text-shadow: 1px 1px 0 #333;
+}
+.EventProgressCellFuture, .ECardFutureStep {
+	background-color: transparent;
+}
+.EventProgressCellFuture .progContent, .EventProgressCellPast .progContent, .ECardFutureStep .progContent, .ECardPastStep .progContent {
+	display: none;
+}
+.progContent br {
+	display: none;
+}
+.EventItemRegistrationsTable tr {
+	border: 0 none;
+}
+.EventItemRegistrationsTable .BBFieldControlCell {
+	padding: 0;
+	width: auto;
+	vertical-align: middle;
+}
+.EventItemRegistrationsTable select {
+	width: auto !important;
+}
+.EventTable input[value=Previous] {
+	float: left;
+}
+.EventAttendeesOverallTotal {
+	padding-right: 0.25em;
+}
+.EventItemRegistrantControlCellName, table[id*=dgRegistrantList] .BBFieldCaption {
+	width: auto;
+	padding: 0;
+}
+.EventItemRegistrantControlCellName label, table[id*=dgRegistrantList] .BBFieldCaption label {
+	width: auto!important;
+	position: absolute;
+}
+.EventItemRegistrantControlCell, table[id*=dgRegistrantList] .BBFieldCaption + td {
+	padding: 1.5em 0 1em;
+}
+.EventAttendeesGrid {
+	border-collapse: separate !important;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #FFF;
+}
+.EventAttendeesCurrent, .EventAttendeesComplete, .EventAttendeesGrid tr {
+	background-color: transparent;
+}
+.EventAttendeesGrid tr:first-child td {
+	padding: 1em 1em 0 0;
+}
+.EventAttendeesGrid tr:first-child + tr td {
+	background-color: transparent;
+	padding: 0 1em 1em 0;
+}
+.EventAttendeesGrid tr:first-child td td {
+	padding: 0;
+}
+.EventAttendeesGrid img {
+	display: none;
+}
+.Ev2_DateTimeLeftContainer, .Ev2_DateTimeRightContainer {
+	float: left;
+	display: block;
+	width: 100%;
+	margin: 1rem 0;
+}
+
+.Ev2_TimeContainer {
+	margin: 0;
+	
+	.Ev2_TimeLabels { margin: 0; }
+}
+
+.BBEventRegSequenceMap {
+	counter-reset: event-steps;
+	background-color: transparent;
+	
+	li {
+		counter-increment:event-step;
+		width: 28%;
+		margin-bottom: 0;
+	}
+	
+	.BBEventRegSequenceMapStepItem {
+		list-style: none; 
+		white-space: nowrap;
+		overflow: hidden;
+		font-size: 0 !important;
+		&:before { 
+    		content:'Step';
+    		font-size: .75rem;
+    		display: inline-block;
+    		padding-right: .35rem;
+    	}
+		&:after {
+	    	content:counter(event-step, decimal);
+	    	font-size: .75rem;
+	    	padding: 0.8rem 0;
+	    	display: inline-block;
+	    }
+	}
+	
+}
+
+.Ev2_RegistrationEventDateContainer, .Ev2_RegistrationEventTimeContainer {
+	width: 100%;
+	display: block;
+}
+.BBSequenceMapCurrentStep:after {
+	font-size: 6.15rem;
+	top: -1.25rem;
+	right: -2rem;
+}
+
+.Ev2_RegistrantFieldCell label[id*="ctlRegBox"] {
+	width: 100%;
+	text-align: left;
+	margin-top: .75rem;
+	margin-bottom: .5rem;
+}
+
+.Ev2_RegistrantFieldCell input[type="checkbox"] + label[id*="ctlRegBox"] {width: 90%;}
+
+.Ev2_PriceTypeValidatorColumn.eventRegCartValidatorCell { width: auto; padding: 0;}
+
+.ECardPreviewBlock {
+	padding: 0;
+}
+.ECardPreviewBlock img {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #D5D5D5;
+	width: 100% !important;
+	height: auto !important;
+	-webkit-box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.6);
+	-moz-box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.6);
+	box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.6);
+}
+.ECardTextBox {
+	width: auto !important;
+}
+.ECardSection {
+	padding: 0 1em;
+	margin: 1em 0;
+}
+.ECardSection table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.ECardSection th {
+	padding: 0 0 6px;
+	vertical-align: top;
+	width: 0;
+}
+.ECardSection th label {
+	position: absolute;
+}
+.ECardSection td {
+	padding: 1.5em 0 1em;
+}
+.ECardSection td input {
+	width: 90% !important;
+}
+.ECardSectionSeparator {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+/* User Login Form */
+
+.LoginSectionHeader {
+	background:transparent;
+	font-style: normal;
+	padding: 0;
+}
+.LoginLink {
+	display: block;
+	padding: 1em 0 0;
+}
+.LoginLink:active {
+	text-decoration: underline;
+}
+.LoginFieldCaption {
+	background: none repeat scroll 0 0 transparent;
+	padding: 0 0 6px;
+	text-align: left;
+	vertical-align: top;
+	width: 0;
+}
+.LoginFieldCaption label {
+	position: absolute;
+}
+input[id$='cbRememberLogin']+label {
+	position:static;
+}
+.LoginFormCheckList td {
+	padding: 0.25em 0;
+}
+.LoginFormCheckListContainer {
+	padding: 1.5em 0 1em;
+}
+.LoginFormTable {
+	width: 100%;
+}
+.LoginFormTable .BBFieldControlCell, .LoginFormTable .BBFieldCaption + td {
+	padding: 1.5em 0 0;
+	display: block;
+}
+.LoginFormTextArea, .LoginFormTextbox {
+	width: 90%;
+}
+.LoginFormTitle {
+	padding: 0 0 0.5em;
+}
+.LoginFormTable .BBFormRequiredFieldMarker {
+    width: 5%;
+}
+/* Email Preferences Form */
+
+label[id$=txtEmailAddress] {
+	padding: 0 0 6px;
+	display: block;
+}
+input[id$=txtEmailAddress] {
+	display: block;
+	width: 95%;
+}
+/* user profile form */
+
+.ProfileFormTitle {
+	padding: 1em 0 1em;
+}
+.ProfileFormTitle + .ProfileFormTitle {
+	display: none;
+}
+.ProfileFieldCaption, .ProfileFormTable .BBFieldCaption {
+	padding: 1em 0 .25em;
+	text-align: left;
+	vertical-align: top;
+}
+.ProfileFieldCaption label, .ProfileFieldCaption span, .ProfileFormTable .BBFieldCaption label, .ProfileFormTable .BBFieldCaption span {
+	position: relative;
+}
+.ProfileFormSelectList {max-width: 240px;}
+.ProfileFieldControlCell {
+	padding: 0;
+}
+.ProfileFieldControlCell + td {
+	vertical-align: middle;
+}
+.ProfileFormPrivateControlCell {
+    text-align: center;
+    vertical-align: middle;
+    width: 20%;
+	white-space: nowrap;
+	padding: 0;
+}
+	.ProfileFormPrivateControlCell span.ProfileFormCheckbox
+	{
+		display: inline-block;
+		margin-bottom: .75em;
+	}
+.ProfileFormRequiredFieldMarkerTD
+{
+	width: 0;
+	display: inline-block;
+}
+.ProfileFormRequiredFieldMarker
+	{
+		position:relative;
+		text-align: right !important;
+		padding-left: .5em;
+		vertical-align: bottom;
+	}
+.ProfileFormTextbox {
+	width: 90%;
+}
+table.ProfileFormTable[id*="tbMain"] td.LoginFieldMessage
+{
+	white-space: normal;
+	text-align: left !important;
+}
+div[id*="ProfileImageSelector"] {margin-top: 1em;}
+/* job board */
+
+.JobSearchFieldCaption, .JobPostFieldCaption {
+	width: 0;
+	padding: 0 0 6px;
+	vertical-align: top;
+}
+.JobSearchFieldCaption label, .JobPostFieldCaption label {
+	position: absolute;
+}
+.JobSearchFieldControlCell, .JobPostFieldControlCell {
+	padding: 1.5em 0 1em;
+	width: auto;
+}
+.JobPostFieldControlCell td {
+	width: auto !important;
+	vertical-align: middle;
+}
+.JobPostSelectList, .JobSearchSelectList {
+	width: 50%;
+}
+label[for$=txtSalaryMax] {
+	margin-right: 1em;
+}
+.JobPostCheckboxCaption {
+	white-space: normal;
+}
+/* news reader */
+
+.NewsReaderFormTable img {
+	max-width:100%;
+}
+.NewsReaderFormImage {
+	padding-bottom: 1em;
+}
+.NewsReaderItemDesc * {
+	font-size: 1em !important;
+}
+label[for$=chkHeadlines], input[id$=chkHeadlines] {
+	display: none;
+}
+/* Weblog */
+
+.ChannelStoryDeleteButtonWAI {
+	margin: 0 0 0 1em;
+}
+/* Personal Notes */
+
+.BBNotesFieldCaption {
+	padding: 0 0 6px;
+	width: 0;
+}
+.BBNotesFieldCaption label {
+	position: absolute;
+}
+.BBNotesControlCell {
+	padding: 1.5em 0 1em;
+}
+.BBNotesTextBox {
+	width: 95%;
+}
+/* search part */
+
+.SearchFormTable table {
+	border-collapse: collapse;
+	width: 100%;
+	position: relative;
+}
+.SearchFormTable table td {
+	padding: 1.5em 0 3em;
+}
+.SearchFormTable table td:first-child {
+	padding: 0 0 6px;
+	width: 0;
+}
+label.SearchFieldCaption {
+	position: absolute;
+	width: auto;
+	margin: 0;
+}
+.SearchTextBox {
+	width: 95%;
+}
+.SearchButton {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin: 0 0 0 -25px;
+}
+/* Payment Part */
+
+.PaymentPartGrid {
+	width: 100%;
+}
+div[id$='UpdatePanel'] table {
+	width: 100%;
+}
+div[id$='UpdatePanel'] table div table table {
+	width: auto;
+}
+div[id$='upDonationCapture'] .DonationCaptureListingHeading {
+	padding-top: 1.5em;
+}
+*.PaymentPartGrid_Header th {
+	text-align: left;
+}
+*.PaymentPartGrid td, *.PaymentPartGrid th {
+	vertical-align: middle;
+	padding: 0.25em;
+}
+table.PaymentPartGrid {
+	border-color: #ffffff; /* match content bg */
+}
+*.PaymentPartGrid tr {
+}
+*.PaymentPartGrid th, *.PaymentPartGrid td {
+}
+/* navigation buttons */
+
+*.BBNavBarTable {
+	border-collapse:collapse;
+	clear:both;
+}
+*.BBNavBarTable td {
+	padding:0;
+	text-align:left;
+}
+/* custom confirmation screen */
+
+#wrapper dt {
+	float: left;
+	clear: left;
+	width: 33%;
+}
+#wrapper label.DonationFieldCaption {
+    display: block;
+    float: none;
+    text-align: right;
+	width: auto;
+}
+dd.DonationFieldControlCell {
+    display: block;
+    float: left;
+    font-style: italic;
+    line-height: 1.5em;
+    margin: 0.25em 0;
+    padding: 0;
+    text-align: left;
+}
+.mergefield {
+	clear: left;
+	padding: 0;
+	margin: 0;
+}
+/* profile display */
+
+.ProfileDisplayFormTable td {
+	vertical-align: middle
+}
+.ProfileDisplayFieldCaption {
+	width: 40%;
+	text-align: left;
+}
+
+.BBEventRegSequenceMapStep {margin-right: 15px;}
+
+.BBEventRegSequenceMapStepItem, .BBSequenceMapStepItem, .BBSequenceMapCurrentStepItem, .BBSequenceMapFutureStepItem, .BBEventRegSequenceMapStepLink:link {padding: 0;}
+
+.Ev2_RegistrantFieldCell, .Ev2_RegistrantFieldCell > div {width: 100%;}
+
+.Ev2_RegistrantContent input[type="text"], .Ev2_RegistrantContent textarea {
+	width: 225px;
+	height: auto;
+}
+
+.Ev2_RegistrantAddressControlLabel {margin-top: 1.25em;}
+
+.Ev2_RegistrantFieldCell {
+	padding: 0;
+	
+	label
+	{
+		display: block;
+		margin-top: 1.25em;
+	}
+}
+
+input[type="checkbox"], input[type="radio"]
+{
+
+}
+
+input[id*="DonationCapture1_txtCSC"] {width: auto !important;}
+
+/* Volunteer Signup */
+.BBVolOpJobDetailCaption, .BBVolOpSignUpControlCell
+{
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+.BBVolOpSignUpControlCell {padding: 0 0 .5em;}
+
+.BBVolOpSignUpTextBox {width: 80%;}
+
+.BBVolOpJobDetailCaption {text-align: left;}
+
+input.hasDatepicker {width: auto;}
+
+/* Documents */
+
+.BBDocumentDisplayTable tr.BBDocumentDisplayHeaderRow td
+{
+	padding: 0.45em 0.5em 0.25em;
+	background: #666666;
+	color: #fff;
+}
+
+td[id*="UploadDocAddCell"], .BBDocumentFormTable td.BBDocumentFormTitle
+{
+	display: block;
+	width: 100%;
+}
+
+	.BBDocumentDisplayTable tr.BBDocumentDisplayHeaderRow td a
+	{
+		color: #fff;
+	}
+
+
+/* Quick Search */
+
+#wrapUtility table.QuickSearchFormTable
+{	
+	input.QuickSearchTextbox {margin-bottom: 8px;}
+	
+	input.BBFormSubmitButton.QuickSearchButton
+	{
+		height: auto;
+		padding-top: 10px;
+	}
+}
+
+/* Hide empty TDs and empty Spans */
+.LoginFormTable .emptyTD, .LoginFormTable .emptyTDSpan {display: none !important;}
+
+select.BBFormSelectList { 
+	max-width: 84%;
+	
+	&.DonationSelectList { max-width: 250px;}
+}
+
+
+/* END Mobile Part Styles at 768 max width */

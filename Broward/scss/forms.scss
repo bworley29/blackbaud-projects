@@ -1,0 +1,173 @@
+/*=========================================================================================
+                     ::7. FORMS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::7.1 Special Widths
+----------------------------------------------*/
+input[type="text"][class*="Narrow"].DonationTextboxNarrow {width: 50%;}
+/*---------------------------------------------
+                     ::7.2 Global Form Styles
+----------------------------------------------*/
+
+input[type="text"], textarea, .BBFormTextArea, input[type="password"]
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+		weight: 400;
+    }
+    line-height:1.8;
+    margin-bottom: $form-input-bottom-margin;
+    width: 80%;
+    padding: 1% 2%;
+    //
+    @media (max-width: 767px) {
+	    padding-top: 2.25%;
+	    padding-bottom: 2.25%;
+	    
+    }
+    
+    @include border-radius(0);
+    border: 1px solid $form-input-border-color;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline-block;
+}
+
+input[type="text"][class*="Narrow"] {width: auto;}
+
+input.QuickSearchTextbox
+{
+    width: 98%;
+    margin-bottom: 0;
+}
+
+label.QuickSearchFieldCaption {display: none !important;}
+
+label, .BBFieldCaption, select.BBFormSelectList
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+    }
+    line-height:$body-font-size;
+}
+
+.BBFieldCaption, .BBFieldCaption label 
+{
+	vertical-align: top;
+	text-align: right;
+	padding: 7px 2% 0 0;
+	font-weight: 700;
+}
+
+select.BBFormSelectList 
+{
+	margin-bottom: $form-input-bottom-margin;
+	padding: 1%;
+	width: auto;
+	max-width:95%;
+	@include border-radius(0);
+	border: 1px solid $form-input-border-color;
+	background-color: #fff;
+}
+
+
+.BBFormRequiredFieldMarker
+{
+	color: red;
+	font-weight: 700;
+}
+
+.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table[style]
+{
+	margin-left: 0 !important;
+	width: 37%;
+}
+
+a[id*="DonationCapture1_lnkcsc_help"].BBLinkHelpIcon img
+{
+	max-width: 21px;
+	vertical-align: middle !important;
+} 
+
+table[id*="tblAmount"] .DonationFieldControlCell
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+    }
+    line-height:$body-font-size;
+}
+	tr[id*="trOther"] td[id*="tdOther"]
+    {
+	    vertical-align: top;
+	    padding-top: 8px;
+	    
+	    span {
+	    	position: relative;
+	    	
+	    label[for*="rdoOther"] {
+	    	position: absolute;
+	    	right: -13.25em;
+	    	top: 0.10em;
+	    	display: none !important;
+	    	}
+	    }
+    }
+
+table[id*="tblAmount"] tr[id*="trOther"] td.wsNowrap.BBFieldControlCell.DonationFieldControlCell table td[id*="Td1"]:after
+{
+	display: inline-block;
+	content: 'Other';
+	color: #999;
+	position: relative;
+	left: -5px;
+}     
+    //tr[id*="trOther"] td[id*="tdOther"] span input[id*="rdoOther"]:focus + label[for*="rdoOther"] {display: none;}
+    
+    tr[id*="trOther"] td:last-child > table 
+    {
+	    margin-left: 0 !important;
+	    	
+	   	td:first-child {
+	    	padding-top: 6px;
+	    	vertical-align: top;
+	   	}
+    }
+    
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList, select[id*="DonationCapture1_cboYear"].BBFormSelectList
+{
+	padding: .25em .5em;
+	position: relative;
+}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList
+{
+	width: 50px;
+	padding-left: 2px;
+}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {width: 70px;}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList {margin-right: 4%;}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {margin-left: 9%;}
+
+
+
+/*---------------------------------------------
+                     ::7.3 Validation
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::7.3 Date Picker
+----------------------------------------------*/
+img.ui-datepicker-trigger {
+margin-left: -2em;
+margin-bottom: -3px;
+}

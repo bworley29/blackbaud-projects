@@ -1,0 +1,593 @@
+	/*=========================================================================================
+                     ::3. PAGE LAYOUT & STRUCTURE
+==========================================================================================*/
+
+body#BodyId.AdminPageBody {
+	background-color: #fff;
+	
+}
+	
+body#BodyId {
+	background: #f3f1e6 url('../image/body.jpg') repeat;
+}
+
+
+
+/*---------------------------------------------
+                     ::3.1 Responsive Grid
+----------------------------------------------*/
+
+
+$column: 60px;
+$gutter: 40px;
+$grid-columns: 12;
+$max-width: rem(1000);
+$small-breakpoint: em(767);
+$large-breakpoint: em(1024);
+$medium-viewport: em(900);
+
+
+
+// Box sizing, applying only to container to avoid issues in BBIS/NC admin bar
+.container *,
+.container *:before,
+.container *:after {
+ box-sizing: border-box; }
+  
+/*
+.container *::before, .container *::after {
+	content:" ";
+	display:table;
+}
+*/
+
+form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.aspx"] .container *::after { display: none; }
+
+
+/* Admin Fixes to Box Sizing rendering issue */
+
+.bb_mainMenu img {
+	box-sizing: content-box;
+}
+
+
+/*---------------------------------------------
+                     ::3.2 Layout
+----------------------------------------------*/
+
+
+// Wrapper 100% Width.  No Max Width
+.wrapper {
+	position: relative;
+	width: 100%;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	
+	&.nav { 
+		//background: url('../image/bgMainNav.png') repeat-x center center transparent;
+		background-color: #686d6f;
+		position: relative;
+		z-index: 5;
+		
+		/*
+&:before {
+			background: url('../image/bgGlow.png') no-repeat center center transparent;
+			content: "";
+		    height: 100%;
+		    left: 0;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		}
+*/
+	
+	}
+	
+	&.breadcrumbs { background:  url('../image/bgBreadcrumbs.png') repeat 0 0 #75736e; }
+	
+	&.blueBg {
+		
+		position: relative;
+		background-color: #2e5a98;
+		
+		&::before {
+			content: "";
+		    height: 4px;
+		    left: 0;
+		    position: absolute;
+		    top: -4px;
+		    width: 100%;
+		    z-index: 1;
+		    background: url('../image/bgBlueTopPattern.png') repeat-x center 0 transparent;
+		    
+		}
+		
+		&::after {
+			content: "";
+		    height: 100%;
+		    left: 0;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		    z-index: 2;	
+		    background: url('../image/bgGlow.png') no-repeat center 0 transparent;
+		}
+		
+		&:empty {
+			margin: 0;
+			padding: 0;
+			
+			&:before {display: none;}
+		}
+		
+	}
+	
+}
+
+
+// Container with Max Width
+.container {
+	@include outer-container;
+	position: relative;
+	width: 100%;
+	z-index: 4;
+	
+	&.mainContent {z-index: 2;}
+	
+}
+
+
+/*---------------------------------------------
+                     ::3.2.1 Header
+----------------------------------------------*/
+header {
+	padding-top: 20px;
+	
+	&.container { z-index: 10; }
+	
+	.logo {
+		float: left;
+		max-width: 380px;
+		
+		h1 {
+			@include imageReplacement;
+			width: 380px;
+			height: 66px;
+			margin-bottom: 26px;
+			background: url('../image/logo.png') no-repeat -52px 0;
+			
+			@media (max-width: $small-breakpoint ) {
+				width: 100%;
+			}
+		}
+		
+		@media (max-width: $small-breakpoint ) {
+				width: 100%;
+			}
+	}
+	
+	.utility {
+		float: right;
+		
+		nav { 
+			margin: 41px 0 33px;
+			float: right; 
+		}
+		
+		.QuickSearchFormTable {float: right;}
+	}
+}
+
+/*---------------------------------------------
+                     ::3.2.2 Main Nav
+----------------------------------------------*/
+
+/*
+.wrapNav {
+
+}
+
+.wrapToggleMainNav {
+}
+*/
+
+
+/*---------------------------------------------
+                     ::3.2.3 Breadcrumbs
+----------------------------------------------*/
+
+
+/*
+.breadcrumbs {
+
+}
+*/
+
+/*---------------------------------------------
+                     ::3.2.4 Main Content
+----------------------------------------------*/
+
+.mainContent {
+	
+	&:empty {margin: 0; padding: 0;}
+	
+	article {
+		@include span-columns(12);
+		@include omega;
+		padding: 28px 0;
+		
+		&:empty { padding: 0; }
+		
+		&.halfWidth {
+			@include span-columns(6);
+			padding: 28px 0;
+			
+			&:empty {margin: 0; padding: 0;}
+			
+			&.last {@include omega;}
+			
+			@media (max-width: $small-breakpoint ) {
+				width: 100%;
+			}
+		}
+	}
+	
+	&.altWithSidebar {
+		@include span-columns(8);
+		width: percentage(700px/1000px);
+		margin-right: 0;
+		margin-top: 40px;
+		
+		.wrapInnerContent {
+			margin-right: 2.5%;
+			
+			article { 
+				padding-top: 20px;
+			}
+		}
+	}
+}
+
+.wrapBannerImg p { margin: 0; }
+
+.container.homeContent {
+	max-width: none;
+	margin-bottom: 28px;
+	z-index: 2;
+	
+	article {
+		p {margin: 0;}
+	}
+	
+	.homeImgCaptionBar {
+		clear: both;
+		//left: 0px;
+		//top: 425px;
+		width: 100%;
+		background: url("../image/bgYellowNoise.png") repeat 0 0 transparent;
+		font: 36px/45px "Oswald",sans-serif;
+		color: #2F2D2A;
+		padding: 5px 0px;
+		min-height: 55px;
+		
+		p {
+			font-size: rem(36);
+			line-height: rem(45);
+			color: #272727;
+			display: block;
+			margin: 0 auto;
+			max-width: 900px;
+			font-family: "Oswald",sans-serif;
+			
+			a {
+				text-transform: uppercase;
+				border-radius: 5px;
+				display: inline-block;
+				font-size: rem(21);
+				line-height: rem(24);
+				padding: 5px 10px;
+				color: #FFF;
+				background-color: #3A3A3F;
+				vertical-align: middle;
+				margin-top: -4px;
+				font-family: "Oswald",sans-serif;
+			}
+		}
+		
+		&:empty {
+			padding: 0;
+			min-height: auto;
+		}
+	}
+}
+
+// Call Out Boxes
+
+.callOutBoxFull {
+	@include span-columns(12);
+}
+
+.callOutBoxHalf {
+	@include span-columns(6);
+}
+
+.callOutBoxThird {
+	@include span-columns(4);
+}
+
+.callOutBoxFourth {
+	@include span-columns(3);
+}
+
+[class*="callOutBox"] {
+	background: url(../image/bgYellowBox.png) repeat-y right 0 #ffc600;
+	color: #383838;
+    font: {
+	    weight: bold; 
+	    size: $body-font-size;
+	   }
+	line-height: rem(22);
+    padding: 0;
+    margin-bottom: 54px;
+    
+    ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	    
+	    li {
+		    
+		    &:first-child {
+			    p {margin: 0; padding: 0;}
+		    }
+		    
+		    &:last-child {
+			    margin: 15px;
+			    min-height: 200px;
+		    }
+	    }
+    }
+}
+
+
+// Blue Bg Content
+
+.blueBg {
+
+	.container {
+		padding-bottom: 64px;
+		padding-top: 54px;
+		margin-bottom: 28px;
+		z-index: 3;
+
+	}
+	
+	article {
+		@include span-columns(3);
+		position: relative;
+		padding-left: rem(50);
+		
+		@media (max-width: $small-breakpoint ) {
+				width: 100%;
+			}
+	}
+
+}
+
+// Sidebar
+
+aside {
+	@include span-columns(4);
+	width: percentage(300px/1000px);
+	margin-top: 40px;
+	padding-bottom:  20px;
+	background-color: #686d6f;
+	
+	h1, h2, h3, h4, h5, h6, p {
+		padding:0 30px;
+	}
+	
+	p { color: #fff; }
+}
+
+/*---------------------------------------------
+                     ::3.2.5 Footer
+----------------------------------------------*/
+
+footer {
+    .footer { background-color: #686d6f; }
+    .footerAlt { 
+	    background-color: #fff;
+	    padding: 20px 0;
+	    color: #898989;
+	    font-size: 11px;
+	    
+	    .left { float: left; }
+	    
+	    .right { 
+		    float: right;
+		    
+		    p a:last-child { margin-right: 0; }
+		}
+	    
+	    p {
+		    line-height: 64px;
+		    color: #272727;
+		    margin: 0;
+		    padding: 0;
+		    font-family:$body-font-family;
+		    
+		    a {
+			    color: #898989;
+			    display: inline-block;
+			    margin-right: 12px;
+			    text-decoration: none;
+			    font-weight: normal;
+			    font-family:$body-font-family;
+			    
+		    }
+		    
+		    img {
+			    display: inline-block;
+			    vertical-align: middle;
+			    margin: 10px 0 10px 16px;
+		    }
+		}
+	}
+    
+    address, article {
+	   @include span-columns(4);
+    }
+    
+    address {
+	    padding: 60px 0 60px 28px;
+	    font-size: rem(14);
+		line-height: rem(21);
+		color: #FFF;
+		font-style: italic;
+		background-color: #686d6f;
+		margin-bottom: 0;
+		
+	    h4 {
+		    color: #fff;
+			font-size: rem(24);
+			line-height: rem(24);
+			font-family: "Oswald",sans-serif;
+			text-transform: uppercase;
+			margin-bottom: 24px;
+			font-weight: normal;
+			font-style: normal;
+	    }
+	    
+	    p {
+		    margin-bottom: 21px;
+		    font-size: rem(14);
+			line-height: rem(21);
+			color: #FFF;
+			font-style: normal;
+			font-family: $body-font-family;
+			
+			&.icon:before {
+				font-family: "SSPika";
+				content: '';
+				display: none;
+				padding-bottom: 5px;
+				font-size: 1.1rem;
+				font-style: normal;
+			}
+			
+			&.address:before { content: '\E6D0'; }
+			
+			&.contactInfo:before { content: '\1F4DE'; }
+	    }
+    }
+    
+    
+    article {
+	    padding: 60px 0 0;
+	    width: 35%;
+	    
+	    table.BBFormTable {
+		    width: 100%;
+		    margin-left: 20px;
+		    
+		    .BBFormTitle.BBAnonymousSubscriptionTitle {
+			    color: #fff;
+				font-size: rem(24);
+				line-height: rem(24);
+				font-family: "Oswald",sans-serif;
+				text-transform: uppercase;
+				padding-bottom: 24px;
+				font-weight: normal;
+				font-style: normal;
+				margin: 0;
+		    }
+		    
+		    .BBFieldCaption {
+				padding: 9px 8px 0 0;
+				color: #fff;
+				
+				label {
+					color: #fff;
+					font-weight: normal;
+				}					
+					   
+			}
+			
+			input.BBFormTextbox.BBAnonymousSubscriptionTextBox {
+				    width: 198px;
+					padding: 1% 2%;
+					font-size: 13px;
+					line-height: 1.8;
+					font-weight: normal;
+					color: #898989;
+					background-color: #FFF;
+					border: 0px none;
+					display: inline-block;
+					margin:0 0 15px;
+			}
+		    
+		    .BBFormButtonCell {
+			    text-align: right;
+			    
+			    input[type="submit"].BBFormSubmitButton.BBAnonymousSubscriptionButton {
+				    display: block;
+					border: 0px none;
+					background-color: #3e4a4f;
+					border: 1px solid #c1c1c1;
+					font-size: 13px;
+					line-height: 33px;
+					color: #FFF;
+					height: 33px;
+					padding: 0px 11px;
+					font-family: "Oswald",arial,sans-serif;
+					font-weight: normal;
+					text-align: center;
+					text-transform: uppercase;
+					cursor: pointer;
+					transition: #6363CE 0.3s ease 0s;
+					float: right;
+					margin:1rem 1.7rem 0 0;
+					
+					&:hover {
+						background:#b7b7b7;
+						text-decoration:none
+					}
+				}
+		    }
+		    
+		    .BBFormRequiredFieldMarker {
+				    color: #ccc !important;
+				    padding: 9px 0 0 10px;
+				    vertical-align: middle;
+			    }
+	    }
+    }
+    
+}
+
+
+/*---------------------------------------------
+                     ::3.3 Skip Link
+----------------------------------------------*/
+p.skip {
+height:0;
+padding:0;
+margin:0;
+}
+a.skip {
+position: absolute;
+top: -50em;
+}
+a.skip:hover,a.skip:active,a.skip:focus {
+position: absolute;
+left: 50%;
+top: 0;
+display: block;
+background: $content-primary-background-color;
+padding: .5em;
+text-align: center;
+margin: 0 auto 0 -10em;
+width: 20em;
+}

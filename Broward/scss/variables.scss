@@ -1,0 +1,114 @@
+// SASS Only Variables
+
+$max-grid-width: 62.500em; //1000px
+$max-content-primary-width: 72%; // 720px/ 1000px
+$max-sidebar-width: 20%; // 200px
+$grid-gutter: 1.875em; //30px
+$grid-gutter-medium: 1.375rem; //22px
+$grid-gutter-small: 1.250rem; //20px 
+
+$body-font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;;
+
+$alt-body-font: "Oswald",sans-serif;
+
+$body-font-color: #4f4f4f;
+
+$body-font-size: rem(14); 
+
+$body-line-height: rem(24); 
+
+$body-background-color: #fff;
+
+// $content-primary-background-color - background color of the primary content container 
+$content-primary-background-color:#fff;
+
+//
+$content-primary-line-height: 1.400rem; 
+
+// $site-primary-color - dominant color used throughout the site IF different than body font color
+$site-primary-color: $body-font-color;
+
+//
+$footer-font-color: #ffffff;                 						 
+
+// $site-accent-color - accent color used throughout the site 
+$site-accent-color: #005581;                  					
+
+// $form-header-row-background-color - background color used on form header rows 
+$form-header-row-background-color: #3a3a3f;      		 
+
+// $form-header-row-text-color - text color used on form header rows 
+$form-header-row-text-color: $content-primary-background-color;
+
+//
+$form-header-row-background-color-alt: lighten($form-header-row-background-color, 75%);
+
+// $form-input-bottom-margin           						 
+$form-input-bottom-margin: 0.75rem;
+
+// $table-cell-heading-padding - default base padding around table headings and cells
+$table-cell-heading-padding: 0.45em;
+
+// $form-input-border-color
+$form-input-border-color: #d6d6d6;
+
+//
+$form-label-font-weight: 700;
+
+// $tab-active-text-color - text color of active tab for tabbed content 
+$tab-active-text-color: $site-primary-color;                	 	 
+
+// $tab-active-background-color - background color of active tab for tabbed content 
+$tab-active-background-color: $form-header-row-text-color;           
+
+// $tab-inactive-text-color - text color of inactive tabs for tabbed content 
+$tab-inactive-text-color: #c4c4c4;              					 
+
+// $tab-inactive-background-color - background color of inactive tabs for tabbed content 
+$tab-inactive-background-color: #eaeaea;         					 
+
+// $subtle-border-color - border color when a subtle border is needed 
+$subtle-border-color:  #dddddd;
+
+//
+$header-font-family: $alt-body-font;
+
+$header-color: #000;               					    
+
+// $link-color - anchor link color 
+$link-color: #00a4e4;                   					 
+
+// $link-hover-color - anchor link hover state color 
+$link-hover-color: #005581;
+
+// $icon-font-base - to use Fontawesome this font family must be used
+$icon-font-family: "FontAwesome";
+
+$icon-button-color-primary: #005581;
+
+//
+$icon-default-padding: 0.35em;
+
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #aad450;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
+
+
+
