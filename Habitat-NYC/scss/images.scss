@@ -1,0 +1,73 @@
+/*=========================================================================================
+                     ::10. IMAGES
+==========================================================================================*/
+img {
+	display: inline-block;
+	vertical-align: middle; 
+	max-width: 100%;
+	height: auto;
+}
+.left {
+	float: left !important; 
+}
+.right {
+	float: right !important; 
+}
+.imageLeft {
+	float: left;
+	margin: 0 0.5em 0.5em 0;
+}
+.imageRight {
+	float: right;
+	margin: 0 0 0.5em 0.5em;
+}
+
+#wrapContent header aside#pageImage 
+{
+	float: right;
+	text-align: right;
+}
+
+.sidebarContent {
+	position: relative;
+	z-index: 1;
+	&::before {
+		font-family: $icon-font-family;
+		content: '\f0d8';
+		position: absolute;
+		z-index: 200;
+		font-size: 7.5rem	;
+		line-height: 1;
+		color: #ccc;
+		top: -.65em;
+		left: rem(40);
+	}
+	
+	&:empty::before {display: none;}
+}
+
+.commTxt {
+	@extend .sidebarContent;
+	
+	&::before {color: #eee;}
+}
+
+.footerAlt img {
+	margin-right: rem(13);
+	
+	@media (max-width: $small-breakpoint) { 
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 10px;
+		text-align: center;
+		display: block;
+	}
+	
+	&:nth-child(2) {
+		margin-right: rem(20);
+		
+		@media (max-width: $small-breakpoint) {
+			margin-right: 0;
+		}
+	}
+}
