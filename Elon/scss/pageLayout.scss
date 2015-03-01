@@ -1,0 +1,158 @@
+	/*=========================================================================================
+                     ::3. PAGE LAYOUT & STRUCTURE
+==========================================================================================*/
+
+body {
+	background-color: #fff;
+}
+
+
+/*---------------------------------------------
+                     ::3.1 Responsive Grid
+----------------------------------------------*/
+
+
+$column: 60px;
+$gutter: 40px;
+$grid-columns: 12;
+$max-width: rem(1200);
+$small-breakpoint: em(767);
+$large-breakpoint: em(1024);
+$medium-viewport: em(900);
+
+
+
+// Box sizing, applying only to container to avoid issues in BBIS/NC admin bar
+.container *,
+.container *:before,
+.container *:after {
+ box-sizing: border-box; }
+  
+/*
+.container *::before, .container *::after {
+	content:" ";
+	display:table;
+}
+*/
+
+form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.aspx"] .container *::after { display: none; }
+
+
+/* Admin Fixes to Box Sizing rendering issue */
+
+.bb_mainMenu img {
+	box-sizing: content-box;
+}
+
+
+/*---------------------------------------------
+                     ::3.2 Layout
+----------------------------------------------*/
+
+.container {
+	@include outer-container;
+	position: relative;
+	width: 100%;
+	
+	@media (max-width: 1199px) {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+.wrapPageHeader {
+	background-color: #ededed;
+	padding-top: rem(21);
+	padding-bottom: rem(18);
+	
+	@media (max-width: 900px) {
+		
+		#breadcrumbs { display: none; }
+	}
+}
+
+.wrapContent {
+	padding: rem(42) 0;
+	
+	@media (max-width: 900px) {
+		padding-top: rem(24);
+		padding-bottom: rem(24);
+	}
+			
+	.mainContent {
+		@include span-columns(8);
+		width: percentage(793px/1200px);
+		float: left;
+		left: 33.8889%;
+		margin-right: 0;
+		position: relative;
+		
+		@media (max-width: 900px) { 
+			left: 0;
+			width: 100%;
+		}
+		
+		
+	}
+	
+	.sidebar {
+		@include span-columns(4);
+	    width: percentage(285px/1200px);
+	    right: 66.0833%;
+	    float: left;
+	    position: relative;
+	    
+	    @media (min-width: 1025px) {
+	    	.fixeSidebar {
+		    	width: 285px;
+				position: fixed;
+				top: 10px;
+	    	}
+	    }
+	    
+	    @media (max-width: 900px) {
+		    width: 100%;
+		    right: 0;
+		    display: none;
+		}
+	    
+	}
+}
+
+
+/*---------------------------------------------
+                     ::3.3 Flexi Layout
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.4 Utility Area
+----------------------------------------------*/
+
+
+/*---------------------------------------------
+                     ::3.5 Quick Search
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.6 Skip Link
+----------------------------------------------*/
+p.skip {
+height:0;
+padding:0;
+margin:0;
+}
+a.skip {
+position: absolute;
+top: -50em;
+}
+a.skip:hover,a.skip:active,a.skip:focus {
+position: absolute;
+left: 50%;
+top: 0;
+display: block;
+background: $content-primary-background-color;
+padding: .5em;
+text-align: center;
+margin: 0 auto 0 -10em;
+width: 20em;
+}

@@ -1,0 +1,105 @@
+/*=========================================================================================
+                     ::7. FORMS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::7.1 Special Widths
+----------------------------------------------*/
+input[type="text"][class*="Narrow"].DonationTextboxNarrow {width: 50%;}
+/*---------------------------------------------
+                     ::7.2 Global Form Styles
+----------------------------------------------*/
+
+input[type="text"], textarea, .BBFormTextArea, input[type="password"]
+{
+	color: #867f8c;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+		weight: 400;
+    }
+    line-height:28px;
+    margin-bottom: $form-input-bottom-margin;
+    width: 80%;
+    padding: 0 12px;
+	border: 1px solid #cccacc;
+	transition:all 0.2s ease 0s;
+    //
+    @media (max-width: 767px) {
+	    padding-top: 2.25%;
+	    padding-bottom: 2.25%;
+	    
+    }
+    
+    @include border-radius(0);
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline-block;
+}
+
+input[type="text"][class*="Narrow"] {width: auto;}
+
+input.QuickSearchTextbox
+{
+    width: 98%;
+    margin-bottom: 0;
+}
+
+label.QuickSearchFieldCaption {display: none !important;}
+
+label, .BBFieldCaption, select.BBFormSelectList
+{
+	color: #867f8c;
+    font:{ 
+    	size:1rem; 
+    	family: $body-font-family;
+    }
+    line-height:$body-font-size;
+    font-weight: normal;
+	text-align: left;
+}
+
+.BBFieldCaption, .BBFieldCaption label 
+{
+	vertical-align: top;
+	text-align: right;
+	padding: 7px 2% 0 0;
+	font-weight: 400;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	color: $body-font-color;
+	font-weight: normal;
+	text-align: left;
+}
+
+select.BBFormSelectList, select
+{
+	margin-bottom: $form-input-bottom-margin;
+	padding: 1%;
+	width: auto;
+	max-width:95%;
+	@include border-radius(0);
+	border:1px solid #cccacc;
+	outline: 0;
+	color: #867f8c;
+}
+
+
+.BBFormRequiredFieldMarker
+{
+	color: red;
+	font-weight: 700;
+}
+
+
+/*---------------------------------------------
+                     ::7.3 Validation
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::7.3 Date Picker
+----------------------------------------------*/
+img.ui-datepicker-trigger {
+margin-left: -2em;
+margin-bottom: -3px;
+}

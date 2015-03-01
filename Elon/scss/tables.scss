@@ -1,0 +1,59 @@
+/*=========================================================================================
+                     ::11. TABLES
+==========================================================================================*/
+table.BBListingTable.DiscussionGroupListingTable td {padding: 0;}
+
+table.BBListingTable th, table.BBListingTable td, table.BBListingTable.DiscussionGroupListingTable .DiscussionTopicList td {
+	padding:0 1em;
+	line-height:2;
+}
+
+table.BBListingTable.DiscussionGroupListingTable .DiscussionTopicList td {
+	line-height: 1.5;
+	padding: .35em 1em .75em;
+}
+
+/*---------------------------------------------
+                     ::11.1 Alternating Rows
+----------------------------------------------*/
+tr.BBListEvenRowStyle>td, table.BBListingTable tr:nth-child(even)>td.BBListingItem{
+background-color: #eee;
+}
+
+table.DiscussionTopicList .BBListOddRowStyle {background-color: transparent;}
+ 
+/*---------------------------------------------
+                     ::11.2 Header Rows
+----------------------------------------------*/
+table.BBListingTable th, tr.JobResultsListHeader td, tr.BBDocumentDisplayHeaderRow td, tr.DiscussionSearchHeader td, tr.DiscussionTopicListHeader td {
+	background:$form-header-row-background-color; /* $client-color-background */
+	color:#FFF; /* $client-color-background-invert */
+	text-align:left;
+	font-weight:bold;
+}
+ 
+/*---------------------------------------------
+                     ::11.3 Sortable Columns
+----------------------------------------------*/
+table.BBListingTable th a, tr.BBDocumentDisplayHeaderRow td a {
+	background:$link-color; /* $client-color-background */
+	color:#FFF; /* $client-color-background-invert */
+	text-align:left;
+	display:block;
+	text-decoration:none;
+	padding:0 1em;
+	margin:0 ;
+}
+table.BBListingTable th a:hover, tr.BBDocumentDisplayHeaderRow td a:hover {
+	background:$link-color; /* transparentize($client-color-background, 0.5) */
+	text-decoration:none;
+}
+/*---------------------------------------------
+                     ::11.4 Borders
+----------------------------------------------*/
+table.BBListingTable td.BBListingItem, tr.BBListEvenRowStyle>td, tr.BBListOddRowStyle>td {
+//border-bottom:1px dotted #AAA;
+}
+
+// Table Overrides for things like Titles
+table.BBListingTable.DiscussionThreadList td.DiscussionGroupFormTitle { padding: 0; }
