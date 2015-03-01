@@ -1,0 +1,5042 @@
+/*=========================================================================================
+                     ::2. DEFAULT PART STYLES (minified....do not edit)
+==========================================================================================*/
+/* Default Part Styles */
+
+.dInlineBlock {
+	display:-moz-inline-block;
+}
+
+.dInlineBlock {
+	display:inline-block;
+}
+
+.h1p {
+	height:1%;
+}
+
+.h100p {
+	height:100%;
+}
+
+.taCenter {
+	text-align:center;
+}
+
+.taLeft {
+	text-align:left;
+}
+
+.taRight {
+	text-align:right;
+}
+
+.vaBottom {
+	vertical-align:bottom;
+}
+
+.vaMiddle {
+	vertical-align:middle;
+}
+
+.vaTop {
+	vertical-align:top;
+}
+
+.w1p {
+	width:1%;
+}
+
+.w100p {
+	width:100%;
+}
+
+.w150px {
+	width:150px;
+}
+
+.wsNowrap {
+	white-space:nowrap;
+}
+
+table.BBFormTable {
+	width: 90%;
+	font-size: $body-font-size;
+	border: 0;
+	background: transparent;
+	margin-left: 0;
+	margin-right: 0;
+
+	.BBFormTitle, .BBListingHeading {
+		text-align: left;
+		height: auto;
+		background: transparent;
+		border: 0;	
+	}
+		
+	.BBFieldCaption {
+		width: 30%;
+		background: transparent;
+		border: 0;
+	}
+	
+	input.BBFormTextbox, textarea.BBFormTextArea {
+		max-width: 260px;
+	}
+
+	input.BBFormTextbox[class="TextboxNarrow"] {
+		width: 50%;
+	}
+	
+	.BBFieldControlCell {
+		padding: 0;
+		width: 50%;
+		
+		.BBFieldCheckboxCaption {
+			display: block;
+			//padding-top: 5px;
+		}
+		input[type="checkbox"], input[type="radio"] {margin-right: 5px;}
+		
+		input[type="checkbox"] + label {
+			margin-bottom: $form-input-bottom-margin;
+			display: inline-block;
+		}
+		
+	}
+	
+	.BBFormTable {
+		background: transparent;
+		border: 0;
+	}
+}
+
+.BBFormTitle { border: 0;}
+
+.BBFieldCheckboxCaption label[for*="chkGiftAid"] {
+	padding-bottom: 1em;
+}
+
+table.BBFormTable.PostJobFormTable {width: 100%;}
+
+.ContentTB2 {
+	background-color:#DDDBDB;
+	border:outset 1px;
+}
+
+.ContentTB2Hot {
+	background-color:#C0C0CF;
+	border:outset 1px;
+}
+
+.BBModalBackground {
+	background-color:gray;
+	filter:alpha(opacity=50);
+	opacity:.5;
+	-moz-opacity:.5;
+}
+
+.ContentTB {
+	background-color:silver;
+	border:outset 1px;
+}
+
+.ContentTBHot {
+	background-color:#C0C0CF;
+	border:outset 1px;
+}
+
+.PageDesignerPane {
+	padding:1px;
+}
+
+.PageDesignerPaneHot {
+	background-color:#f5f5f5;
+	border:dashed 1px green;
+}
+
+.BBFormCheckListContainer {
+	height:100px;
+	overflow:auto;
+}
+
+.BBCalendarWeekendDay {
+	border:1px solid $body-font-color;
+}
+
+.BBCalendarDay {
+	border:1px solid $body-font-color;
+}
+
+.ReportInformationCell {
+	height:150px;
+	white-space:normal;
+	overflow:auto;
+}
+
+.BBModalDialog {
+	border:solid thin #999;
+}
+
+.BBModalDialogTitle {
+	background-color:#006;
+	border-bottom:solid thin #999;
+	color:$content-primary-background-color;
+	font-weight:700;
+	overflow:hidden;
+	padding:3px;
+	text-align:left;
+	white-space:nowrap;
+}
+
+.BBModalDialogContent {
+	background-color:$content-primary-background-color;
+	padding:3px;
+}
+
+.BBModalDialogButton {
+	width:100px;
+}
+
+.BBSequenceMap {
+	margin:0 !important;
+	padding:0 !important;
+	float: left;
+	width: 100%;
+}
+
+.BBSequenceMapStepList {
+	margin:0;
+	padding:0;
+	display:block;
+	overflow:auto;
+}
+
+.BBSequenceMapStep {
+	list-style:none;
+	float:left;
+	//margin-right:6px;
+	margin-bottom:5px;
+	position: relative;
+	width: 33%;
+}
+
+.BBSequenceMapCurrentStep {
+	font-weight:400;
+	
+	&::after {
+		font-size: 4.65rem;
+	    line-height: 1;
+	    position: absolute;
+	    right: -23px;
+	    top: -14px;
+	    z-index: 100;
+	    font-family: $icon-font-family;
+	    content: '\f0da';
+	    color:$form-header-row-background-color;
+	}
+	&:last-child::after {
+		content: '';
+		display: none;
+	}
+
+}
+
+.BBSequenceMapStepItem {
+	display:block;
+	//border:1px solid #999;
+	padding:13px 5px;
+	text-decoration:none;
+	min-width:60px;
+	text-align:center;
+	font-size:.75rem;
+	min-height:13px;
+	white-space:nowrap;
+}
+
+.BBSequenceMapCurrentStepItem {
+	background-color:$site-accent-color;
+	//border-color:#555;
+}
+
+.BBSequenceMapContentContainer {
+	clear:both;
+	margin-top:2em;
+	float: left;
+}
+
+.BBSequenceMapNavigationContainer {
+	float:right;
+	margin-top:15px;
+	margin-right:12px;
+}
+
+.DCFieldCaption {
+	width:150px;
+	display:block;
+	float:left;
+	margin-right:2px;
+	padding-right:5px;
+	text-align:right;
+}
+
+.DCCreditValidation {
+	margin-bottom:0;
+}
+
+.DCCreditExpiration {
+	margin-bottom:0;
+}
+
+.DonationCaptureFormTableFieldset {
+	border:none;
+}
+
+.DonationCaptureFormTableFieldLegend {
+	padding:0;
+}
+
+.DonationCaptureFormTableFDFieldLegend {
+	font-weight:400;
+	font-size:11px;
+}
+
+.BBSequenceMapOptionalContainer {
+	float:left;
+	margin-top:15px;
+	margin-right:25px;
+}
+
+.BBClear {
+	clear:both;
+	display:block;
+	position:relative;
+}
+
+.AlphaIndexItem {
+	padding:2px;
+	margin:2px;
+	text-decoration:underline;
+}
+
+.AlphaIndexSelectedItem {
+	text-decoration:none;
+	font-weight:700;
+}
+
+.AlphaIndexDisabledItem {
+	text-decoration:none;
+}
+
+.BML_Header {
+	font-size:18px;
+	font-weight:700;
+}
+
+.BML_Desc {
+	display:block;
+	margin:8px 0;
+}
+
+.BML_Content textarea {
+	width:300px;
+}
+
+.BBCalendar {
+	border-color:$body-font-color;
+}
+
+.BBCalendar:active {
+	color:$link-color;
+}
+
+.BBCalendar:hover {
+	color:$link-hover-color;
+}
+
+.BBCalendar:link {
+	color:$link-color;
+}
+
+.BBCalendar:visited {
+	color:$link-color;
+}
+
+.BBCalendarDayHeader {
+	background-color:$form-header-row-background-color;
+	color:$content-primary-background-color;
+	height:1px;
+}
+
+.BBCalendarNextPrev {
+	background-color:$form-header-row-background-color;
+	color:$content-primary-background-color;
+}
+
+.BBCalendarOtherMonthDay {
+	color:#C96;
+}
+
+.BBCalendarSelectedDay {
+	font-weight:700;
+}
+
+.BBCalendarSelector {
+	background-color:$form-header-row-background-color;
+}
+
+.BBCalendarTitle {
+	background-color:$form-header-row-background-color;
+	color:$content-primary-background-color;
+	font-weight:700;
+}
+
+.BBCalendarTodayDay {
+	background-color:$site-accent-color;
+}
+
+.BBFieldControlCell {
+	text-align:left;
+}
+
+.BBFormButtonCell {
+	text-align:center;
+}
+
+.BBFormButtonRow {
+	background-color:$content-primary-background-color;
+}
+
+.BBFormErrorMessage {
+	color:red;
+	font-weight:700;
+}
+
+.BBFormReadonlyValue {
+	font-style:italic;
+}
+
+.BBFormRequiredFieldMarker {
+	color: $form-header-row-background-color !important;
+	font-weight:700;
+	vertical-align:top;
+}
+
+.BBFormRequiredFieldMissingText {
+	color:Red;
+	font-weight:700;
+}
+
+.BBFormValidatorSummary {
+	color: $body-font-color;
+	text-align:left;
+	background: #efefef;
+	padding: .5rem;
+	
+	ul {
+		margin: 0 !important;
+		padding: 0 auto !important;
+		
+		li {
+			font-size: $body-font-size;
+			color: red;
+		}
+	}
+}
+
+.BBListingHeading {
+	text-align:left;
+}
+
+.BBMessage {
+	font-style:italic;
+	font-size: $body-font-size;
+	line-height: $body-line-height ;
+}
+
+.PagedListFooter {
+	background-color:transparent;
+	font-weight:400;
+	font-size: $body-font-size;
+	line-height: $body-line-height ;
+}
+
+.PagedListFooterLink:hover {
+	color: $link-hover-color;
+	text-decoration:underline;
+}
+
+.PagedListFooterLink:link {
+	color: $link-color;
+	text-decoration:none;
+}
+
+.PagedListFooterLink:visited {
+	color: $link-color;
+	text-decoration:none;
+}
+
+.SpellBody {
+	background-color:#f5f5f5;
+	padding:0 6px 6px;
+}
+
+.SpellButton {
+	width:100%;
+}
+
+.SpellCheckBadWord {
+	color:Red;
+	font-weight:700;
+}
+
+.SpellCheckTextBox {
+	width:100%;
+}
+
+.SpellFieldValue {
+	text-align:left;
+}
+
+.SpellHeading {
+	font-weight:700;
+}
+
+.SpellHeadingCell {
+	background-color:#e9e9e9;
+	width:100%;
+}
+
+.SpellHeadLegend {
+	font-style:normal;
+	font-weight:400;
+}
+
+.SpellLegend {
+	font-weight:700;
+	text-align:right;
+}
+
+.SpellSubject {
+	font-weight:700;
+}
+
+.SpellSuggestionList {
+	border:1px solid $body-font-color;
+	height:auto;
+	width:100%;
+}
+
+.SpellText {
+	background-color:#f5f5f5;
+	padding:12px 6px 6px;
+}
+
+.SpellTextValue {
+	text-align:left;
+}
+
+.BBListOddRowStyle {
+	background-color:transparent;
+}
+
+.BBListOddRowStyle.BBVolOpJobListOddRow { background: transparent;}
+
+.MatchFinderResultsList {
+	background-color:transparent;
+	font-weight:400;
+}
+
+.BBListingHeadingSortedDescending {
+	background-image:url(./images/SortDesc.gif);
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+
+.BBListingHeadingSortedAscending {
+	background-image:url(./images/SortAsc.gif);
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+
+.BBListingHeadingLink:active {
+	font-weight:400;
+}
+
+.BBListingHeadingLink:hover {
+	font-weight:400;
+}
+
+.BBListingHeadingLink:link {
+	font-weight:400;
+}
+
+.BBListingHeadingLink:visited {
+	font-weight:400;
+}
+
+.OCCHeader {
+	color:#F90;
+}
+
+.OCCClassName {
+	color:#06C;
+}
+
+.ModalEditFromSavingMessage {
+	background-color:#FF9;
+	visibility:visible;
+	color:$body-font-color;
+	vertical-align:middle;
+}
+
+.BBPager {
+	height:15px \0/IE9;
+	padding-top:2px \0/IE9;
+}
+
+.BBPagerPageLink {
+	border:1px Solid #CCC;
+	padding:4px;
+	margin:3px;
+}
+
+.BBPagerPageLink:hover {
+	background-color:#CCC;
+}
+
+.BBPagerSeparator {
+	padding:4px;
+	margin:3px;
+}
+
+.BBPagerPageSelectedLink {
+	padding:4px;
+	margin:3px;
+}
+
+.BBPagerPrevPageLink {
+	border:1px Solid #CCC;
+	padding:4px;
+	margin:3px;
+}
+
+.BBPagerPrevPageLink:hover {
+	background-color:#CCC;
+}
+
+.BBPagerNextPageLink {
+	border:1px Solid #CCC;
+	padding:4px;
+	margin:3px;
+}
+
+.BBPagerNextPageLink:hover {
+	background-color:#CCC;
+}
+
+.SpellFieldCaption {
+	font-weight:700;
+	text-align:left;
+}
+
+.SpellFormTable {
+	font-weight:400;
+}
+
+.SpellFormTitle {
+	width:100%;
+}
+
+.ReportTitle {
+	height:18px;
+}
+
+.LoginLink {
+	font-size:11px;
+	font-weight:400;
+	text-decoration:underline;
+}
+
+.BBNewRegCaptchaCaption {
+	float:left;
+	clear:left;
+	width:125px;
+	text-align:right;
+	padding-right:5px;
+	padding-left:10px;
+}
+
+.BBNewRegCaptchaResponse {
+	width:150px;
+	float:none;
+}
+
+.BBNewRegCaptchaControlCell {
+	clear:none;
+	margin-left:0;
+	margin-top:3px;
+	white-space:nowrap;
+}
+
+.BBNewRegCaptchaActionLinkContainer {
+	text-align:right;
+}
+
+#trRegistrationRequest.BBFormRequiredFieldMarker {
+	color:red;
+	font-size:medium;
+	font-weight:bolder;
+	text-align:left;
+	vertical-align:middle;
+	width:65px;
+}
+
+.LoginFieldCaption {
+	padding-right:8px;
+	width:130px;
+}
+
+.LoginFormTable {
+	border:0 none;
+	width:auto;
+	
+	.BBFormButtonCell {
+		text-align: center;
+		padding-bottom: 1rem;
+		
+		input { margin-right: 2rem; }
+	}
+}
+
+.LoginFormTextArea {
+	width:140px;
+}
+
+.LoginFormTitle {
+	text-align:left;
+	border-bottom:none;
+}
+
+.BBFieldCaption.LoginFieldMessage
+{
+	text-align: left;
+	padding-right: 0;
+	padding-bottom: 12px;
+	color: #999;
+}
+
+.RoleImage {
+	width:20px;
+	margin:2px;
+}
+
+.RoleImageContainer {
+	padding:2px;
+}
+
+.ProfileImageDefault {
+	width:100px;
+}
+
+.ProfileDisplayMultiRecordTable {
+	width:100%;
+}
+
+.ProfileFormPrivateControlCell {
+	text-align:center;
+	white-space:nowrap;
+	vertical-align:top;
+}
+
+.ProfileFieldCaptionDisabled {
+	color:#CCC;
+}
+
+.ProfileFormButtonCell {
+	text-align:right;
+	padding-top: $form-input-bottom-margin;
+}
+
+.ProfileFormRequiredFieldMarkerDisabled {
+	color:#CCC;
+}
+
+.ProfileFormTable {
+	border:0;
+}
+
+.ProfileFormChildRowTitle {
+	text-align:right;
+}
+
+.ProfileFormTitle {
+	text-align:left;
+}
+
+table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+table.DirectorySearchForm {
+	width: 100%;
+	.BBFieldCaption.DirectoryFieldCaption {width: 20%;}
+	.BBFieldControlCell.DirectoryFieldControlCell {width: 30%;}
+}
+
+.DirectoryListingItemInteriorTable {
+	border-collapse:collapse;
+	white-space:nowrap;
+	width:100%;
+}
+
+.DirectoryListingItemInteriorItem {
+	white-space:nowrap;
+}
+
+.DirectoryPagingButton {
+	width:60px;
+}
+
+.DirectoryListingHeading {
+	border-left:1pt solid $content-primary-background-color;
+	border-right:1pt solid $content-primary-background-color;
+	padding:0 1em;
+	
+	a {
+		padding: 0 !important;
+	}
+}
+
+.DirectoryListingItem {
+	vertical-align:top;
+}
+
+.DirectoryListingTable {
+	border-collapse:collapse;
+	width: 98%;
+	
+	th.BBListingHeading.DirectoryListingHeading {
+		border: 0;
+		padding-left: 1em;
+		padding-right: 1em;
+		background-color: $form-header-row-background-color;
+		
+		a {
+			&:hover {
+				background-color: darken($form-header-row-background-color, 10%);
+			}
+		}
+	}
+}
+
+.DonationHelpFormDDTable {
+	height:275px;
+}
+
+.DonationHelpFormGATable {
+	height:280px;
+}
+
+.DonationHelpFormCheckTable {
+	height:50px;
+}
+
+.DonationHelpFormCSCTable {
+	height:400px;
+}
+
+.DonationCaptureFieldControlCellAmount {
+	font-weight:700;
+	width:400px;
+}
+
+.DonationCaptcha {
+	margin:0;
+}
+
+.DonationCaptchaControlCell {
+	margin-left:154px;
+	clear:right;
+	margin-top:3px;
+	white-space:nowrap;
+}
+
+.DonationCaptchaImageContainer {
+	border:1px solid $site-accent-color;
+}
+
+.DonationCaptchaActionLinkContainer {
+	text-align:right;
+}
+
+.DonationECardSectionSeparator {
+	background-color:#999;
+	margin-left:20px;
+	padding:2px;
+}
+
+.DonationECardSectionBody {
+	padding:5px 5px 5px 20px;
+}
+
+.DonationECardTemplate {
+	padding:2px;
+}
+
+.DonationCaptchaCaption {
+	float:left;
+	clear:left;
+	text-align:right;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-top:2px;
+}
+
+.DonationButtonCell {
+	text-align:right;
+	padding-top: $form-input-bottom-margin;
+}
+
+.DonationCaptureReadonlyValue {
+	text-align:left;
+}
+
+.DonationCaptureSelectListNarrow {
+	width:75px;
+}
+
+.DonationCaptureFormTable {
+	width:100%;
+}
+
+.DonationCaptureTextArea {
+	width:250px;
+	border-color:#F0F0F0;
+}
+
+.DonationTextArea {
+	width:92% !important;
+}
+
+.DonationCaptureTextboxNarrow {
+	width:80px;
+}
+
+.DonationCaptureTextboxWide {
+	width:250px;
+}
+
+.DonationTextboxNarrow {
+	width:80px;
+}
+
+.DonationTextboxWide {
+	width:250px;
+}
+
+input[id*="DonationCapture1_txtCSC"].BBFormTextbox.DonationCaptureTextboxNarrow {
+	width: 39%;
+}
+
+table.BBFormTable.DonationFormTable input[id*="txtDesignation"].BBFormTextbox {max-width: 189px;}
+
+// Donation Form Multiple Amount Shopping Cart
+
+tbody[id*="tbdCart"] {
+	input[id*="btnAddToCart"] {margin-bottom: $form-input-bottom-margin;}
+	
+	tr[id*="trCart"] table[id*="dgCart"].DonationGrid {
+		width: 360px;
+		border: 0;
+		margin-bottom: $form-input-bottom-margin;
+		
+		tr.DonationGridHeader {
+			td.DonationGridHeaderCell {
+				background: $form-header-row-background-color;
+				color: #fff;
+				padding: $table-cell-heading-padding;
+				border: 0;
+			}
+		}
+		.DonationGridCell {
+			border: 0;
+			padding:0.75rem $table-cell-heading-padding $table-cell-heading-padding;
+			background: #EDF9FF;
+			
+			input[id*="dgCart_btnRemove"].BBFormSubmitButton.DonationSubmitButton {
+				background: $icon-button-color-primary;
+				color: #fff;
+				border: 0;
+				@include box-shadow(none);
+				text-shadow: 0 0 1px #333;
+			}
+			.ColumnNoWrapHelper {
+				display: block;
+				
+				input[id*="dgCart_txtDesAmount"] {width: 75%;}
+			}
+		}
+		tr.DonationGridOddRow {
+			.DonationGridCell {
+				background: darken(#EDF9FF, 5%);
+			}
+		}
+		tr.DonationGridFooter {
+			td.DonationGridCell {font-weight: bold;}
+		}
+	}
+}
+
+tr[id*="trOther"] td:last-child > table td:first-child {
+	width: 9px !important;
+	vertical-align: top;
+	padding-top: 6px;
+}
+
+.EventAttendeesComplete {
+	background-color:$site-accent-color;
+	padding-left:2px;
+}
+
+.EventAttendeesCurrent {
+	background-color:$site-accent-color;
+	padding-left:2px;
+}
+
+.EventAttendeesFuture {
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+.EventAttendeesGrid {
+	vertical-align:top;
+	background-color:$site-accent-color;
+	border:1px solid #dcdcdc;
+	padding-right:8px;
+	margin-bottom:10px;
+}
+
+.EventAttendeesOverallTotal {
+	padding-right:6px;
+}
+
+.EventItemRegistrantsEventName {
+	background-color:$site-accent-color;
+	text-align:left;
+	padding-left:4px;
+	padding-right:2px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+.EventItemsSelectionGrid {
+	margin-top:6px;
+	margin-bottom:6px;
+}
+
+.EventSectionHeader {
+	text-align:left;
+	border-bottom:none;
+	font-style:italic;
+	padding:.65em 0 .25em;
+	display:inline-block;
+}
+
+.EventItemRegistrationControlCellQuantity {
+	width:55px;
+}
+
+.EventItemRegistrantControlCellName {
+	text-align:right;
+}
+
+.EventItemRegistrantsHeader {
+	background-color:transparent;
+	text-align:left;
+}
+
+.EventItemRegistrationControlCellDescription {
+	text-align:left;
+	width:100px;
+}
+
+.EventItemRegistrationControlCellNumParticipants {
+	text-align:left;
+}
+
+.EventItemRegistrationControlCellPrice {
+	text-align:right;
+	width:100px;
+}
+
+.EventItemRegistrationFooterControlCellAmount {
+	text-align:right;
+	width:70px;
+}
+
+.EventItemRegistrationFooterControlCellNumRegistrations {
+	width:25px;
+}
+
+.EventItemRegistrationFooterControlCellRegistrations {
+	width:100px;
+}
+
+.EventItemRegistrationFooterControlCellTotal {
+	text-align:right;
+	width:150px;
+}
+
+.EventItemRegistrationsHeader {
+	background-color:transparent;
+	text-align:left;
+}
+
+.EventProgressCell {
+	background-color:#666;
+	color:$content-primary-background-color;
+	height:10px;
+}
+
+.EventProgressCellFuture {
+	background-color:#ccc;
+	color:#888;
+	height:10px;
+}
+
+.EventProgressCellPast {
+	background-color:#ccc;
+	color:#888;
+	height:10px;
+}
+
+.EventItemRegistrantControlCell {
+	text-align:left;
+}
+
+.EventItemRegistrantSelectList {
+	width:200px;
+}
+
+.EventSubmitButton {
+	margin-left:5px;
+	margin-right:5px;
+	width:100px;
+}
+
+.EventItemRegistrantsTable {
+	text-align:center;
+	width:485px;
+}
+
+.EventItemRegistrationFooterTable {
+	border:none;
+	width:485px;
+}
+
+.EventItemRegistrationsTable {
+	border:none;
+	text-align:left;
+	width:550px;
+	margin-left:20px;
+}
+
+.EventItemsTable {
+	border:none;
+}
+
+table.BBFormTable.EventTable {
+	border:none;
+	width:100%;
+}
+
+.EventItemRegistrantTextbox {
+	width:200px;
+}
+
+.EventItemRegistrationTextbox {
+	width:25px;
+}
+
+.EventItemTitleDescription {
+	border:none;
+}
+
+.EventItemTitleName {
+	border:none;
+}
+
+.EventItemTitleTime {
+	border:none;
+}
+
+.EventMessage {
+	text-align:center;
+}
+
+.ProfilePhotoFormTextbox {
+	width:250px;
+}
+
+.DiscussionPending {
+	color:red;
+}
+
+.DiscussionFilterSpacer {
+	width:2px;
+}
+
+.DiscussionGroupApproveButton {
+	background:url(images/ApproveBtn.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:44px;
+}
+
+.DiscussionGroupDeleteButton {
+	background:url(images/DeleteBtn.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:44px;
+}
+
+.DiscussionGroupHeadingCell {
+	background-color:$content-primary-background-color;
+	color:$body-font-color;
+	padding:.25em .5em;
+	width:100%;
+}
+
+.DiscussionGroupNewTopicButton {
+	background:url(images/PostNewTopic.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:79px;
+}
+
+.DiscussionGroupReplyButton {
+	height:13px;
+	margin-right:6px;
+	padding:0;
+	width:36px;
+}
+
+.DiscussionGroupReplyTextbox {
+	width:100%;
+}
+
+.DiscussionGroupSearchCellSpacer {
+	width:1%;
+	display: none;
+}
+
+.DiscussionGroupSearchTextCell {
+	width:45%;
+	
+	input.BBFormTextbox.DiscussionGroupSearchTextbox { width: 95%;}
+}
+
+.DiscussionMessageNew {
+	color:red;
+}
+
+.DiscussionMessageSepHR {
+	color:#ccc;
+	margin:3px 0 0;
+	padding:0;
+	width:95%;
+}
+
+.DiscussionNew {
+	color:red;
+}
+
+.DiscussionReplyBody {
+	background-color:transparent;
+	padding:0 6px 0 0;
+}
+
+.DiscussionReplyFieldValue {
+	text-align:left;
+}
+
+.DiscussionReplyHeading {
+	background-color:transparent;
+	height:21px;
+	padding:3px 5px 2px 0;
+}
+
+.DiscussionReplySubject {
+	font: {
+		weight:700;
+		size:0.875rem;
+		}
+}
+
+.DiscussionReplyTable {
+	margin:0 0 10px;
+	width:100%;
+}
+
+.DiscussionThreadLBracket {
+	background:url(images/Bracket3.gif) no-repeat;
+	height:21px;
+	padding:0;
+	width:11px;
+}
+
+.DiscussionThreadRBracket {
+	background:url(images/Bracket2.gif) no-repeat;
+	height:21px;
+	padding:0;
+	width:11px;
+}
+
+.DiscussionThreadTBracket {
+	background:url(images/Bracket1.gif) no-repeat;
+	background-position:3px 3px;
+	border-style:none;
+	border-top:none;
+	height:21px;
+	padding:0;
+	width:11px;
+}
+
+.DiscussionTopicBody {
+	background-color:#f5f5f5;
+	padding:12px 6px 6px;
+}
+
+.DiscussionTopicFieldValue, .DiscussionReplyFieldValue {
+	text-align:left;
+	font-size: $body-font-size;
+	display: inline-block;
+}
+
+[id*="lblMessage"].DiscussionTopicFieldValue {padding-bottom: 1rem;}
+
+.DiscussionTopicHeading {
+	background-color: $form-header-row-background-color;
+	height:21px;
+	padding:3px 5px 2px;
+	
+	span {
+		color: $content-primary-background-color !important;
+	}
+}
+
+.DiscussionTopicList {
+	background-color:transparent;
+	font-size: $body-font-size;
+
+	td {padding: 0 .5rem;}
+}
+
+.DiscussionTopicTable td {
+	padding: 0 .5rem;
+	
+	a {
+		font-size: $body-font-size;
+	}
+}
+
+.DiscussionTopicSepHR {
+	width:95%;
+}
+
+.DiscussionTopicTable {
+	margin:0 0 5px;
+	width:100%;
+}
+
+.DiscussionGroupMessage {
+	font-style: normal;
+	padding-bottom: .25em;
+}
+
+.PostDiscussionPreviewHeadingCell {
+	background-color:#e9e9e9;
+	width:100%;
+}
+
+.PostDiscussionReplyHeadingCell {
+	background-color:#e9e9e9;
+	width:100%;
+}
+
+.PostDiscussionTopicHeadingCell {
+	//background-color:#e9e9e9;
+	width:100%;
+}
+
+.DiscussionFilterFieldCaption {
+	width:60px;
+}
+
+.DiscussionReplyFieldCaption {
+	text-align:left;
+}
+
+input[type="button"].BBFormSubmitButton.DiscussionGroupSpellButton {
+	margin: 1em;
+	background: $icon-button-color-primary;
+	border: 0;
+	@include box-shadow(none);
+	text-shadow: none;
+}
+
+.BBFieldCaption.DiscussionTopicFieldCaption, .BBFieldCaption.DiscussionReplyFieldCaption
+{
+	display: inline-block;
+	padding: 13px .25em 0 0;
+	text-align:left;
+}
+
+.DiscussionTopicFieldValue, .DiscussionReplyFieldValue {padding-top: 4px;}
+
+.DiscussionGroupButtonCell {
+	text-align:left;
+}
+
+.PostDiscussionPreviewFormTable {
+	background-color:transparent;
+}
+
+.PostDiscussionReplyFormTable {
+	background-color:transparent;
+}
+
+.PostDiscussionTopicFormTable {
+	background-color:transparent;
+}
+
+.DiscussionGroupMessageTextArea {
+	width:95%;
+}
+
+.DiscussionGroupSearchTextbox {
+	width:100%;
+}
+
+.DiscussionGroupTopicTextbox {
+	width:95%;
+}
+
+.DiscussionGroupFormTitle {
+	width:100%;
+	padding: 0;
+}
+
+.DiscussionGroupValidationSummary {
+	background-color:transparent;
+}
+
+.DiscussionThreadList {
+	background-color:transparent;
+	
+	a {
+		font-size: $body-font-size;
+	}
+}
+
+.DiscussionTopicNumReplies {
+	font-size: $body-font-size;
+}
+
+.BBDocumentDisplayNew {
+	color:red;
+}
+
+.BBDocumentDisplayTable {
+	background-color:transparent;
+	width:100%;
+	a.BBDocumentDisplayLink {
+		padding-bottom: .75em;
+	}
+	tr.BBDocumentDisplayHeaderRow {
+		td {
+			line-height: 2;
+			padding: 0;
+			
+			a:hover {
+				background: transparent;
+				color: #ccc;
+			}
+		}
+	}
+}
+
+table.BBFormTable.BBDocumentFormTable {
+	width:100%;
+}
+
+.BBDocumentAddFile {
+	width:auto;
+}
+
+.BBPollAnswersRadioList {
+	white-space:nowrap;
+}
+
+.BBPollAnswersTable {
+	text-align:left;
+}
+
+.BBPollAnswersTableCell {
+	white-space:nowrap;
+}
+
+.BBPollsQuestionCell {
+	text-align:left;
+}
+
+.BBPollsQuestionRow {
+	font-weight:700;
+}
+
+.BBPollsSubmitButtonCell {
+	text-align:center;
+}
+
+.BBPollsSubmitButtonRow {
+	text-align:center;
+}
+
+.BBPollsSubmitButton {
+	font-weight:700;
+}
+
+.BBPollsFormTitle {
+	text-align:left;
+}
+
+.JobBoardLegend {
+	font-style:normal;
+	font-weight:400;
+}
+
+.JobDetailApproveButton {
+	background:url(images/ApproveBtn.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:44px;
+}
+
+.JobDetailEditButton {
+	background:url(images/EditBtn.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:31px;
+}
+
+.JobDetailHeadingCell {
+	background-color:#e9e9e9;
+	width:100%;
+}
+
+.JobPostDetailFieldCaption {
+	background-color:#e9e9e9;
+	text-align:right;
+	white-space:nowrap;
+	width:25%;
+}
+
+.JobPostDetailFieldValue {
+	background-color:#f5f5f5;
+	width:75%;
+}
+
+.JobResultsApproveButton {
+	background:url(images/ApproveBtn.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:44px;
+}
+
+.JobResultsDeleteButton {
+	background:url(images/DeleteBtn.gif) no-repeat;
+	height:14px;
+	padding:0;
+	width:44px;
+}
+
+.JobResultsFilterFieldCaption {
+	width:80%;
+}
+
+.JobResultsFilterSpacer {
+	width:2px;
+}
+
+.JobResultsHeadingCell {
+	background-color:#e9e9e9;
+	width:100%;
+}
+
+.JobResultsList {
+	background-color:transparent;
+	font-weight:400;
+}
+
+.JobResultsListHeader {
+	font-weight:700;
+}
+
+.JobResultsNew {
+	color:red;
+}
+
+table.jobPostSalaryTbl {
+	width: 87% !important;
+	
+	td:first-child {
+		width: auto !important;
+		
+		input.BBFormTextbox.JobPostTextboxWide { width: 125px;}
+	}
+	
+	td:nth-child(2) {
+		width: 15% !important;
+		vertical-align: top;
+		padding-top: 7px;
+	}
+	
+	td:last-child {
+		width: auto !important;
+		
+		input.BBFormTextbox.JobPostTextboxWide { width: 125px;}
+	}
+}
+
+input[id*="btnSearch"].BBFormSubmitButton.JobBoardSubmitButton {margin-left: 2.85rem;}
+
+.PostJobHeadingCell {
+	//background-color:#e9e9e9;
+	width:100%;
+}
+
+.PreviewJobHeadingCell {
+	background-color:#e9e9e9;
+	width:100%;
+}
+
+.SearchJobHeadingCell {
+	background-color:transparent;
+	width:100%;
+}
+
+.JobSearchFieldCaption {
+	text-align:right;
+	//width:30%;
+}
+
+.JobPostFieldControlCell {
+	width:65%;
+}
+
+.JobSearchFieldControlCell {
+	width:60%;
+}
+
+.JobPostSelectList {
+	width:97%;
+}
+
+.JobSearchSelectList {
+	width:auto;
+}
+
+.JobPostTextArea {
+	width:95%;
+}
+
+.JobPostTextboxWide {
+	width:95%;
+}
+
+.JobSearchTextboxWide {
+	width:inherit;
+}
+
+.JobBoardValidationSummary {
+	background-color:transparent;
+}
+
+.BBCurrentMembershipCaption {
+	height:30px;
+	padding-top:15px;
+	vertical-align:bottom;
+	width:100%;
+	border-bottom:1pt solid $body-font-color;
+}
+
+.BBMembershipSummaryActionCaption {
+	height:30px;
+	padding-top:15px;
+	vertical-align:bottom;
+	width:100%;
+}
+
+.BBMembershipFieldCaption {
+	width:175px;
+}
+
+.BBMembershipSummaryFieldCaption {
+	width:150px;
+}
+
+.BBMembershipTextArea {
+	width:100%;
+}
+
+.BBMembershipTextboxNarrow {
+	width:80px;
+}
+
+.GivingHistoryList {
+	background-color:transparent;
+}
+
+.GivingHistoryFormTitle {
+	width:100%;
+}
+
+.NewsReaderFormImage {
+	text-align:right;
+}
+
+.NewsReaderResultsList {
+	border-width:0;
+	border-style:None;
+	width:100%;
+}
+
+.NewsReaderItemDesc {
+	white-space:normal;
+}
+
+.NewsReaderLoadError {
+	background-color:transparent;
+	color:red;
+}
+
+.NewsReaderFormTable {
+	width:100%;
+}
+
+.NewsReaderFormTitle {
+	text-align:left;
+}
+
+.ChannelStoryApproveButton {
+	background:url(images/ApproveBtn.gif) no-repeat;
+	padding:0;
+	width:44px;
+	height:14px;
+}
+
+.NewsChannelFormImage {
+	text-align:right;
+}
+
+.NewsChannelLoadError {
+	background-color:transparent;
+	color:red;
+}
+
+.NewsChannelStoryList {
+	background-color:transparent;
+}
+
+.ChannelStoryEditButton {
+	background:url(images/EditBtn.gif) no-repeat;
+	padding:0;
+	width:30px;
+	height:14px;
+}
+
+a.ChannelStoryEditButtonWAI {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.ChannelStoryDeleteButton {
+	background:url(images/DeleteBtn.gif) no-repeat;
+	padding:0;
+	width:44px;
+	height:14px;
+}
+
+.ChannelNewStoryButton {
+	background:url(images/PostNewStory.gif) no-repeat;
+	padding:0;
+	width:79px;
+	height:14px;
+}
+
+.ChannelRSSFeedButton {
+	background:url(images/feed-icon.gif) no-repeat;
+	padding:0;
+	width:16px;
+	height:16px;
+}
+
+.rteImage {
+	background:#D3D3D3;
+	border:1px solid #D3D3D3;
+	cursor:pointer;
+}
+
+.rteImageRaised {
+	background:#D3D3D3;
+	border:1px outset;
+	cursor:pointer;
+}
+
+.rteImageLowered {
+	background:#D3D3D3;
+	border:1px inset;
+	cursor:pointer;
+}
+
+.rteVertSep {
+	margin:0 4px;
+}
+
+.rteBack {
+	background:#D3D3D3;
+	border:1px outset;
+	letter-spacing:0;
+	padding:2px;
+}
+
+.rteBack tbody tr td,.rteBack tr td {
+	background:#D3D3D3;
+	padding:0;
+}
+
+.PostChannelStoryFormTable {
+	background-color:transparent;
+}
+
+.ChannelStoryTextbox {
+	width:100%;
+}
+
+.NewsChannelFormTitle {
+	width:100%;
+}
+
+.PostChannelStoryFormTitle {
+	width:100%;
+}
+
+.ChannelStoryValidationSummary {
+	background-color:transparent;
+}
+
+.SurveyButtonsRow {
+	text-align:center;
+}
+
+.SurveyQuestionSeparator {
+	width:100%;
+	font-size:1pt;
+	background-color:#a9a9a9;
+}
+
+.SurveyConstantSumTextbox {
+	width:50px;
+}
+
+.SurveyResponseResultsBar {
+	height:5px;
+	background-color:green;
+	border-right:1px solid $body-font-color;
+}
+
+.SurveyAnswerTableHeaderRow {
+	background-color:#a9a9a9;
+}
+
+.SurveyResponseTableHeaderRow {
+	background-color:#a9a9a9;
+}
+
+.SurveyTestModeMessage {
+	color:red;
+}
+
+.SurveyFormTable {
+	border:none;
+	width:100%;
+}
+
+.SurveyQuestionTable {
+	border:none;
+}
+
+.SurveyAnswerTable {
+	border:none;
+}
+
+.SurveyResponseTable {
+	border:none;
+}
+
+.SurveyOpenEndedEssayTextArea {
+	width:250px;
+}
+
+.SurveyOpenEndedAnswerTextbox {
+	width:150px;
+}
+
+.SurveyErrorMessage {
+	color:red;
+}
+
+.SearchDescriptionStyle {
+	white-space:pre;
+}
+
+table[id*="tableMain"][summary="Event Calendar"].BBFormTable, table.BBFormTable.CalendarViewContainer {
+	width: 95%;
+}
+
+table.BBFormTable[id*="tableMain"][summary="Event Calendar"] td.EventCalendarButtonBar {
+	input[id*="ImageButton"], a[id*="ImageButton"] {display: none;}
+	a.EventCalendarButtons {
+		margin-left: 1em;
+		&::before {
+			font-family: $icon-font-family;
+			display: inline-block;
+			color: $icon-button-color-primary;
+			font-size: 1rem;
+			padding-right:.25em;
+			position: relative;
+			top: .15em;
+		}
+		&:first-child {margin-left: 0;}
+	}
+	
+	a[id*="lbtnNewEvent"] {margin-left: 0;}
+	
+	a.EventCalendarButtons:hover::before {color:$link-hover-color;}
+	
+	// Create New Event
+	a[id*="lbtnNewEvent"]::before {content: '\f14b';}
+	// Import Events
+	a[id*="lbtnImportEvents"]::before{content: '\f0ee';}
+	// List View
+	a[id*="lbtnListView"]::before {content: '\f0ca';}
+	// Calendar View
+	a[id*="lbtnCalView"]::before {content: '\f073';}
+	// Print View
+	a[id*="lbtnPrintView"]::before {content: '\f02f';}
+	// Export Events
+	a[id*="lbtnExportICal"]::before {content: '\f14d';}
+}
+
+a.EventCalendarButtons {
+	font-size: $body-font-size;
+}
+.ListViewDateLabel {
+	height:17px;
+}
+
+.ListViewEventItemContainer {
+	font-size:$body-font-size;
+}
+
+.CalendarViewMonthYearLabel {
+	height:17px;
+}
+
+.CalendarViewDayHeader {
+	background-color:$form-header-row-background-color;
+	color:$content-primary-background-color;
+	height:1px;
+	font-weight:400;
+	font-size: $body-font-size;
+}
+
+.CalendarViewOtherMonthDay {
+	border:1px solid $form-input-border-color;
+	height:50px;
+	color:#C96;
+}
+
+.CalendarViewWeekendDay {
+	border:1px solid $form-input-border-color;
+	height:50px;
+}
+
+.CalendarViewDay {
+	border:1px solid $form-input-border-color;
+	height:50px;
+}
+
+.CalendarViewSelectedDay {
+	font-weight:700;
+}
+
+.ListViewEventDate {
+	font-weight:700;
+	color:#d51;
+	margin-top:15px;
+}
+
+.ListViewEventSubtitle {
+	vertical-align:top;
+}
+
+.ListViewEventLocation {
+	vertical-align:top;
+}
+
+.EventCalendarName {
+	font-weight:700;
+}
+
+.DetailEventTitle {
+	font-weight:700;
+}
+
+.DetailEventSubtitle {
+	font-style:italic;
+}
+
+.DetailCaptionContainer {
+	padding: $table-cell-heading-padding 0;
+}
+
+.DetailCaption {
+	color:$content-primary-background-color;
+}
+
+.CalendarViewToday {
+	border:1px solid $site-accent-color;
+	background-color:$site-accent-color;
+	color:$body-font-color;
+	font-weight: 700;
+	width:3%;
+}
+
+.CalendarViewAllDayEvent {
+	border:1px dotted $site-accent-color;
+	margin-bottom:10px;
+}
+
+.CalendarViewMultiDayEvent {
+	margin-bottom:10px;
+}
+
+.CalendarViewEvent {
+	margin-bottom:10px;
+	font-weight: 300;
+	font-size: .688rem;
+}
+
+.CalendarFilterContainer {
+	float:left;
+	width:100%;
+	border:2px solid gray;
+}
+
+.CalendarFilterSaveButton {
+	width:auto;
+	margin-top: 1em;
+}
+
+.CalendarFilterHorizontalDividers {
+	color:silver;
+}
+
+.EventCalendarPartContainer {
+	vertical-align:top;
+	text-align:left;
+	
+	table.w100p.BBFormTable {width: 100%;}
+	
+	table[id*="CalendarEvent1_TableEditEvent"] {
+		
+		.BBFieldCaption label {white-space: nowrap;}
+		.BBFieldControlCell {width: 70%;}
+		select {width: auto;}
+		select[id*="ddlFrequency"] {width:12em ;}
+		select[id*="CalendarEvent1_TimeZonePicker1_TimeZoneDropDown"] {width: 18em;}
+		select[id*="CalendarEvent1_DropDownlistCategory"] {width: 16em;}
+		
+		input[type="text"][class*="EditEvent"], textarea[class*="EditEvent"] {
+			width: 60%;
+			max-width: none;
+		}
+		div#divTinyMCEWrapper {
+			width: 90%;
+			float: left;
+			margin-bottom: 2rem;
+			}
+	}
+}
+
+input[type="button"].ListViewDateRangeGoButton {
+	padding: 0 1em;
+}
+
+table[id*="CalendarEvent1_rblMapLink"] input[type="radio"] + label {
+	display: inline-block;
+	margin:0 .75em 1em .5em;
+}
+
+.EventCalFilter_Show {
+	padding: .5em .75em 1em !important;
+	margin-bottom: 1em;
+	> span {
+		display: block;
+		margin-bottom: .75em;
+		}
+	> span[id*="lblCalName"] {
+		margin-bottom: 0;
+		font-weight: 700;
+		}
+}
+
+.bbAthMgrLocationAddLink {font-size: $body-font-size; }
+
+.defaultSkin ul.ribbon_tab_btn {
+	padding: 3px 0 0 15px !important;
+}
+
+.ListViewTopLeft {
+	padding:$table-cell-heading-padding 0 ;
+}
+
+.ListViewTopRight {
+	text-align:right;
+	padding:$table-cell-heading-padding 0 ;
+}
+
+.ListViewTopGap {
+	padding-top:5px;
+	
+	div > table {
+		width: 100%;
+		
+		tr:first-child td:first-child {
+			width: 38%;
+			
+			label[for*="EventCalendar1_ddlDateRange"] {
+				float: left;
+				display: inline-block;
+				position: relative;
+				padding: .85em .35em 0 0;
+			}
+			select {
+				width: 140px !important;
+				margin-top: .6em;
+			}
+		}
+	}
+}
+
+.ListViewEventTopGap {
+	padding-top:$table-cell-heading-padding;
+}
+
+.ListViewEventDivider {
+	margin-bottom:10px;
+}
+
+.CalendarViewCalendarContainer { border-color: $form-header-row-background-color; }
+
+.CalendarViewContainer {
+	width:100%;
+	
+	select {font-size: $body-font-size;}
+}
+
+.CalendarViewCalendarContainer td {
+	font-size: $body-font-size;
+	padding:0 $table-cell-heading-padding;
+}
+
+td[id*="EventCalendar1_TDGo"] {vertical-align: top;}
+
+.CalendarViewTopLeft {
+	width:35%;
+	
+	label[for*="EventCalendar1_ddlMonthYear"] {display: none;}
+	div.wrapSelectList {margin-bottom: .5em;}
+	select {margin-bottom: 0 !important;}
+}
+
+.CalendarViewTopMiddle {
+	width:30%;
+	text-align:center;
+	padding-bottom: .5em !important;
+	vertical-align: bottom;
+	
+	span.CalendarViewMonthYearLabel {
+		display: block;
+		text-align: center;
+		height: auto;
+	}
+}
+
+.CalendarViewTopRight {
+	width:35%;
+	text-align:right;
+	font-size: $body-font-size;
+	vertical-align: bottom;
+	padding-bottom: .5em !important;
+}
+
+table.BBFormTable[summary="Event Calendar"] {	
+	input[id*="ImageButtonFilterEvents"] {display: none;}
+	
+	a[id*="lbtnFilterEvents"]::before {
+		content: '\f0b0';
+		font-family: $icon-font-family;
+		display: inline-block;
+		color: $icon-button-color-primary;
+		font-size: 1rem;
+		padding-right:.25em;
+		position: relative;
+		top: .15em;
+	}
+	a[id*="lbtnFilterEvents"]:hover::before { color:$link-hover-color; }
+}
+
+.CalendarViewTodayText {
+	white-space:nowrap;
+	font-size: $body-font-size;
+}
+
+.CalendarViewBottomIcons {
+	text-align:right;
+	font-size: $body-font-size;
+}
+
+.CalendarFilterSaveContainer {
+	text-align:right;
+}
+
+.CalendarFilterSaveMsg {
+	display:none;
+	border:solid 1px #903;
+	color:#903;
+}
+
+.CalendarEventRecurMsg {
+	padding:0 0 .5em;
+	clear: both;
+	display: block;
+	font-weight:700;
+}
+
+.CalendarEventRecurContainer {
+	float: left;
+	clear: both;
+	position: relative;
+}
+
+.CalendarFormLegend {
+	font-weight:700;
+}
+
+.CalendarFormCategoryContainer {
+	width:100%;
+}
+
+.CalendarFormDateTimeContainer {
+	width:100%;
+}
+
+.CalendarFormOptionalText {
+	vertical-align:top;
+	font-size: $body-font-size;
+	display: inline-block;
+	padding: 7px 0 0 5px;
+}
+
+.CalendarFormEventInfoContainer {
+	width:100%;
+}
+
+.CalendarFormHTMLEditor {
+	height:360px;
+	width:525px;
+}
+
+.DetailCalendarCategory {
+	height:30px;
+	vertical-align:bottom;
+}
+
+.EventCalendarButtonBar {
+	height:auto;
+	padding: .5em 0 1.5em;
+	font-size: $body-font-size;
+	text-align: left;
+	
+	input[id*="ImageButtonNewEvent"].vaMiddle {margin-left: .5em;}
+}
+
+table[id*="tableMain"].BBFormTable[summary="Event Calendar"] td.EventCalendarButtonBar a.EventCalendarButtons:first-child { margin-left: 0; }
+
+.CalendarFormDateTimeContainer [id*="TDStartTimeList"], [id*="TDEndTimeList"] {
+	padding:0 0 0;
+	vertical-align: top;
+	
+	label.CalendarFormFieldCaption {
+		padding: 0 .438rem 0 0;
+		position: relative;
+		line-height: 1.1;
+		//top: 8px;
+	}
+}
+
+
+.EditEventDropDown {
+	width:275px;
+}
+
+.ImportContainer {
+	width:100%;
+}
+
+.ImportSelectFileContainer {
+	width:100%;
+}
+
+.ImportMapFieldsContainer {
+	width:100%;
+}
+
+.ImportNavigationButtonsContainer {
+	width:100%;
+	text-align:right;
+}
+
+.ImportConfirmationContainer {
+	width:100%;
+}
+
+.ImportCaption {
+	font-weight:600;
+	text-align:left;
+}
+
+.ImportListTable {
+	width:100%;
+}
+
+.CalendarFormFieldCaption {
+	vertical-align:top;
+	width:20%;
+}
+table.BBFormTable {
+	
+	.BBFieldCaption.DetailLeft {
+		width:0;
+		padding: $table-cell-heading-padding $table-cell-heading-padding $table-cell-heading-padding 0;
+		text-align:right;
+		vertical-align:top;
+		line-height: $body-line-height;
+	}
+	
+	.DetailDateTime {
+	}
+	
+	.DetailEventDetails {
+		border-bottom:solid 1px #DCDCDC;
+		background: $site-accent-color;
+		padding: $table-cell-heading-padding;
+		
+		p {
+			padding: 0;
+		}
+	}
+	
+	.BBFieldControlCell.DetailRight {
+		padding: $table-cell-heading-padding $table-cell-heading-padding $table-cell-heading-padding 0;
+		text-align:left;
+		vertical-align:top;
+		line-height: $body-line-height;
+	}
+
+}
+
+table.BBListingTable {
+	border: 0;
+}
+
+table.BBFormTable.ListViewContainer {
+	width:100%;
+	border:none;
+	margin: 1em 0;
+}
+
+.EditEventLocation {
+	width:275px;
+	height:30px;
+}
+
+.EditEventFees {
+	width:275px;
+	height:25px;
+}
+
+.EditEventContactInfo {
+	width:275px;
+	height:25px;
+}
+
+.EditEventTextBox {
+	width:275px;
+}
+
+.ImportListEvenRowStyle {
+	background-color:#f5f5f5;
+	text-align:left;
+	height:20px;
+}
+
+.ImportListHeading {
+	text-align:center;
+	height:20px;
+	white-space:nowrap;
+}
+
+.ImportListOddRowStyle {
+	text-align:left;
+	height:20px;
+}
+
+.EducationListItem {
+	padding:3px;
+}
+
+.EducationListHeaderItem {
+	padding:3px;
+}
+
+.BBVolOpJobListPageControlCell {
+	text-align:right;
+}
+
+.BBVolOpInstructions {padding-bottom: $form-input-bottom-margin;}
+
+.BBVolOpBackToListCell {
+	text-align:right;
+	white-space:nowrap;
+}
+
+.BBVolOpJobDetailCaption {
+	width:15%;
+}
+
+.BBVolOpJobDetailButtonCell {
+	text-align:center;
+}
+
+.BBVolOpSignUpButtonCell {
+	text-align:center;
+}
+
+.BBVolOpSearchButtonCell {
+	text-align:center;
+	padding-bottom: 1rem;
+}
+
+.BBVolOpJobListTable {
+	width:100%;
+}
+
+.BBVolOpJobDetailTable {
+	width:100%;
+}
+
+.BBVolOpSignUpTable {
+	width:100%;
+}
+
+.BBVolOpJobList {
+	width:100%;
+	margin-top: 1rem;
+	
+	.BBListingHeading.BBVolOpJobListHeader {
+		@include row-heading();
+	}
+	
+	.BBListEvenRowStyle, .BBListOddRowStyle {
+		
+		td {
+			padding-bottom: .75em;
+			padding-top: .75em;
+		}
+		
+	}
+}
+
+.UpcomingEventContainer {
+	background-color:$content-primary-background-color;
+}
+
+.RecentEventContainer {
+	background-color:#f5f5f5;
+}
+
+.MoreEventURL {
+	padding-right:15px;
+}
+
+.HighlightEventTitle {
+	font-weight:700;
+}
+
+.HighlightEventCancelled {
+	font-style:italic;
+}
+
+.HighlightEventScore {
+	font-weight:700;
+}
+
+.BBNotesNoteImageCell {
+	vertical-align:top;
+}
+
+.BBNotesNoteTopicCell {
+	font-weight:700;
+	text-align:left;
+}
+
+.BBNotesNoteNameCell {
+	text-align:right;
+}
+
+.BBNotesNoteDateCell {
+	text-align:right;
+}
+
+.BBNotesNoteLinkCell {
+	text-align:right;
+}
+
+.BBNotesNoteCell {
+	text-align:left;
+}
+
+.BBNotesListPageControlCell {
+	text-align:right;
+}
+
+.BBNotesListAddCell {
+	text-align:right;
+}
+
+.BBNotesList {
+	width:100%;
+}
+
+.BBNotesInstructions {
+	font-style:italic;
+}
+
+.BBNotesSearchFormTable {
+	width:100%;
+}
+
+.BBNotesTabSelected {
+	font-weight:700;
+}
+
+.BBNotesTabUnselected {
+	font-weight: 400;
+}
+
+[class*="BBNotesTab"] a {
+	display: inline-block;
+	margin-left: 1rem;
+}
+.BBNotesNoteTable {
+	width:100%;
+}
+
+.BBNotesLayoutTable {
+	width:100%;
+}
+
+.BBNotesListLayoutTable {
+	width:100%;
+}
+
+.BBNotesEditorLayoutTable {
+	width:100%;
+}
+
+.BBNotesSearchFormLayoutTable {
+	width:100%;
+}
+
+.BBNotesTextArea {
+	width:100%;
+}
+
+.BBNotesEditor {
+	width:100%;
+}
+
+.PageSharingContainer {
+	border-top:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	padding:8px;
+	overflow:auto;
+	width:95%;
+}
+
+.PageSharingLink {
+	display:none;
+}
+
+.PageSharingLinkImage {
+	display:block;
+	border:none;
+	float:left;
+	display:none;
+}
+
+.PageSharingList {
+	display:inline;
+	clear:both;
+	margin:5px 0 0;
+	padding:0;
+}
+
+.PageSharingListItem {
+	list-style:none;
+	float:left;
+	margin-right:20px;
+	padding:0;
+}
+
+.PageSharingListItemLinkImage {
+	display:block;
+	border:none;
+	float:left;
+	width:16px;
+	height:16px;
+	margin-right:2px;
+}
+
+.PageSharingModalInfoText {
+	padding:10px;
+}
+
+.PageSharingCaption {
+	float:left;
+	clear:left;
+	width:125px;
+	text-align:right;
+	padding-right:5px;
+	padding-left:10px;
+	color:$body-font-color;
+}
+
+.PageSharingControlCell {
+	margin-left:140px;
+	clear:right;
+	margin-top:3px;
+}
+
+.PageSharingFormTextBox {
+	width:298px;
+}
+
+.PageSharingFormTextArea {
+	width:298px;
+	height:50px;
+}
+
+.PageSharingControlHelpText {
+	text-align:right;
+	color:#999;
+	margin-right:55px;
+	margin-bottom:5px;
+}
+
+.PageSharingSendMeACopy {
+	margin-left:-2px;
+}
+
+.PageSharingCaptcha {
+	text-align:right;
+	color:#999;
+	margin-right:55px;
+}
+
+.PageSharingCaptchaImageContainer {
+	border:1px solid $site-accent-color;
+}
+
+.PageSharingCaptchaActionLinkContainer {
+	text-align:right;
+}
+
+.PageSharingModalActions {
+	padding:20px 10px 10px;
+	text-align:center;
+}
+
+.PageSharingSubmitButton {
+	margin-right:10px;
+}
+
+.PaymentPartSubmitButton {
+	margin-right:12px;
+}
+
+.PaymentPartGrid {
+	width:500px;
+	margin-top:10px;
+}
+
+.ECardCaptcha {
+	margin:0;
+	width:470px;
+}
+
+.ECardCaptchaControlCell {
+	margin-left:154px;
+	clear:right;
+	margin-top:3px;
+	white-space:nowrap;
+}
+
+.ECardCaptchaImageContainer {
+	border:1px solid $site-accent-color;
+}
+
+.ECardCaptchaActionLinkContainer {
+	text-align:right;
+}
+
+.ECardWizardNavigationButtons {
+	text-align:center;
+	margin-bottom:5px;
+}
+
+.ECardWizardSubheading {
+	margin-bottom:5px;
+}
+
+.ECardSection {
+	padding:5px 5px 5px 20px;
+	margin-bottom:25px;
+}
+
+.ECardSectionSeparator {
+	padding:4px;
+	background-color:#CCC;
+	border:1px solid $site-accent-color;
+	font-weight:700;
+	width:98%;
+}
+
+.ECardPreviewBlock {
+	padding:5px;
+	border:1px solid #CCC;
+	margin:5px 5px 5px 0;
+}
+
+.ECardPrintableLink {
+	text-align:right;
+}
+
+.ECardPrintableIcon {
+	margin-right:5px;
+}
+
+.ECardThumbnail {
+	text-align:center;
+	vertical-align:middle;
+	border:2px solid $content-primary-background-color;
+	padding:2px;
+	margin-left:4px;
+	margin-bottom:4px;
+}
+
+.ECardProgressIndicator {
+	width:100%;
+	text-align:center;
+	margin-bottom:15px;
+}
+
+.ECardCurrentStep {
+	background-color:#bbb;
+	font-weight:700;
+	padding:1px;
+	margin:2px;
+	border:1px solid $body-font-color;
+}
+
+.ECardPastStep {
+	background-color:$site-accent-color;
+	border:solid 1px #888;
+	font-weight:700;
+	padding:1px;
+	margin:2px;
+	color:#555;
+}
+
+.ECardFutureStep {
+	border:solid 1px #888;
+	font-weight:700;
+	padding:1px;
+	margin:2px;
+	background-color:$content-primary-background-color;
+	color:#888;
+}
+
+.ECardCategorySelection {
+	margin-bottom:5px;
+}
+
+.ECardThumbnail:hover {
+	border:2px solid #888;
+}
+
+.ECardCaptchaCaption {
+	float:left;
+	clear:left;
+	text-align:right;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-top:2px;
+}
+
+.ECardCaptchaTextbox {
+	width:312px;
+}
+
+.ECardWizardHeading {
+	font-size:large;
+	margin-bottom:5px;
+}
+
+.GivingSearchResultDetails {
+	margin:0;
+}
+
+.GivingSearchResultFieldName {
+	float:left;
+	font-weight:700;
+	padding:0 1px 0 7px;
+	text-transform:capitalize;
+}
+
+.GivingSearchSearchForm {
+	margin:0;
+	padding:5px;
+	width:100%;
+}
+
+.GivingSearchResultsHeader {
+	display:block;
+	padding:2px 0;
+	text-align:left;
+	text-transform:capitalize;
+}
+
+.GivingSearchPagingButtons {
+	float:right;
+}
+
+.GivingSearchPagination {
+	margin:0 0 5px;
+	padding:0 0 5px;
+	width:100%;
+}
+
+.GivingSearchResultCount {
+	color:#34657e;
+	float:left;
+	margin:3px 5px 0 0;
+	text-transform:lowercase;
+}
+
+.GivingSearchResultEvenRow {
+	background-color:#EDF1F2;
+	border:1px solid #b6babb;
+	padding:0 0 2px;
+}
+
+.GivingSearchFieldCaption {
+	text-align:left;
+}
+
+.GivingSearchFormTable {
+	border:0;
+}
+
+.GivingSearchFormTitle {
+	border-bottom:0;
+	padding-bottom:3px;
+	text-align:left;
+}
+
+.GivingSearchMessage {
+	background-color:#EDF1F2;
+	border:1px dashed #b6babb;
+	color:#00e;
+	margin:5px 30px;
+	padding:5px;
+	text-decoration:underline;
+}
+
+.GivingSearchResultLink {
+	color:#00e;
+	display:block;
+	padding:2px 0 2px 2px;
+}
+
+table.BBFormTable.TransactionManagerGrid {
+	width: 100%;
+	th {font-weight: $form-label-font-weight;}
+}
+
+.TransactionManagerExportContainer {
+	background-color:#CCC;
+	border:1px solid $site-accent-color;
+	margin:1px 1px 1px 443px;
+	position:absolute;
+	width:55px;
+	z-index:0;
+}
+
+.TransactionManagerExportOptionsContainer {
+	float:right;
+	background-color:#BBB;
+	width:55px;
+}
+
+.TransactionManagerExportOptionsContainer ul {
+	padding:0 0 0 5px;
+	margin:0;
+}
+
+.TransactionManagerInformationGrid {
+	width:100%;
+}
+
+.TransactionManagerExportButton {
+	background:url(./images/transaction_manager_down_arrow.png) no-repeat scroll 0 0 transparent;
+	height:14px;
+}
+
+.TransactionManagerSeparatorCell {
+	background-color:#C0C0CC;
+	width:100%;
+	font-weight:700;
+	text-align:center;
+}
+
+.TransactionManagerGroupPickerCaption {
+	width:100px;
+	display:block;
+	float:left;
+	padding-right:3px;
+}
+
+.TransactionManagerAccDD {
+	color:#033;
+	list-style:none outside none;
+	padding:0;
+	width:150px;
+	position:inherit;
+	display:block;
+	margin:-10px 4px 0;
+	*margin-top:-25px;
+}
+
+.TransactionManagerAccDD h3 {
+	border:1px solid #9AC1C9;
+	cursor:pointer;
+	font-weight:700;
+	margin:5px 0 0 auto;
+	padding:6px 6px 8px;
+	text-align:center;
+	width:25px;
+}
+
+.TransactionManagerAccDD h3:hover {
+	background:url(header_over.gif) repeat scroll 0 0 transparent;
+}
+
+.TransactionManagerAccDD .acc-section {
+	overflow:hidden;
+	width:150px;
+	z-index:1002;
+	position:absolute;
+}
+
+.v .acc-content {
+	width:150px;
+	padding:15px;
+	border:1px solid #9ac1c9;
+	border-top:none;
+	position:absolute;
+}
+
+.acc-content {
+	background-color:#F1F1F1;
+	border:1px solid #333;
+	display:block;
+	overflow:visible;
+	padding:3px;
+	position:relative;
+}
+
+.TransactionManagerExpanded dl {
+	margin:0;
+}
+
+.TransactionManagerGridInstallmentOverdue {
+	color:red;
+}
+
+.TransactionManagerFilterContainer {
+	margin-bottom:10px;
+	padding:5px;
+}
+
+.TransactionManagerFilterItem {
+	margin-right:25px;
+	overflow:auto;
+	margin-top:5px;
+}
+
+.TransactionManagerGrid {
+	border-collapse:collapse;
+	margin-top:20px;
+	width: 100%;
+}
+
+.TransactionManagerGridCell {
+	padding:5px;
+	border:none;
+}
+
+.TransactionManagerGridHeaderCell {
+	padding:$table-cell-heading-padding;
+	cursor:pointer;
+	border:none;
+	font-size: $body-font-size;
+	background-color:$form-header-row-background-color;
+	color: $content-primary-background-color;
+}
+
+.TransactionManagerGridDetailCell {
+	padding:5px;
+	border:none;
+}
+
+.TransactionManagerGridDetailLabel {
+	float:left;
+	width:150px;
+	text-align:right;
+	margin-right:10px;
+}
+
+.PagerInfoCell {
+	padding:5px;
+	border: 0;
+	white-space:nowrap;
+	font-weight:700;
+	background-color:$site-accent-color;
+}
+
+.PagerCurrentPageCell {
+	cursor:default;
+}
+
+[class*="TransactionManagerGridHeaderCellSorted"]::after {
+	display: inline-block;
+	font-family: $icon-font-family;
+	color: #eee;
+	padding-left: 1em;
+}
+
+.TransactionManagerGridHeaderCellSortedAscending {
+	background-color:$form-header-row-background-color;
+	//background-image:url(./images/SortAsc.gif);
+	//background-position:right center;
+	//background-repeat:no-repeat;
+	background-image: none;
+	
+	&::after { 
+		content: '\f0d8';
+	}
+}
+
+.TransactionManagerGridHeaderCellSortedDescending {
+	background-color:$form-header-row-background-color;
+	//background-image:url(./images/SortDesc.gif);
+	//background-position:right center;
+	//background-repeat:no-repeat;
+	background-image: none;
+	
+	&::after {
+		content: '\f0d7';
+	}
+}
+
+.TransactionManagerSpecificDateDivNotSelected {
+	display:none;
+}
+
+.TransactionManagerSpecificDateDivSelected {
+	clear:left;
+	margin-left:103px;
+	margin-top:3px;
+	display:block;
+}
+
+.TransactionManagerSummaryContainer {
+	clear:left;
+	width:100%;
+	margin-bottom:10px;
+	font-size: $body-font-size;
+}
+
+.TransactionManagerSummaryTable {
+	width:100%;
+	
+	th {font-weight:$form-label-font-weight; }
+}
+
+.TransactionManagerSummaryHeaderRow {
+	background-color:$form-header-row-background-color;
+	color:$content-primary-background-color;
+}
+
+.TransactionManagerSummaryHeaderLabel {
+	//width:150px;
+	text-align:left;
+	padding:$table-cell-heading-padding;
+}
+
+.TransactionManagerSummaryHeaderValue {
+	//width:125px;
+	text-align:center;
+	padding: $table-cell-heading-padding;
+}
+
+.TransactionManagerSummaryCurrency {
+	margin-right:5px;
+}
+
+.TransactionManagerSummaryDetailEvenRow {
+	background-color:$site-accent-color;
+}
+
+.TransactionManagerSummaryDetailLabel {
+	padding:2px;
+	width:150px;
+	text-align:left;
+	padding:5px;
+	padding-left:30px;
+}
+
+.TransactionManagerSummaryDetailValue {
+	padding:2px;
+	width:125px;
+	text-align:right;
+	padding:5px;
+}
+
+.TransactionManagerSummaryExpandCollapse {
+	width:20px;
+	text-align:center;
+}
+
+.TransactionManagerSummaryExpandCollapseCell {
+	background-color:#CCC;
+}
+
+.TransactionManagerSummaryExpandCollapseLink {
+	display:block;
+	width:16px;
+	height:16px;
+	float:left;
+	margin-right:10px;
+	background-color:#CCC;
+	background-image:url(./images/plus.gif);
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+
+.TransactionManagerSummaryExpandCollapseLink:hover {
+	cursor:pointer;
+}
+
+.TransactionManagerSummaryExpanded {
+	background-image:url(./images/minus.gif);
+}
+
+.TransactionManagerDatePickerFieldCaption {
+	width:100px;
+	display:block;
+	float:left;
+	padding-right:3px;
+}
+
+.TransactionManagerFundPickerFieldCaption {
+	width:100px;
+	display:block;
+	float:left;
+	padding-right:3px;
+}
+
+.TransactionManagerOddRow {
+	background-color:$content-primary-background-color;
+}
+
+.TransactionManagerDetailsOddRow {
+	background-color:$content-primary-background-color;
+}
+
+.TransactionManagerEvenRow {
+	background-color:$site-accent-color;
+}
+
+.TransactionManagerDetailsEvenRow {
+	background-color:$site-accent-color;
+}
+
+.TransactionManagerFilterActions {
+	margin-left:103px;
+	margin-top:5px;
+}
+
+.TransactionManagerFieldContainer {
+	display:inline;
+}
+
+.TransactionManagerGridNotificationCell {
+	padding:5px;
+}
+
+.Pager {
+	border:none;
+	float:left;
+	margin:0;
+	margin-bottom:10px;
+	font-size: $body-font-size;
+}
+
+.PagerInfo {
+	float:left;
+	padding:5px;
+	white-space:nowrap;
+	font-weight:700;
+	background-color:transparent;
+	border: none;
+}
+
+.PagerItem {
+	float:left;
+	margin:0 5px;
+	padding-top:5px;
+}
+
+.PagerItemSelected {
+	cursor:default;
+	font-weight:700;
+}
+
+.TransactionManagerReceiptImage {
+	border:none;
+	margin-left:5px;
+}
+
+.TransactionManagerGridCellAmount {
+	width:33%;
+}
+
+.TransactionManagerGridCellAmountLink {
+	border:medium none;
+	padding:2px;
+	width:33%;
+}
+
+.TransactionManagerHelpTextDiv {
+	padding:0 0 10px;
+	clear:both;
+}
+
+.TransactionManagerPayablePledgeHelpTextDiv {
+	padding:10px 0 0;
+}
+
+.TransactionManagerFilterPayablePledgeItem {
+	margin-left:103px;
+	overflow:visible;
+}
+
+.TransactionManagerGridEditGiftDiv {
+	clear:both;
+	float:left;
+	margin-right:20px;
+	white-space:nowrap;
+}
+
+.TransactionManagerGridEditGiftLink {
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+.TransactionManagerGridDetailSet {
+	clear:both;
+}
+
+.TransactionManagerEditFormAmount {
+	padding:5px;
+	width:100%;
+}
+
+.TransactionManagerRecurrenceScheduleSelectedAreaInner {
+	background-color:$site-accent-color;
+	border-left:1px solid #CCC;
+	min-height:60px;
+	padding:10px;
+}
+
+.TransactionManagerRecurrenceScheduleSelectedArea {
+	background-color:#DDD;
+	border:1px solid #CCC;
+	margin:0 0 10px 92px;
+	min-height:60px;
+	padding:0 0 0 5px;
+	width:300px;
+}
+
+.TransactionManagerRecurrenceScheduleRadioGrouping {
+	float:left;
+	left:1px;
+	width:91px;
+}
+
+.TransactionManagerRecurrenceScheduleRadioButtonListContainer {
+	margin-left:150px;
+}
+
+.TransactionManagerRecurrenceSchedule {
+	margin-top:15px;
+	margin-bottom:5px;
+	margin-left:5px;
+	margin-right:5px;
+	width:100%;
+}
+
+.TransactionManagerEditFormHelpText {
+	display:block;
+	margin-bottom:10px;
+	margin-left:155px;
+	margin-right:5px;
+	margin-top:5px;
+}
+
+.TransactionManagerEditFormDateContainer {
+	padding-top:5px;
+}
+
+.TransactionManagerRecurrenceScheduleRadioContainer {
+	margin:0;
+	border-left:1px solid $content-primary-background-color;
+	padding:2px;
+}
+
+.TransactionManagerEditFormDirectDebitFields {
+	margin-top:25px;
+	padding-bottom:5px;
+	padding-right:5px;
+	width:100%;
+}
+
+.TransactionManagerTabsContainer {
+	clear:both;
+	background-color: $form-header-row-background-color-alt;
+	border-color:#EBEBEB #EBEBEB #ccc;
+	border-style:solid;
+	border-width:1px;
+	float:left;
+	width:100%;
+}
+
+.TransactionManagerGridEditGiftWrapper {
+	margin-left:160px;
+	clear:both;
+}
+
+.TransactionManagerTabContent {
+	background-color:$content-primary-background-color;
+	border-color:#ccc;
+	border-style:none solid solid;
+	border-width:medium 1px 1px;
+	float:left;
+	overflow:auto;
+	padding-top:0;
+	clear:none;
+	position:relative;
+	width:100%;
+}
+
+.TransactionManagerTab {
+	float:left;
+	font-size: $body-font-size;
+	margin:0 0 0 4px;
+	padding:7px 10px;
+	a {
+		@include link-style();
+	}
+}
+
+.TransactionManagerCurrentTab {
+	background-color:$content-primary-background-color;
+	background-image:none;
+	border-color:#ccc #ccc $content-primary-background-color;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:-1px;
+	margin-top:-4px;
+	padding:8px 10px 11px;
+	
+	a {
+		@include link-style();
+	}
+}
+
+.TransactionManagerCurrentTabLink {
+	color: $link-color;
+}
+
+.TransactionManagerTabLink:visited {
+	text-decoration:none;
+}
+
+.TransactionManagerTabLink:hover {
+	text-decoration:underline;
+}
+
+.TransactionManagerContentWrapper {
+	margin:10px;
+}
+
+.TransactionManagerWrapper {
+	width:100%;
+}
+
+.TransactionManagerRecurrenceScheduleRadioButtonSelected {
+	background-color:#DDD;
+}
+
+.TransactionManagerEditFormCreditCardLink {
+	color:blue;
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+.TransactionManagerRecurrenceScheduleRadioSelected {
+	background-color:#DDD;
+	border-bottom:1px solid #CCC;
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	padding:2px;
+}
+
+.BBFormDisplayHelpImage {
+	background-image:url(images/helpsm.gif);
+	cursor:pointer;
+	float:left;
+	margin-right:8px;
+	height:16px;
+	width:16px;
+}
+
+.BBFormDisplayHelpImageAltText {
+	position:absolute;
+	text-indent:-9000px;
+}
+
+.BBFormDisplayHelpContainer {
+	float:left;
+	position:relative;
+}
+
+.BBFormDisplaySection {
+	border:0;
+	padding:0;
+	margin:0;
+	margin-bottom:10px;
+}
+
+.BBFormDisplaySectionLabel {
+	font-weight:700;
+}
+
+.BBFormDisplayCheckboxListContainer {
+	padding:5px;
+}
+
+.BBFormDisplayTextboxContainer {
+	padding:5px;
+}
+
+.BBFormDisplayTextAreaContainer {
+	padding:5px;
+}
+
+.BBFormDisplayImage {
+	float:left;
+	margin-right:8px;
+}
+
+.BBFormDisplayTextContainer {
+	padding:5px;
+	overflow:auto;
+	font-size: $body-font-size;
+}
+
+.BBFormDisplayDropdownContainer {
+	padding:5px;
+}
+
+.BBFormDisplayRadioButtonList {
+	float:left;
+	margin-right:8px;
+}
+
+.BBFormDisplayRadioButtonListContainer {
+	padding:5px;
+}
+
+.BBFormDisplayEmailContainer {
+	padding:5px;
+}
+
+.BBFormDisplayFieldResponseText {
+	display:block;
+	padding-top:2px;
+	margin-left:158px;
+	font-weight:700;
+}
+
+.BBFormDisplayResponseContainer {
+	padding:5px;
+	overflow:auto;
+}
+
+.BBFormDisplayCheckboxContainer {
+	padding:5px;
+}
+
+.BBFormDisplayNewFormList {
+	width:100%;
+	border:1px solid #CCC;
+}
+
+.BBFormDisplayItem {
+	padding:3px;
+}
+
+.BBFormDisplayStartedFormList {
+	width:100%;
+	border:1px solid #CCC;
+	margin-bottom:15px;
+}
+
+.BBFormDisplayPrintButtonContainer {
+	padding-top:15px;
+}
+
+.BBFormDisplayHelp {
+	position:absolute;
+	padding:5px;
+	border:1px solid #CCC;
+	min-width:200px;
+	background-color:#FFD;
+	top:0;
+	left:20px;
+	max-width:350px;
+	white-space:normal;
+	word-wrap:break-word;
+	line-height:normal;
+}
+
+.BBFormDisplayDisabled {
+	color:silver;
+}
+
+.BBFormDisplayFieldReadOnlyText {
+	display:block;
+	float:left;
+	font-weight:700;
+	margin-right:3px;
+	padding-top:2px;
+}
+
+.BBFormDisplayReadOnlyFieldContainer {
+	padding:5px;
+}
+
+.BBFormDisplayNewFormListDisabled {
+	color:#696969;
+}
+
+.BBFormDisplayFileAttachmentContainer {
+	padding:5px;
+}
+
+.BBFormDisplayFileAttachment {
+	float:left;
+}
+
+.BBFormDisplayFileAttachmentFileName {
+	float:left;
+}
+
+.BBFormDisplayFileAttachmentErrorMessage {
+	float:left;
+}
+
+.BBFormDisplayFieldCaption {
+	float:left;
+	position: relative;
+	display:inline-block;
+	width:30%;
+	text-align:right;
+	margin-right:8px;
+	padding-top:2px;
+	white-space:normal!important;
+}
+
+.BBFormDisplayCheckbox {
+	float:left;
+}
+
+.BBFormDisplayChecklist {
+	float:left;
+	border:none!important;
+	margin-right:8px;
+}
+
+.BBFormDisplayBeginLink {
+	width:80px;
+}
+
+.BBFormDisplayStartedFormStatus {
+	width:80px;
+}
+
+.BBFormDisplayResumeLink {
+	width:50px;
+	text-align:center;
+}
+
+.BBFormDisplayDeleteLink {
+	width:40px;
+	text-align:center;
+}
+
+.BBFormDisplayPrintLink {
+	width:30px;
+	text-align:center;
+}
+
+input[type="text"].BBFormDisplayEmail {
+	float:left;
+	width:50%;
+	display: inline-block;
+	position: relative;
+	margin-right:8px;
+}
+
+.BBFormDisplayErrorMessage {
+	background-color:#FEE;
+	margin-bottom:3px;
+	margin-left:158px;
+	margin-top:10px;
+}
+
+.BBFormDisplayRequiredFieldMarker {
+	float:left;
+	margin-right:8px;
+}
+
+.BBFormDisplayRequiredFieldMissingText {
+	background-color: transparent;
+	margin-bottom:3px;
+	margin-left:158px;
+	margin-top:10px;
+}
+
+.BBFormDisplaySelectList {
+	float:left;
+	margin-right:8px;
+}
+
+textarea.BBFormDisplayTextArea {
+	float:left;
+	width:50%;
+	display: inline-block;
+	position: relative;
+	margin-right:8px;
+}
+
+input[type="text"].BBFormDisplayTextbox {
+	float:left;
+	width:50%;
+	display: inline-block;
+	position: relative;
+	margin-right:8px;
+}
+
+.BBTag {
+	padding:5px 0;
+	margin:0;
+}
+
+.BBTagHeader {
+	display:inline;
+	padding:0 5px 0 0;
+	margin:0;
+}
+
+.BBTagList {
+	display:inline;
+	padding:0;
+	margin:0;
+}
+
+.BBTagItem {
+	display:inline;
+	padding:0;
+	margin:0;
+}
+
+.BBTagHeaderAll {
+	padding:0;
+	margin:0;
+}
+
+.BBTagListAll {
+	display:block;
+	padding:0;
+	margin:0;
+}
+
+.BBTagItemAll {
+	display:block;
+	padding:0;
+	margin:0;
+}
+
+.BBTagDelimiterAll {
+	display:none;
+}
+
+.Ev2_ValidationSummary {
+	color:red;
+}
+
+.BBEventRegSequenceMapStep {
+	margin-right:0;
+}
+
+.BBEventRegSequenceMapStepItem {
+	background-color: $form-header-row-background-color-alt;
+	white-space:normal;
+	word-wrap:break-word;
+	color: $site-primary-color;
+	font-size: $body-font-size !important;
+	border: 0;
+	@include border-radius(0);
+}
+
+.BBEventRegSequenceMapStepLink:link {font-weight: 400;}
+.BBEventRegSequenceMapStepLink:hover {
+	background-color:transparent;
+	border-bottom: 0;
+	text-decoration: none;
+}
+
+.BBEventRegSequenceMapCurrentStepItem {
+	background-color:$form-header-row-background-color;
+	color: $content-primary-background-color;
+}
+
+.BBEventRegSequenceMapNavigationNextButton {
+	margin-bottom:15px;
+	margin-left:15px;
+	padding:8px;
+	@include border-radius(0);
+}
+
+.BBEventRegSequenceMapNavigationNextButton:hover {
+	cursor:pointer;
+}
+
+input[type="button"].BBEventRegSequenceMapNavigationPreviousButton {
+	color: $link-color !important;
+	margin-bottom:15px;
+	@include box-shadow(none);
+	background: transparent !important;
+	margin-left:15px;
+	text-decoration:underline;
+}
+
+.BBEventRegSequenceMapNavigationPreviousButton:hover {
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.BBEventRegSequenceMapContentContainer {
+	width:100%;
+	margin-left: 0;
+	line-height: $body-line-height;
+}
+
+.BBEventRegSequenceMapNavigationContainer {
+	clear:right;
+}
+
+.Ev2_SummaryHeader {
+	font-weight:700;
+}
+
+.Ev2_SummaryRow {
+	display:table-row;
+	font-size: $body-font-size;
+}
+
+.Ev2_SummaryCell {
+	display:table-cell;
+	padding:.45em 1rem 0 0;
+	white-space:normal;
+}
+
+.Ev2_SummaryEventColumn {
+	text-align:right;
+	width:auto;
+}
+
+.Ev2_SummaryPriceRow {
+	display:table-row;
+}
+
+.Ev2_SummaryPriceTypeColumn {
+	width:auto;
+}
+
+.Ev2_SummaryQuantityColumn {
+	width:50px;
+	text-align:right;
+}
+
+.Ev2_SummaryPriceColumn {
+	width:100px;
+	text-align:right;
+}
+
+.Ev2_SummaryTotal {
+	font-weight:700;
+	
+	.Ev2_SummaryCell {
+		padding-top: 0;
+	}
+}
+
+.BBEventRegSequenceMapNavigationFinishButton {
+	margin-bottom:15px;
+	margin-left:15px;
+	@include border-radius(0);
+}
+
+.BBEventRegSequenceMapNavigationFinishButton:hover {
+	cursor:pointer;
+}
+
+.Ev2_RegistrationEventTitleContainer {
+	display:block;
+	margin-bottom:1rem;
+	line-height: 1;
+}
+
+.Ev2_RegistrationEventDescContainer {
+	display:block;
+	margin-bottom:8px;
+}
+
+.Ev2_RegistrationEventDateContainer, .Ev2_RegistrationEventTimeContainer {
+	display:inline-block;
+	margin:0.5em 0 1.75em;
+	width: 48%;
+}
+
+.Ev2_RegistrantContainer {
+	padding:0;
+	width: 100%;
+	background: transparent;
+	border: 0;
+	@include border-radius(0);
+}
+
+.Ev2_RegistrationEventDescContainer + .Ev2_RegistrantContainer {
+			border-top: 0;
+			padding-top: 0;
+		}
+
+.Ev2_Checkmark {
+	background-image:url(images/checkmark_green_2_16.png);
+	background-repeat:no-repeat;
+	display:none;
+	min-width:16px;
+	min-height:16px;
+	margin:0 0 0 15px;
+	vertical-align:text-top;
+}
+
+.Ev2_RegistrantLeft {
+	float:left;
+}
+
+.Ev2_RegistrantFieldCell {
+	width:100%;
+	float: left;
+	position: relative;
+	> div {
+		display: inline-block;
+		text-align: right;
+		padding: 8px 0.438rem 0 0;
+		width: 30%;
+	}
+	label { font-weight: $form-label-font-weight; }
+	
+	label[id*="ctlRegBox"] {
+		display: block;
+	}
+	
+	input[type="checkbox"]+label[id*="ctlRegBox"] {display: inline-block;}
+	
+	input[type="text"] {max-width: 300px;}
+}
+
+.Ev2_RegistrantAddressControlCell {
+	float: left;
+	label {
+		display: inline-block;
+		text-align: right;
+		padding: 8px 0.438rem 0 0;
+		width: 30%;
+		float: left;
+		position: relative;
+	}
+	input[type="text"], select, textarea {
+		max-width: 300px;
+		float: left;
+		display: inline-block;
+		position: relative;
+		clear: right;
+		margin-bottom: $form-input-bottom-margin;
+		}
+}
+
+.Ev2_PhoneEmailSeparator {
+	clear:both;
+}
+
+.Ev2_RegistrationGroups {
+	padding:0;
+}
+
+.Ev2_RegistrantsContainer {
+	padding:0;
+}
+
+.Ev2_RegistrantAddressForAllContainer {
+	padding:0;
+}
+
+.Ev2_RegistrantUseBillingContainer {
+	padding:0 0 1.25em;
+}
+
+.Ev2_RegistrantEventHeader {
+	margin-bottom:5px;
+}
+
+.Ev2_RegistrantHeader {
+
+}
+
+.Ev2_RegistrantAddressContainer {
+	padding:10px 0 25px;
+}
+
+.Ev2_RegistrantAddressHeader {
+	font-weight:700;
+	margin: 1em 0 $form-input-bottom-margin;
+}
+
+.Ev2_RegistrantAddressControlLabel {
+	float:left;
+	overflow:hidden;
+}
+
+.Ev2_RegistrantAddressControlCell {
+	clear:both;
+}
+
+.Ev2_RegistrantAddressControlRequire {
+	float:left;
+	margin-left:1%;
+}
+
+select.Ev2_RegistrantAddressControlDropDown {
+	float:left;
+	clear:right;
+	width: auto;
+}
+
+select.Ev2_RegistrantInput.Ev2_RegistrantDropDown.Ev2_RegistrantAddressControlDropDown {}
+
+// Event Reg 2.0 Step 2 Zip Code
+.Ev2_RegistrantContent input[id*="Zip"] {width: 28.5%;}
+
+.Ev2_AttributeContent input.BBFormTextbox.Ev2_AttributeTextBox {width: 50%;}
+
+.Ev2_RegistrantTextBox {
+	float:left;
+	clear:both;
+}
+
+.Ev2_RegisterYou {margin: 1em 0;}
+
+.Ev2_RegistrantTextArea {
+	float:left;
+	clear:both;
+}
+
+.Ev2_RegistrantContent {
+}
+
+.Ev2_RegistrantContent input[type="text"] {
+}
+
+.Ev2_RegistrantContent textarea {
+}
+
+.Ev2_RegistrantLink {
+	float:right;
+	display: inline-block;
+	padding:0 0 .5em;
+}
+
+.Ev2_RegistrantLink a {
+font-size: $body-font-size;
+@include link-style();
+}
+
+.Ev2_DidYouMeanToRegisterAs {
+	margin-left:10px;
+}
+
+.Ev2_SameAsPreviousTable {
+	display:table;
+	table-layout:fixed;
+	width:100%;
+}
+
+.Ev2_SameAsPrevious_Row {
+	display:table-row;
+}
+
+.Ev2_SameAsPrevious_Item {
+	display:table-cell;
+	padding:5px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:33%;
+}
+
+.Ev2_TitleCheckbox {
+	margin:0 $icon-default-padding 0 0;
+	width:20px;
+	height:20px;
+}
+
+.Ev2_TitleLabel {
+	margin-bottom: 1em;
+	display: block;
+	line-height: 1;
+}
+
+.Ev2_DateTimeContainer {
+	margin:0;
+}
+
+.Ev2_DateTimeLeftContainer {
+	display:inline-block;
+	float:left;
+	width:48%;
+	min-height:0;
+}
+
+.Ev2_DateTimeRightContainer {
+	display:inline-block;
+	float:left;
+	width:48%;
+	min-height:0;
+}
+
+.Ev2_DateHeaderLabel {
+	display:block;
+	margin-bottom:4px;
+	margin-top:8px;
+	text-align:center;
+	width:auto;
+}
+
+.Ev2_DateHeaderLabel:empty {
+	display:none;
+}
+
+.Ev2_DateContainer {
+	display:block;
+	margin:0 ;
+	width:95%;
+	background-image: none;
+	
+	.Ev2_DateLabel {
+		font-size: 1rem;
+		color: #000;
+		font-weight: 400;
+		padding: 0;
+		margin-left: 0;
+		&::before {
+			content: '\f073';
+			font-family: $icon-font-family;
+			font-size: 2rem;
+			color: $icon-button-color-primary;
+			margin-right: .3em;
+			top: .1em;
+			position: relative;
+		}
+	}
+}
+
+.Ev2_RegistrationEventDateContainer {
+	.Ev2_RegistrationEventDate {
+		font-size: 1rem;
+		font-style: normal;
+		color:#000;
+		font-weight: 400;
+		padding: 0;
+		margin-left: 0;
+		&::before {
+			content: '\f073';
+			font-family: $icon-font-family;
+			font-size: 2rem;
+			color: $icon-button-color-primary;
+			margin-right: $icon-default-padding;
+			top: .1em;
+			position: relative;
+		}
+	}
+}
+
+.Ev2_DateLabel {
+	display:block;
+	width:auto;
+}
+
+.Ev2_TimeContainer {
+	display:block;
+	margin:0 0 0 20px;
+	width:95%;
+	background-image: none;
+}
+
+.Ev2_TimeLabels {
+	display:block;
+	width:auto;
+	font-size: 1rem;
+	padding: 0;
+	
+	&::before {
+		content: '\f017';
+		font-family: $icon-font-family;
+		font-size: 2rem;
+		color: $icon-button-color-primary;
+		margin-right: .3em;
+		top: .1em;
+		position: relative;
+		}
+}
+
+.Ev2_RegistrationEventTime {
+	display:block;
+	width:auto;
+	font-size: $body-font-size;
+	font-style: normal;
+	font-weight: 400;
+	color: $body-font-color;
+	&::before {
+		content: '\f017';
+		font-family: $icon-font-family;
+		font-size: 2rem;
+		color: $icon-button-color-primary;
+		margin-right: $icon-default-padding;
+		top: .1em;
+		position: relative;
+		}
+}
+
+.Ev2_TimerContainer {
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	min-height: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	
+	.Ev2_TimerLabel {
+		float: left;
+		position: relative;
+		display: inline-block;
+	}
+	
+	.Ev2_Timer {
+		font-weight: 700;
+		color: $form-header-row-background-color;
+		float: left;
+		position: relative;
+		display: inline-block;
+		margin-left: $icon-default-padding;
+		margin-right: 0;
+		font-size: 1.15rem;
+	}
+}
+
+.Ev2_StartTimeLabel {
+	letter-spacing:0;
+	font-size: 1rem;
+	color: #000;
+}
+
+.Ev2_EndTimeLabel {
+	letter-spacing:0;
+	font-size: 1rem;
+	color: #000;
+}
+
+.Ev2_TimespanSeparatorLabel {
+	vertical-align:top;
+	display: inline-block;
+	padding-top: 4px;
+}
+
+.Ev2_DescriptionContainer {
+	display:block;
+	width:97%;
+	margin:1.5em 0 0;
+	padding:0;
+	font-size: $body-font-size;
+	// Add this style if more than one event is available
+	div[id*="ctlDescription"] {
+		display: inline-block;
+		
+		&:before {
+		content: '\f05a';
+		font-family: $icon-font-family;
+		color: #999;
+		font-size: 1rem;
+		padding-right: $icon-default-padding;
+		}
+
+	}
+}
+
+.Ev2_PriceTypesContainer {
+	margin:1em 0 0;
+}
+
+.Ev2_PriceTypesTable {
+	display:table;
+	width:98%;
+	border: 0;
+}
+
+.Ev2_PriceTypesHeader {
+	display:table-header-group;
+	text-align:center;
+	background: $site-accent-color;
+	
+	.Ev2_PriceTypesCell {
+		@include row-heading();
+		font: { 
+			weight: 400;
+			size: $body-font-size;
+			}
+	}
+}
+
+.Ev2_PriceTypesCell {
+	display:table-cell;
+	border-right:0;
+	text-align:left;
+	vertical-align:middle;
+	padding:.45em 1rem;
+	white-space:normal;
+	line-height: 1.3;
+	font: {
+		size: $body-font-size;
+		weight: 700;
+	}
+	color: $body-font-color;
+	
+	span[id*="lblPrice"] {
+		position: relative;
+		display: block;
+		top: -6px;
+	}
+	
+	&:nth-child(2) { text-align: center; }
+	
+}
+
+// Event Reg 2.0 inline stylesheet overrides
+
+.AdditionalDonation_Caption {
+	display: inline-block !important;
+	margin: 0 !important;
+}
+.AdditionalDonation_Error {font-size: $body-font-size;}
+.AdditionalDonation_Currency 
+{
+	margin-left: 5px !important;
+	font-size: $body-font-size;
+}
+input.AdditionalDonation_Amount {
+	display: inline-block !important;
+	width: 30% !important;
+}
+
+.Ev2_PriceTypesRow {
+	display:table-row;
+	background-color:#fff; // Alt Row Bg color here 
+	
+	.Ev2_PriceTypesCell {
+		font-weight: 400;
+		font-size: $body-font-size;
+		color: $body-font-color;
+		border-bottom:  1px solid #dddddd;
+		
+		.Ev2_PriceCount {font-weight: 300;}
+	}
+	.Ev2_PriceTypesCell.Ev2_PriceTypeQtyColumn {text-align: center;}
+	
+	&:nth-child(odd){
+		background-color: #fff;
+	}
+}
+
+.Ev2_PriceTypesCell.Ev2_PriceTypeValidatorColumn .Ev2_PriceDescriptionCell {
+	text-align: left;
+	font-weight: 400;
+	padding-top: .75em;
+}
+
+.Ev2_PriceTypeNameColumn {
+	width:28%;
+}
+
+.Ev2_PriceTypeQtyColumn input[id*="txtQty"][type="text"] {
+	width:30px;
+	text-align:center;
+	font-size: $body-font-size;
+	padding: 3% 3% 1%;
+}
+
+.Ev2_PriceTypeValidatorColumn {
+	width:50%;
+}
+
+label.Ev2_PriceName.BBFieldCaption {
+	white-space:normal;
+	font-weight:400;
+	text-align: center;
+	padding: 0;
+	font-family: $body-font-family;
+	line-height: $body-line-height;
+	
+	label.Ev2_PriceTypesCell {
+		font-weight: 300;
+	}
+}
+
+.Ev2_DonationContainer {
+	margin:25px 0 0;
+}
+
+.Ev2_EventContainer {
+	margin:0;
+	
+	input[type="checkbox"] + label {
+		display: inline-block;
+	}
+	
+	> input[type="checkbox"].Ev2_TitleCheckbox + label.Ev2_TitleLabel {
+		margin-top: .5em;
+	}
+}
+
+.Ev2_EventContainer + .Ev2_EventContainer{
+		margin: 1em 0;
+		border-top: 1px solid #ccc;
+		padding-top: 1em;
+
+	}
+
+.Ev2_SummaryContainer {
+	margin:20px 0;
+	clear: both;
+	float: left;
+	
+	.Ev2_SummaryHeader {
+		display: block;
+		color: #fff;
+		background: $form-header-row-background-color;
+		padding: $table-cell-heading-padding;
+		line-height: 1;
+		margin-bottom: 0;
+	}
+	
+	.Ev2_SummaryRow {
+		background: $form-header-row-background-color-alt; //#F9F9F9
+		.Ev2_SummaryCell {
+			padding: $table-cell-heading-padding;
+			}
+	}
+}
+
+.Ev2_OrgRegContainer {
+	width:auto;
+	float:left;
+	display:inline-block;
+	position: relative;
+}
+
+.Ev2_OrgRegText {
+	position: relative;
+	input[type="checkbox"] {
+		margin: 0;
+		padding: 0;
+		display: none;
+	}
+	label[for*="chkOrgRegistration"] {
+		display: block;
+		position: relative;
+		background: #efefef; /* Old browsers */
+background: -moz-linear-gradient(top,  #efefef 0%, #f7f7f7 50%, #f4f4f4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(50%,#f7f7f7), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #efefef 0%,#f7f7f7 50%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #efefef 0%,#f7f7f7 50%,#f4f4f4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #efefef 0%,#f7f7f7 50%,#f4f4f4 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #efefef 0%,#f7f7f7 50%,#f4f4f4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+		padding: 1em;
+		cursor: pointer;
+		text-shadow: 1px 1px 0 #FFFFFF;
+		@include box-shadow(0 -2px 2px 0 #D9D9D9 inset);
+		font: { 
+			weight: 400;
+			}
+	&::before {
+		content: '\f0f7';
+		font-family:$icon-font-family ;
+		display: inline-block;
+		padding-right: $table-cell-heading-padding;
+		}
+	&:hover {
+		@include box-shadow(0 1px 2px 0 #D9D9D9);
+		}
+	}
+}
+
+.Ev2_RegistrationStepContainer {
+	margin: 0;
+	font-size: $body-font-size;
+}
+
+.Ev2_PriceDescriptionCell {
+	display:block;
+	text-align:left;
+}
+
+.Ev2_Step1QtyValidation {
+	display:block;
+	text-align:left;
+	color:red;
+}
+
+.Ev2_BillMeLaterContainer {
+	width:150px;
+	height:46px;
+	background-color:#ffe8c8;
+	float:right;
+	clear:right;
+	border:1px solid #797979;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	display:block;
+	margin-right:25px;
+	margin-bottom:10px;
+}
+
+.Ev2_BillMeLaterText {
+	margin-top:12px;
+	text-align:center;
+}
+
+.Ev2_AttributeCheckListContainer {
+	height:auto;
+}
+
+.Ev2_AttributesContainer {
+	padding:0;
+}
+
+.Ev2_AttributesItem {
+	margin:0 ;
+	display: inline-block;
+	width: 30%;
+	padding: 8px 0.438rem 0 0;
+	text-align: right;
+	
+	> span {
+		font-weight: 700;
+	}
+}
+
+.Ev2_AttributesItemRequired {
+	color:Red;
+}
+
+.Ev2_AttributesHorizontalLine {
+	margin:20px 0;
+}
+
+.Ev2_AttributeContent {
+	margin:0 !important;
+	
+	.Ev2_AttributesItem + div {
+		display: inline-block;
+		width: auto;
+		
+		input[type="text"] {width: 100%;}
+	}
+}
+
+.PaymentPart_CartCell_Error {
+	background-color:#FEE;
+}
+
+.PaymentPart_SectionHeading {
+	text-align:left;
+}
+
+.PaymentPart_CartDeliveryMethodCaption {
+	white-space:nowrap;
+}
+
+.PaymentPart_CartSubtotalCaption {
+	white-space:nowrap;
+}
+
+.PaymentPart_CartSubtotal {
+	white-space:nowrap;
+}
+
+.PaymentPart_DiscountCodeContainer {
+	float:left;
+	margin:0 0 8px;
+	padding:0 10px 0 0;
+	text-align:left;
+	width:auto;
+}
+
+.PaymentPart_CartSummaryDetails {
+	float:right;
+}
+
+.PaymentPart_DiscountCodeDetails {
+	float:left;
+}
+
+.PaymentPart_CartCell_CurrencyError {
+	background-color:#FFA;
+}
+
+.PaymentPart_CartCell_ConvertedCurrencyMessage {
+	background-color:#FFA;
+}
+
+.PaymentPart_CartCell_RequireRegistration {
+	background-color:#FFA;
+}
+
+.PaymentPart_CartOptions {
+	margin-bottom:8px;
+	padding:2px 0 4px;
+}
+
+.PaymentPart_Cart {
+	border:1px solid #CCC;
+	margin-bottom:10px;
+}
+
+.PaymentPart_CartList {
+	width:100%;
+}
+
+.PaymentPart_CartHeader {
+	font-size:9pt;
+}
+
+.PaymentPart_CartHeaderCell {
+	margin:0;
+	padding:3px 5px;
+}
+
+.PaymentPart_CartHeaderDescriptionCell {
+	text-align:left;
+}
+
+.PaymentPart_CartHeaderCurrencyCell {
+	text-align:center;
+}
+
+.PaymentPart_CartHeaderQuantityCell {
+	text-align:center;
+}
+
+.PaymentPart_CartCell {
+	padding:5px;
+	border-top:1px solid $site-accent-color;
+}
+
+.PaymentPart_CartQuantityCell {
+	text-align:center;
+}
+
+.PaymentPart_CartCurrencyCell {
+	text-align:center;
+}
+
+.PaymentPart_CartItemType {
+	border-top:1px solid #CCC;
+	padding:5px 5px 2px;
+}
+
+.PaymentPart_CartSummary {
+	background-color:#F1F1F1;
+	text-align:right;
+	margin:0;
+}
+
+.PaymentPart_CartSummaryCaptionContainer {
+	float:left;
+	margin:0 0 8px;
+	padding:0 10px 0 0;
+	text-align:right;
+	width:150px;
+}
+
+.PaymentPart_CartSummaryFieldContainer {
+	float:left;
+	margin:0;
+}
+
+.PaymentPart_Controls {
+	padding:5px 0;
+}
+
+.PaymentPart_PesonalInfoCheckbox {
+	margin-left:150px;
+}
+
+.PaymentPart_ShippingList {
+	padding:0;
+	margin:0;
+}
+
+.PaymentPart_ShippingListItem {
+	padding:5px;
+	margin:10px 0 0;
+	list-style:none;
+	border-bottom:1px solid $site-accent-color;
+}
+
+.PaymentPart_ShippingListItemInfoItem {
+	display:block;
+}
+
+.PaymentPart_ShippingListItemInfoName {
+	font-weight:700;
+}
+
+.SuggestedContentContainer {
+	display:table;
+	margin-top:6px;
+	width:100%;
+}
+
+.SuggestedContentOpeningBlurb {
+	display:block;
+}
+
+.SuggestedContentList {
+	display:block;
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+	clear:none;
+}
+
+.SuggestedContentOrientation {
+	width:160px;
+}
+
+.SuggestedContentListItem {
+	float:left;
+	height:85px;
+	margin:3px;
+	max-height:125px;
+	min-height:70px;
+	overflow:hidden;
+	padding:0;
+	width:150px;
+}
+
+.SuggestedContentTitleLink {
+	display:block;
+}
+
+.SuggestedContentSummary {
+	display:block;
+}
+
+.SuggestedContentListItemFTI {
+	height:auto;
+	min-height:100%;
+	max-height:100%;
+}
+
+.PaymentPartSummary_CartCell_Error {
+	background-color:red;
+}
+
+.PaymentPartSummary_Container {
+	border:1px solid #CCC;
+	padding:8px;
+	width:275px;
+}
+
+.PaymentPartSummary_CartOptions {
+	text-align:right;
+}
+
+.PaymentPartSummary_Cart {
+	border-bottom:1px solid #CCC;
+	border-top:1px solid #CCC;
+	margin-top:3px;
+}
+
+.PaymentPartSummary_CartList {
+	background-color:#F1F1F1;
+	padding:2px;
+}
+
+.PaymentPartSummary_CartCurrencyCell {
+	padding:2px;
+	white-space:nowrap;
+}
+
+.PaymentPartSummary_CartItemUnitPrice {
+	text-align:right;
+	width:45px;
+}
+
+.PaymentPartSummary_CartSummaryCaptionContainer {
+	float:left;
+	text-align:right;
+	width:130px;
+}
+
+.PaymentPartSummary_CartSummaryFieldContainer {
+	float:right;
+	margin-right:47px;
+}
+
+.PaymentPartSummary_CartSummaryList {
+	margin-bottom:30px;
+}
+
+.PersonalNotesDiv {
+	margin-bottom:10px;
+}
+
+.PersonalNotesButton {
+	text-align:center;
+}
+
+.PersonalNotesValidation {
+	color:Red;
+}
+
+.PersonalNotesDropDown {
+	width:304px;
+}
+
+.PersonalNotesWrapper {
+	width:auto;
+}
+
+.GroupJoinLinkDisabled {
+	display:none;
+}
+
+.GroupViewLinkDisabled {
+	display:none;
+}
+
+.GroupViewLink,.GroupViewLink:hover,.GroupViewLink:visited {
+	-moz-box-shadow:inset 0 1px 0 0 $content-primary-background-color;
+	-webkit-box-shadow:inset 0 1px 0 0 $content-primary-background-color;
+	box-shadow:inset 0 1px 0 0 $content-primary-background-color;
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+	color:#777;
+	font-size:15px;
+	font-weight:700;
+	padding:6px 20px;
+	text-decoration:none;
+}
+
+.GroupJoinLink,.GroupJoinLink:hover {
+	-moz-box-shadow:inset 0 1px 0 0 $content-primary-background-color;
+	-webkit-box-shadow:inset 0 1px 0 0 $content-primary-background-color;
+	box-shadow:inset 0 1px 0 0 $content-primary-background-color;
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+	color:#777;
+	font-size:15px;
+	font-weight:700;
+	padding:6px 20px;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+table.DirectoryFormTable {width: 100%;}
+
+.DirectoryFormSelectList {
+	max-width:300px;
+}
+
+.DirectoryFormButtonCell {
+	text-align:right;
+	padding: $form-input-bottom-margin .5rem 0 0;
+}
+
+.DirectoryFormTextBox {
+	width:225px;
+}
+
+.ProfileFormSelectList {
+	max-width:260px;
+}
+
+.ProfileFormRequiredFieldMarkerTD {
+	vertical-align:top;
+}
+
+.ProfileFormTextbox {
+	width:230px;
+}
+
+.TransactionManagerFieldContainer .BBFieldCaption {
+	padding-top:4px;
+	padding-right:10px;
+}
+
+.BBFormTitle.EventItemTitleName {
+	line-height:normal;
+}
+
+.BBFormTitle.EventItemTitleDescription {
+	letter-spacing:0;
+	text-transform:none;
+}
+
+.BBFormTitle.EventItemTitleTime {
+
+	text-transform:none;
+}
+
+.BBFormTable.EventTable table[id*="Wizard1"][style*="collapse"] table.w100p td[style*="25px"] {
+	display:none;
+	//width: auto !important;
+}
+
+.BBFormTextbox.JobSearchTextboxNarrow {
+	width:50%;
+}
+
+.w100p.BBFormTable.SearchJobFormTable {
+	width:80%;
+}
+
+a.DiscussionGroupNewTopicButtonWAI {
+	font-size: $body-font-size;
+}
+
+.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table[style]
+{
+	margin-left: 0 !important;
+	width: 80%;
+	
+	td {
+		padding: 0;
+		
+	&:first-child {
+		width: 115px;
+		
+		label[id*="lblTxtYear"] {
+			display: inline-block;
+			padding-top: 8px;
+			text-align: center;
+			width: 25px;
+			}	
+		}
+	}
+}
+
+
+// Search 
+
+table.BBFormTable.SearchFormTable {
+	width: 100%;
+	
+	.BBSearchDescriptionStyle {white-space: normal;}
+	
+	td {
+		vertical-align: top;
+		padding: 0;
+		border-bottom: 0;
+	}
+	
+	td.BBFormDescription.SearchFormDescription {padding-bottom: .5em;}
+	
+	tr:nth-child(2) { 
+		table {
+		
+		td:first-child {
+			padding: 0;
+			text-align: left;
+			
+			label.BBFieldCaption.SearchFieldCaption {
+				@include hide-text;
+				font-size: 0;
+				visibility: hidden;
+				
+				&::after {
+					display: block;
+					font-size: .85rem;
+					visibility: visible;
+					width: 100%;
+					text-align: right;
+					position: relative;
+					right: -3px;
+					top: -18px;
+					height: 31px;
+					padding: 0.95em 0.65em 0.55em;
+					@include border-radius(5px 0 0 5px);
+					border: 1px solid #ccc;
+					background-color: $site-accent-color;
+					content: '\f002';
+					color: $icon-button-color-primary;
+					font-family: $icon-font-family;
+					}
+				}
+			}
+		td:nth-child(2) {
+			width: 70%;
+			
+			input.SearchTextBox { 
+				width: 100%;
+				outline: none;
+				}
+			}
+		td:nth-child(3) {
+				input.BBFormSubmitButton.SearchButton {
+					padding: .4rem 1rem;
+					}
+			}
+		}
+	}
+	
+	table.SearchTable {
+		tr.BBListOddRowStyle.SearchOddRowStyle {background-color: #fff;}
+	
+		td {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	
+		td.BBSearchDescriptionStyle {padding-bottom: 1.5em;}
+		
+		a[id*="rpResultList"] {
+			display: block;
+			padding-top: 1em;
+			
+			&::after {
+				content: '\f0a9';
+				font-family: $icon-font-family;
+				display: inline-block;
+				color: $site-primary-color;
+				text-decoration: none;
+				padding-left: .45em;
+			}
+		}
+	}
+}
+
+// Personal Notes
+
+table.BBFormTable .BBFormTitle.BBNotesTitle {
+	padding: 1rem 0 .5rem;
+}
+
+.BBNotesInstructions {padding-bottom: 1rem;}
+
