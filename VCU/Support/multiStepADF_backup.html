@@ -1,0 +1,530 @@
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/easyXDM/2.4.17.1/easyXDM.min.js"></script> -->
+
+<script type="text/javascript">
+    ///// Part configuration
+
+    // Test Designation ID that works
+    //var designationId = "f3a7750a-a12f-45ff-ab5c-557e081a242f";
+
+    // Designation Search QUID
+    var designationSearchId = "70e67c33-39bc-43b0-8441-4caf81b4d4ee";
+
+    var merchantAccountId = "94083cfe-3ea6-4320-a040-4f9c37a26f7c";
+    var bbisURL = 'https://bbis59760desval.blackbaudhosting.com/'; //URL to BBIS site
+    ///// End Part configuration
+</script>
+
+<style type="text/css">
+.BBElementBlock
+{
+    width: 220px;
+    height: 44px;
+    text-align:center;
+    margin-left: -110px;
+    margin-top: -22px;
+    padding: 5px;
+    box-shadow:0 2px 5px #666666;
+    border: 1px solid #999999;
+    background: url(images/ajaxwaitbar.gif) no-repeat scroll center 25px Transparent;
+    background-color: #F5F5F5
+}
+.BBPageBlock {position: fixed;left: 50%;top: 50%;}
+.donationForm .validation{color: Red;}
+.donationForm .confirmation {min-height:400px;}
+.donationForm .invisible, #generalTribute {display: none;}
+</style>
+
+    <div class="donationForm">
+        <div class="validation"></div>
+
+        <div class="form">
+            <fieldset class="row designationInfo">
+                <h4 class="sectionTitle">Gift Information</h4>
+
+                <h5>I'd like to support:</h5><select id="designation" name=" ">
+                    <option value="" selected="selected">
+                        select a value
+                    </option>
+
+                </select> <a href="/online-giving/designation-search">Search All Funds</a>
+            </fieldset>
+
+            <fieldset class="row amountInfo">
+                <h5>Gift amount:</h5>
+
+                <ul>
+                    <li><input id="amt500" type="radio" name="radioAmount" value="500"> <label for="amt500"><span class="value">$500</span></label></li>
+
+                    <li><input id="amt100" type="radio" name="radioAmount" value="100" checked="checked"> <label for="amt100"><span class="value">$100</span></label></li>
+
+                    <li><input id="amt25" type="radio" name="radioAmount" value="25"> <label for="amt25"><span class="value">$25</span></label></li>
+
+                    <li class="other"><input id="amtOther" type="radio" name="radioAmount" value="-1"> <label for="amtOther"><span class="term">Enter an amount</span></label> <input id="txtAmount" type="text" placeholder="Enter an amount" class="BBFormTextbox"></li>
+                </ul>
+            </fieldset>
+
+            <fieldset class="row giftType">
+                <h5>Please make this gift as</h5>
+
+                <ul>
+                    <li><input id="recOneTime" type="radio" name="radioRecurrence" value="0" checked="checked"> <label for="recOneTime">A one time gift.</label></li>
+
+                    <li><input id="recPledge" type="radio" name="radioRecurrence" value="1"> <label for="recPledge">Pledge payment.</label></li>
+                </ul>
+            </fieldset>
+            <fieldset class="row tribueInformation">
+                <h4 class="sectionTitle">Tribute Information</h4>
+
+                <ul>
+                    <li><input type="checkbox" id="includeTribue"> <label for="includeTribue">Include Tribute:</label> </li>
+                </ul>
+
+                <div class="invisible" id="tribute">
+                    <div class="Kind">
+                        <h5>What kind of :</h5>
+
+                        <ul>
+                            <li><input id="kindSpecific" type="radio" name="radioTribute" value="1" checked="checked"> <label for="kindSpecific"><span class="term">Specific</span></label></li>
+
+                            <li><input id="kindGeneral" type="radio" name="radioTribute" value="2"> <label for="kindGeneral"><span class="term">General</span></label></li>
+                        </ul>
+                    </div>
+
+                    <div id="specificTribute">
+                        <ul>
+                            <li>
+                            <label for="tributeID">Tribute ID:</label> <input type="text" class="mediumWidth" id="tributeID" maxlength="60" placeholder="enter a tribute GUID"></li>
+                        </ul>
+                    </div>
+
+                    <div id="generalTribute">
+                        <ul>
+                            <li>
+                            <label for="tributeFirstName">First name:</label> <input type="text" class="mediumWidth" id="tributeFirstName" placeholder="enter a first name">
+                        </li>
+
+                        <li>
+                            <label for="tributeLastName">Last name:</label> <input type="text" class="mediumWidth" id="tributeLastName" placeholder="enter a last name">
+                        </li>
+
+                        <li>
+                            <label for="tributeType">Type:</label> <input type="text" class="mediumWidth" id="tributeType" placeholder="enter a tribute type">
+                        </li>
+
+                        <li>
+                            <label for="tributeDescription">Description:</label> <input type="text" class="mediumWidth" id="tributeDescription" placeholder="enter a description">
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="row additionalInformation">
+                <h4 class="sectionTitle">Additional Information</h4>
+                <ul>
+                    <li>
+                <label for="attribute1ID">Matching Gift:</label> <input class="mediumWidth" type="text" id="attribute1ID" placeholder="Type employer or company name here"></li>
+
+                <li><label for="attribute2ID">Class of:</label> <input class="mediumWidth" type="text" id="attribute2ID" placeholder="enter class year here"></li></ul>
+            </fieldset>
+            <input id="donate" class="submit" type="button" value="Step 2 - Donor Info">
+        </div>
+    </div>
+
+<script type="text/javascript">
+    (function () {
+        var blocked, donationService, part, partInstanceId, addressLinesCaption, cityCaption, stateCaption, postCodeCaption;
+
+        ///// Helper functions
+        function setValidationMessage(html) {
+            part.find(".validation").html(html);
+        }
+
+        function convertErrorToString(error) {
+            if (error) {
+                if (error.Message) return error.Message;
+                switch (error.ErrorCode) {
+                    case 101:
+                        return error.Field + " is required.";
+                    case 105:
+                        return error.Field + " is not valid.";
+                    case 106:
+                        return "Record for " + error.Field + " was not found.";
+                    case 203:
+                        return "Donation not completed on BBSP.";
+                    default:
+                        return "Error code " + error.ErrorCode + ".  " + error.Message;
+                }
+            }
+        }
+
+        function convertErrorsToHtml(errors) {
+            var i, message = "Unknown error.<br/>";
+            if (errors) {
+                message = "";
+                for (i = 0; i < errors.length; i++) {
+                    message = message + convertErrorToString(errors[i]) + "<br/>";
+                }
+            }
+            return message;
+        }
+
+/*
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+          if (phone) {
+            var re = /^[0-9 \+\)\(\-]{6,20}\s?((([xX]|[eE][xX][tT])\.?\s*(\d+))*)$/;
+            return re.test(phone);
+          } else {
+            return true;
+          }
+        }
+*/
+
+        function blockForm() {
+          //if (!blocked) {
+          //      BLACKBAUD.api.blockElement(part);
+          //      blocked = true;
+          //  }
+        }
+
+        function unblockForm() {
+          //  BLACKBAUD.api.unblockElement(part);
+          //  blocked = false;
+        }
+        ///// End Helper Functions
+
+        ///// Main Functions
+
+        function validateFormClientSide() {
+            var errs = "";
+            //Amount
+            if (getDonationAmount() <= 0) {
+                errs += "Gift amount is not valid.<br/>";
+            }
+/*
+            //Last Name
+            if (!part.find("#lastName").val()) {
+                errs += "Last name is required.<br/>";
+            }
+            //Email Address
+            if (!validateEmail(part.find("#emailAddress").val())) {
+                errs += "Email is not valid.<br/>";
+            }
+            //Street Address
+            if (!part.find("#streetAddress").val()) {
+                errs += addressLinesCaption + " is required.<br/>";
+            }
+            //City
+            if (!part.find("#city").val()) {
+                errs += cityCaption + " is required.<br/>";
+            }
+            //Postal Code
+            if (!part.find("#postalCode").val()) {
+                errs += postCodeCaption + " is required.<br/>";
+            }
+            //Phone
+            if (!validatePhone(part.find("#phone").val())){
+                errs += "Phone is not valid.<br/>";
+            }
+            //Organization Name
+            if (part.find("#isCorporate").prop("checked") && !part.find("#organizationName").val()){
+                errs += "Organization name is required if this donation is on behalf of a company.<br/>";
+            }
+*/
+            if (errs === "") {
+                return true;
+            } else {
+                setValidationMessage(errs);
+                return false;
+            }
+        }
+
+        function getDonationAmount() {
+            if (part.find("#amtOther").prop("checked")) {
+                return part.find("#txtAmount").val();
+            } else {
+                return part.find("[name='radioAmount']:checked").val();
+            }
+        }
+
+        function extractDataFromForm() {
+            var paymentMethod, result;
+            var isCorporate = part.find("#isCorporate").prop("checked");
+            var organizationName = "";
+            if(isCorporate){
+                organizationName = part.find("#organizationName").val();
+            }
+            paymentMethod = part.find("[name='paymentMethod']:checked").val();
+          donation = {
+            //MerchantAccountId : merchantAccountId
+          };
+
+          //donation.Donor = {
+              //FirstName: part.find("#firstName").val(),
+              //  LastName: part.find("#lastName").val(),
+              //    EmailAddress: part.find("#emailAddress").val(),
+
+              //  Address: {
+              //      Country: part.find("#country").val(),
+              //      State: part.find("#state").val(),
+              //      City: part.find("#city").val(),
+              //      StreetAddress: part.find("#streetAddress").val(),
+              //      PostalCode: part.find("#postalCode").val()
+              //  }
+          //   };
+
+            if (part.find("#includeTribue").prop("checked")) {
+                var kind = part.find("[name='radioTribute']:checked").val();
+                if(kind === "1") {
+                    result.Gift.Tribute = {
+                      TributeID: part.find("#tributeId").val()
+                    };
+                } else {
+                    result.Gift.Tribute = {
+                      TributeDefinition: {
+                        FirstName : part.find("#tributeFirstName").val(),
+                        LastName : part.find("#tributeLastName").val(),
+                        Type : part.find("#tributeType").val(),
+                        Description : part.find("#tributeDescription").val()
+                      }
+                    };
+                }
+
+                if (part.find("#includeAcknowledgee").prop("checked")) {
+                    result.Gift.Tribute.AcknowledgeeInformation = {
+                        FirstName : part.find("#acknowledgeeFirstName").val(),
+                        LastName : part.find("#acknowledgeeLastName").val(),
+                        Country : part.find("#acknowledgeeCountry").val(),
+                        AddressLines : part.find("#acknowledgeeAddressLines").val(),
+                        City : part.find("#acknowledgeeCity").val(),
+                        State : part.find("#acknowledgeeState").val(),
+                        PostalCode : part.find("#acknowledgeePostalCode").val(),
+                        Phone : part.find("#acknowledgeePhone").val(),
+                        Email : part.find("#acknowledgeeEmail").val()
+                    };
+                }
+              }
+
+
+             donation.Gift = {
+                 PaymentMethod: paymentMethod,
+               Designations: [{
+                    Amount: getDonationAmount(),
+                    DesignationId: $('#designation').val()
+                }]
+             };
+
+            return donation;
+        }
+
+        function submitDonationToServer(data) {
+            onSuccess = function (d) {
+                // For Pledge, go ahead and show the confirmation.  For credit card, you will be redirected to BBSP already.
+                if (d.Donation.TransactionStatus === 1) {
+                    part.find(".form").hide();
+                    part.find(".confirmation").show();
+                    getConfirmationHtml(d.Donation.Id);
+                }
+            };
+
+            onFail = function (d) {
+                setValidationMessage(convertErrorsToHtml(d));
+                unblockForm();
+            };
+
+            blockForm();
+            donationService.createDonation(data, onSuccess, onFail);
+
+          console.log(data);
+        }
+
+        function completeBBSPPayment(id) {
+            onSuccess = function (d) {
+                getConfirmationHtml(id);
+            };
+
+            onFail = function (d) {
+                setValidationMessage(convertErrorsToHtml(d));
+                unblockForm();
+            };
+
+            blockForm();
+            donationService.completeBBSPDonation(id, onSuccess, onFail);
+        }
+
+        function getConfirmationHtml(id) {
+            onSuccess = function (d) {
+                part.find(".confirmation").html(d);
+                unblockForm();
+            };
+
+            onFail = function (d) {
+                setValidationMessage(convertErrorsToHtml(d));
+                unblockForm();
+            };
+
+            donationService.getDonationConfirmationHtml(id, onSuccess, onFail);
+        }
+
+
+        function bindDesignationDropdown() {
+                var filter;
+                blockForm();
+                queryService = new BLACKBAUD.api.QueryService({url: bbisURL, crossDomain: false});
+
+                statusFilter = {columnName:'Is active', value:'True'};
+
+                queryService.getResults(designationSearchId, function (d) {
+                    var rows = d.Rows;
+                    $.each(rows, function () {
+                        var values = this['Values'];
+                        $("#designation").append($("<option></option>").val(values[8]).text(values[1]));
+                    });
+                    unblockForm();
+                }, null, [statusFilter]);
+            }
+
+
+        /*
+function bindCountryDropdown() {
+            blockForm();
+            countryService = new BLACKBAUD.api.CountryService();
+            countryService.getCountries(function (d) {
+                $.each(d, function () {
+                    var item = $("#country").append($("<option></option>").val(this["Description"]).text(this["Description"]).attr("id", this["Id"]));
+                });
+
+                $("#country").find("option[value='United States']").attr("selected", "selected");
+                $("#country").change(bindStateDropdown);
+                bindStateDropdown();
+            });
+        }
+
+        function bindStateDropdown() {
+            blockForm();
+            $("#state").empty();
+            var countryId = $("#country").find(":selected").attr("id");
+
+            countryService = new BLACKBAUD.api.CountryService();
+            countryService.getStates(countryId, function (d) {
+                $.each(d, function () {
+                    var item = $("#state").append($("<option></option>").val(this["Abbreviation"]).text(this["Description"]));
+                });
+                unblockForm();
+
+                updateAddressLabels();
+            });
+        }
+
+        function updateAddressLabels() {
+            blockForm();
+            var countryId = $("#country").find(":selected").attr("id");
+
+            countryService = new BLACKBAUD.api.CountryService();
+            countryService.getAddressCaptions(countryId, function (d) {
+                if (!!d) {
+                    addressLinesCaption = d["AddressLines"];
+                    cityCaption = d["City"];
+                    stateCaption = d["State"];
+                    postCodeCaption = d["PostCode"];
+                }
+                else {
+                    addressLinesCaption = "Address lines";
+                    cityCaption = "City";
+                    stateCaption = "State/Providence";
+                    postCodeCaption = "Zip/Postal code";
+                }
+
+                $("#streetAddressLabel").text(addressLinesCaption + ":");
+                $("#cityLabel").text(cityCaption + ":");
+                $("#stateLabel").text(stateCaption + ":");
+                $("#postalCodeLabel").text(postCodeCaption + ":");
+
+                unblockForm();
+            }, function () {
+                unblockForm();
+            });
+        }
+*/
+
+        function onSubmitClick() {
+            var data;
+
+            setValidationMessage("");
+            if (validateFormClientSide()) {
+                data = extractDataFromForm();
+                submitDonationToServer(data);
+            }
+        }
+
+        function setupForm() {
+            bindDesignationDropdown();
+            part.find(".submit").click(function () {
+                onSubmitClick();
+            });
+            part.find("#txtAmount").change(function () {
+                part.find("#amtOther").attr("checked", "checked");
+            });
+            part.find("#includeTribue").click(function () {
+                part.find("#tribute").toggleClass("invisible");
+            });
+            part.find('#kindSpecific').click(function () {
+                part.find('#specificTribute').show();
+                part.find('#generalTribute').hide();
+            });
+            part.find('#kindGeneral').click(function () {
+                part.find('#specificTribute').hide();
+                part.find('#generalTribute').show();
+            });
+
+            function tributeKindChange() {
+                var kind = part.find("[name='radio']:checked").val();
+                if(kind === "1"){
+                    part.find("#specific").removeClass("invisible");
+                    part.find("#general").addClass("invisible");
+                } else {
+                    part.find("#general").removeClass("invisible");
+                    part.find("#specific").addClass("invisible");
+                }
+            }
+
+            part.find("#isCorporate").click(function () {
+              part.find("#organizationNameDiv").toggleClass("invisible");
+            });
+
+        }
+
+        ///// End Main Functions
+
+        ///// On Page Load
+      //$.getScript(BLACKBAUD.api.pageInformation.rootPath + "Client/Scripts/jquery/jquery.blockui.js", function () {
+            //Wait until the blockUI script is loaded before we start loading the page.
+            var t;
+
+            blocked = false;
+            part = $(".donationForm");
+            partInstanceId = part.parents(".BBDonationApiContainer").attr("data-partid");
+            donationService = new BLACKBAUD.api.DonationService(partInstanceId);
+
+            t = BLACKBAUD.api.querystring.getQueryStringValue("t");
+            if (t) {
+                part.find(".form").hide();
+                part.find(".confirmation").show();
+
+                completeBBSPPayment(t);
+            } else {
+                part.find(".form").show();
+                part.find(".confirmation").hide();
+
+                setupForm();
+            }
+
+          // });
+        ///// End Page Load
+
+    } ());
+</script>

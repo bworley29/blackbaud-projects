@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VCU | Online Giving</title>
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="css/creditCard.css" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script src="js/vendor/modernizr.js" type="text/javascript">
+</script>
+    <style type="text/css">
+.zero {
+        margin: 0;
+        padding: 0;
+    }
+    .hide {
+     transition: all 0.5s ease;
+    }
+    .complete {
+        color: #999;
+        float: left;
+        text-decoration: line-through;
+    }
+
+    .complete:hover { text-decoration: none; }
+    .complete:after {
+        font-family: fontawesome;
+        content: '\f046';
+        display: inline-block;
+        float: right;
+        color: rgba(0, 128, 0, 0.6);
+        padding-left: 1em;
+    font-size: .75em;
+    line-height: 2;
+    }
+    .complete:hover::after { content: '\f044'; }
+    .complete.active { text-decoration: none; }
+    .complete.active:after { 
+        content: '\f00d'; 
+        color: rgba(255, 0, 0, 0.6);
+    }
+    input.fundSearch {
+        width: 80%;
+        position: relative;
+        z-index: 1;
+        padding-left: 2.5rem;
+    }
+    input.fundSearch::placeholder {
+       font-style: italic;
+    }
+    a.fa-search:before {
+        display: inline-block;
+        padding-right: 6px;
+    }
+    span.fa-search {
+        display: inline-block;
+        position: absolute;
+        font-size: 1.5rem;
+        color: #ccc;
+        z-index: 200;
+        padding: 6px 0 0 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="large-11 columns">
+            <h1>Support VCU!</h1>
+
+            <p>Today's Virginia Commonwealth University students are a lot like you. They work hard inside and outside the classroom. They strive for excellence and want to succeed in their careers. They are the first in their families to go to college. They bring diversity to campus. And they hope you will consider making an investment in their future and the future of VCU.</p>
+        </div>
+    </div><!--
+<div class="row">
+        <div class="large-9 columns">
+            <i class="fa fa-search">&nbsp;</i>
+<input class="fundSearch" type="text" placeholder="Search All Available Funds">        </div>
+    </div>
+-->
+
+    <div class="row">
+        <div class="large-1 columns">
+            &nbsp;
+        </div>
+
+        <div class="large-8 medium-8 columns">
+            <div class="row">
+                <div class="large-12 columns zero">
+                    <h3>Step 1 - Giving Details</h3>
+                </div>
+            </div>
+
+            <div class="row donateAmount">
+                <div class="row">
+                    <div class="large-6 columns">
+                        <h4>I'd like to support:</h4><select>
+                            <option value="husker">
+                                Greatest Need
+                            </option>
+
+                            <option value="starbuck">
+                                Fund for VCU
+                            </option>
+
+                            <option value="hotdog">
+                                Athletics
+                            </option>
+
+                            <option value="apollo">
+                                Alumni
+                            </option>
+                        </select><a  href="#" data-reveal-id="myModal"><i class="fa fa-search"></i> Search All Funds</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h4>By donating:</h4>
+
+                        <div class="small-4 columns zero">
+                            <input type="radio" name="pokemon" value="Red" id="optOne"><label for="optOne">$30</label> <input type="radio" name="pokemon" value="Blue" id="optTwo" checked="true"><label for="optTwo">$75</label> <input type="radio" name="pokemon" value="Blue" id="optThree"><label for="optThree">$150</label>
+                        </div>
+
+                        <div class="small-3 columns zero left">
+                            <!-- <label class="inline">Other Amount</label> --><input class="inline" type="text" placeholder="Other Amount...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns giftType">
+                        <h4>Please make this a:</h4><input type="checkbox" name="pokemon" value="Red" id="oneTime"><label for="oneTime">One-time gift</label> <input type="checkbox" name="pokemon" value="Blue" id="recGift"><label for="recGift">Recurring gift</label> <input type="checkbox" name="pokemon" value="Blue" id="pledgeGift"><label for="pledgeGift">Pledge gift</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns zero">
+                    <h3>Step 2 - Donor Info</h3>
+                </div>
+            </div>
+
+            <div class="row donorInfo" style="display: none;">
+                <div class="row">
+                    <div class="large-2 columns">
+                        <label>Title:</label> <select>
+                            <option value="husker">
+                                Mr.
+                            </option>
+
+                            <option value="starbuck">
+                                Ms.
+                            </option>
+
+                            <option value="hotdog">
+                                Dr.
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="large-6 columns">
+                        <label>Full Name</label> <input id="fullName" type="text" placeholder="First & Last Name">
+                    </div>
+
+                    <div class="large-2 columns left">
+                        <label>Suffix:</label> <select>
+                            <option value="husker">
+                                Sr.
+                            </option>
+
+                            <option value="starbuck">
+                                Jr.
+                            </option>
+
+                            <option value="hotdog">
+                                III
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-6 columns">
+                        <label>Email</label> <input type="email" required="true" id="email" placeholder="donor@vcu.edu" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns zero">
+                    <h3>Step 3 - Payment Information</h3>
+                </div>
+            </div>
+
+            <div class="row paymentInfo" style="display: none;">
+                <div class="row">
+                    <div class="large-6 columns">
+                        <label>Cardholder Name</label> <input id="cardholder" type="text" placeholder="Name as it appears">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-8 columns">
+                        <fieldset class="credit-card-group">
+                            <legend>Credit Card Information</legend> <label for="card-number">Credit Card Number</label> <input placeholder="1234 5678 9012 3456" pattern="[0-9]*" type="text" class="card-number" id="card-number"> <label for="card-number">Expiration Date</label> <input placeholder="MM/YY" pattern="[0-9]*" type="text" class="card-expiration" id="card-expiration"> <label for="card-number">CVV Number</label> <input placeholder="CVV" pattern="[0-9]*" type="text" class="card-cvv" id="card-cvv"> <label for="card-number">Billing Zip Code</label> <input placeholder="ZIP" pattern="[0-9]*" type="text" class="card-zip" id="card-zip">
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-9 columns">
+                        <a href="#" class="button expand">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="reveal-modal xlarge" data-reveal="">
+            <h2>Search Funds</h2><!-- <p>Please use the form below to search for a particular fund.</p> --><span class="fa fa-search">&nbsp;</span><input class="fundSearch" type="text" placeholder="Search All Available Funds">
+
+            <div class="row">
+                <h4>Funds That Might Interest You.</h4>
+
+                <div class="large-4 columns">
+                    <ul class="pricing-table">
+                        <li class="title">Rams For Life</li><!-- <li class="price">$99.99</li> -->
+
+                        <li class="description">An awesome description for the <strong>Rams For Life Fund.</strong></li>
+
+                        <li class="cta-button"><a class="secondary button" href="#">Make A Gift</a></li>
+                    </ul>
+                </div>
+
+                <div class="large-4 columns">
+                    <ul class="pricing-table">
+                        <li class="title">STAT</li><!-- <li class="price">$99.99</li> -->
+
+                        <li class="description">An awesome description for the <strong>STAT Fund.</strong></li>
+
+                        <li class="cta-button"><a class="secondary button" href="#">Make A Gift</a></li>
+                    </ul>
+                </div>
+
+                <div class="large-4 columns">
+                    <ul class="pricing-table">
+                        <li class="title">Gold</li><!-- <li class="price">$99.99</li> -->
+
+                        <li class="description">An awesome description for the <strong>Gold Fund.</strong></li>
+
+                        <li class="cta-button"><a class="secondary button" href="#">Make A Gift</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+	            <div class="large-12 columns">
+		                <div class="row">
+        <div class="large-12 columns">
+            <h3>Army ROTC General Fund</h3>
+
+            <p>Benefits the Army ROTC; includes facilities, equipment and instructional materials<br>
+            <a href="https://gail.uga.edu/give?id=a01469cf-e8b3-4b26-8076-cf8a0ccfa001">Make a Gift »</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h3>Army ROTC General Fund</h3>
+
+            <p>Benefits the Army ROTC; includes facilities, equipment and instructional materials<br>
+            <a href="https://gail.uga.edu/give?id=a01469cf-e8b3-4b26-8076-cf8a0ccfa001">Make a Gift »</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h3>Army ROTC General Fund</h3>
+
+            <p>Benefits the Army ROTC; includes facilities, equipment and instructional materials<br>
+            <a href="https://gail.uga.edu/give?id=a01469cf-e8b3-4b26-8076-cf8a0ccfa001">Make a Gift »</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h3>Army ROTC General Fund</h3>
+
+            <p>Benefits the Army ROTC; includes facilities, equipment and instructional materials<br>
+            <a href="https://gail.uga.edu/give?id=a01469cf-e8b3-4b26-8076-cf8a0ccfa001">Make a Gift »</a></p>
+        </div>
+    </div>
+
+	            </div>
+            </div>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+        <script src="js/vendor/jquery.js" type="text/javascript">
+</script><script src="js/foundation.min.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+$(document).foundation();
+
+        $(document).ready(function(){
+
+        $('.giftType input[type="checkbox"]').click(function() {
+            
+            $('.donateAmount').slideUp();
+            $('.donorInfo').slideDown();
+            $('.donateAmount').prev().find('h3').removeClass().addClass('complete');
+            $('#fullName').focus();
+        });
+
+
+        $('input#email[type="email"]').blur(function() {
+
+            var emailValidator = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+
+            if ($(this).val().match(emailValidator)) {
+
+                $('.paymentInfo').slideDown();
+                $('.donorInfo').slideUp();
+                $('.donorInfo').prev().find('h3').removeClass().addClass('complete');;
+                $('#cardholder').focus();
+
+            } 
+
+        });
+
+        $('h3.complete').click(function(){
+           
+           $(this).addClass('active');
+           
+           $(this).parent().parent().next().slideDown();
+            
+        });
+        });
+        </script> <script src="js/inputMask.js" type="text/javascript">
+</script> <script src="js/date.js" type="text/javascript">
+</script> <script src="js/app.js" type="text/javascript">
+</script>
+    </div>
+</body>
+</html>

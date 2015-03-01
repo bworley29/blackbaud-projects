@@ -1,0 +1,76 @@
+/*=========================================================================================
+                     ::7. FORMS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::7.1 Special Widths
+----------------------------------------------*/
+input[type="text"][class*="Narrow"].DonationTextboxNarrow {width: 50%;}
+/*---------------------------------------------
+                     ::7.2 Global Form Styles
+----------------------------------------------*/
+
+input[type="text"], textarea, .BBFormTextArea, input[type="password"]
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+		weight: 400;
+    }
+    line-height:$body-font-size;
+    margin-bottom: $form-input-bottom-margin;
+    width: 80%;
+    padding: 1.75% 1.25%;
+    //
+    @media (max-width: 767px) {
+	    padding-top: 2.25%;
+	    padding-bottom: 2.25%;
+	    
+    }
+    
+    @include border-radius(0);
+    border: 1px solid $form-input-border-color;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline-block;
+}
+
+input[type="text"][class*="Narrow"] {width: auto;}
+
+
+
+label, .BBFieldCaption, select.BBFormSelectList
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+    }
+    line-height:$body-font-size;
+}
+
+select.BBFormSelectList { 
+	border: 1px solid $form-input-border-color;
+	margin-bottom: $form-input-bottom-margin;
+}
+
+
+.BBFormRequiredFieldMarker
+{
+	color: red;
+	font-weight: 700;
+}
+
+
+/*---------------------------------------------
+                     ::7.3 Validation
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::7.3 Date Picker
+----------------------------------------------*/
+img.ui-datepicker-trigger {
+margin-left: -2em;
+margin-bottom: -3px;
+}

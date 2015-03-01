@@ -1,0 +1,290 @@
+	/*=========================================================================================
+                     ::3. PAGE LAYOUT & STRUCTURE
+==========================================================================================*/
+
+body {
+	background-color: #fff;
+	background-image: none;
+	
+	&#BodyId {background:url('vcualumni/image/bgBody.png') repeat-x 0 0 transparent; }
+}
+
+
+/*---------------------------------------------
+                     ::3.1 Responsive Grid
+----------------------------------------------*/
+
+
+$column: 60px;
+$gutter: 40px;
+$grid-columns: 12;
+$max-width: rem(1020);
+$small-breakpoint: em(767);
+$large-breakpoint: em(1024);
+$medium-viewport: em(900);
+
+
+
+// Box sizing, applying only to container to avoid issues in BBIS/NC admin bar
+.container *,
+.container *:before,
+.container *:after {
+ box-sizing: border-box; }
+  
+/*
+.container *::before, .container *::after {
+	content:" ";
+	display:table;
+}
+*/
+
+form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.aspx"] .container *::after { display: none; }
+
+
+/* Admin Fixes to Box Sizing rendering issue */
+
+.bb_mainMenu img {
+	box-sizing: content-box;
+}
+
+
+/*---------------------------------------------
+                     ::3.2 Layout
+----------------------------------------------*/
+
+.container {
+	@include outer-container;
+	position: relative;
+	width: 100%;
+	padding: 0 rem(40);
+}
+
+.topBg {
+	height: 25px;
+	text-align: center;
+	background-color: #595a5b;
+	color: #fff;
+}
+
+.siteWrapperOuter {
+	max-width: em(1035);
+	width: 100%;
+	background: url('vcualumni/image/bgWrapper.png') repeat-x 0 0 transparent;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+form[action*="pagedesign.aspx"] .siteWrapperOuter { overflow: visible; }
+
+.siteWrapperInner {
+	background-color: #fff;
+	max-width: rem(1020);
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+form[action*="pagedesign.aspx"] .siteWrapperInner { overflow: visible; }
+
+
+.logo {
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	width: percentage(340px / 940px);
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+.audienceUtility {
+	ul {
+		width: percentage(573px / 940px);
+		background: url('vcualumni/image/util-navbar.gif') no-repeat 0 0;
+		height: 30px;
+		list-style: none;
+		float: right;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			display: inline-block;
+		}
+	}
+
+}
+
+.wrapToggleMainNav {
+}
+
+#utility {
+	width: percentage(600px / 940px);
+	float: right;
+	display: inline-block;
+	position: relative;
+}
+
+.banner, .fullWidthContent, .sidebarImg {
+	@include fill-parent;
+}
+
+header {
+
+	
+	.logo {
+		position: relative;
+		float: left;
+		h1 {
+			position: relative;
+
+		}
+	}
+	
+	nav {
+		position: relative;
+	}
+}
+
+
+.mainContent {
+	@include span-columns(8);
+	padding-bottom: 2rem;
+	
+	.content {
+		position: relative;
+		float: left;
+		margin: 0;
+		padding: 0 30px;
+		width: 100%;
+		
+		&.left, &.right {
+			width: 50%;
+		}
+		
+		&.left { padding-left: 0; }
+	}
+	
+	&.returnUser {
+		width: 66.66667%;
+		float: right;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-bottom: 2rem;
+		
+		.left {
+			width: 50%;
+			float: left;
+			padding-right: 15px;
+		}
+		
+		.right {
+			width: 50%;
+			float: right;
+			padding-left: 15px;
+			
+			.BBDesignationSearchResult {
+				display: none;
+				
+				&:first-child {display: block; }
+			}	
+		}
+		
+		.full {
+			width: 100%;
+			padding: 0;
+			clear: both;
+			position: relative;
+			float: left;
+			margin-top: 2rem;
+		}
+	}
+
+	
+}
+
+
+// Sidebar
+aside.sidebar {
+	@include span-columns(4);
+	padding-left: 0;
+	
+	&.returnUser {
+		width: 30%;
+		padding-left: 30px;
+		margin-right: 0;
+		padding-bottom: 2rem;
+	}
+}
+
+
+footer {
+	background: url('vcualumni/image/alumni_footer.jpg') repeat-x -350px bottom transparent;
+	-webkit-animation: animatedBackground 100s linear infinite;
+	-moz-animation: animatedBackground 100s linear infinite;
+	animation: animatedBackground 100s linear infinite;
+	height: 340px;
+	margin-top: 30px;
+	width: 100%;
+	clear: both;
+    
+    address {
+
+    }
+    
+	section {
+		@include span-columns(4);
+	}
+}
+
+@-webkit-keyframes animatedBackground {
+		from { background-position: 0 bottom; }
+		to { background-position: -1000% bottom; }
+}
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 bottom; }
+	to { background-position: -1000% bottom; }
+}
+@keyframes animatedBackground {
+	from { background-position: 0 bottom; }
+	to { background-position: -1000% bottom; }
+}
+
+
+
+/*---------------------------------------------
+                     ::3.3 Flexi Layout
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.4 Utility Area
+----------------------------------------------*/
+
+
+/*---------------------------------------------
+                     ::3.5 Quick Search
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.6 Skip Link
+----------------------------------------------*/
+p.skip {
+height:0;
+padding:0;
+margin:0;
+}
+a.skip {
+position: absolute;
+top: -50em;
+}
+a.skip:hover,a.skip:active,a.skip:focus {
+position: absolute;
+left: 50%;
+top: 0;
+display: block;
+background: $content-primary-background-color;
+padding: .5em;
+text-align: center;
+margin: 0 auto 0 -10em;
+width: 20em;
+}

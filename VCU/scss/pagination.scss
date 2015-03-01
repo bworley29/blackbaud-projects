@@ -1,0 +1,55 @@
+/*=========================================================================================
+                     ::8. PAGINATION
+==========================================================================================*/
+div.BBPager, span.PagedListFooter, span.PagedListHeader, span.BBPagerDataResults {
+text-align:center;
+display:block;
+}
+a.PagedListFooterLink:link, span.PagedListFooter span, span.PagedListFooter a:link, div.BBPager a {
+display:inline-block;
+cursor: pointer;
+text-decoration:none !important;
+line-height:1;
+padding:3px 0 0 1px;
+margin:0;
+background-color:transparent;
+color:inherit;
+border:0;
+font-size: rem(11);
+vertical-align: middle;
+width: 19px;
+height: 17px;
+}
+div.BBPager {
+padding:1em 0;
+}
+div.BBPager a {
+margin:0 0.15em;
+}
+span.BBPagerDataResults, span[id$="lblFooter"] {
+font-size:0.9em;
+font-style:italic;
+}
+span.PagedListFooter span, div.BBPager a.BBPagerPageSelectedLink {
+background: #b79b7c; // $client-color-background 
+color: #fff; // $client-color-background-invert
+}
+a.PagedListFooterLink:hover, span.PagedListFooter span:hover, span.PagedListFooter a:hover, div.BBPager a:hover {
+background:#3a3531; 
+color:#fff;
+}
+/* Hiding inactive controls */
+span.PagedListFooter span[id$="lblFirst"], span.PagedListFooter span[id$="lblPrevious"], span.PagedListFooter span[id$="lblNext"], span.PagedListFooter span[id$="lblLast"], span.PagedListHeader span[id$="lblFirst"], span.PagedListHeader span[id$="lblPrevious"], span.PagedListHeader span[id$="lblNext"], span.PagedListHeader span[id$="lblLast"] {
+display: none;
+}
+/* Reset Pagination Label */
+span.PagedListFooter span[id$="lblFooter"], span.PagedListHeader span[id$="lblHeader"] {
+color: inherit;
+background-color: inherit;
+border:0;
+padding: 0;
+display:block;
+}
+span.PagedListFooter a[id$="lnkFirst"], span.PagedListFooter a[id$="lnkPrevious"], span.PagedListFooter a[id$="lnkNext"], span.PagedListFooter a[id$="lnkLast"], span.PagedListHeader a[id$="lnkFirst"], span.PagedListHeader a[id$="lnkPrevious"], span.PagedListHeader a[id$="lnkNext"], span.PagedListHeader a[id$="lnkLast"] {
+border: 0;
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<head>
+    <title>Ottawa - Online Giving</title>
+    <link href="form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <div class="column left">
+            <fieldset class="row donationType">
+                <h4>Donation Type</h4>
+                <ul>
+                    <li>
+                        <!--<input type="radio" name="typeOf" value="One-time" id="optOne">-->
+                        <!--<label for="optOne">One-time</label>-->
+                        <input type="button" class="onetime" value="One Time">
+                    </li>
+                    
+                    <li>
+                        <!--<input type="radio" name="typeOf" value="Recurring" id="optTwo">-->
+                        <!--<label for="optTwo">Recurring</label>-->
+                        <input type="button" class="recurring" value="Recurring">
+                        <select class="hide">
+                            <option value="husker">
+                                Greatest Need
+                            </option>
+                            
+                            <option value="starbuck">
+                                Fund for VCU
+                            </option>
+                            
+                            <option value="hotdog">
+                                Athletics
+                            </option>
+                            
+                            <option value="apollo">
+                                Alumni
+                            </option>
+                        </select>
+                    </li>
+                </ul>
+                
+                <ul>
+                    <li>
+                        <input type="radio" name="typeTo" value="Personal" id="optOne">
+                        <label for="optOne">Personal</label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="typeTo" value="Corporate" id="optTwo">
+                        <label for="optTwo">Corporate</label>
+                    </li>
+                </ul>
+            </fieldset>
+            
+            <div class="row giftInMemory">
+                <input type="checkbox" name="type" value="Matching" id="optOne">
+                <label for="optOne">Make my gift in memoriam or in honor of someone or something</label><br>
+                <label for="optTwo">Name</label>
+                <input type="text" name="type" id="memoryOfName"><br>
+                <label for="optThree">Type</label>
+                <select id="memoryOfCaption"></select><br>
+                <label for="optFour">Message</label>
+                <input type="text" name="type" id="memoryOfDescription"><br>
+                <input type="checkbox" name="type" value="Matching" id="memoryOnBehalf">
+                <label for="optFive">Mail a leter on my behalf</label>
+            </div>
+            
+            <fieldset class="row donationAmount">
+                <ul class="givingOptions">
+                    <li>
+                        <input type="radio" name="amount" value="25" id="optOne">
+                        <label for="optOne">$25</label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="amount" value="50" id="optTwo" checked="true">
+                        <label for="optTwo">$50</label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="amount" value="100" id="optThree">
+                        <label for="optThree">$100</label>
+                    </li>
+                </ul>
+                
+                <ul class="givingOptions">
+                    <li>
+                        <input type="radio" name="amount" value="500" id="optFour">
+                        <label for="optFour">$500</label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="amount" value="1000" id="optFive" checked="true">
+                        <label for="optFive">$1,000</label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="amount" value="5000" id="optSix">
+                        <label for="optSix">$5,000</label>
+                    </li>
+                </ul>
+                
+                <ul class="givingOptions">
+                    <li>
+                        <input type="radio" name="amount" value="other" id="optSeven"><label for="optSeven">Other</label> <input class="otherInput" type="text">
+                    </li>
+                </ul>
+            </fieldset>
+            
+            <fieldset class="row fundDesignation">
+                <h5>Direct my gift</h5>
+                
+                <ul>
+                    <li>
+                        <input type="radio" name="giftOpt" value="" id="optOne" checked="true">
+                        <label for="optOne">To the area of <strong>greatest need</strong>
+                        </label>
+                    </li>
+                    
+                    <!--
+                    <li>
+                        <input type="radio" name="giftOpt" value="" id="optTwo">
+                        <label for="optTwo">To <strong>Defy the Conventional: The Campaign for uOttawa</strong>
+                        </label>
+                        <select class="hide">
+                            <option value="husker">
+                                Greatest Need
+                            </option>
+                            
+                            <option value="starbuck">
+                                Fund for VCU
+                            </option>
+                            
+                            <option value="hotdog">
+                                Athletics
+                            </option>
+                            
+                            <option value="apollo">
+                                Alumni
+                            </option>
+                        </select>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="giftOpt" value="" id="optThree">
+                        <label for="optThree">To a specific <strong>Faculty or Area</strong>
+                        </label>
+                        <select class="hide">
+                            <option value="husker">
+                                Greatest Need
+                            </option>
+                            
+                            <option value="starbuck">
+                                Fund for VCU
+                            </option>
+                            
+                            <option value="hotdog">
+                                Athletics
+                            </option>
+                            
+                            <option value="apollo">
+                                Alumni
+                            </option>
+                        </select>
+                    </li>
+                    -->
+                    
+                    <li>
+                        <input type="radio" name="giftOpt" value="" id="optFour">
+                        <label for="optFour">To a specific <strong>Fund</strong>
+                        </label>
+                        <select class="hide" id="fundDesignList">
+                            
+                        </select>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="giftOpt" value="other" id="optSeven">
+                        <label class="otherInput" for="optSeven">Other</label>
+                        <input type="text">
+                    </li>
+                </ul>
+            </fieldset>
+            
+            <fieldset class="row personalInfo">
+                <h4>Personal Information</h4>
+                
+                <ul>
+                    <li>
+                        <input type="radio" name="personalInfo" value="" id="optOne">
+                        <label for="optOne">I am an <strong>Alumni</strong></label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="personalInfo" value="" id="optOne">
+                        <label for="optOne">I am an <strong>Faculty/Staff/Retiree</strong></label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="personalInfo" value="" id="optOne">
+                        <label for="optOne">I am a <strong>Student</strong></label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="personalInfo" value="" id="optOne">
+                        <label for="optOne"><strong>Anonymous</strong></label>
+                    </li>
+                    
+                    <li>
+                        <input type="radio" name="personalInfo" value="" id="optSeven">
+                        <label for="optSeven">Other</label>
+                        <input type="text">
+                    </li>
+                </ul>
+                
+                <hr>
+                
+                <ul class="personalInfoList">
+                    <li>
+                        <label class="inline">First Name:</label>
+                        <input id="billingFirstName" class="inline" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your first name">
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Last Name:</label>
+                        <input id="billingLastName" class="inline" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your last name">
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" name="type" value="Matching" id="matchGift">
+                        <label class="matching" for="optOne">My employer offers Corporate Gift Matching</label>
+                    </li>
+                    <li class="wrapMatchingGift hide">
+                        <label class="inline">Company:</label>
+                        <input id="matchingGiftCompany" class="inline" type="text" placeholder="Your company name">
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Address:</label>
+                        <input id="billingAddress" class="inline" type="text" required="true" placeholder="Street address">
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Country:</label>
+                        <select id="billingCountry" class="inline"></select>
+                    </li>
+                    
+                    <li>
+                        <label class="inline">City:</label>
+                        <input id="billingCity" class="inline" type="text" required="true" placeholder="Your first name">
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Province / State:</label>
+                        <select id="billingState" class="inline">&nbsp;</select>
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Postal / ZIP:</label>
+                        <input class="inline" type="tel" required="true" maxlength="10" name="zip" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" id="zip" placeholder="Postal or ZIP code">
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Phone Number:</label>
+                        <input id="billingPhone" class="inline" required="true" type="tel" placeholder="Your daytime phone number">
+                    </li>
+                    
+                    <li>
+                        <label class="inline">Email:</label>
+                        <input type="email" required="true" name="amount" id="email" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" placeholder="Your email address">
+                    </li>
+                    
+                    <li>
+                        <button type="submit">Donate</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        
+        <div class="column right">
+            <div class="row otherGiving">
+                <h3>Other ways to give</h3>
+                <ul>
+                    <li><a href="">Campus Campaign</a>
+                    </li>
+                    
+                    <li><a href="">Annual Campaign</a>
+                    </li>
+                    
+                    <li><a href="">Bequests</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="row privacy">
+                <h3>Privacy and Security</h3>
+            </div>
+            
+            <fieldset class="row paymentInfo">
+                <h4>Payment Information</h4>
+                
+                <ul class="paymentInfo">
+                    <li>
+                        <label class="inline">Cardholder Name</label>
+                        <input id="cardholder" class="inline" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your full name">
+                    </li>
+                    
+                    <li>
+                        <label for="cardNumber">Card Number</label>
+                        <input type="tel" required="true" name="cardNumber" maxlength="16" autocomplete="off" pattern="[0-9]{15,16}" id="cardNumber" placeholder="Your card number"><span class="cardTypeEnt">&nbsp;</span>
+                    </li>
+                    
+                    <li>
+                        <label>Expiry Date</label>
+                        <select id="cardExpMonth">
+                        </select>
+                        <select id="cardExpYr">
+                        </select>
+                    </li>
+                    
+                    <li>
+                        <label for="cscCode">CVD</label>
+                        <input class="shorter" type="tel" required="true" name="cscCode" maxlength="4" pattern="[0-9]{3,4}" id="cscCode" placeholder="123">
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+    </div>

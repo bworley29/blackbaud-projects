@@ -1,0 +1,28 @@
+html, body { margin: 0; padding: 0; font-family: arial; color: #555; }
+    .row { margin: 1.5rem auto; max-width: 980px; position: relative;}
+    .row .row {float: left; clear: both; position: relative; width: 100%; margin: 0 0 .75rem; padding: 0;}
+    .column {position: relative; display: inline-block;float: left; width: 48%;}
+    .right {float: right;}
+    ul { margin: 0; padding: 0; list-style: none;}
+    ul li {margin-bottom: .75rem;}
+    .donationType ul {width: 100%; clear: both; float: left;}
+    .donationType li { display: inline-block; float: left; width: 25%;}
+    .givingOptions { width: 33%; float: left;}
+    .givingOptions li { position: relative; display:block; margin: 0; padding: 0;}
+    .hide {display: none;}
+    .personalInfoList label {text-align: left; width: auto; margin-right: 1rem; display: inline-block; width: 26.5%;}
+    .personalInfoList label.matching { width: auto;}
+    .personalInfoList input {display: inline-block; width: 64%;}
+    input.otherInput { width: 75px; }
+    input[type="radio"], input[type="checkbox"] { width: auto !important; margin-right: 8px;}
+    .fundDesignation input[name="giftOpt"] + label + select { display: block !important; width: 230px; margin: 8px 0 15px 25px; clear: both; position: relative;}
+    .fundDesignation input[name="giftOpt"] + label + select.hide {display: none !important;}
+    .paymentInfo { width: 220px;}
+    .paymentInfo label {display: block; width: 100%;}
+    .paymentInfo input { width: 200px;}
+    .paymentInfo select {width: 47%; float: left;}
+    .paymentInfo select:last-child {float: right;}
+    fieldset { border: 0;}
+    input:required:invalid { border: 1px solid #ccc; box-shadow: none; }
+
+    input:focus:invalid { border: 1px solid rgba(255, 0, 0, 0.65); box-shadow: none; outline:none; box-shadow: 0 0 5px rgba(255, 0, 0, 0.6); }

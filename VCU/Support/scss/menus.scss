@@ -1,0 +1,586 @@
+/*=========================================================================================
+                     ::4. MENUS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::4.1 Global Menu Styles
+----------------------------------------------*/
+
+/* menu list reset */
+.menuReset {
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+	    float: left;
+	    margin: 0;
+	    padding: 0;
+	    
+	    a {
+		    cursor: pointer;
+		    text-decoration: none;
+		    display: block;
+	    }
+    }
+}
+
+/*---------------------------------------------
+                     ::4.1 Utility Navigation
+----------------------------------------------*/
+
+header nav.utility {
+	
+	@media (max-width: 767px) {
+		background-color: #595a5b;
+		border-top: 1px solid #101010;
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+		padding: 0;
+	    position: absolute;
+	    top: 55px;
+	    width: 100%;
+		
+	}
+		
+	ul {
+		@extend .menuReset;
+		background-color: #000;
+		border-radius: 15px;
+		margin-bottom: 11px;
+		margin-top: 11px;
+		float: left;
+		
+		@media (max-width: 767px) {
+		
+			background-color: #595a5b;
+			border-radius: 0;
+			float: none;
+			width: 100%;	
+		}
+				
+		li {
+			
+			float: left;
+			border-right: 1px solid #333;
+			
+			&:first-child { 
+				
+				border-radius: 15px 0 0 15px;
+				
+				&:hover a { border-radius: 15px 0 0 15px; }
+			}
+			
+			&:last-child { 
+				
+				border-radius: 0 15px 15px 0;
+				
+				&:hover a { border-radius: 0 15px 15px 0; }
+			}
+			
+			@media (max-width: 767px) {
+				border:0;
+				float: none;
+				display: block;
+				
+				&:first-child { 
+				
+					border-radius: 0;
+				
+					&:hover a { border-radius: 0; }
+				}
+				
+				&:last-child { 
+					
+					border-radius: 0;
+					
+					&:hover a { border-radius: 0; }
+				}	
+			}
+			
+			a  {
+
+				line-height: 20px;
+				font-size: rem(14);
+				color: #fff;
+				text-decoration: none;
+				padding: 7px 30px;
+				
+								
+				&:hover {
+					text-decoration: none;
+					background-color: #333;
+				}
+				
+				@media (max-width: 767px) {
+					line-height: 20px;
+					padding: 7px 30px;
+					text-align: center;
+				}
+			}
+			
+			.fa::before {
+				display: inline-block;
+				font-size: 21px;
+				line-height: 1;
+			}
+		}
+	}
+
+}
+
+
+/*---------------------------------------------
+                     ::4.2 Main Horizontal Navigation
+----------------------------------------------*/
+.wrapMainNav nav > ul
+{
+	@extend .menuReset;
+	width: 100%;
+	position: relative;
+	display: block;
+
+		
+	> li
+	{
+		position: relative;
+		display: block;
+		width: 25%;
+		
+		//&:hover { > a { color: #B4BA13;} }
+
+		> a
+		{
+			color: #000000;
+		    font-weight: 600;
+		    padding: 15px;
+		    text-align: center;
+		    font-size: rem(14);
+		    line-height: rem(20);
+		    
+			&:hover {
+				text-decoration: none;
+				background-color: #febe10;
+			}
+
+		}
+		
+		// Li hover
+		&:hover {
+			
+			a {
+				text-decoration: none;
+				background-color: #febe10;
+				
+			}
+		}
+		
+	}
+	
+	@media (max-width: $small-breakpoint) {
+		
+		li {
+			width: 33.3333%;
+			
+			a {
+				color: #000;
+				font-weight: 600;
+				padding: 15px;
+				text-align: center;
+				background: transparent;
+				width: 100%;
+				display: block;
+				font-size: $body-font-size;
+				line-height: $body-line-height;
+				
+				&:after {
+					display: block;
+					content: '\f0ab';
+					font-family: $icon-font-family;
+					position: relative;
+					font-weight: normal;
+					line-height: 1;
+					top: 1px;
+				}
+			}
+
+			&:last-child { display: none; }
+		}
+	}
+	
+	@media (max-width: 320px ) {
+		li a:hover { background-color:#dedcdd ;}
+		
+		li:nth-child(2) {
+				border-left: 1px solid #000;
+				border-right: 1px solid #000;	
+		}
+	}
+}
+
+// Mobile Utility Toggle
+
+.hide.navbar-toggle {
+	border: 1px solid #333;
+	border-radius: 4px;
+	float: right;
+	position: relative;
+	margin: 8px 15px 8px 0px;
+	padding: 9px 10px;
+	background-color: transparent;
+	
+	&:hover { background-color: #333; }
+	
+	@media (max-width: 767px) {
+		
+		display: inline-block;
+	}
+	
+	.icon-bar {
+		background-color: #fff;
+		border-radius: 1px;
+		display: block;
+		height: 2px;
+		width: 22px;
+		margin-bottom: 4px;
+		
+		&:last-child { margin-bottom: 0; }
+	}
+}
+
+
+/*---------------------------------------------
+                     ::4.3 Sidebar Navigation
+----------------------------------------------*/
+
+.wrapContent aside nav ul {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	
+	li {
+		width: 100%;
+		float: none;
+		
+		a {
+			border-bottom: 1px solid #ababab;
+		    color: #ffffff;
+		    display: block;
+		    padding: 5px 5px 5px 0;
+		    font-size: rem(14);
+		    line-height: rem(20);
+			
+			&:hover, &.selected {
+				text-decoration: none;
+				background-color: #666666;
+				color: #fff;
+			}
+			
+			&:visited { color: #fff; }
+		} // END 1st anchor
+		
+		ul {
+			@extend .menuReset;
+			display: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		&.selected {
+			
+			> ul {
+				@extend .menuReset;
+				display: block;
+				
+				li {
+				
+					a {
+						display: block;
+						position: relative;
+						
+						&:before {
+							content: '\f054';
+							font-family: $icon-font-family;
+							display: inline-block;
+							font-size: 10px;
+							padding: 0 10px;
+							position: relative;
+							top: 0;
+						}
+					}
+					
+					ul {
+						display: none;
+					}
+					
+					&.selected {
+										
+						ul {
+							display: block;
+							
+							li {
+								border-bottom: 0;
+							}
+						}
+						
+					}  // END 2nd Li.selected
+					
+				} // END 2nd level Li
+				
+			} // END 2nd level Ul
+			
+		}  // END 1st Li.selected
+		
+	} // END 1st Li
+	
+} // END 1st level Ul
+		
+		
+
+/*
+aside nav ul.mainNav li.selected a.selected {
+	display: block;
+	
+	& + ul {
+		display: block;
+		
+		> li > a {display: block;}
+	}
+}
+*/
+
+
+/* Mobile - Nav */
+
+.mobileSubNav + ul.nccUlMenuSub1, .mobileSubNav + ul.nccUlMenuSub1 + ul.nccUlMenuSub2 {display: none;}
+
+.toggleMainNav {
+	color: #fff;
+	font-size: rem(18);
+	font-weight: 700;
+	font-family: $alt-body-font;
+	&:after {
+		content: '\f0c9';
+		font-family: $icon-font-family;
+		font-size: rem(25);
+		line-height: 1;
+		position: relative;
+		top: 2px;
+		font-weight: 300;
+		padding-left: 16px;
+		display: inline-block;
+	}
+	
+	&.active {
+		text-decoration: none;
+		
+		&:after {content: '\f057';}
+	}
+}
+
+/*---------------------------------------------
+                     ::4.5 Footer Navigation
+----------------------------------------------*/
+
+footer nav ul.mainNav {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	margin-top: rem(15);
+	
+	@media (max-width: $small-breakpoint) { margin-top: 0; }
+	
+	li {
+		display: none;
+		
+		&.showInFooter {
+			display: block;
+			margin-right: rem(32);
+			
+			@media (max-width: $small-breakpoint) { margin-right: 0; }
+			
+			a {
+				color: $footer-font-color;
+				font-size: rem(13);
+				font-weight: 700;
+				line-height: rem(18);
+				text-transform: uppercase;
+				
+				@media(max-width: 980px) {
+					line-height: 1;
+				    margin-right: 8px;
+				    padding: 0.35em 0.65em;
+				    border: 1px solid;
+			    }
+				
+				@media (max-width: $small-breakpoint) { 
+					padding: rem(11) 0 rem(15); 
+					line-height: rem(18);
+					text-align: center;
+					border: 0;
+					margin-right: 0;
+					border-top: 1px solid #fff;
+					font-weight: 400;
+				}
+				
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			
+			ul {
+				@extend .menuReset;
+				display: block;
+				margin-top: 0;
+				
+				@media (max-width: $small-breakpoint) { display: none; }
+				
+				li {
+					display: block;
+					float: none;
+					width: auto;
+					
+					a {
+						padding:2px 0 2px rem(14);
+						text-transform: capitalize;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+		&:nth-child(10) { 
+			width: percentage(153px/670px);
+			
+			@media(max-width: 980px) { width: auto; margin-right: 0; ul {display: none;} }
+			
+			@media (max-width: $small-breakpoint) {
+				@include span-columns(12);
+			} 
+		}
+		&:nth-child(11) { 
+			width: percentage(210px/670px);
+			
+			@media(max-width: 980px) { width: auto; margin-right: 0; ul {display: none;} }
+			
+			@media (max-width: $small-breakpoint) {
+				@include span-columns(12);
+			}  
+		}
+		&:nth-child(12) { 
+			width: percentage(105px/670px);
+			
+			@media(max-width: 980px) { width: auto; margin-right: 0; ul {display: none;} }
+			
+			@media (max-width: $small-breakpoint) {
+				@include span-columns(12);
+			} 
+		}
+		&:nth-child(13) {
+			margin-right: 0;
+			
+			@media(max-width: 980px) { width: auto; ul {display: none;} }
+			
+			@media (max-width: $small-breakpoint) { @include span-columns(12); border-bottom: 1px solid #fff; }
+		}
+	}
+
+	
+}
+
+footer ul.socialIcons {
+	float: left;
+	margin-top: 0;
+}
+
+footer ul.socialIcons li a:before {
+	background-color: $body-font-color;
+	border: 1px solid #ccc;
+}
+
+footer ul.socialIcons li a:hover:before {
+	background-color: #ccc;
+	color: $body-font-color;
+}
+
+// Return User Landing
+
+ul.returnUserNav {
+	margin:0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	float: left;
+	border-bottom: 2px solid #e4e4e4;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		width: 25%;
+		
+		a {
+			display: block;
+			color: #555;
+			border-right: 1px solid #eee;
+			margin: 1.5rem 0 1rem;
+			padding: 0;
+			font-size: 16px;
+			line-height: 16px;
+			
+			i { 
+				font-size: 1.875rem;
+				padding-right: 7px;
+				vertical-align: middle;
+				display: inline-block;
+				position: relative;
+				top: 6px;
+				line-height: 16px;
+			}
+			
+			&:hover { color: $link-hover-color; text-decoration: none; }
+		}
+		
+		&:last-child a { border-right: 0; }
+	}
+}
+
+// Multi-Step Giving Form Nav
+
+.wrapContent ul.givingStepsNav {
+	margin: 1rem 0 1.25rem;
+	padding: 0 20px;
+	list-style: none;
+	position: relative;
+	float: left;
+	width: 100%;
+	
+	li {
+		margin: 0;
+		list-style: none;
+		display: inline-block;
+		float: left;
+	    padding: 0;
+	    line-height: 14px;
+	    background-color: transparent !important;
+	    
+	    a {
+		    display: block;
+			text-decoration: none;
+			color: #999;
+			font-size: 14px;
+			line-height: 1;
+			padding: 10px 20px 10px 12px;
+			background-color: transparent;
+	    }
+	    
+	    &.selected a {
+		    background-color: #555555;
+			border-radius: 0 100px 100px 0;
+			color: #fff;
+	    }
+	    
+	}
+}

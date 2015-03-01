@@ -1,0 +1,2215 @@
+/*=========================================================================================
+                     ::13. SPECIFIC PARTS & STYLES
+==========================================================================================*/
+
+table.BBFormTable {
+	.BBFieldCaption {
+		color: #2f2f2f;
+		vertical-align: top;
+		padding: 5px 8px 0 0;
+		font-weight: bold;
+	}
+	
+	input[type="radio"], input[type="checkbox"] {
+		display: inline-block;
+		
+		+ label { display: inline-block; }
+	}
+	
+	.BBFieldControlCell {
+		
+		select.BBFormSelectList {
+			max-width: 250px;
+		}
+	}
+	
+	.BBListingHeading { padding: 1rem 0; }
+}
+//
+
+/*---------------------------------------------
+                     ::13.1 Page Title
+----------------------------------------------*/
+ 
+/*---------------------------------------------
+                     ::13.2 Donation Form
+                     
+----------------------------------------------*/
+
+table.DonationFormTable {
+	
+	margin-bottom: 2rem;
+	
+	td[id*="thCaptionAmount"] {
+		padding-top: 0;
+		label {padding: 0;}
+	}
+	
+	.DonationListingHeading {
+		span, label {
+			display: block;
+			white-space: nowrap;
+		}
+	}
+	
+	[id*="trDesignationOther"][style*="hidden"] {
+		.DonationFieldCaption, [id*="tdDesignationOther"] { 
+			display: none;
+		}
+	}
+	
+	tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {margin-top: 1rem;}
+	
+	.emptyTD { display: table-cell; }
+	
+}
+
+table[id*="tblAmount"] {
+	.DonationFieldControlCell {
+		width: auto;
+		vertical-align: top;
+		
+		input[name*="givingLevels"] { margin: 0 10px 13px 0;}
+	}
+}
+
+// Shopping Cart Customization
+
+table.DonationFormTable tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {width: 100%;}
+
+tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] tr.DonationGridHeader td.DonationGridHeaderCell:first-child {text-align: right;}
+
+tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] .DonationGridCell { vertical-align: top; background-color: #fff;}
+
+tbody[id*="tbdCart"] tr[id*="trAddToCart"] .DonationSubmitButton {float: right;}
+
+// Hide old asterisks for required fields and display new icon
+.DonationFormTable, .ProfileFormTable, .LoginFormTable {
+	.BBFieldCaption > .required {
+		
+		&:after {
+			content: '*';
+			display: inline-block;
+			color: $link-color;
+			font-weight: bold;
+			font-size: rem(14);
+			padding-left: $icon-default-padding;
+		}
+	}
+	.BBFormRequiredFieldMarker {display: none !important;}
+}
+
+.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table[style]
+{
+	margin-left: 0 !important;
+	width: 37%;
+}
+
+a[id*="DonationCapture1_lnkcsc_help"].BBLinkHelpIcon img
+{
+	max-width: 21px;
+	vertical-align: middle !important;
+} 
+
+table[id*="tblAmount"] .DonationFieldControlCell
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+    }
+    line-height:$body-font-size;
+}
+	tr[id*="trOther"] td[id*="tdOther"]
+    {
+	    vertical-align: top;
+	    padding-top: 8px;
+	    
+	    span {
+	    	position: relative;
+	    	
+	    label[for*="rdoOther"] {
+	    	position: absolute;
+	    	right: -13.25em;
+	    	top: 0.10em;
+	    	display: none !important;
+	    	}
+	    }
+    }
+
+table[id*="tblAmount"] tr[id*="trOther"] td.wsNowrap.BBFieldControlCell.DonationFieldControlCell table td[id*="Td1"]:after
+{
+	display: inline-block;
+	content: 'Other';
+	color: #999;
+	position: relative;
+	left: -5px;
+}     
+    //tr[id*="trOther"] td[id*="tdOther"] span input[id*="rdoOther"]:focus + label[for*="rdoOther"] {display: none;}
+    
+    tr[id*="trOther"] td:last-child > table 
+    {
+	    margin-left: 0 !important;
+	    	
+	   	td:first-child {
+	    	padding-top: 6px;
+	    	vertical-align: top;
+	   	}
+    }
+    
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList, select[id*="DonationCapture1_cboYear"].BBFormSelectList
+{
+	padding: .25em .5em;
+	position: relative;
+}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList
+{
+	width: 50px;
+	padding-left: 2px;
+}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {width: 70px;}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList {margin-right: 4%;}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {margin-left: 9%;}
+
+table[id*="rdoGiftType"] { width: 100%; }
+
+ 
+/*---------------------------------------------
+                     ::13.3 Transaction Manager
+----------------------------------------------*/
+
+.TransactionManagerWrapper select.BBFormSelectList {
+	padding-top:1%;
+	padding-bottom:1%;
+}
+ 
+/*---------------------------------------------
+                     ::13.4 Event Registration Form Classic
+----------------------------------------------*/
+
+.EventAttendeesComplete {
+	background-color:transparent;
+	font-size:$body-font-size;
+	color: $body-font-color;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesCurrent {
+	background-color:transparent;
+	font-size:$body-font-size;
+	color: $body-font-color;
+	font-weight:400;
+	padding-left:0;
+}
+
+.EventAttendeesFuture {
+	background-color:transparent;
+	font-size:$body-font-size;
+	color: $body-font-color;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesGrid {
+	background-color:transparent;
+	border:0;
+	font-size:$body-font-size;
+	color: $body-font-color;
+	margin:1em 0;
+	padding-right:0;
+	vertical-align:top;
+	width: 60%;
+	
+	.SummaryGridEventTitle {
+		display: table-cell;
+		white-space: nowrap;
+	}
+}
+
+.EventAttendeesOverallTotal {
+	background-color:transparent;
+	font-size:$body-font-size;
+	color: $body-font-color;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventItemRegistrantsEventName {
+	background-color:transparent;
+	border:medium none;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemsSelectionGrid {
+	border:0 none;
+	margin:0;
+}
+
+.EventSectionHeader {
+	font-weight:400;
+	font-size:18px;
+	background-color:transparent;
+	border:medium none;
+	padding:1em 0 .25em;
+	text-align:left;
+}
+
+.EventTicketsBodyCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventTicketsHeaderCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:700;
+	padding:.25em .25em 1em 0;
+}
+
+.SummaryGridEventTitle {
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+}
+
+.EventItemRegistrantControlCellName {
+	width:33%;
+	padding-bottom:10px;
+}
+
+.EventItemRegistrantControlCellName .BBFieldCaption {
+	white-space:nowrap;
+}
+
+.EventItemRegistrantsHeader {
+	background-color:transparent;
+	border-bottom:0 none;
+	color:#000;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemRegistrationControlCellDescription {
+	width:55% !important;
+	padding:0 1em !important;
+	vertical-align:middle;
+}
+
+.EventItemRegistrationControlCellNumParticipants {
+	width:15% !important;
+	white-space:nowrap;
+}
+
+.EventItemRegistrationControlCellPrice {
+	width:20%;
+}
+
+.EventItemRegistrationsHeader {
+	background-color:transparent;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventProgressCell {
+	background-color:transparent;
+	border-bottom:3px solid #000;
+	color:#333;
+/* $heading-color */
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellFuture {
+	background:transparent none repeat scroll 0 0;
+	border-bottom:3px solid #ccc;
+	color:#999;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellPast {
+	background:transparent;
+	border-bottom:3px solid #ccc;
+	color:#ccc;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantControlCell {
+	padding-bottom:10px;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantSelectList {
+	width:auto;
+}
+
+.EventItemRegistrantsTable {
+	font-size:1em;
+}
+
+.EventItemRegistrationsTable {
+	width:100%;
+	margin:0;
+	font-size:1em;
+	
+}
+
+.EventItemRegistrationsTable tr {
+	border-bottom:1px solid #888;
+}
+
+.EventTable .EventItemsTable {
+	border:0 none;
+	border-collapse:collapse;
+	margin-top: 1rem;
+}
+
+.EventTable {
+	margin:0;
+	width:100%;
+	
+	table[id*="dgPriceList"] {margin-top: 1rem; }
+}
+
+.EventTable .BBFieldCheckboxCaption {
+	display:block;
+	margin:0;
+}
+
+.wrapAddGift { width: 100%; display: block; }
+
+.EventTable .BBFieldCheckboxCaption input {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable .EventItemTitleName {
+	line-height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table table {
+	margin-left:0;
+	
+	&.formButtons { width: 100%; }
+}
+
+.EventTable td.wrapEventItemsSelectionGridTd { 
+	width: 100%;
+	
+	table.EventItemsSelectionGrid { width: 50% !important; }
+}
+
+.EventTable .BBFormSubmitButton {
+	display:block;
+	margin:0 ;
+	float: left;
+	
+	&[value="Previous"] { float: left; }
+	
+	&[value="Next"] { float: right;}
+}
+
+.EventTable .BBListEvenRowStyle {
+	background-color:transparent!important;
+}
+
+.EventTable .LoginFormTextbox {
+	width:100%;
+}
+
+.EventItemRegistrantTextbox {
+	width:95%;
+}
+
+table.EventItemsTable .EventItemTitleDescription {
+	display:block;
+}
+
+.EventTable tr[id*="trAdditionalDonation"] {
+	span[id*="lblCurrency"], input.BBFormTextbox {
+		float: left;
+		display: inline-block;
+		position: relative;
+		margin-top: 12px;
+	}
+	input.BBFormTextbox { width: 125px !important; padding: 10px; }
+}
+
+.EventItemTitleName {
+	border:medium none;
+	display:block;
+	text-align:left;
+}
+
+.EventItemTitleTime {
+	text-transform:none;
+}
+
+table.EventItemsTable .EventItemTitleTime {
+	border:medium none;
+	color: $body-font-color;
+	display:block;
+	font-family:inherit;
+	font-size: $body-font-size;
+	font-weight:400;
+	padding:0;
+}
+
+table[id$=tblProgress] {
+	background-color:#f9f9f9;
+}
+
+.EventProgressCell {
+	background: $form-header-row-background-color;
+	border:0;
+	color: $content-primary-background-color;
+}
+
+.EventProgressCellFuture,.EventProgressCellPast {
+	padding-left:20px;
+	margin-left:-10px;
+	border:0;
+	color: $body-font-color;
+}
+
+.EventProgressCell,.EventProgressCellFuture,.EventProgressCellPast {
+	padding:10px;
+	text-align:center;
+}
+
+
+.EventItemsSelectionGrid {
+	min-width:0;
+}
+
+td.EventItemRegistrationsHeader {
+	padding-bottom:10px;
+}
+
+input[id*=Attributes][type=checkbox] {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table[id*=dgEventItems] td {
+	padding-top:0;
+	padding-bottom:0;
+}
+
+.EventTable table[id*=dgEventItems] td.EventItemRegistrantsHeader {
+	padding-top:15px;
+}
+
+input[id*=Attributes][type=checkbox] + label {
+	line-height:24px;
+/* $checkbox-line-height */
+	padding-left:10px;
+/* $checkbox-to-label-spacing */
+}
+
+
+
+
+/*---------------------------------------------
+                     ::13.5 User Login
+----------------------------------------------*/
+
+table.wrapLoginFormTable {
+	width: 100%;
+	
+	tr[id*="trSignInBody"] table.taLeft {
+		width: 100%;
+	}
+}
+
+.LoginFormCheckListContainer .LoginFormCheckList input[type="checkbox"] + label { padding-left: .7rem; }
+
+.LoginFormTable .taCenter {padding-bottom: .65rem;}
+
+.LoginFormTable .BBFormButtonCell { padding-left: 2rem;}
+
+
+/*---------------------------------------------
+                     ::13.6 My Home Profile
+----------------------------------------------*/
+
+dl.myHomeProfileDisplay {
+	margin: 0;
+	padding: 0;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	
+	dd {
+		margin: 0 0 $form-input-bottom-margin;
+		padding: 0;
+		
+		h3, a {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		a:before {
+			content: '\f040';
+			padding:0 .3em;
+			font-family: $icon-font-family;
+			display: inline-block;
+		}
+		span:empty {display: none;}
+	}
+}
+
+ul.myHomeProfileLinks {
+	margin: 0;
+	padding: 0 0 0 .15em !important;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	list-style: none;
+	
+	li {
+		margin: 0 0 $form-input-bottom-margin;
+		padding: 0;
+		
+		a {
+		
+			&:before {
+				content: '\f101';
+				font-family: $icon-font-family;
+				display: inline-block;
+				padding-right: .5em;
+				color: $icon-button-color-primary;
+				font-size: .875rem;
+			}
+		}
+	}
+	li.myProfile a:before {
+		content: '\f007';
+	}
+	li.subscriptions a:before {
+		content: '\f01c';
+	}
+	li.givingHistory a:before {
+			content: '\f06b';
+		}
+	li.personalNotes a:before {
+			content: '\f15c';
+		}
+	
+}
+
+
+
+/*---------------------------------------------
+                     ::13.9 Survey Styles
+----------------------------------------------*/
+
+*.SurveySubTitle {
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	color: $body-font-color;
+	display: block;
+	margin-bottom: $form-input-bottom-margin;
+}
+
+.BBListOddRowStyle.SurveyAnswerTableOddRowStyle {background-color: transparent;}
+
+.SurveyQuestion {
+	line-height: 1.25;
+	display: block;
+	margin-bottom: $form-input-bottom-margin;
+}
+
+.SurveyQuestionSequence {
+	display: block;
+	font-family: $body-font-family;
+	font-size: $body-font-size;
+	color: $body-font-color;
+	background: #eee;
+	width: 25px;
+	height: 25px;
+	line-height: 21px;
+	border: 1px solid #ddd;
+	margin-right: $icon-default-padding;
+	text-align: center;
+	@include border-radius(3em);
+}
+
+.SurveyOpenEndedAnswerLabel {
+	vertical-align: middle;
+	width: 40%;
+}
+
+.SurveyFormTable {
+	input[type="submit"] {
+		margin-bottom: 1.25rem;
+		}
+	input[id*="btnExportResults"] {margin-right: 1.25rem;}
+}
+
+/* Survey Print Preview */
+@media (min-width:320px) {
+#divModalPage {
+
+	.SurveyAnswer {
+		font-family: arial, helvetica, sans-serif;
+		font-size: 12px;
+		padding: 5px;
+	}
+	
+	.SurveyAnswerTableHeaderRow, .BBListOddRowStyle {
+		background-color: transparent !important;
+		
+	}
+	
+	.SurveyAnswerTableHeaderRow td {
+		text-shadow: none;
+		color: #000;
+		background: transparent;
+	}
+	
+	.SurveyAnswerTableHeaderRow {
+		.SurveyAnswer, .SurveyResponseColumnHeading  {
+			font-weight: 700;
+			font-size: 15px !important;
+		}
+	}
+
+}
+
+}
+
+/*---------------------------------------------
+                     ::13.10 Polls Styles
+----------------------------------------------*/
+
+table.BBFormTable.BBPollsFormTable {
+	width: 100%;
+}
+
+aside {
+
+.wrapPolls {
+	border-top: 0;
+	padding: 1.875em 1.75rem;
+}
+	.BBPollsFormTable {
+		.BBPollsFormTitle {
+			padding: 0 0 .25em;
+		}
+	}
+}
+
+/*---------------------------------------------
+                     ::13.11 Quick Search
+----------------------------------------------*/
+
+.QuickSearchFormTable {
+	border-left: 1px solid #c6c2ba;
+	input.QuickSearchTextbox {
+		background-color: transparent;
+		border: 0;
+		width: 180px;
+		color:#c6c2ba;
+		font: bold rem(13) $alt-body-font;
+		background:transparent url('image/icon_search.png') no-repeat right 50%;
+		padding:.5em 20px .5em 10px;
+		
+		&:focus { background-color: transparent; border: 0; appearance: none;}
+	}
+	
+	.QuickSearchButton {display: none !important;}
+}
+
+
+
+.card-image {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%221%200%2060%2040%22%20enable-background%3D%22new%201%200%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23C4DAB0%22%20d%3D%22M61%2C35c0%2C2.8-2.2%2C5-5%2C5H6c-2.8%2C0-5-2.2-5-5V5c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V35z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%226.3%22%20fill%3D%22%23424143%22%20width%3D%2259%22%20height%3D%228%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cg%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%237D9769%22%20d%3D%22M56%2C1c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4H6c-2.2%2C0-4-1.8-4-4V5c0-2.2%2C1.8-4%2C4-4H56%20M56%2C0H6%0D%0A%09%09%09%09C3.2%2C0%2C1%2C2.2%2C1%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5V5C61%2C2.2%2C58.7%2C0%2C56%2C0L56%2C0z%22/%3E%0D%0A%09%09%3C/g%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  top: 50%;
+  margin: 0 3px -6px 0;
+  width: 32px;
+  z-index: 2;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear; }
+  .card-image.visa {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220.4%2043.8%2060%2040%22%20enable-background%3D%22new%200.4%2043.8%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20fill%3D%22%23F3F4F4%22%20d%3D%22M60.4%2C78.8c0%2C2.8-2.2%2C5-5%2C5h-50c-2.8%2C0-5-2.2-5-5v-30c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V78.8z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%235565AF%22%20d%3D%22M1.4%2C53.8v-5c0-2.8%2C2.2-5%2C5-5h48c2.8%2C0%2C5%2C2.2%2C5%2C5v5%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%23E6A124%22%20d%3D%22M59.4%2C73.8v5c0%2C2.8-2.2%2C4-5%2C4h-48c-2.8%2C0-5-1.2-5-4v-5%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%235565AF%22%20d%3D%22M17.8%2C67.2c0.4-1.1%2C0.7-1.9%2C0.9-2.2l3.4-6.9h2.5l-5.8%2C11.4H16l-1-11.4h2.3l0.4%2C6.9c0%2C0.2%2C0%2C0.6%2C0%2C1%0D%0A%09%09%09C17.7%2C66.5%2C17.7%2C66.9%2C17.8%2C67.2L17.8%2C67.2z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%235565AF%22%20d%3D%22M23.4%2C69.5l2.4-11.4h2.4l-2.4%2C11.4H23.4z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%235565AF%22%20d%3D%22M35.6%2C66.1c0%2C1.1-0.4%2C1.9-1.2%2C2.6c-0.8%2C0.6-1.8%2C0.9-3.1%2C0.9c-1.2%2C0-2.1-0.2-2.8-0.7v-2.1%0D%0A%09%09%09c1%2C0.6%2C1.9%2C0.8%2C2.8%2C0.8c0.6%2C0%2C1-0.1%2C1.4-0.3c0.3-0.2%2C0.5-0.5%2C0.5-0.9c0-0.2%2C0-0.4-0.1-0.6c-0.1-0.2-0.2-0.3-0.3-0.5%0D%0A%09%09%09c-0.1-0.1-0.5-0.4-1-0.8c-0.7-0.5-1.2-1-1.5-1.5c-0.3-0.5-0.4-1-0.4-1.6c0-0.7%2C0.2-1.3%2C0.5-1.8c0.3-0.5%2C0.8-0.9%2C1.4-1.2%0D%0A%09%09%09c0.6-0.3%2C1.3-0.4%2C2.1-0.4c1.1%2C0%2C2.2%2C0.3%2C3.1%2C0.8L36%2C60.5c-0.8-0.4-1.6-0.6-2.2-0.6c-0.4%2C0-0.8%2C0.1-1.1%2C0.4%0D%0A%09%09%09c-0.3%2C0.2-0.4%2C0.5-0.4%2C0.9c0%2C0.3%2C0.1%2C0.6%2C0.3%2C0.8c0.2%2C0.2%2C0.6%2C0.6%2C1.2%2C0.9c0.6%2C0.4%2C1.1%2C0.9%2C1.4%2C1.4C35.4%2C64.9%2C35.6%2C65.5%2C35.6%2C66.1%0D%0A%09%09%09z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%235565AF%22%20d%3D%22M43.2%2C66.8h-3.7l-1.3%2C2.7h-2.5l6-11.5h2.9l1.1%2C11.5h-2.3L43.2%2C66.8z%20M43.1%2C64.8L42.9%2C62%0D%0A%09%09%09c-0.1-0.7-0.1-1.3-0.1-2v-0.3c-0.2%2C0.6-0.5%2C1.3-0.9%2C2l-1.5%2C3H43.1z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M30.4%2C43.8%22/%3E%0D%0A%09%3Cpath%20opacity%3D%224.000000e-02%22%20fill%3D%22%23FFFFFF%22%20enable-background%3D%22new%20%20%20%20%22%20d%3D%22M58.9%2C45.3c0.9%2C0.9%2C1.5%2C2.2%2C1.5%2C3.5v15v15%0D%0A%09%09c0%2C1.4-0.6%2C2.6-1.5%2C3.5s-2.2%2C1.5-3.5%2C1.5h-25h-25c-1.4%2C0-2.6-0.6-3.5-1.5L58.9%2C45.3z%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23F8F8F9%22%20d%3D%22M55.4%2C44.8c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4h-50c-2.2%2C0-4-1.8-4-4v-30c0-2.2%2C1.8-4%2C4-4H55.4%20M55.4%2C43.8%0D%0A%09%09%09h-50c-2.8%2C0-5%2C2.2-5%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5v-30C60.4%2C46%2C58.1%2C43.8%2C55.4%2C43.8L55.4%2C43.8z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A"); }
+  .card-image.mc {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220.4%2088%2060%2040%22%20enable-background%3D%22new%200.4%2088%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20fill%3D%22%235565AF%22%20d%3D%22M60.4%2C123c0%2C2.8-2.2%2C5-5%2C5h-50c-2.8%2C0-5-2.2-5-5V93c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V123z%22/%3E%0D%0A%09%3Cpath%20opacity%3D%224.000000e-02%22%20fill%3D%22%23FFFFFF%22%20enable-background%3D%22new%20%20%20%20%22%20d%3D%22M58.9%2C89.5c0.9%2C0.9%2C1.5%2C2.2%2C1.5%2C3.5v15v15%0D%0A%09%09c0%2C1.4-0.6%2C2.6-1.5%2C3.5c-0.9%2C0.9-2.2%2C1.5-3.5%2C1.5h-25h-25c-1.4%2C0-2.6-0.6-3.5-1.5L58.9%2C89.5z%22/%3E%0D%0A%09%3Cpath%20fill%3D%22%2356B1D9%22%20d%3D%22M30.4%2C88%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23EA564B%22%20d%3D%22M30.4%2C101.4c-1.8-2.1-4.5-3.4-7.5-3.4c-5.5%2C0-10%2C4.5-10%2C10c0%2C5.5%2C4.5%2C10%2C10%2C10c3%2C0%2C5.7-1.3%2C7.5-3.4%0D%0A%09%09%09c-1.6-1.8-2.5-4.1-2.5-6.6S28.8%2C103.2%2C30.4%2C101.4z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23EA564B%22%20d%3D%22M30.4%2C101.4c-1.6%2C1.8-2.5%2C4.1-2.5%2C6.6s0.9%2C4.8%2C2.5%2C6.6c1.6-1.8%2C2.5-4.1%2C2.5-6.6S31.9%2C103.2%2C30.4%2C101.4z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cpath%20fill%3D%22%23E9D419%22%20d%3D%22M37.9%2C98c-3%2C0-5.7%2C1.3-7.5%2C3.4c-0.4%2C0.5-0.8%2C1-1.1%2C1.6h2.3c0.4%2C0.6%2C0.6%2C1.3%2C0.9%2C2h-4%0D%0A%09%09c-0.2%2C0.6-0.4%2C1.3-0.4%2C2h4.9c0%2C0.3%2C0.1%2C0.7%2C0.1%2C1c0%2C0.3%2C0%2C0.7-0.1%2C1h-4.9c0.1%2C0.7%2C0.2%2C1.4%2C0.4%2C2h4.1c-0.2%2C0.7-0.5%2C1.4-0.9%2C2h-2.3%0D%0A%09%09c0.3%2C0.6%2C0.7%2C1.1%2C1.1%2C1.6c1.8%2C2.1%2C4.5%2C3.4%2C7.5%2C3.4c5.5%2C0%2C10-4.5%2C10-10C47.9%2C102.5%2C43.4%2C98%2C37.9%2C98z%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%237684B7%22%20d%3D%22M55.4%2C89c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4h-50c-2.2%2C0-4-1.8-4-4V93c0-2.2%2C1.8-4%2C4-4H55.4%20M55.4%2C88h-50%0D%0A%09%09%09c-2.8%2C0-5%2C2.2-5%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5V93C60.4%2C90.2%2C58.1%2C88%2C55.4%2C88L55.4%2C88z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A"); }
+  .card-image.amex {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220.1%20131.8%2060%2040%22%20enable-background%3D%22new%200.1%20131.8%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%235EC1EC%22%20d%3D%22M60.1%2C166.8c0%2C2.8-2.2%2C5-5%2C5h-50c-2.8%2C0-5-2.2-5-5v-30c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V166.8z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%235BBBE6%22%20d%3D%22M58.6%2C133.3c0.9%2C0.9%2C1.5%2C2.2%2C1.5%2C3.5v15v15c0%2C1.4-0.6%2C2.6-1.5%2C3.5c-0.9%2C0.9-2.2%2C1.5-3.5%2C1.5h-25h-25%0D%0A%09%09%09c-1.4%2C0-2.6-0.6-3.5-1.5L58.6%2C133.3z%22/%3E%0D%0A%09%09%3Cg%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M17.7%2C156.7l-0.5-1.7h-3l-0.5%2C1.7H11l3-9.3h3.3l3.1%2C9.3H17.7z%20M16.7%2C152.9l-0.4-1.5%0D%0A%09%09%09%09c-0.1-0.3-0.2-0.8-0.3-1.3c-0.1-0.5-0.2-0.9-0.3-1.2c0%2C0.2-0.1%2C0.6-0.2%2C1.1s-0.4%2C1.5-0.7%2C2.9L16.7%2C152.9L16.7%2C152.9z%22/%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M25.5%2C156.7l-1.9-6.7h-0.1c0.1%2C1.1%2C0.1%2C2%2C0.1%2C2.7v4h-2.2v-9.3h3.3l1.9%2C6.6h0.1l1.9-6.6H32v9.3h-2.3v-4.1%0D%0A%09%09%09%09c0-0.2%2C0-0.4%2C0-0.7s0-0.9%2C0.1-1.9h-0.1l-1.9%2C6.7L25.5%2C156.7L25.5%2C156.7z%22/%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M39.2%2C156.7h-5.5v-9.3h5.5v2h-3v1.5H39v2h-2.8v1.8h3V156.7z%22/%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M49.2%2C156.7h-2.9l-1.8-2.9l-1.8%2C2.9h-2.8L43%2C152l-2.9-4.5h2.8l1.7%2C2.9l1.6-2.9H49l-2.9%2C4.7L49.2%2C156.7z%22%0D%0A%09%09%09%09/%3E%0D%0A%09%09%3C/g%3E%0D%0A%09%09%3Cg%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M17.7%2C156.7l-0.5-1.7h-3l-0.5%2C1.7H11l3-9.3h3.3l3.1%2C9.3H17.7z%20M16.7%2C152.9l-0.4-1.5%0D%0A%09%09%09%09c-0.1-0.3-0.2-0.8-0.3-1.3c-0.1-0.5-0.2-0.9-0.3-1.2c0%2C0.2-0.1%2C0.6-0.2%2C1.1s-0.4%2C1.5-0.7%2C2.9L16.7%2C152.9L16.7%2C152.9z%22/%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M25.5%2C156.7l-1.9-6.7h-0.1c0.1%2C1.1%2C0.1%2C2%2C0.1%2C2.7v4h-2.2v-9.3h3.3l1.9%2C6.6h0.1l1.9-6.6H32v9.3h-2.3v-4.1%0D%0A%09%09%09%09c0-0.2%2C0-0.4%2C0-0.7s0-0.9%2C0.1-1.9h-0.1l-1.9%2C6.7L25.5%2C156.7L25.5%2C156.7z%22/%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M39.2%2C156.7h-5.5v-9.3h5.5v2h-3v1.5H39v2h-2.8v1.8h3V156.7z%22/%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M49.2%2C156.7h-2.9l-1.8-2.9l-1.8%2C2.9h-2.8L43%2C152l-2.9-4.5h2.8l1.7%2C2.9l1.6-2.9H49l-2.9%2C4.7L49.2%2C156.7z%22%0D%0A%09%09%09%09/%3E%0D%0A%09%09%3C/g%3E%0D%0A%09%09%3Cpath%20fill%3D%22%2356B1D9%22%20d%3D%22M30.1%2C131.8%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%239BCEE0%22%20d%3D%22M55.1%2C132.8c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4h-50c-2.2%2C0-4-1.8-4-4v-30c0-2.2%2C1.8-4%2C4-4H55.1%0D%0A%09%09%09%20M55.1%2C131.8h-50c-2.8%2C0-5%2C2.2-5%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5v-30C60.1%2C134%2C57.9%2C131.8%2C55.1%2C131.8L55.1%2C131.8z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A"); }
+  .card-image.disc {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220.1%20175.7%2060%2040%22%20enable-background%3D%22new%200.1%20175.7%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20fill%3D%22%23FFF9F0%22%20d%3D%22M60.1%2C210.7c0%2C2.8-2.2%2C5-5%2C5h-50c-2.8%2C0-5-2.2-5-5v-30c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V210.7z%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M15.2%2C195.7c0%2C1-0.3%2C1.8-0.9%2C2.3c-0.6%2C0.5-1.4%2C0.8-2.5%2C0.8h-1.7v-6.1h1.9c1%2C0%2C1.8%2C0.3%2C2.3%2C0.8%0D%0A%09%09%09C15%2C194%2C15.2%2C194.7%2C15.2%2C195.7z%20M13.9%2C195.7c0-1.3-0.6-2-1.7-2h-0.7v4H12C13.3%2C197.7%2C13.9%2C197%2C13.9%2C195.7z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M16.3%2C198.8v-6.1h1.3v6.1H16.3z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M22.8%2C197.1c0%2C0.6-0.2%2C1-0.6%2C1.3c-0.4%2C0.3-0.9%2C0.5-1.6%2C0.5c-0.6%2C0-1.2-0.1-1.7-0.4v-1.2%0D%0A%09%09%09c0.4%2C0.2%2C0.8%2C0.3%2C1%2C0.4c0.3%2C0.1%2C0.5%2C0.1%2C0.8%2C0.1c0.3%2C0%2C0.5-0.1%2C0.7-0.2c0.1-0.1%2C0.2-0.3%2C0.2-0.5c0-0.1%2C0-0.2-0.1-0.3%0D%0A%09%09%09c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.4-0.2-0.8-0.4c-0.4-0.2-0.6-0.3-0.8-0.5c-0.2-0.2-0.3-0.3-0.4-0.6s-0.2-0.5-0.2-0.8%0D%0A%09%09%09c0-0.5%2C0.2-1%2C0.5-1.3c0.4-0.3%2C0.9-0.5%2C1.5-0.5c0.3%2C0%2C0.6%2C0%2C0.9%2C0.1c0.3%2C0.1%2C0.6%2C0.2%2C0.9%2C0.3l-0.4%2C1c-0.3-0.1-0.6-0.2-0.8-0.3%0D%0A%09%09%09c-0.2-0.1-0.4-0.1-0.6-0.1c-0.2%2C0-0.4%2C0.1-0.6%2C0.2c-0.1%2C0.1-0.2%2C0.3-0.2%2C0.4c0%2C0.1%2C0%2C0.2%2C0.1%2C0.3c0.1%2C0.1%2C0.1%2C0.2%2C0.3%2C0.2%0D%0A%09%09%09s0.4%2C0.2%2C0.8%2C0.4c0.6%2C0.3%2C1%2C0.5%2C1.2%2C0.8C22.6%2C196.3%2C22.8%2C196.7%2C22.8%2C197.1z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M26.4%2C193.7c-0.5%2C0-0.9%2C0.2-1.1%2C0.5c-0.3%2C0.4-0.4%2C0.9-0.4%2C1.5c0%2C1.4%2C0.5%2C2%2C1.5%2C2c0.4%2C0%2C0.9-0.1%2C1.6-0.3%0D%0A%09%09%09v1.1c-0.5%2C0.2-1.1%2C0.3-1.7%2C0.3c-0.9%2C0-1.6-0.3-2-0.8c-0.5-0.5-0.7-1.3-0.7-2.3c0-0.6%2C0.1-1.2%2C0.3-1.7c0.2-0.5%2C0.6-0.8%2C1-1.1%0D%0A%09%09%09c0.4-0.3%2C0.9-0.4%2C1.5-0.4c0.6%2C0%2C1.2%2C0.1%2C1.8%2C0.4l-0.4%2C1c-0.2-0.1-0.5-0.2-0.7-0.3C26.9%2C193.7%2C26.7%2C193.7%2C26.4%2C193.7z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M38.3%2C192.7h1.3l-2.1%2C6.1h-1.4l-2.1-6.1h1.3l1.1%2C3.6c0.1%2C0.2%2C0.1%2C0.5%2C0.2%2C0.7c0.1%2C0.3%2C0.1%2C0.5%2C0.1%2C0.6%0D%0A%09%09%09c0-0.3%2C0.1-0.7%2C0.3-1.3L38.3%2C192.7z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M43.9%2C198.8h-3.5v-6.1h3.5v1.1h-2.2v1.3h2.1v1.1h-2.1v1.6h2.2V198.8z%22/%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23414042%22%20d%3D%22M46.5%2C196.4v2.3h-1.3v-6.1h1.8c0.8%2C0%2C1.4%2C0.1%2C1.8%2C0.5c0.4%2C0.3%2C0.6%2C0.8%2C0.6%2C1.4c0%2C0.4-0.1%2C0.7-0.3%2C1%0D%0A%09%09%09c-0.2%2C0.3-0.5%2C0.5-0.8%2C0.7c0.9%2C1.4%2C1.5%2C2.3%2C1.8%2C2.6h-1.4l-1.5-2.3L46.5%2C196.4L46.5%2C196.4z%20M46.5%2C195.4h0.4c0.4%2C0%2C0.7-0.1%2C0.9-0.2%0D%0A%09%09%09c0.2-0.1%2C0.3-0.4%2C0.3-0.6c0-0.3-0.1-0.5-0.3-0.6s-0.5-0.2-0.9-0.2h-0.4L46.5%2C195.4L46.5%2C195.4z%22/%3E%0D%0A%09%09%3Ccircle%20fill%3D%22%23E6A124%22%20cx%3D%2231.2%22%20cy%3D%22195.7%22%20r%3D%223%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Cpath%20fill%3D%22%23E6A124%22%20d%3D%22M60.1%2C203.2v7.5c0%2C0.7-0.1%2C1.3-0.4%2C1.9c-0.3%2C0.6-0.6%2C1.1-1.1%2C1.6s-1%2C0.8-1.6%2C1.1c-0.6%2C0.3-1.3%2C0.4-1.9%2C0.4%0D%0A%09%09H32.7H10.2L60.1%2C203.2z%22/%3E%0D%0A%09%3Cpath%20opacity%3D%228.000000e-02%22%20fill%3D%22%23FFFFFF%22%20enable-background%3D%22new%20%20%20%20%22%20d%3D%22M58.6%2C177.2c0.9%2C0.9%2C1.5%2C2.2%2C1.5%2C3.5v15v15%0D%0A%09%09c0%2C1.4-0.6%2C2.6-1.5%2C3.5c-0.9%2C0.9-2.2%2C1.5-3.5%2C1.5h-25h-25c-1.4%2C0-2.6-0.6-3.5-1.5L58.6%2C177.2z%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23F7F5F2%22%20d%3D%22M55.1%2C176.7c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4h-50c-2.2%2C0-4-1.8-4-4v-30c0-2.2%2C1.8-4%2C4-4H55.1%0D%0A%09%09%09%20M55.1%2C175.7h-50c-2.8%2C0-5%2C2.2-5%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5v-30C60.1%2C178%2C57.9%2C175.7%2C55.1%2C175.7L55.1%2C175.7z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A"); }
+  .card-image.cvv2 {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220%20308.7%2060%2040%22%20enable-background%3D%22new%200%20308.7%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23CDCDCD%22%20d%3D%22M60%2C343.7c0%2C2.8-2.2%2C5-5%2C5H5c-2.8%2C0-5-2.2-5-5v-30c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V343.7z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Crect%20x%3D%221.8%22%20y%3D%22315%22%20fill%3D%22%23424143%22%20width%3D%2258.2%22%20height%3D%228%22/%3E%0D%0A%09%3Crect%20x%3D%227.8%22%20y%3D%22327%22%20fill%3D%22%23FFFFFF%22%20width%3D%2236%22%20height%3D%228%22/%3E%0D%0A%09%3Crect%20x%3D%2210.8%22%20y%3D%22330%22%20fill%3D%22%23424143%22%20width%3D%2229%22%20height%3D%222%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cg%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%23DFDEDD%22%20d%3D%22M55%2C309.7c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4H5c-2.2%2C0-4-1.8-4-4v-30c0-2.2%2C1.8-4%2C4-4H55%20M55%2C308.7H5%0D%0A%09%09%09%09c-2.8%2C0-5%2C2.2-5%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5v-30C60%2C311%2C57.8%2C308.7%2C55%2C308.7L55%2C308.7z%22/%3E%0D%0A%09%09%3C/g%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Crect%20x%3D%2246.8%22%20y%3D%22327%22%20fill%3D%22%23FFFFFF%22%20width%3D%228%22%20height%3D%228%22/%3E%0D%0A%09%3Crect%20x%3D%2247.8%22%20y%3D%22330%22%20fill%3D%22%23424143%22%20width%3D%226%22%20height%3D%222%22/%3E%0D%0A%09%3Ccircle%20fill%3D%22none%22%20stroke%3D%22%23E9564B%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%20cx%3D%2250.2%22%20cy%3D%22330.9%22%20r%3D%227.8%22/%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A");
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+
+.no-svg .card-image {
+  background-image: url("../images/cc-front.png"); }
+  .no-svg .card-image.visa {
+    background-image: url("../images/cc-visa.png"); }
+  .no-svg .card-image.mc {
+    background-image: url("../images/cc-mc.png"); }
+  .no-svg .card-image.amex {
+    background-image: url("../images/cc-amex.png"); }
+  .no-svg .card-image.disc {
+    background-image: url("../images/cc-disc.png"); }
+  .no-svg .card-image.cvv2 {
+    background-image: url("../images/cc-back.png"); }    
+
+    
+    
+// Return User Landing
+
+.returnUser table.ProfilePhotoFormTable {
+	tr {
+		&:nth-child(4), &:nth-child(5), &:nth-child(6) { display: none; }
+	}
+	
+	td.taCenter { text-align: left; }
+	
+	img[id*="imgPhoto"] {
+		background-color: #f5f5f5;
+		border-radius: 100%;
+		padding: 10px;
+	}
+	
+	[class*="fa-"] { font-family: $icon-font-family; }
+	
+	[class*="fa-"].PhotoLink::before {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-size: 23px;
+		line-height: 1;
+	}
+	
+	.PhotoLink.fa-edit:hover img { opacity: 0.5; }
+	
+	.PhotoLink.fa-times-circle::before { color: rgba(255, 0, 0, 0.7); }
+	
+	.PhotoLink.active { padding-bottom: 1rem; }
+}
+
+// Multi-Step Giving Form Styles
+
+.donationForm {
+	padding: 0 20px;
+	width: 100%;
+	
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		
+		select {
+			background-color: #fafafa;
+		    background-position: 100% center;
+		    background-repeat: no-repeat;
+		    border-color: #cccccc;
+		    border-radius: 0;
+		    border-style: solid;
+		    border-width: 1px;
+		    color: rgba(0, 0, 0, 0.75);
+		    font-size: 0.875rem;
+		    height: 2.3125rem;
+		    line-height: normal;
+		    padding: 0.5rem;
+		}
+		
+		select#designation {
+			position: relative;
+			float: left;
+			margin: 0 1rem 1rem 0;
+			width: 40%;
+			
+			+ a {
+				position: relative;
+				display: inline-block;
+				float: left;
+				margin-top: 9px;
+				
+				&::before {
+					content: '\f002';
+					font-family: $icon-font-family;
+					display: inline-block;
+					padding-right: 5px;
+				}
+			}
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+			float: left;
+			width: 100%;
+			
+			li {
+				float: left;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: inline-block;
+				position: relative;
+				
+				input + label {
+					margin-right: 1rem;
+					margin-left: .5rem;
+					vertical-align: baseline;
+					
+					&[for="amtOther"] { display: none; }
+				}
+				
+				&.invisible { display: none;}
+				
+			}
+			
+			&.giftTypeRdoList { margin-bottom: 1rem;}
+			
+			&.giftOptions {
+				
+				li {
+					float: left;
+					position: relative;
+					display: block;
+					width: 100%;
+					margin-bottom: 12px;
+					
+					&.invisible { display: none;}
+				}
+			}
+		}
+		
+		input, label {
+			display: inline-block;
+			float: left;
+			position: relative;
+		}
+		
+		input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+			background-color: #ffffff;
+		    border-color: #cccccc;
+		    border-style: solid;
+		    border-width: 1px;
+		    box-shadow: none;
+		    box-sizing: border-box;
+		    color: rgba(0, 0, 0, 0.75);
+		    display: block;
+		    font-family: inherit;
+		    font-size: 0.875rem;
+		    height: 2.3125rem;
+		    margin: 0 0 1rem;
+		    padding: 0.5rem;
+		    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+		}
+		
+		input.mediumWidth { width: 50%; }
+		
+		&.row {
+			width: 100%;
+			float: left;
+			position: relative;
+			margin-top: 15px;
+			
+			&.designationInfo {margin-top: 0;}
+			
+			&.tribueInformation, &.additionalInformation { margin-top: 1.5rem; }
+		}
+		
+		&.amountInfo {
+			
+			ul li {
+				
+				input#txtAmount {
+					margin-left: 1rem;
+					top: -10px;
+				}
+			}
+		}
+		
+		&.additionalInformation, &.tribueInformation {
+			ul li {
+				display: block;
+				width: 100%;
+				margin-bottom: .5rem;
+				
+				label {
+					padding: 10px 10px 0 0;
+					font-weight: bold;
+					width: 20%;
+					
+					text-align: right;
+				}
+				
+			}
+		}
+		
+		&.tribueInformation {
+			
+			input[type="checkbox"] + label {
+				width: auto;
+				padding: 0;
+				
+			}
+			
+			input[type="radio"] + label {
+				width: auto;
+				padding: 0;
+				
+			}
+			
+			.tributeKind { 
+				margin: 1rem 0 24px;
+				
+				ul li { 
+					margin-bottom: 1rem;
+					
+					&:last-child { margin-bottom: 0; }
+				}
+			}
+			
+		}
+	}
+	
+	input[type="button"]#donate {
+		margin: 1.5rem 3rem 2rem 0;
+		float: right;
+		padding: 12px 15px;
+	}
+}
+
+// Single Donation Form - Single Inptu Credit Card Styles
+
+#wrapSingleGivingForm + [id*="UpdatePanel"] { display: none; }
+
+#wrapSingleGivingForm {
+	margin-bottom: 2.5rem;
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		
+		&.step.two ul.personalInfoList, &.step.three ul.paymentInfo { display: none; }
+	}
+	
+	.inactive { color: #999; }
+	
+	.complete:after {
+		font-family: $icon-font-family;
+		content: '\f046';
+		color: rgba(0, 128, 0, 0.6);
+		display: inline-block;
+		margin-left: 1rem;
+		font-size: 23px;
+	}
+	
+	.siblingsComplete { opacity: .4; }
+	
+	select {
+			background-color: #fafafa;
+		    background-position: 100% center;
+		    background-repeat: no-repeat;
+		    border-color: #cccccc;
+		    border-radius: 0;
+		    border-style: solid;
+		    border-width: 1px;
+		    color: rgba(0, 0, 0, 0.75);
+		    font-size: 0.875rem;
+		    height: 2.3125rem;
+		    line-height: normal;
+		    padding: 0.5rem;
+		}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: block;
+		float: left;
+		width: 100%;
+		
+		li {
+			float: left;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			position: relative;
+			
+			input + label {
+				margin-right: 1rem;
+				margin-left: .5rem;
+				vertical-align: baseline;
+			}
+			
+			input[type="checkbox"] + label {
+			width: auto;
+			padding: 0;
+			
+			}
+			
+			input[type="radio"] + label {
+				width: auto;
+				padding: 0;
+				
+			}
+			
+			label {
+				display: block;
+				width: 100%;
+				margin-bottom: 8px;
+			}
+			
+			&.searchAllFundsLink a:before {
+				content: '\f002';
+				font-family: $icon-font-family;
+				display: inline-block;
+				padding-right: 5px;
+			}
+		}
+		
+		&.fundDesignation { margin-bottom: 1.5rem; }
+		
+		
+		&.givingAmountOptions .otherAmount input + label + input[type="text"] {
+			margin-left: 15px;
+			position: relative;
+			top: -10px;
+		}
+		
+		&.personalInfoList {
+			li {
+				display: block;
+				width: 100%;
+				margin-bottom: .5rem;
+			}
+			
+			.donorTitle, .donorFirstName, .donorLastName {
+				display: inline-block;
+				position: relative;
+				float: left;
+				width: 30%;
+				
+				input[type="text"] {
+					width: 100%;
+				}
+			}
+			
+			.donorFirstName { margin-right: 2rem; }
+			
+			.donorTitle {
+				width: 20%;
+				
+				select#nameTitleList { max-width: 80%; }
+			}
+			
+			.wrapCity, .wrapState, .wrapZip {
+				position: relative;
+				display: inline-block;
+				float: left;
+				width: 40%;
+			}
+			
+			.wrapCity input#billingCity { width: 87%; }
+			
+			.wrapState { width: 28%; }
+			
+			.wrapZip {
+				width: 25%;
+				
+				input#zip { width: 88%; }
+			}
+		}
+	}
+	
+	input, label {
+		display: inline-block;
+		float: left;
+		position: relative;
+	}
+	
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+		background-color: #ffffff;
+	    border-color: #cccccc;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: none;
+	    box-sizing: border-box;
+	    color: rgba(0, 0, 0, 0.75);
+	    display: block;
+	    font-family: inherit;
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    margin: 0 0 1rem;
+	    padding: 0.5rem;
+	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	    max-width: 350px;
+	}
+	
+	input.mediumWidth { width: 50%; }
+
+	fieldset.credit-card-group {
+		position: relative;
+		overflow: hidden;
+		
+		ul.paymentInfo {
+			
+			li {
+				float: none;
+				display: block;
+				width: 100%;
+				clear: both;
+				
+				/*
+legend {
+					background: none repeat scroll 0 0 #ffffff;
+				    font-weight: normal;
+				    margin: 0 0 0 -0.1875rem;
+				    padding: 0 0.1875rem;
+				    color: #4d4d4d;
+				    font-size: 14px;
+				}
+				
+				.wrapCardInfo {
+					border: 1px solid #ccc;
+					box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+					padding: 0 .5em;
+					overflow: hidden;
+					backface-visibility: hidden;
+					position: relative;
+					width: 77%;
+					
+					.card-image {
+						float: left;
+						margin-top: 6px;
+					}
+				}
+				
+				&:first-child label { 
+					display: block !important;
+					position: relative !important;
+					left: 0;
+				}
+				
+				&:last-child input {
+					display: inline;
+					margin: 0;
+					background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				    border: 0 none;
+				    box-shadow: none;
+				    outline: 0 none;
+				    padding: 0;
+				}
+*/				
+				&[class*="card"] {
+					float: left;
+					display: inline-block;
+					width: 40%;
+				}
+				
+				&.cardNumber input#cardNumber { width: 87%; }
+				
+				&.cardExp { 
+					width: 29%; 
+					clear: none;
+					
+					#cardExpMonth { margin-right: 10px; }
+				}
+				
+				&.cardCsc { 
+					width: 20%;
+					clear: none;
+					
+					input#cscCode { width: 63%; }
+				}
+			}
+		}
+	}
+	
+	.hide {
+		display: none !important;
+		position: absolute !important;
+		left: -999999px;
+	}
+	
+	.BBFormValidatorSummary ul li {
+		display: block;
+		width: 100%;
+	}
+	
+	input[type="submit"].DonationSubmitButton {
+		margin: 1.5rem 0 2rem 0;
+		float: right;
+		padding: 12px 15px;
+		background-color: $link-color;
+	}
+}
+
+.card-instructionm, .cardTypeEnt { display: none; }
+
+// Profile Update Form
+
+.bbformbuilder-form-part > div[style] { width: 100% !important; }
+
+.bbformbuilder-form-part { 
+	margin:0 0 2rem 1.5rem;
+	width: 100%; 
+	float: left;
+}
+
+.bbformbuilder-form-part .BBSequenceMapContentContainer {
+	margin: 0;
+	width: 90%;
+	
+	.bbformbuilder-section {
+		margin: 0;
+		padding: 0;
+		
+		[class*="ManagementContainer"][style], .bbformbuilder-float-none { width: 100% !important; }
+		
+		.bbformbuilder-float-none { padding: 0;}
+		
+		.bbformbuilder-inputandmsg-container { width: 100% !important; }
+				
+		.bbformbuilder-section-column1 { width: 100% !important; }
+		
+		.bbformbuilder-element-row { 
+			padding: 0;
+			
+			.bbformbuilder-validator-boundry { width: 100% !important; }
+			
+			label {
+				display: inline-block;
+				padding: 13px 8px 0 0;
+				text-align: right;
+				font-weight: bold;
+				font-size: 14px;
+			}
+			
+			input + label  { margin-left: 8px; }
+		}
+	
+		.bbformbuilder-float-lalign {
+			padding: 0;
+			text-align: right;
+			float: left;
+			width: 25% !important;
+			
+			+ div {
+				float: left;
+				width: 60% !important;
+			}
+		}
+		
+		.BBFormAddressManagementNewAddressRow {
+			.BBFormRow { margin-bottom: .75rem; }
+			
+			.BBFormLabel {
+				float: left;
+				width: 25% !important;
+			}
+			
+			textarea, input { float: left;}
+			
+			span[id*="rq"] { float: left; margin-left: 10px; }
+		}
+		
+	}
+	
+	
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+		background-color: #ffffff;
+	    border-color: #cccccc;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: none;
+	    box-sizing: border-box;
+	    color: rgba(0, 0, 0, 0.75);
+	    display: inline-block;
+	    font-family: inherit;
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    margin: 0 0 1rem;
+	    padding: 0.5rem;
+	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	    float: left;
+	}
+	
+	div[id*="privacy_cont"] { 
+		float: left; 
+		display: inline-block;
+		margin-left: 1rem;
+	}
+	
+	select {
+		background-color: #fafafa;
+	    background-position: 100% center;
+	    background-repeat: no-repeat;
+	    border-color: #cccccc;
+	    border-radius: 0;
+	    border-style: solid;
+	    border-width: 1px;
+	    color: rgba(0, 0, 0, 0.75);
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    line-height: normal;
+	    padding: 0.5rem;
+	    margin-bottom: 1rem;
+	    float: left;
+	    
+	    &[id*="State"], &[id*="Country"] { max-width: 53%;}
+	}
+	
+	.BBFormAddressManagementNewAddressContainer, .BBFormEmailManagementNewEmailContainer, .BBFormOrganizationFieldsContainer, .BBFormPhoneManagementNewPhoneContainer, .BBFormOrganizationNewRelationshipContainer {
+		padding: 0 0 1rem;
+		width: 100%;
+		background: transparent;
+		border: 0;
+		
+		input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea { max-width: 53%; }
+		
+	}
+	
+	
+	.bbformbuilder-section-header {
+		border-bottom: 2px solid #ebd087;
+	    display: block;
+	    margin-bottom: 1.25rem;
+	    padding-bottom: 3px;
+	    width: 92%;
+	    font-size: rem(23);
+	    line-height: rem(32);
+	    font-weight: 400;
+	    margin-top: 1.25rem;
+	}
+	
+	a[id*="lnkAddNew"], a[id*="btnInsert"], a[id*="InsertLink"] { margin: .5rem 0; }
+}
+
+.BBSequenceMapContentContainer > .BBSequenceMapContent > .bbformbuilder-errmsg + .bbformbuilder-section .bbformbuilder-section-header {
+	font-size: rem(30);
+	line-height: rem(37);
+	font-weight: normal;
+	margin: 3px 0 8px;
+	text-transform: none;
+	clear: both;
+	padding: 0;
+	border-bottom: 0;
+}
+
+
+// Comm Pref
+
+[id*="commPrefs"].bbformbuilder-element-block {
+	float: left;
+	width: 100%;
+	
+	#header, #item {
+		height: auto !important;
+		float: left !important;
+		display: block;
+		width: 100% !important;
+		
+		div {
+			position: relative;
+			float: left;
+			display: inline-block;
+		}
+	}
+	
+	#header > div {
+		width: 3%;
+		
+		+ div + div {
+			width: 35%;
+			
+			+ div { width: 58%; }
+		}
+	}
+	
+	#item > div {
+		width: 3%;
+		
+		+ div + div {
+			width: 35%;
+			
+			+ div { width: 58%; }
+		}
+	}
+}
+
+
+// Payment Summary Cart
+
+.wrapSidebar .PaymentPartSummary_Container {
+	border: 0;
+	padding: 0px;
+	width: 100%;
+	clear: both;
+	float: left;
+	font-size: .875rem;
+	
+	.PaymentPartSummary_Cart {
+		border: 0;
+		margin: 0;
+		
+		table.PaymentPartSummary_CartList {
+			background-color: transparent;
+			padding: 0;
+			border-color: #999 !important;
+			margin: 12px 0;
+			
+			[id*="tdImageItem"], [id*="tdDescription"], [id*="tdUnitPrice"], [id*="tdRemove"] {
+				display: block;
+				padding: 0 !important;
+				width: 250px;
+			}
+			
+			input[id*="txtItemUnitPrice"] { width: 40%; }
+		}
+	}
+	
+	a {
+		text-decoration: underline;
+		color: #fff;
+		font-size: .875rem;
+		//background-color: #6F6F6F;
+		//padding: 5px 10px;
+		
+		&[id*="hyperlinkItemThumbnail"], &[id*="cartUpdated"] { background-color: 0; padding: 0; }
+	}
+	
+	.PaymentPartSummary_CartOptions {
+		a {
+			text-decoration: none;
+			color: #fff;
+			margin-bottom: 7px;
+		
+			&[id*="lbRemoveAll"] {
+				float: left;
+			}
+			
+			&[id*="ButtonUpdateCart"] {
+				float: right;
+			}
+		}
+	}
+	
+	dl.PaymentPartSummary_CartSummaryList {
+		margin: 0;
+		padding: 0;
+		font-size: $body-font-size;
+		
+		dt {
+			label { color: #fff; }
+		}
+		
+		dd.PaymentPartSummary_CartSummaryFieldContainer {
+			margin-right: 0;
+		}
+	}
+}
+
+
+// Designation Search 
+
+.wrapMainContent .BBDesignationSearchResultContainer {
+	float: left;
+	clear: both;
+	width: 100%;
+	margin: 1.5rem 0;
+
+	.BBDesignationSearchResult {
+		display: inline-block;
+		float: left;
+		width: 47%;
+		position: relative;
+		margin-bottom: 1.85rem;
+		background: rgba(240, 240, 240, 0.8);
+		padding: 2% 3%;
+		box-shadow: 0 2px 1px #ccc;
+		min-height: 142px;		
+
+		p {
+			font-size: rem(14);
+			color: #000;
+			font-weight: bold;
+			margin-bottom: 5px;
+			
+			+ p {
+				font-size: rem(13);
+				color: #555;
+				font-weight: normal;
+				
+				+ p {
+					a {
+						display: inline-block;
+						position: relative;
+						float: left;
+						background-color: $link-color;
+						color: #fff;
+						padding: 2px 7px;
+						margin-top: 10px;
+						font-size: 13px;
+						
+						+ span { display: none; }
+						
+						&.BBAddToCartLink { float: right;}
+					}
+				}
+			}
+		}
+		
+		&:nth-child(even) { float: right; }
+	}
+}
+
+#wzdEvents {
+	padding-left: 20px;
+}
+.lbl_Error {
+	font-weight: bold;
+	color: Red;
+}
+.lbl_Helplet {
+}
+.alignTop {
+	vertical-align: top;
+}
+.alignRight {
+	text-align: right;
+}
+.bold {
+	font-weight: bold;
+}
+.hidden {
+	display: none;
+}
+.visible {
+	display: inline;
+}
+.centered {
+	margin: 0 auto;
+}
+/* end global */
+
+#EventSectionTable, .QuantityAndPricingSectionTable, #AttendeesSummaryTable, #status-table, #donationModal, .EventTable, .QuantityAndPricingTable, .QuantityAndPricingTableLineItem, .AttendeesSectionTable, .AttendeesSectionPromoCodesTable, .AttendeesTable, .AttendeesDetailsSectionTable, .AttendeesDetailsTable, .table {
+	display: table;
+}
+#donationModalHeaderRow, #status-row, .AttendeesSectionTableRow, .QuantityAndPricingSectionTableRow, .donationModalRow, .EventSectionTableRow, .EventSectionTableAlternatingRow, .QuantityAndPricingSectionTableAlternatingRow, .EventTableRow, .QuantityAndPricingTableRow, .QuantityAndPricingTableRowLineItem, .AttendeesSummaryTableRow, .AttendeesSectionTableAlternatingRow, .AttendeesSectionPromoCodesTableRow, .AttendeesTableRow, .AttendeesDetailsSectionTableRow, .AttendeesDetailsSectionTableAlternatingRow, .AttendeesDetailsTableRow, [id$="wzdEvents"] .row, .row-panel {
+	display: table-row;
+}
+#donationModalHeaderCell, #donationAmountOtherHolder, .donationModalCell, .EventSectionTableCell, .EventTableCell, .QuantityAndPricingSectionTableCell, .QuantityAndPricingTableCell, .QuantityAndPricingTableCellLineItem, .AttendeesSummaryTableCell, .AttendeesSectionTableCell, .AttendeesSectionPromoCodesTableCell, .AttendeesTableCell, .AttendeesDetailsSectionTableCell, .AttendeesDetailsTableCell, .status-cell, .cell, .QuantityAndPricingSubRegTableCell {
+	display: table-cell;
+}
+
+.QuantityAndPricingTableLineItem .QuantityAndPricingTableCellLineItem {
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+/* start event selection */
+#EventSelection {
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+.EventTable {
+	width: 100%;
+}
+.EventSectionTableAlternatingRow {
+	background-color: #EEEEEE;
+}
+.EventTableCell {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.EventTableCellDate {
+	font-weight:normal;
+	width:50%
+}
+.EventTableCellDescription {
+	padding-left:30px;
+	font-weight:normal;
+	font-size:10px;
+}
+.EventTableCellCheckbox {
+	width:20px;
+}
+/* end event selection */
+
+/* start quantity and pricing */
+#QuantityAndPricing {
+	font-weight: bold;
+	padding-bottom: 10px;
+	color: #2B3B76;
+	font-family: Arial;
+}
+#QuantityAndPricingSectionTable {
+	width: 600px;
+}
+.QuantityAndPricingSectionTableAlternatingRow {
+	background-color: #EEEEEE;
+}
+.QuantityAndPricingSectionTableCell {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.QuantityAndPricingTableCell {
+	padding: 2px 15px 2px 15px;
+}
+.QuantityAndPricingTableCellLineItemQuantity {
+	min-width: 70px;
+}
+.QuantityAndPricingTableCellLineItemCaption {
+	min-width: 150px;
+	margin-right: 1rem;
+}
+.QuantityAndPricingTableCellLineItemDateTime {
+	width: 150px;
+}
+.QuantityAndPricingSubRegTableCell {
+	padding: 2px 2px 2px 2px;
+}
+.QuantityAndPricingTableCellCaption {
+	font-weight: bold;
+	width: 300px;
+}
+.QuantityAndPricingTableCellAttendees {
+	width: 150px;
+}
+.QuantityAndPricingTableCellCost {
+	font-weight: bold;
+	width: 100px;
+}
+/* end quantity and pricing */
+/* start attendees summary */
+#AttendeesSummaryTable {
+	width: 400px;
+}
+.AttendeesSummaryTableCellQuantity {
+	width: 10%;
+}
+.AttendeesSummaryTableCellCaption {
+	width: 40%;
+}
+.AttendeesSummaryTableCellRegistrantsUnit {
+	width: 25%;
+}
+.AttendeesSummaryTableCellCost {
+	width: 10%;
+}
+.AttendeesSummaryTableCellTotal {
+	width: 15%;
+}
+
+.AttendeesSectionTable {
+	width: 400px;
+	background-color: #EEEEEE;
+	border: solid 1px #DCDCDC;
+	color: #666666;
+	font-size: 8pt;
+}
+.AttendeesSectionTableAlternatingRow {
+	background-color: #EEEEEE;
+}
+.AttendeesSectionTableCell {
+	padding: 5px 5px 2px 5px;
+	padding-top: 5px;
+	padding-bottom: 2px;
+}
+.AttendeesSectionTableCellEventName {
+	font-weight: bold;
+}
+.AttendeesSectionPromoCodesTable {
+	color: #666666;
+	font-size: 8pt;
+	float: right;
+}
+.hidden {
+	display: none;
+}
+/* end attendees summary */
+/* start attendees */
+.AttendeesTable {
+	width: 600px;
+}
+.AttendeesTableCell {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.AttendeesDetailsSectionTable {
+	width: 600px;
+}
+.AttendeesDetailsSectionTableAlternatingRow {
+	background-color: #EEEEEE;
+}
+.AttendeesDetailsSectionTableCell {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.AttendeesDetailsTable {
+	width: 600px;
+}
+.AttendeesDetailsTableCell {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#RegistrationsInPackages {
+	width: 600px;
+}
+/* end attendees */
+
+/* start status */
+#status-table {
+	width:100%;
+	margin-bottom:1rem;
+}
+#status-row {
+	background: #ddd;
+	font-weight: bold;
+	text-align: center;
+	color:#fff; 
+}
+.status-cell {
+	padding: 10px 40px;
+	color: #333;
+	background-color: #f9f9f9;
+}
+.activeStatus {
+	//background: url(image/css/stepBg.png) 100% 50% no-repeat;
+	background-color: #666666;
+	color: #fff;
+}
+.status-cell:nth-child(4).activeStatus {
+	background: url(image/css/stepBg.png) 100% 50% no-repeat #fff;
+}
+/* end status */
+
+#steps {
+	position: relative;
+}
+/* start step 4 */
+#billing-information-step4 {
+	width: 570px;
+	border: 2px solid white;
+}
+#payment-information-step4 {
+	border: 2px solid white;
+}
+[id$="wzdEvents"] .row {
+	border: 2px solid white;
+}
+.row-panel {
+	border: 1px solid white;
+}
+.cell {
+	float: left;
+}
+#billing-information-step4 .cell {
+	float:none;
+}
+#billing-information-step4 .row:before, #billing-information-step4 .row:after {
+	content: none;
+}
+.step4-label {
+	background: transparent;
+	width: 33%;
+	background-color: transparent!important;
+	font-family: inherit;
+	font-weight: 400;
+	color: #333;
+	padding: 0 .5em 0 0;
+	text-align: right;
+	white-space: normal;
+}
+.step4-input {
+	vertical-align: middle;
+	padding-left: 1px;
+	width: 260px;
+}
+.step4-input-promo {
+	vertical-align: middle;
+	padding-left: 1px;
+}
+.required-field-validator {
+	color: Red;
+	float: left;
+}
+input.coer, input.promo {
+	margin: 0px;
+	padding: 0px;
+	width: 170px;
+	font-size: inherit;
+	margin-left: 4px;
+	margin-right: 0px;
+	color: inherit;
+	box-shadow: none;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	-ms-border-radius: none;
+	-o-border-radius: none;
+	border-radius: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+input.promo {
+	width:initial;
+}
+select.coer {
+	width: auto;
+	margin-left: 4px;
+}
+textarea.coer {
+	padding: 0;
+	margin: 0;
+	margin-left: 4px;
+	font-size: inherit;
+}
+/* end step 4 */
+
+/* start step 5 */
+#summary-guests {
+	padding-left: 10px;
+}
+.step5-header {
+	background-color: #72B505;
+	text-align: center;
+	color: White;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 400px;
+}
+/*end step 5*/
+
+/* start donation modal */
+#AttendeesDonationDescriptionCell {
+	width: 95%;
+}
+#AttendeesDonationParentCell {
+	width: 400px;
+}
+.donationAmount[type=radio] {
+	margin:10px;
+	display:none;
+}
+.donationAmount[type=radio] + label {
+	display:inline-block;
+	margin:-2px;
+	padding: 10px;
+	background-color: #d67d29;
+	color: White;
+	border: none;
+}
+.donationAmount[type=radio]:checked + label {
+	border:solid 1px white;
+}
+.donationAmountActive {
+	border:solid 1px white;
+}
+.donationAmountOther {
+	width: 50px;
+	height: 25px;
+}
+#donationModal {
+	width: 385px;
+	background-color: #fff;
+	display: none;
+	cursor: default;
+}
+#donationModalHeaderRow {
+	background-color: #fff;
+	width:inherit;
+}
+#donationModalHeaderCell {
+	color: #333;
+	padding: 20px;
+	font-size: 18px;
+}
+.donationModalAmountCell {
+	padding:10px;
+}
+#donationModalCallNoThankYou {
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+#donationModalCellDesignations {
+	text-align: center;
+}
+/* end donation modal */
+
+/* start date picker */
+/*
+ * jQuery UI Datepicker 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+	background-color: white;
+	border: solid 1px black;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year {
+	width: 100%;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	width: 49%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+/* with multiple calendars */
+    .ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0em;
+}
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+	display: none; /*sorry for IE5*/
+	display: /**/ block; /*sorry for IE5*/
+	position: absolute; /*must have*/
+	z-index: -1; /*must have*/
+	filter: mask(); /*must have*/
+	top: -4px; /*must have*/
+	left: -4px; /*must have*/
+	width: 200px; /*must have*/
+	height: 200px; /*must have*/
+}
+/* end date picker */
+
+#divWizardButtons {
+	> table {
+		width: 100%;
+		
+		td { width: 50%; }
+	}
+}
+
+/*end coer */
+
+/* elements to add to selector groups
+#Attendees, .step4-header --> h2
+.AttendeesDetailsSectionEventName --> h3
+.step4-label --> .DonationFieldCaption / .BBFieldCaption
+*/
+
+.matchingGiftText { display: none; }
+
+[id*="tbdyMatchingGifts"] {
+	.matchingGiftText { margin-top: .75rem; }
+	.DonationCaptureListingHeading { padding-bottom: 0; }
+}
+
+
+.PaymentPart_FormContainer { overflow: auto; }

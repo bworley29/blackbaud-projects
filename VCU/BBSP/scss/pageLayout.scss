@@ -1,0 +1,335 @@
+	/*=========================================================================================
+                     ::3. PAGE LAYOUT & STRUCTURE
+==========================================================================================*/
+
+body {
+	background-color: #fff;
+	background-image: none;
+	
+	&#BodyId {
+		background: url("../image/bkg.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+		}
+}
+
+
+/*---------------------------------------------
+                     ::3.1 Responsive Grid
+----------------------------------------------*/
+
+
+$column: 60px;
+$gutter: 40px;
+$grid-columns: 12;
+$max-width: rem(960);
+$small-breakpoint: em(767);
+$large-breakpoint: em(1024);
+$medium-viewport: em(900);
+
+
+
+// Box sizing, applying only to container to avoid issues in BBIS/NC admin bar
+.container *,
+.container *:before,
+.container *:after {
+ box-sizing: border-box; }
+  
+
+.container *::before, .container *::after {
+	content:" ";
+	display:table;
+}
+
+
+form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.aspx"] .container *::after { display: none; }
+
+
+/* Admin Fixes to Box Sizing rendering issue */
+
+.bb_mainMenu img {
+	box-sizing: content-box;
+}
+
+
+/*---------------------------------------------
+                     ::3.2 Layout
+----------------------------------------------*/
+
+.container {
+	@include outer-container;
+	position: relative;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.banner, .fullWidthContent, .sidebarImg {
+	@include fill-parent;
+}
+
+.wrapHeader {
+	background-color: #595a5b;
+	left: 0;
+    //position: fixed;
+    position: relative;
+    right: 0;
+    transform: translate3d(0px, 0px, 0px);
+    z-index: 300;
+    min-height: 115px;
+	
+	.wrapLogo { background-color: #000; }
+	
+	.logo {
+		position: relative;
+		background: url(../image/vcu-brand-black.gif) no-repeat 0 0;
+		height: 60px;
+		
+		#vcubar-vcu-link, #vcubar-make-it-real {
+			@include imageReplacement;
+			display: block;
+		    height: 48px;
+		    color: rgba(0, 0, 0, 0);
+		    opacity: 0;
+		    //overflow: hidden;
+		    position: absolute;
+		    //text-indent: -9999px;
+		    top: 6px;
+		}
+		
+		#vcubar-vcu-link {
+			left: 23px;
+			width: 796px;
+
+		}
+		
+		#vcubar-make-it-real
+		{
+			right: 19px;
+			width: 106px;
+
+		}
+	}
+	
+	.wrapUtility {
+		
+		position: relative;
+
+	}
+	
+	.sectionTitle {
+		width: auto;
+		float: left;
+		
+		p {
+			margin: 0;
+			padding: 0;
+			
+			a {
+				font-size: rem(28);
+				line-height: rem(20);
+				color: #fff;
+				margin: 0;
+				padding: 15px;
+				height: 50px;
+				margin: 5px 5px 0 0;
+				display: block;
+				
+				&:hover {
+					text-decoration: none;
+				}
+				
+				@media (max-width: 767px) {
+					font-size: rem(22.4);
+					padding: 0 15px;
+					
+				}
+			}
+		}
+	}
+	
+	.utility {
+		position: relative;
+		float: right;
+		width: auto;
+	}
+}
+
+.wrapMainNav {
+	background-color: #f8b800;
+	box-shadow: 0 1px 5px 0 #666666;
+	position: relative;
+	z-index: 100;
+	//margin-top: 115px;
+	float: left;
+	width: 100%;
+	min-height: 50px;
+	
+}
+
+
+.wrapContent {
+	
+	position: relative;
+	background-color: #fff;
+	z-index: 1;
+				
+	.wrapMainContent {
+		width: 66.6667%;
+		float: left;
+		padding: 20px 10px 0 0;
+		position: relative;
+		
+		&.returnUser {
+			width: 66.66667%;
+			float: right;
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-bottom: 2rem;
+			
+			.left {
+				width: 50%;
+				float: left;
+				padding-right: 15px;
+			}
+			
+			.right {
+				width: 50%;
+				float: right;
+				padding-left: 15px;
+				
+				.BBDesignationSearchResult {
+					display: none;
+					
+					&:first-child {display: block; }
+				}	
+			}
+			
+			.full {
+				width: 100%;
+				padding: 0;
+				clear: both;
+				position: relative;
+				float: left;
+			}
+		}
+	}
+}
+
+
+// Sidebar
+.wrapSidebar {
+	width: 33.3333%;
+	float: left;
+	padding: 0 0 0 20px;
+	position: relative;
+	
+	@media (max-width: 767px) {
+		width: 100%;
+		float: none;
+		padding-left: 0;
+	}
+	
+	.nav {
+		background-color: #595a5b;
+		color: #fff;
+		margin-top: 20px;
+		padding: 10px 20px;
+		float: left;
+		clear: both;
+		position: relative;
+		width: 100%;
+	}
+
+	
+	//.wrapSidebarContent { }
+	
+	&.returnUser {
+		float: left;
+		width: 33.33333%;
+		padding-left: 42px;
+	}
+		
+}
+
+
+.wrapFooter {
+    
+        background: url(../image/footer-bg.png) no-repeat right bottom / 100% auto;
+        font-size: $body-font-size;
+        line-height: rem(20);
+        color: #fff;
+        
+        .footerBg {
+	        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		    border: 1px solid #adadad;
+		    height: auto;
+		    margin: 20px 5px;
+		    display: block;
+		    float: left;
+		    position: relative;
+
+        }
+        
+        .ourMission {
+	        width: 36%;
+	        float: left;
+	        position: relative;
+	        padding: 0 15px;
+
+        }
+        
+        .footerLinks {
+	        @extend .ourMission;
+	        width: 28%;
+	        border-left: 1px solid #adadad;
+	        border-right: 1px solid #adadad;
+	        height: 85%;
+	        margin-top: 20px;
+	        text-align: center;
+
+        }
+        
+        .footerContact {
+	        @extend .ourMission;
+	        width: 36%;
+	        
+        }
+}
+
+
+
+/*---------------------------------------------
+                     ::3.3 Flexi Layout
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.4 Utility Area
+----------------------------------------------*/
+
+
+/*---------------------------------------------
+                     ::3.5 Quick Search
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.6 Skip Link
+----------------------------------------------*/
+p.skip {
+height:0;
+padding:0;
+margin:0;
+}
+a.skip {
+position: absolute;
+top: -50em;
+}
+a.skip:hover,a.skip:active,a.skip:focus {
+position: absolute;
+left: 50%;
+top: 0;
+display: block;
+background: $content-primary-background-color;
+padding: .5em;
+text-align: center;
+margin: 0 auto 0 -10em;
+width: 20em;
+}

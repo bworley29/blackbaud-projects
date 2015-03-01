@@ -1,0 +1,1374 @@
+/*=========================================================================================
+                     ::13. SPECIFIC PARTS & STYLES
+==========================================================================================*/
+
+table.BBFormTable {
+	.BBFieldCaption {
+		color: #2f2f2f;
+		vertical-align: top;
+		padding: 5px 8px 0 0;
+		font-weight: bold;
+	}
+	
+	.BBFieldControlCell {
+		
+		select.BBFormSelectList {
+			max-width: 250px;
+		}
+	}
+}
+
+/*---------------------------------------------
+                     ::13.1 Page Title
+----------------------------------------------*/
+ 
+/*---------------------------------------------
+                     ::13.2 Donation Form
+                     
+----------------------------------------------*/
+
+table.DonationFormTable {
+	
+	td[id*="thCaptionAmount"] {
+		padding-top: 0;
+		label {padding: 0;}
+	}
+	
+	.DonationListingHeading {
+		span, label {
+			display: block;
+			white-space: nowrap;
+		}
+	}
+	
+	[id*="trDesignationOther"][style*="hidden"] {
+		.DonationFieldCaption, [id*="tdDesignationOther"] { 
+			display: none;
+		}
+	}
+	
+	tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {margin-top: 1rem;}
+	
+	.emptyTD { display: none; }
+	
+}
+
+table[id*="tblAmount"] {
+	.DonationFieldControlCell {
+		width: auto;
+		vertical-align: top;
+		
+		input[name*="givingLevels"] { margin: 0 10px 13px 0;}
+	}
+}
+
+// Shopping Cart Customization
+
+table.DonationFormTable tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {width: 100%;}
+
+tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] tr.DonationGridHeader td.DonationGridHeaderCell:first-child {text-align: right;}
+
+tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] .DonationGridCell { vertical-align: top; background-color: #fff;}
+
+tbody[id*="tbdCart"] tr[id*="trAddToCart"] .DonationSubmitButton {float: right;}
+
+// Hide old asterisks for required fields and display new icon
+.DonationFormTable, .ProfileFormTable, .LoginFormTable {
+	.BBFieldCaption > .required {
+		
+		&:after {
+			content: '*';
+			display: inline-block;
+			color: $link-color;
+			font-weight: bold;
+			font-size: rem(14);
+			padding-left: $icon-default-padding;
+		}
+	}
+	.BBFormRequiredFieldMarker {display: none !important;}
+}
+
+.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table[style]
+{
+	margin-left: 0 !important;
+	width: 37%;
+}
+
+a[id*="DonationCapture1_lnkcsc_help"].BBLinkHelpIcon img
+{
+	max-width: 21px;
+	vertical-align: middle !important;
+} 
+
+table[id*="tblAmount"] .DonationFieldControlCell
+{
+	color: $body-font-color;
+    font:{ 
+    	size:$body-font-size; 
+    	family: $body-font-family;
+    }
+    line-height:$body-font-size;
+}
+	tr[id*="trOther"] td[id*="tdOther"]
+    {
+	    vertical-align: top;
+	    padding-top: 8px;
+	    
+	    span {
+	    	position: relative;
+	    	
+	    label[for*="rdoOther"] {
+	    	position: absolute;
+	    	right: -13.25em;
+	    	top: 0.10em;
+	    	display: none !important;
+	    	}
+	    }
+    }
+
+table[id*="tblAmount"] tr[id*="trOther"] td.wsNowrap.BBFieldControlCell.DonationFieldControlCell table td[id*="Td1"]:after
+{
+	display: inline-block;
+	content: 'Other';
+	color: #999;
+	position: relative;
+	left: -5px;
+}     
+    //tr[id*="trOther"] td[id*="tdOther"] span input[id*="rdoOther"]:focus + label[for*="rdoOther"] {display: none;}
+    
+    tr[id*="trOther"] td:last-child > table 
+    {
+	    margin-left: 0 !important;
+	    	
+	   	td:first-child {
+	    	padding-top: 6px;
+	    	vertical-align: top;
+	   	}
+    }
+    
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList, select[id*="DonationCapture1_cboYear"].BBFormSelectList
+{
+	padding: .25em .5em;
+	position: relative;
+}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList
+{
+	width: 50px;
+	padding-left: 2px;
+}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {width: 70px;}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList {margin-right: 4%;}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {margin-left: 9%;}
+
+ 
+/*---------------------------------------------
+                     ::13.3 Transaction Manager
+----------------------------------------------*/
+
+.TransactionManagerWrapper select.BBFormSelectList {
+	padding-top:1%;
+	padding-bottom:1%;
+}
+ 
+/*---------------------------------------------
+                     ::13.4 Event Registration Form Classic
+----------------------------------------------*/
+
+.EventAttendeesComplete {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesCurrent {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	font-weight:400;
+	padding-left:0;
+}
+
+.EventAttendeesFuture {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesGrid {
+	background-color:#fafafa;
+	border:1px solid #888;
+	color:#333;
+	font-size:1em;
+	margin:1em 0;
+	padding-right:0;
+	vertical-align:top;
+}
+
+.EventAttendeesOverallTotal {
+	background-color:#fafafa;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventItemRegistrantsEventName {
+	background-color:transparent;
+	border:medium none;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemsSelectionGrid {
+	border:0 none;
+	margin:0;
+}
+
+.EventSectionHeader {
+	font-weight:400;
+	font-size:18px;
+	background-color:transparent;
+	border:medium none;
+	padding:1em 0 .25em;
+	text-align:left;
+}
+
+.EventTicketsBodyCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventTicketsHeaderCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:700;
+	padding:.25em .25em 1em 0;
+}
+
+.SummaryGridEventTitle {
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+}
+
+.EventItemRegistrantControlCellName {
+	width:33%;
+	padding-bottom:10px;
+}
+
+.EventItemRegistrantControlCellName .BBFieldCaption {
+	white-space:nowrap;
+}
+
+.EventItemRegistrantsHeader {
+	background-color:transparent;
+	border-bottom:0 none;
+	color:#000;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemRegistrationControlCellDescription {
+	width:55%;
+	padding:0 1em;
+	vertical-align:middle;
+}
+
+.EventItemRegistrationControlCellNumParticipants {
+	width:15%;
+	white-space:nowrap;
+}
+
+.EventItemRegistrationControlCellPrice {
+	width:20%;
+}
+
+.EventItemRegistrationsHeader {
+	background-color:transparent;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventProgressCell {
+	background-color:transparent;
+	border-bottom:3px solid #000;
+	color:#333;
+/* $heading-color */
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellFuture {
+	background:transparent none repeat scroll 0 0;
+	border-bottom:3px solid #ccc;
+	color:#999;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellPast {
+	background:transparent;
+	border-bottom:3px solid #ccc;
+	color:#ccc;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantControlCell {
+	padding-bottom:10px;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantSelectList {
+	width:auto;
+}
+
+.EventItemRegistrantsTable {
+	font-size:1em;
+}
+
+.EventItemRegistrationsTable {
+	width:100%;
+	margin:0;
+	font-size:1em;
+	
+}
+
+.EventItemRegistrationsTable tr {
+	border-bottom:1px solid #888;
+}
+
+.EventItemsTable {
+	border:0 none;
+	border-collapse:collapse;
+}
+
+.EventTable {
+	margin:0;
+	width:100%;
+}
+
+.EventTable .BBFieldCheckboxCaption {
+	display:block;
+	margin:0;
+}
+
+.EventTable .BBFieldCheckboxCaption input {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable .EventItemTitleName {
+	line-height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table table {
+	margin-left:0;
+}
+
+.EventTable .BBFormSubmitButton {
+	display:block;
+	margin:0 0 0 auto;
+}
+
+.EventTable .BBListEvenRowStyle {
+	background-color:transparent!important;
+}
+
+.EventTable .LoginFormTextbox {
+	width:100%;
+}
+
+.EventItemRegistrantTextbox {
+	width:95%;
+}
+
+table.EventItemsTable .EventItemTitleDescription {
+	display:block;
+}
+
+.EventItemTitleName {
+	border:medium none;
+	display:block;
+	text-align:left;
+}
+
+.EventItemTitleTime {
+	text-transform:none;
+}
+
+table.EventItemsTable .EventItemTitleTime {
+	border:medium none;
+	color: $body-font-color;
+	display:block;
+	font-family:inherit;
+	font-size: $body-font-size;
+	font-weight:400;
+	padding:0;
+}
+
+table[id$=tblProgress] {
+	background-color:#f9f9f9;
+}
+
+.EventProgressCell {
+	background: $form-header-row-background-color;
+	border:0;
+	color: $content-primary-background-color;
+}
+
+.EventProgressCellFuture,.EventProgressCellPast {
+	padding-left:20px;
+	margin-left:-10px;
+	border:0;
+	color: $body-font-color;
+}
+
+.EventProgressCell,.EventProgressCellFuture,.EventProgressCellPast {
+	padding:10px;
+	text-align:center;
+}
+
+
+.EventItemsSelectionGrid {
+	min-width:0;
+}
+
+td.EventItemRegistrationsHeader {
+	padding-bottom:10px;
+}
+
+input[id*=Attributes][type=checkbox] {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table[id*=dgEventItems] td {
+	padding-top:0;
+	padding-bottom:0;
+}
+
+.EventTable table[id*=dgEventItems] td.EventItemRegistrantsHeader {
+	padding-top:15px;
+}
+
+input[id*=Attributes][type=checkbox] + label {
+	line-height:24px;
+/* $checkbox-line-height */
+	padding-left:10px;
+/* $checkbox-to-label-spacing */
+}
+
+
+
+/*---------------------------------------------
+                     ::13.11 Quick Search
+----------------------------------------------*/
+
+.QuickSearchFormTable {
+	border-left: 1px solid #c6c2ba;
+	input.QuickSearchTextbox {
+		background-color: transparent;
+		border: 0;
+		width: 180px;
+		color:#c6c2ba;
+		font: bold rem(13) $alt-body-font;
+		background:transparent url('image/icon_search.png') no-repeat right 50%;
+		padding:.5em 20px .5em 10px;
+		
+		&:focus { background-color: transparent; border: 0; appearance: none;}
+	}
+	
+	.QuickSearchButton {display: none !important;}
+}
+
+    
+// Multi-Step Giving Form Styles
+
+.donationForm {
+	padding: 0 20px;
+	width: 100%;
+	
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		
+		select {
+			background-color: #fafafa;
+		    background-position: 100% center;
+		    background-repeat: no-repeat;
+		    border-color: #cccccc;
+		    border-radius: 0;
+		    border-style: solid;
+		    border-width: 1px;
+		    color: rgba(0, 0, 0, 0.75);
+		    font-size: 0.875rem;
+		    height: 2.3125rem;
+		    line-height: normal;
+		    padding: 0.5rem;
+		}
+		
+		select#designation {
+			position: relative;
+			float: left;
+			margin: 0 1rem 1rem 0;
+			width: 40%;
+			
+			+ a {
+				position: relative;
+				display: inline-block;
+				float: left;
+				margin-top: 9px;
+				
+				&::before {
+					content: '\f002';
+					font-family: $icon-font-family;
+					display: inline-block;
+					padding-right: 5px;
+				}
+			}
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+			float: left;
+			width: 100%;
+			
+			li {
+				float: left;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: inline-block;
+				position: relative;
+				
+				input + label {
+					margin-right: 1rem;
+					margin-left: .5rem;
+					vertical-align: baseline;
+					
+					&[for="amtOther"] { display: none; }
+				}
+				
+			}
+		}
+		
+		input, label {
+			display: inline-block;
+			float: left;
+			position: relative;
+		}
+		
+		input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+			background-color: #ffffff;
+		    border-color: #cccccc;
+		    border-style: solid;
+		    border-width: 1px;
+		    box-shadow: none;
+		    box-sizing: border-box;
+		    color: rgba(0, 0, 0, 0.75);
+		    display: block;
+		    font-family: inherit;
+		    font-size: 0.875rem;
+		    height: 2.3125rem;
+		    margin: 0 0 1rem;
+		    padding: 0.5rem;
+		    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+		}
+		
+		input.mediumWidth { width: 50%; }
+		
+		&.row {
+			width: 100%;
+			float: left;
+			position: relative;
+			margin-top: 15px;
+			
+			&.designationInfo {margin-top: 0;}
+			
+			&.tribueInformation, &.additionalInformation { margin-top: 1.5rem; }
+		}
+		
+		&.amountInfo {
+			
+			ul li {
+				
+				input#txtAmount {
+					margin-left: 1rem;
+					top: -10px;
+				}
+			}
+		}
+		
+		&.additionalInformation, &.tribueInformation {
+			ul li {
+				display: block;
+				width: 100%;
+				margin-bottom: .5rem;
+				
+				label {
+					padding: 10px 10px 0 0;
+					font-weight: bold;
+					width: 20%;
+					
+					text-align: right;
+				}
+				
+			}
+		}
+		
+		&.tribueInformation {
+			
+			input[type="checkbox"] + label {
+				width: auto;
+				padding: 0;
+				
+			}
+			
+			input[type="radio"] + label {
+				width: auto;
+				padding: 0;
+				
+			}
+			
+			.tributeKind { 
+				margin: 1rem 0 24px;
+				
+				ul li { 
+					margin-bottom: 1rem;
+					
+					&:last-child { margin-bottom: 0; }
+				}
+			}
+			
+		}
+	}
+	
+	input[type="button"]#donate {
+		margin: 1.5rem 3rem 2rem 0;
+		float: right;
+		padding: 12px 15px;
+	}
+}
+
+// Single Donation Form - Single Inptu Credit Card Styles
+
+#wrapSingleGivingForm + [id*="UpdatePanel"] { display: none; }
+
+#wrapSingleGivingForm {
+	margin-bottom: 2.5rem;
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		
+		&.step.two ul.personalInfoList, &.step.three ul.paymentInfo { display: none; }
+	}
+	
+	.inactive { color: #999; }
+	
+	.complete:after {
+		font-family: $icon-font-family;
+		content: '\f046';
+		color: rgba(0, 128, 0, 0.6);
+		display: inline-block;
+		margin-left: 1rem;
+		font-size: 23px;
+	}
+	
+	.siblingsComplete { opacity: .4; }
+	
+	select {
+			background-color: #fafafa;
+		    background-position: 100% center;
+		    background-repeat: no-repeat;
+		    border-color: #cccccc;
+		    border-radius: 0;
+		    border-style: solid;
+		    border-width: 1px;
+		    color: rgba(0, 0, 0, 0.75);
+		    font-size: 0.875rem;
+		    height: 2.3125rem;
+		    line-height: normal;
+		    padding: 0.5rem;
+		}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: block;
+		float: left;
+		width: 100%;
+		
+		li {
+			float: left;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			position: relative;
+			
+			input + label {
+				margin-right: 1rem;
+				margin-left: .5rem;
+				vertical-align: baseline;
+			}
+			
+			input[type="checkbox"] + label {
+			width: auto;
+			padding: 0;
+			
+			}
+			
+			input[type="radio"] + label {
+				width: auto;
+				padding: 0;
+				
+			}
+			
+			label {
+				display: block;
+				width: 100%;
+				margin-bottom: 8px;
+			}
+			
+			&.searchAllFundsLink a:before {
+				content: '\f002';
+				font-family: $icon-font-family;
+				display: inline-block;
+				padding-right: 5px;
+			}
+		}
+		
+		&.fundDesignation { margin-bottom: 1.5rem; }
+		
+		
+		&.givingAmountOptions .otherAmount input + label + input[type="text"] {
+			margin-left: 15px;
+			position: relative;
+			top: -10px;
+		}
+		
+		&.personalInfoList {
+			li {
+				display: block;
+				width: 100%;
+				margin-bottom: .5rem;
+			}
+			
+			.donorTitle, .donorFirstName, .donorLastName {
+				display: inline-block;
+				position: relative;
+				float: left;
+				width: 30%;
+				
+				input[type="text"] {
+					width: 100%;
+				}
+			}
+			
+			.donorFirstName { margin-right: 2rem; }
+			
+			.donorTitle {
+				width: 20%;
+				
+				select#nameTitleList { max-width: 80%; }
+			}
+			
+			.wrapCity, .wrapState, .wrapZip {
+				position: relative;
+				display: inline-block;
+				float: left;
+				width: 40%;
+			}
+			
+			.wrapCity input#billingCity { width: 87%; }
+			
+			.wrapState { width: 28%; }
+			
+			.wrapZip {
+				width: 25%;
+				
+				input#zip { width: 88%; }
+			}
+		}
+	}
+	
+	input, label {
+		display: inline-block;
+		float: left;
+		position: relative;
+	}
+	
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+		background-color: #ffffff;
+	    border-color: #cccccc;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: none;
+	    box-sizing: border-box;
+	    color: rgba(0, 0, 0, 0.75);
+	    display: block;
+	    font-family: inherit;
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    margin: 0 0 1rem;
+	    padding: 0.5rem;
+	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	    max-width: 350px;
+	}
+	
+	input.mediumWidth { width: 50%; }
+
+	fieldset.credit-card-group {
+		position: relative;
+		overflow: hidden;
+		
+		ul.paymentInfo {
+			
+			li {
+				float: none;
+				display: block;
+				width: 100%;
+				clear: both;
+				
+				/*
+legend {
+					background: none repeat scroll 0 0 #ffffff;
+				    font-weight: normal;
+				    margin: 0 0 0 -0.1875rem;
+				    padding: 0 0.1875rem;
+				    color: #4d4d4d;
+				    font-size: 14px;
+				}
+				
+				.wrapCardInfo {
+					border: 1px solid #ccc;
+					box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+					padding: 0 .5em;
+					overflow: hidden;
+					backface-visibility: hidden;
+					position: relative;
+					width: 77%;
+					
+					.card-image {
+						float: left;
+						margin-top: 6px;
+					}
+				}
+				
+				&:first-child label { 
+					display: block !important;
+					position: relative !important;
+					left: 0;
+				}
+				
+				&:last-child input {
+					display: inline;
+					margin: 0;
+					background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				    border: 0 none;
+				    box-shadow: none;
+				    outline: 0 none;
+				    padding: 0;
+				}
+*/				
+				&[class*="card"] {
+					float: left;
+					display: inline-block;
+					width: 40%;
+				}
+				
+				&.cardNumber input#cardNumber { width: 87%; }
+				
+				&.cardExp { 
+					width: 29%; 
+					clear: none;
+					
+					#cardExpMonth { margin-right: 10px; }
+				}
+				
+				&.cardCsc { 
+					width: 20%;
+					clear: none;
+					
+					input#cscCode { width: 63%; }
+				}
+			}
+		}
+	}
+	
+	.hide {
+		display: none !important;
+		position: absolute !important;
+		left: -999999px;
+	}
+	
+	.BBFormValidatorSummary ul li {
+		display: block;
+		width: 100%;
+	}
+	
+	input[type="submit"].DonationSubmitButton {
+		margin: 1.5rem 0 2rem 0;
+		float: right;
+		padding: 12px 15px;
+		background-color: #47bddb;
+	}
+}
+
+.card-instructionm, .cardTypeEnt { display: none; }
+
+/* ------------------------------
+	Payment Part Styles
+------------------------------ */
+
+
+.PaymentPart_CartCell_Error {
+	background-color:#FEE;
+}
+
+.PaymentPart_SectionHeading {
+	text-align:left;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid #ebd087;
+    display: block;
+    margin-bottom: 1.75rem;
+    padding-bottom: 3px;
+    width: 92%;
+    font-size: rem(23);
+    line-height: rem(32);
+    font-weight: 400; 
+}
+
+.PaymentPart_CartDeliveryMethodCaption {
+	white-space:nowrap;
+}
+
+.PaymentPart_CartSubtotalCaption {
+	white-space:nowrap;
+}
+
+.PaymentPart_CartSubtotal {
+	white-space:nowrap;
+}
+
+.PaymentPart_DiscountCodeContainer {
+	float:left;
+	margin:0 0 8px;
+	padding:0 10px 0 0;
+	text-align:left;
+	width:auto;
+}
+
+.PaymentPart_CartSummaryDetails {
+	float:right;
+}
+
+.PaymentPart_DiscountCodeDetails {
+	float:left;
+}
+
+.PaymentPart_CartCell_CurrencyError {
+	background-color:#FFA;
+}
+
+.PaymentPart_CartCell_ConvertedCurrencyMessage {
+	background-color:#FFA;
+}
+
+.PaymentPart_CartCell_RequireRegistration {
+	background-color:#FFA;
+}
+
+.PaymentPart_CartOptions {
+	margin-bottom:8px;
+	padding:2px 0 4px;
+}
+
+.PaymentPart_Cart {
+	border:0;
+	margin-bottom:10px;
+	background-color: #efefef;
+}
+
+.PaymentPart_CartList {
+	width:100%;
+}
+
+.PaymentPart_CartHeader {
+	font-size:9pt;
+}
+
+.PaymentPart_CartHeaderCell {
+	margin:0;
+	padding:3px 5px;
+	font-size: 14px;
+}
+
+.PaymentPart_CartHeaderDescriptionCell {
+	text-align:left;
+}
+
+.PaymentPart_CartHeaderCurrencyCell {
+	text-align:center;
+}
+
+.PaymentPart_CartHeaderQuantityCell {
+	text-align:center;
+}
+
+.PaymentPart_CartCell {
+	padding:5px;
+	border-top: 0;
+}
+
+.PaymentPart_CartQuantityCell {
+	text-align:center;
+}
+
+.PaymentPart_CartCurrencyCell {
+	text-align:center;
+}
+
+.PaymentPart_CartItemType {
+	border-top:1px solid #CCC;
+	border-bottom: 0 !important;
+	padding:5px 5px 2px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.PaymentPart_CartSummary {
+	background-color:transparent;
+	text-align:right;
+	margin:0;
+	font-size: $body-font-size;
+	border: 0;
+	
+	dl {
+		margin: 0;
+		padding: 0;
+	}
+	
+}
+
+.PaymentPart_CartSummaryCaptionContainer {
+	float:left;
+	margin:0 0 8px;
+	padding:0 10px 0 0;
+	text-align:right;
+	width:150px;
+}
+
+.PaymentPart_CartSummaryFieldContainer {
+	float:left;
+	margin:0;
+}
+
+.PaymentPart_Controls {
+	padding:5px 0;
+}
+
+.PaymentPart_PesonalInfoCheckbox {
+	margin-left:150px;
+	display: block;
+	
+	input[type="checkbox"] { margin-right: 8px; }
+	
+	label { display: inline-block; }
+}
+
+.PaymentPart_ShippingList {
+	padding:0;
+	margin:0;
+}
+
+.PaymentPart_ShippingListItem {
+	padding:5px;
+	margin:10px 0 0;
+	list-style:none;
+	border-bottom:1px solid $site-accent-color;
+}
+
+.PaymentPart_ShippingListItemInfoItem {
+	display:block;
+}
+
+.PaymentPart_ShippingListItemInfoName {
+	font-weight:700;
+}
+
+.BBDivFieldContainer {
+	width: 100%;
+	display: block;
+	margin-bottom: .5rem;
+	padding: 0;
+	float: left;
+	
+	select {
+		background-color: #fafafa;
+	    background-position: 100% center;
+	    background-repeat: no-repeat;
+	    border-color: #cccccc;
+	    border-radius: 0;
+	    border-style: solid;
+	    border-width: 1px;
+	    color: rgba(0, 0, 0, 0.75);
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    line-height: normal;
+	    padding: 0.5rem;
+	    color: #333;
+		font-size: .875rem;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		line-height: .875rem;
+		float: left;
+		max-width: 40%;
+	}
+	
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+		background-color: #ffffff;
+	    border-color: #cccccc;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: none;
+	    box-sizing: border-box;
+	    color: rgba(0, 0, 0, 0.75);
+	    display: inline-block;
+	    font-family: inherit;
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    margin: 0 0 1rem;
+	    padding: 0.5rem;
+	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	    max-width: 50%;
+	    float: left;
+	}
+	
+	label, .DCFieldCaption {
+		padding: 10px 10px 0 0;
+		font-weight: bold;
+		width: 20%;
+		text-align: right;
+		color: #333;
+		font-size: .875rem;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		line-height: .875rem;
+		float: left;
+		display: inline-block;
+	}
+	
+	.DonationCaptureRequiredFieldMarker {
+		display: inline-block;
+		position: relative;
+		margin-left: 1rem;
+	}
+}
+
+input[name*="ButtonCheckout"].PaymentPartSubmitButton {
+	margin: 1.5rem 8rem 2rem 0;
+	padding: 12px 15px;
+}
+
+.wrapContent .wrapMainContent .PaymentPart_ValidationSummary {
+	color: red;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			color: red;
+			list-style: none;
+			font-size: $body-font-size;
+			line-height: $body-line-height;
+			margin-bottom: .7rem;
+		}
+	}
+}
+
+// BBSP
+
+#bbpay_Payment {
+	font-size: $body-font-size;
+	color: $body-font-color;
+	font-family: $body-font-family;
+	line-height: $body-line-height;
+	
+	.x-form-item {
+		margin-bottom: .5rem;	
+	}
+	
+	label {
+		padding: 10px 10px 0 0;
+		font-weight: bold;
+		width: 25% !important;
+		text-align: right;
+		color: #333;
+		font-size: .875rem;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		line-height: .875rem;
+		float: left;
+		display: inline-block;
+	}
+	
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+		background-color: #ffffff;
+	    border-color: #cccccc;
+	    border-style: solid;
+	    border-width: 1px;
+	    box-shadow: none;
+	    box-sizing: border-box;
+	    color: rgba(0, 0, 0, 0.75);
+	    display: inline-block;
+	    font-family: inherit;
+	    font-size: 0.875rem;
+	    height: 2.3125rem;
+	    margin: 0 0 1rem;
+	    padding: 0.5rem;
+	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	    float: left;
+	}
+	
+	input[type="text"] {
+		&#city, &#cardholdername, &#phone, &#email, &#cardnumber { width: 300px !important; }
+	}
+	
+	textarea {
+		&#addr { width: 300px !important; }
+	}
+	
+	#editpanel, .contentEditWindow, [id*="ext"][class*="x-panel"] {
+		width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	
+	div#amount, div#description { margin-top: 8px; }
+	
+	div.x-form-field-trigger-wrap {
+		width: auto !important;
+		
+		img.x-form-arrow-trigger {
+			opacity: 0;
+			z-index: 1000;
+			height: 2.3125rem;
+			width: 25px;	
+		}
+		
+		&::after {
+			content: '\f078';
+			font-family: $icon-font-family;
+			display: inline-block;
+			color: #555;
+			background-color: #ccc;
+			padding: 12px 0 0;
+			height: 2.3125rem;
+			width: 30px;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	
+	input[type="text"]#csc { width: 75px !important; }
+	
+	#x-form-el-expiry {
+		
+		.x-box-inner {
+			
+			> input {
+				width: 50px !important;
+				
+				+ label.x-box-item {
+					left: 39px !important;
+					
+					+ input {
+						width: 50px !important;
+						left: 81px !important;
+					}
+				}
+			}
+		}
+	}
+	
+	.x-panel-footer-noborder.x-panel-btns {
+		
+		td[class*="x-panel"], #submitButton td, #cancelButton td { background-image: none !important; }
+		
+		button[id*="ext"].x-btn-text {
+			background: #47bddb;
+			text-align: center;
+			vertical-align: middle;
+			font-size: .75rem;
+			border: 0;
+			box-shadow: 0;
+			border-radius: 0;
+			display: block;
+			margin: 1.5rem 3rem 2rem 0;
+			padding: 12px 15px;
+			overflow: auto;
+			color: #fff;
+			height: auto;
+			
+			&:hover { background: darken(#002c64, 5%); }
+		}
+		
+		#cancelButton button[id*="ext"].x-btn-text {
+			background-color: #ccc;
+			color: #555;
+			
+			&:hover { background: darken(#ccc, 5%); }
+		}
+	}
+}
+
+.PaymentPart_FormContainer { overflow: visible !important; }
+

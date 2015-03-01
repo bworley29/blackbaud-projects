@@ -1,0 +1,106 @@
+/*=========================================================================================
+                     ::6. Buttons
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::6.1 Default Buttons
+----------------------------------------------*/
+input[type="submit"], input[type="button"], input.BBFormSubmitButton, button, a.BBFormDisplayLinkButton, a.PaymentPart_UpdateCartLink, a.PaymentPart_CartItemRemoveText, a[id$="UpdateLink"], a[id$="btnInsert"], a[id$="InsertLink"], div[id$="pnlAddNew"] a, a.CommandButton, a[id$="ExpandCollapseLinkButton"], a[id$="NewMessageHyperlink"], div[id$="MessageView1_ActionsMenu"] a[value="16"], div[id$="PanelOnlineStatus"]+div+div+div ul li a, table.ProfilePhotoFormTable input[value="Update"], table.ProfilePhotoFormTable input[value="Remove Photo"], a[id$="LinkButtonYes"], input[id$="btnSave"].DonorGrantSubmitButton, input[id$="btnCancel"].DonorGrantSubmitButton, input.QuickSearchButton, a.BBDocumentTabButton, a.BBDocumentEditButtonWAI, a.BBDocumentApproveButtonWAI, a.defaultGoldButton, #simpleSlider .slide .link a, input.ListViewDateRangeGoButton[type="button"], .defaultButton {
+display:inline-block;
+cursor: pointer;
+text-decoration:none !important;
+line-height:1;
+padding:0 1em;
+height: auto;
+font-size: $body-font-size;
+font-weight: 400;
+font-family: $alt-body-font;
+padding: 7px 20px 5px;
+text-transform: uppercase;
+text-align: center;
+vertical-align: middle;
+color: #fff;
+background: #c22516;
+border: 0;
+@include border-radius(5);
+}
+
+/* Default Button Hovers */
+input[type="submit"]:hover, input[type="button"]:hover, input.BBFormSubmitButton:hover, button:hover, a.PaymentPart_UpdateCartLink:hover, a.PaymentPart_CartItemRemoveText:hover, a[id$="UpdateLink"]:hover, a[id$="btnInsert"]:hover, a[id$="InsertLink"]:hover, div[id$="pnlAddNew"] a:hover, a.CommandButton:hover, a[id$="ExpandCollapseLinkButton"]:hover, a[id$="NewMessageHyperlink"]:hover, div[id$="MessageView1_ActionsMenu"] a[value="16"]:hover, div[id$="PanelOnlineStatus"]+div+div+div ul li a:hover, table.ProfilePhotoFormTable input[value="Update"]:hover, table.ProfilePhotoFormTable input[value="Remove Photo"]:hover, a[id$="LinkButtonYes"]:hover, input[id$="btnSave"].DonorGrantSubmitButton:hover, input[id$="btnCancel"].DonorGrantSubmitButton:hover, input.QuickSearchButton:hover, a.BBDocumentTabButton:hover, a.BBDocumentEditButtonWAI:hover, a.BBDocumentApproveButtonWAI, a.defaultGoldButton:hover, input.ListViewDateRangeGoButton[type="button"]:hover {
+	background: lighten(#c22516, 5%);
+}
+ 
+/*---------------------------------------------
+                     ::6.2 Primary Buttons
+----------------------------------------------*/
+input.BBFormSubmitButton, #submitButton button, input.BBSequenceMapNavigationNextButton, input.BBSequenceMapNavigationFinishButton, input[type="submit"], a[id$="NewMessageHyperlink"], div[id$="MessageView1_ActionsMenu"] a[value="16"], table.ProfilePhotoFormTable input[value="Select Image"], a[id$="LinkButtonYes"], a.loiDonateLink, span.buttonPrimary>a, input[value*="Save and Continue"], a.BBDocumentTabButton {
+}
+/* Primary Button Hovers */
+input.BBFormSubmitButton:hover, input.BBSequenceMapNavigationFinishButton:hover, input[type="submit"]:hover, a[id$="NewMessageHyperlink"]:hover, div[id$="MessageView1_ActionsMenu"] a[value="16"]:hover, table.ProfilePhotoFormTable input[value="Select Image"]:hover, a[id$="LinkButtonYes"]:hover, a.loiDonateLink:hover, span.buttonPrimary>a:hover, input[value*="Save and Continue"]:hover, a.BBDocumentTabButton {
+}
+
+ 
+/*---------------------------------------------
+                     ::6.3 Inline Buttons
+----------------------------------------------*/
+input.SearchButton[id$="btnSearch"], input.FundSummarySubmitButton[name$="btnRefresh"], a.PaymentPart_CartItemRemoveText, input.ListViewDateRangeGoButton, a.BBFormDisplayLinkButton, a.DiscussionGroupSubmitButton[value="Search"], a.BBDocumentEditButtonWAI, a.BBDocumentDeleteButtonWAI {
+
+}
+
+
+/*---------------------------------------------
+                     ::6.4 Cancel Buttons (Styled to look like links by default)
+----------------------------------------------*/
+input[type="reset"], input[type="submit"][name*="btnCancel"], input[type="button"][value="Previous"], input[value="Cancel"] {
+border:0;
+color: $body-font-color;
+background:transparent;
+@include box-shadow(none);
+text-decoration: underline ;
+line-height:inherit;
+cursor:pointer ;
+text-decoration: none ;
+height: auto;
+padding-top: 0;
+padding-bottom: 0;
+}
+input[type="submit"][name*="btnCancel"]:hover, input[type="button"][value="Previous"]:hover, input[type="submit"][value="Cancel"]:hover {
+color: $body-font-color;
+@include box-shadow(none);
+border-color: transparent;
+background: transparent;
+}
+
+/*---------------------------------------------
+                     ::6.5 Disabled Buttons
+----------------------------------------------*/
+input[type="submit"][disabled], input[type="button"][disabled], a.aspNetDisabled {
+//opacity: 0.5;
+//filter: alpha(opacity=50);
+background: transparent;
+color: #333;
+border: 0;
+cursor: default !important;
+}
+
+
+// Sidebar Button
+button.sidebarButton, a.sidebarButton {
+	font-size: rem(14);
+	line-height: rem(17);
+	display: block;
+	width: 100%;
+	background: #B5BB14;
+	border: solid 1px #fff;
+	text-transform: uppercase;
+	@include box-shadow(none);
+	@include border-radius(0);
+	margin: rem(10) 0 rem(8);
+	text-align: center;
+	color: #fff;
+	padding: .35rem 1.5rem;
+	
+	&:hover {
+		background: $link-color;
+	}
+}

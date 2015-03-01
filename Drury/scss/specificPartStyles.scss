@@ -1,0 +1,947 @@
+/*=========================================================================================
+                     ::13. SPECIFIC PARTS & STYLES
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::13.1 Page Title
+----------------------------------------------*/
+ 
+/*---------------------------------------------
+                     ::13.2 Donation Form
+                     
+----------------------------------------------*/
+
+table.DonationFormTable {
+	
+	td[id*="thCaptionAmount"] {
+		padding-top: 0;
+		label {padding: 0;}
+	}
+	
+	.DonationListingHeading {
+		span, label {
+			display: block;
+			white-space: nowrap;
+		}
+	}
+	
+	[id*="trDesignationOther"][style*="hidden"] {
+		.DonationFieldCaption, [id*="tdDesignationOther"] { 
+			display: none;
+		}
+	}
+	
+	tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {margin-top: 1rem;}
+	
+	.emptyTD { display: none; }
+	
+}
+
+table[id*="tblAmount"] {
+	.DonationFieldControlCell {
+		width: auto;
+		vertical-align: top;
+		
+		input[name*="givingLevels"] { margin: 0 10px 13px 0;}
+	}
+}
+
+// Shopping Cart Customization
+
+table.DonationFormTable tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {width: 100%;}
+
+tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] tr.DonationGridHeader td.DonationGridHeaderCell:first-child {text-align: right;}
+
+tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] .DonationGridCell { vertical-align: top; background-color: #fff;}
+
+tbody[id*="tbdCart"] tr[id*="trAddToCart"] .DonationSubmitButton {float: right;}
+ 
+/*---------------------------------------------
+                     ::13.3 Transaction Manager
+----------------------------------------------*/
+
+.TransactionManagerWrapper select.BBFormSelectList {
+	padding-top:1%;
+	padding-bottom:1%;
+}
+ 
+/*---------------------------------------------
+                     ::13.4 Event Registration Form Classic
+----------------------------------------------*/
+
+.EventAttendeesComplete {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesCurrent {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	font-weight:400;
+	padding-left:0;
+}
+
+.EventAttendeesFuture {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesGrid {
+	background-color:#fafafa;
+	border:1px solid #888;
+	color:#333;
+	font-size:1em;
+	margin:1em 0;
+	padding-right:0;
+	vertical-align:top;
+}
+
+.EventAttendeesOverallTotal {
+	background-color:#fafafa;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventItemRegistrantsEventName {
+	background-color:transparent;
+	border:medium none;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemsSelectionGrid {
+	border:0 none;
+	margin:0;
+}
+
+.EventSectionHeader {
+	font-weight:400;
+	font-size:18px;
+	background-color:transparent;
+	border:medium none;
+	padding:1em 0 .25em;
+	text-align:left;
+}
+
+.EventTicketsBodyCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventTicketsHeaderCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:700;
+	padding:.25em .25em 1em 0;
+}
+
+.SummaryGridEventTitle {
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+}
+
+.EventItemRegistrantControlCellName {
+	width:33%;
+	padding-bottom:10px;
+}
+
+.EventItemRegistrantControlCellName .BBFieldCaption {
+	white-space:nowrap;
+}
+
+.EventItemRegistrantsHeader {
+	background-color:transparent;
+	border-bottom:0 none;
+	color:#000;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemRegistrationControlCellDescription {
+	width:55%;
+	padding:0 1em;
+	vertical-align:middle;
+}
+
+.EventItemRegistrationControlCellNumParticipants {
+	width:15%;
+	white-space:nowrap;
+}
+
+.EventItemRegistrationControlCellPrice {
+	width:20%;
+}
+
+.EventItemRegistrationsHeader {
+	background-color:transparent;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventProgressCell {
+	background-color:transparent;
+	border-bottom:3px solid #000;
+	color:#333;
+/* $heading-color */
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellFuture {
+	background:transparent none repeat scroll 0 0;
+	border-bottom:3px solid #ccc;
+	color:#999;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellPast {
+	background:transparent;
+	border-bottom:3px solid #ccc;
+	color:#ccc;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantControlCell {
+	padding-bottom:10px;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantSelectList {
+	width:auto;
+}
+
+.EventItemRegistrantsTable {
+	font-size:1em;
+}
+
+.EventItemRegistrationsTable {
+	width:100%;
+	margin:0;
+	font-size:1em;
+	
+}
+
+.EventItemRegistrationsTable tr {
+	border-bottom:1px solid #888;
+}
+
+.EventItemsTable {
+	border:0 none;
+	border-collapse:collapse;
+}
+
+.EventTable {
+	margin:0;
+	width:100%;
+}
+
+.EventTable .BBFieldCheckboxCaption {
+	display:block;
+	margin:0;
+}
+
+.EventTable .BBFieldCheckboxCaption input {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable .EventItemTitleName {
+	line-height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table table {
+	margin-left:0;
+}
+
+.EventTable .BBFormSubmitButton {
+	display:block;
+	margin:0 0 0 auto;
+}
+
+.EventTable .BBListEvenRowStyle {
+	background-color:transparent!important;
+}
+
+.EventTable .LoginFormTextbox {
+	width:100%;
+}
+
+.EventItemRegistrantTextbox {
+	width:95%;
+}
+
+table.EventItemsTable .EventItemTitleDescription {
+	display:block;
+}
+
+.EventItemTitleName {
+	border:medium none;
+	display:block;
+	text-align:left;
+}
+
+.EventItemTitleTime {
+	text-transform:none;
+}
+
+table.EventItemsTable .EventItemTitleTime {
+	border:medium none;
+	color: $body-font-color;
+	display:block;
+	font-family:inherit;
+	font-size: $body-font-size;
+	font-weight:400;
+	padding:0;
+}
+
+table[id$=tblProgress] {
+	background-color:#f9f9f9;
+}
+
+.EventProgressCell {
+	background: $form-header-row-background-color;
+	border:0;
+	color: $content-primary-background-color;
+}
+
+.EventProgressCellFuture,.EventProgressCellPast {
+	padding-left:20px;
+	margin-left:-10px;
+	border:0;
+	color: $body-font-color;
+}
+
+.EventProgressCell,.EventProgressCellFuture,.EventProgressCellPast {
+	padding:10px;
+	text-align:center;
+}
+
+
+.EventItemsSelectionGrid {
+	min-width:0;
+}
+
+td.EventItemRegistrationsHeader {
+	padding-bottom:10px;
+}
+
+input[id*=Attributes][type=checkbox] {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table[id*=dgEventItems] td {
+	padding-top:0;
+	padding-bottom:0;
+}
+
+.EventTable table[id*=dgEventItems] td.EventItemRegistrantsHeader {
+	padding-top:15px;
+}
+
+input[id*=Attributes][type=checkbox] + label {
+	line-height:24px;
+/* $checkbox-line-height */
+	padding-left:10px;
+/* $checkbox-to-label-spacing */
+}
+
+// Event Reg 2.0
+.EventItemTitleTime:before {
+	content:'\f017';
+	display:inline-block;
+	font-family:$icon-font-family;
+	font-style:normal;
+	font-weight:400;
+	line-height:1;
+	padding-right:.25em;
+}
+
+/*---------------------------------------------
+                     ::13.5 User Login
+----------------------------------------------*/
+
+table.wrapLoginFormTable {
+	width: 100%;
+	
+	tr[id*="trSignInBody"] table.taLeft {
+		width: 100%;
+	}
+}
+
+.LoginFormCheckListContainer .LoginFormCheckList input[type="checkbox"] + label { padding-left: .7rem; }
+
+.LoginFormTable .taCenter {padding-bottom: .65rem;}
+
+.LoginFormTable .BBFormButtonCell { padding-left: 2rem;}
+
+/*---------------------------------------------
+                     ::13.6 Documents
+----------------------------------------------*/
+
+table.BBFormTable.BBDocumentFormTable table.BBDocumentDisplayTable td[id*="rpFileList_EditBtnCell"],table.BBFormTable.BBDocumentFormTable table.BBDocumentDisplayTable td[id*="rpFileList_DeleteBtnCell"] {
+	padding-left:0!important;
+	padding-right:0!important;
+}
+
+td[id*="rpFileList_EditBtnCell"] {
+	padding-left:1em;
+}
+
+[id*="btnAddDocument"],a[id*="rpFileList_btnEdit"],a[id*="rpFileList_btnDelete"] {
+	visibility:hidden;
+	margin:0;
+	padding:0;
+	height: auto;
+}
+
+[id*="btnAddDocument"] {
+	float:right;
+}
+
+[id*="btnAddDocument"]:after {
+	content:'\f093';
+	display:inline-block;
+	font-family:$icon-font-family;
+	font-style:normal;
+	font-weight:400;
+	line-height:1;
+	visibility:visible;
+	font-size:1.25em;
+	color:#fff;
+	padding:.25em .65em;
+	background:$icon-button-color-primary;
+}
+
+[id*="btnAddDocument"]:hover:after {
+	color:#fff;
+	background:darken($icon-button-color-primary,10%);
+}
+
+a[id*="rpFileList_btnEdit"]:before,a[id*="rpFileList_btnDelete"]:before {
+	display:inline-block;
+	font-family:$icon-font-family;
+	font-style:normal;
+	font-weight:400;
+	line-height:2.25rem;
+	text-indent:0;
+	visibility:visible;
+	font-size:1rem;
+	height:auto;
+	text-shadow:none;
+	color:$icon-button-color-primary;
+}
+
+a[id*="rpFileList_btnEdit"]:before {
+	content:'\f044';
+}
+
+a[id*="rpFileList_btnDelete"]:before {
+	content:'\f014';
+}
+
+a[id*="rpFileList_btnEdit"]:hover:before,a[id*="rpFileList_btnDelete"]:hover:before {
+}
+
+a.BBDocumentDisplayHeader:after {
+	content:'\f0dc';
+	display:inline-block;
+	font-family:$icon-font-family;
+	font-style:normal;
+	font-weight:400;
+	line-height:1;
+	color:#ccc;
+	padding-left:.65em;
+}
+
+a.BBDocumentDisplayHeader.BBDocumentDisplayHeaderSelected:after {
+	color:#545454;
+}
+
+.BBDocumentDisplayHeaderRow td {
+	background-color:#efefef;
+}
+
+tr.BBDocumentDisplayHeaderRow + tr td {
+	padding-top:1.25em;
+}
+
+a[id*="rpFileList_FileLink"]:before {
+	content:'\f016';
+	display:inline-block;
+	font-family:$icon-font-family;
+	font-style:normal;
+	font-weight:400;
+	font-size:1rem;
+	line-height:1;
+	padding-right:.25em;
+	color:$icon-button-color-primary;
+}
+
+table[id*="tblDocUpload"] tr[id*="trOriginalFile"] td:last-child {
+	font-size:$body-font-size;
+	padding:5px 0 1em;
+}
+
+.BBDocumentDisplayTable {
+	tr > td > hr {
+		display: none;
+	}
+	
+	.BBListOddRowStyle {background-color: transparent;}
+	
+	tr[class*="BBDocumentDisplay"] {
+		td {
+			padding: 0 1em;
+			
+			a {padding: 0;}
+		}
+	}
+}
+
+/*---------------------------------------------
+                     ::13.7 My Home Profile
+----------------------------------------------*/
+
+dl.myHomeProfileDisplay {
+	margin: 0;
+	padding: 0;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	
+	dd {
+		margin: 0 0 $form-input-bottom-margin;
+		padding: 0;
+		
+		h3, a {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		a:before {
+			content: '\f040';
+			padding:0 .3em;
+			font-family: $icon-font-family;
+			display: inline-block;
+		}
+		span:empty {display: none;}
+	}
+}
+
+ul.myHomeProfileLinks {
+	margin: 0;
+	padding: 0 0 0 .15em !important;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	list-style: none;
+	
+	li {
+		margin: 0 0 $form-input-bottom-margin;
+		padding: 0;
+		
+		a {
+		
+			&:before {
+				content: '\f101';
+				font-family: $icon-font-family;
+				display: inline-block;
+				padding-right: .5em;
+				color: $icon-button-color-primary;
+				font-size: .875rem;
+			}
+		}
+	}
+	li.myProfile a:before {
+		content: '\f007';
+	}
+	li.subscriptions a:before {
+		content: '\f01c';
+	}
+	li.givingHistory a:before {
+			content: '\f06b';
+		}
+	li.personalNotes a:before {
+			content: '\f15c';
+		}
+	
+}
+
+
+
+/*---------------------------------------------
+                     ::13.9 Survey Styles
+----------------------------------------------*/
+
+*.SurveySubTitle {
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	color: $body-font-color;
+	display: block;
+	margin-bottom: $form-input-bottom-margin;
+}
+
+.BBListOddRowStyle.SurveyAnswerTableOddRowStyle {background-color: transparent;}
+
+.SurveyQuestion {
+	line-height: 1.25;
+	display: block;
+	margin-bottom: $form-input-bottom-margin;
+}
+
+.SurveyQuestionSequence {
+	display: block;
+	font-family: $body-font-family;
+	font-size: $body-font-size;
+	color: $body-font-color;
+	background: #eee;
+	width: 25px;
+	height: 25px;
+	line-height: 21px;
+	border: 1px solid #ddd;
+	margin-right: $icon-default-padding;
+	text-align: center;
+	@include border-radius(3em);
+}
+
+.SurveyOpenEndedAnswerLabel {
+	vertical-align: middle;
+	width: 40%;
+}
+
+.SurveyFormTable {
+	input[type="submit"] {
+		margin-bottom: 1.25rem;
+		}
+	input[id*="btnExportResults"] {margin-right: 1.25rem;}
+}
+
+/* Survey Print Preview */
+@media (min-width:320px) {
+#divModalPage {
+
+	.SurveyAnswer {
+		font-family: arial, helvetica, sans-serif;
+		font-size: 12px;
+		padding: 5px;
+	}
+	
+	.SurveyAnswerTableHeaderRow, .BBListOddRowStyle {
+		background-color: transparent !important;
+		
+	}
+	
+	.SurveyAnswerTableHeaderRow td {
+		text-shadow: none;
+		color: #000;
+		background: transparent;
+	}
+	
+	.SurveyAnswerTableHeaderRow {
+		.SurveyAnswer, .SurveyResponseColumnHeading  {
+			font-weight: 700;
+			font-size: 15px !important;
+		}
+	}
+
+}
+
+}
+
+/*---------------------------------------------
+                     ::13.10 Polls Styles
+----------------------------------------------*/
+
+table.BBFormTable.BBPollsFormTable {
+	width: 100%;
+}
+
+aside {
+
+.wrapPolls {
+	border-top: 0;
+	padding: 1.875em 1.75rem;
+}
+	.BBPollsFormTable {
+		.BBPollsFormTitle {
+			padding: 0 0 .25em;
+		}
+	}
+}
+
+/*---------------------------------------------
+                     ::13.11 Quick Search
+----------------------------------------------*/
+
+.QuickSearchFormTable {
+	border-left: 1px solid #c6c2ba;
+	input.QuickSearchTextbox {
+		background-color: transparent;
+		border: 0;
+		width: 180px;
+		color:#c6c2ba;
+		font: bold rem(13) $alt-body-font;
+		background:transparent url('image/icon_search.png') no-repeat right 50%;
+		padding:.5em 20px .5em 10px;
+		
+		&:focus { background-color: transparent; border: 0; appearance: none;}
+	}
+	
+	.QuickSearchButton {display: none !important;}
+}
+
+
+// CF Parts
+
+.FundSummaryFieldCaption {
+	background: transparent;
+	padding-right: .5em;
+}
+
+.DTGrid {
+	width: 100%;
+	font: {
+		family: $body-font-family;
+		size: $body-font-size;
+		weight: 400;	
+	}
+	
+	input[type="text"] {
+		max-width: 250px;
+		width: auto;
+	}
+	
+	input[type="submit"] { margin:0 0 0 .5em; }	
+}
+
+.FSGrid {
+	width: 100%;
+	font: {
+		family: $body-font-family;
+		size: $body-font-size;
+		weight: 400;	
+	}
+	
+	tr:nth-child(even) {
+		background-color: #F5F5F5;
+	}
+	th {
+		background: $link-color;
+		color: #fff;
+		
+		a {
+			color: #fff;
+		}
+	}
+	
+	td {
+		
+		&:empty {
+			padding: 0;
+		}
+	}
+	
+	tr.BBListEvenRowStyle > td, tr:nth-child(even) > td.BBListingItem {background-color: transparent; }
+}
+
+div[id*="Details_pnlUserSize"] + b {
+	margin-bottom: .75em;
+	display: inline-block;
+	font: {
+		family: $body-font-family;
+		size: $body-font-size;
+	}
+}
+
+.FundSummaryFieldControlCell input + label {
+	padding-right: 1rem;
+	padding-left: .5em;
+	display: inline-block;
+}
+
+.FundSummaryFieldControlCell:empty {padding: 0;}
+
+select.FundSummaryCaptureSelectList {max-width: 325px;}
+
+.DonorGrantFieldCaption {
+	background-color: transparent;
+	width: 40%;
+	white-space: normal;
+}
+
+input.DonorGrantSubmitButton + input.DonorGrantSubmitButton { margin: 1rem; } 
+
+input.DonorGrantSubmitButton {
+	margin-right: 2.5rem !important;
+	
+	&:last-child { margin-right: 0 !important; }
+}
+
+// Class added with JavaScript
+.tableWrapper {
+	width: 100%;
+	position: relative;
+	
+	.DonorGrantFieldCaption, .FundSummaryFieldCaption { width: 33%; }
+	
+	[id*="pnlAlphaSelect"] {
+		text-align: left;
+	}
+	
+	input[type="submit"][name*="btnDelete"].DonorGrantSubmitButton { background-color: #EE2352; }
+	
+	input[type="submit"][name*="btnCancel"].DonorGrantSubmitButton { @extend .defaultButton; background: #ccc; color: #000; }
+	
+	.emptyTD {display: none;}
+}
+
+.DAGRGrid {
+	position: relative;
+	width: 100%;
+	
+	input[type="text"] {
+		padding: .6% 1%;
+		margin-bottom: 1.5rem;
+	}
+	
+	input[type="submit"] {
+		vertical-align: top;
+	}
+	
+	th {
+		@extend .TransactionManagerGridHeaderCell;
+		text-align: left;
+		
+		a {color: inherit;}
+		
+		&.money {text-align: right;}
+	}
+	
+	td {
+		text-align: left;
+		padding: 0.45em;
+		
+		&.money {text-align: right;}
+	}
+}
+
+.DTGrid {
+	position: relative;
+	input[type="text"] {
+		padding: .6% 1%;
+		margin-bottom: 1.5rem;
+	}
+	
+	input[type="submit"] {
+		vertical-align: top;
+	}
+}
+
+[id*="pnlExport"] .DTGrid [id*="lblExport"] {
+	display: block;
+
+	a {
+		@include imageReplacement;
+		visibility: hidden;
+		
+		&:after {
+			content: '\f019';
+			font-family: $icon-font-family;
+			visibility: visible;
+			padding: 6px 10px 4px;
+			color: #fff;
+			background: $link-color;
+			text-align: center;
+			position: relative;
+			top: -1.25rem;
+		}
+		
+		&:hover:after {
+			background: darken(#002c64, 5%);
+		}
+	}
+}
+
+.DonorGrantListingIntro, .BBListingHeading {
+	background: transparent;
+	border: 0;
+}
+
+.DonorGrantListingIntro {
+	white-space: normal;
+	padding-right: 0;
+	text-align: left;
+	line-height: 1.5;
+	padding-bottom: 1.25rem;
+	font-weight: normal;
+}
+
+.DonorGrantListingHeading {
+	padding-left: 0;
+	padding-right: 0;
+	font-size: rem(20);
+	line-height: rem(40);
+	font-weight: 400;
+}
+
+.DonorGrantListingIntro:empty { display: none;}
+
+.DonorGrantListingHeading {
+	font: {
+		weight:400;
+		style: italic;
+		size: rem(32);
+	}
+	color: #000;
+	font-family: $header-font-family;
+	display: block;
+	line-height: rem(34);
+	padding: rem(20) 0;
+	
+	&:empty {display: none;}
+}
+
+
+div[id*="pnlDefaultButtonControl"] {margin-top: 1rem;}

@@ -1,0 +1,7 @@
+<svg width="75" height="54" 
+     viewPort="0 0 75 54" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <polygon points="0,17.32 10,34.64 30,34.64 40,17.32 30,0 10,0" style="stroke-width:2; stroke:#00A7E1; fill:none;"/>
+    <polygon points="33,35.64 43,52.96 63,52.96 73,35.64 63,18.32 43,18.32" style="stroke-width:2; stroke: #F58220; fill: none;"/>
+</svg>

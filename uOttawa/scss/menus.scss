@@ -1,0 +1,772 @@
+/*=========================================================================================
+                     ::4. MENUS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::4.1 Global Menu Styles
+----------------------------------------------*/
+
+/* menu list reset */
+.menuReset {
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+	    float: left;
+	    margin: 0;
+	    padding: 0;
+	    
+	    a {
+		    cursor: pointer;
+		    text-decoration: none;
+		    display: block;
+	    }
+    }
+}
+
+/*---------------------------------------------
+                     ::4.1 Utility Navigation
+----------------------------------------------*/
+
+.utility {
+	font-family: $alt-body-font;
+	
+	article {
+		
+		&:first-child {
+			ul {
+				li {
+					a {
+						color: #efede9;
+						font-size: rem(12);
+						line-height: rem(30);
+					}
+				}
+			}
+		}
+	}
+	//
+	ul {
+		@extend .menuReset;
+		
+		li {
+			a  {
+				font-size: rem(12);
+				text-transform: capitalize;
+				border: 0;
+				font-weight: 700;
+				font-family: $alt-body-font;
+				
+				&:hover {text-decoration: none; border: 0;}
+			}
+		}
+	}
+
+}
+
+
+/*---------------------------------------------
+                     ::4.2 Main Horizontal Navigation
+----------------------------------------------*/
+nav ul.mainNav
+{
+	list-style: none;
+	margin: 0;
+	position: relative;
+	display: table;
+	padding:0;
+		
+	li
+	{
+		position: static;
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		line-height: normal;
+		
+		@media (max-width: 767px) { 
+			display: block;
+			float: left;
+			position: relative;
+			width: 49%;
+			margin: 5px 0;
+						
+			&:first-child, &:nth-child(2n+1) { margin-right: 1%;}
+			
+			&.menuItem2, &:nth-child(2n) { margin-left: 1%; }
+		}
+		
+		//&:hover { > a { color: #B4BA13;} }
+
+		a
+		{
+			height: 46px;
+			color: #C4BFBA;
+			font-size: 0.8125rem;
+			text-decoration: none;
+			font-family: 'Vegur',Verdana,Helvetica,sans-serif;
+			display: table-cell;
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+			vertical-align: middle;
+			
+			&:hover {
+				text-decoration: none;
+			}
+			
+			@media (max-width: 767px) {
+					color: #c4bfba;
+					height: 46px;
+					background-color: #222222;
+					border-radius: 5px;
+					font-size: 12px;
+					line-height: 1;
+					padding: 15px 10px;
+					display: block;
+					text-align: left;
+					width: auto;
+			}
+			
+		}
+		
+		&.first a { 
+			width: 155px;
+			
+			@media (max-width: 767px) { width: 100%;; }
+			
+			}
+		
+		&:nth-child(2) a { 
+			width: 67px;
+			
+			@media (max-width: 767px) { width: 100%;; }
+		}
+		
+		&:nth-child(3) a { 
+			width: 116px;
+			
+			@media (max-width: 767px) { width: 100%; }
+			
+			}
+		
+		&:nth-child(4) a { 
+			width: 83px;
+			
+			@media (max-width: 767px) { width: 100%; }
+			
+			}
+		
+		&:nth-child(5) a { 
+			width: 86px;
+			
+			@media (max-width: 767px) { width: 100%; }
+			
+			}
+		
+		&:nth-child(6) a { 
+			width: 75px; 
+			
+			@media (max-width: 767px) { width: 100%; }
+			
+			}
+		
+		&:nth-child(7) a { 
+			width: 128px; 
+			
+			@media (max-width: 767px) { width: 100%; }
+			
+			}
+		
+		&.last {
+			> a {
+				text-indent: -9999px;
+				white-space: normal;
+				overflow: hidden;
+				background:url('//alumni.uottawa.ca/document.doc?id=278') no-repeat 36px 12px / 45px auto;
+				width: 105px;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				
+				@media (max-width: 767px) {
+					text-indent: 0;
+					padding: 15px 24px 15px 10px;
+					width: auto;
+					background-image: none;
+					background-color: #222;
+					
+					&:after {
+						background-image: url('//alumni.uottawa.ca/document.doc?id=278');
+						background-repeat: no-repeat;
+					    background-size: 20px auto;
+					    content: "";
+					    display: block;
+					    height: 20px;
+					    margin-top: -10px;
+					    position: absolute;
+					    right: 2px;
+					    top: 50%;
+					    width: 20px;
+					}
+				}
+			
+			}
+			
+			&:hover > a {
+				background:url('//alumni.uottawa.ca/document.doc?id=277') no-repeat 36px 12px / 45px auto;
+			}
+
+		}
+	}
+}
+
+// Mega Menu
+
+nav ul.mainNav .megaMenu {
+	display: none;
+	position: absolute;
+	width: 820px;
+	left: 0;
+	background-color: #333;
+	z-index: 9000;
+	
+	@media (max-width: 767px) {
+		display: none !important;
+		}
+	
+	&.shown { display: block; }
+	
+	.uoe--meganav-title {
+	    background: none repeat scroll 0 0 #000000;
+	    border: 1px solid #1c1c1c;
+	    color: #d3d3d3;
+	    display: block;
+	    font-family: 'Vegur',Verdana,Helvetica,sans-serif;
+	    font-size: 26px;
+	    margin: 0;
+	    padding: 11px 19px;
+	    text-decoration: none;
+	    width: 100%;
+	    height: auto;
+	    text-align: left;
+    }
+    
+
+    a.uoe--meganav-subtitle {
+	    color: #ffffff;
+	    display: inline-block;
+	    font-size: 20px;
+	    height: 46px;
+	    padding: 14px 63px 14px 0;
+	    position: absolute;
+	    right: 0;
+	    text-decoration: none;
+	    text-transform: uppercase;
+	    top: -1px;
+	    width: auto;
+	 
+    
+    	&:after {
+	    	background-image: url("//alumni.uottawa.ca/document.doc?id=294");
+		    background-repeat: no-repeat;
+		    background-size: 45px auto;
+		    content: "";
+		    display: block;
+		    height: 46px;
+		    position: absolute;
+		    right: 9px;
+		    top: 0;
+		    width: 45px;
+    	}
+    	
+    	&:hover {
+	    	&:after { background-image: url("//alumni.uottawa.ca/document.doc?id=295"); }
+    	}
+    }
+    
+    .uoe--menu-container
+    {
+	    border: 1px solid rgba(255, 255, 255, 0.15);
+		padding: 15px;
+		width: 100%;
+		position: relative;
+		float: left;
+		
+		ul {
+			float: left;
+			margin: 0;
+		    padding: 0;
+		    width: 33.3333%;
+		    
+		    li {
+			    width: 100%;
+			    margin: 0;
+			    padding: 0;
+			    
+			    a {
+				    clear: both;
+				    color: #ffffff;
+				    display: inline-block;
+				    font-family: 'Vegur',Verdana,Helvetica,sans-serif;
+				    font-size: rem(17);
+				    line-height: rem(19.5);
+				    text-align: left;
+				    height: auto;
+				    padding: 5px;
+				    text-decoration: none;
+				    width: 100%;
+				    font-weight: 400;
+				    
+				    + ul {
+					    list-style: outside none none;
+					    margin: 0 0 15px;
+					    padding: 0 0 0 7px;
+					    width: 100%;
+					    
+					    li a {
+						    font-size: rem(13);
+						    line-height: rem(18.2);
+						    padding: 1px 0 1px 5px;
+					    }
+				    }
+			    }
+		    }
+		}
+    }
+    
+    .uoe--flyout-bottom {
+	    .uojs--hidden { display: none; }
+    }
+
+}
+
+
+/*---------------------------------------------
+                     ::4.3 Breadcrumb Navigation
+----------------------------------------------*/
+
+
+.wrapContent nav.breadcrumbs ul {
+	@extend .menuReset;
+	display: inline-block;
+	float: left;
+	
+	
+	li {
+		display: inline-block;
+		position: relative;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		a {
+			font-family: $alt-body-font;
+			font-size: rem(12);
+			font-weight:900;
+			line-height: rem(11);
+			letter-spacing:.12em;
+			text-transform:uppercase;
+			color: #000;
+			display: none;
+
+			&.selected {
+				display: block !important;
+				color:#47bddb;
+				
+				&:hover {
+					color: $link-color;
+					cursor: text;
+				}
+				
+				
+				&:before {
+					content: '/';
+					margin:0 2px;
+					color:#000;
+				}
+
+				
+			}
+		
+		}
+					
+	}
+	
+}
+
+
+
+nav.breadcrumbs ul.mainNav a, nav.breadcrumbs ul.mainNav .parent.selected ul li a, nav.breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li a, nav.breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected ul li a, nav.breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected ul li.parent.selected ul li a
+  		{
+  			display: none;
+  			float: left;
+  		}
+  		
+
+		nav.breadcrumbs ul.mainNav a.selected, nav.breadcrumbs ul.mainNav .parent.selected a, nav.breadcrumbs ul.mainNav .parent.selected ul li a.selected, nav.breadcrumbs ul.mainNav .parent.selected ul li .parent.selected ul li a.selected, nav.breadcrumbs ul.mainNav .parent.selected ul li .parent.selected ul li .parent.selected ul li a.selected, nav.breadcrumbs ul.mainNav .home a, nav.breadcrumbs ul.mainNav .parent.selected ul li.parent.selected a, nav.breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected a, nav.breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected ul li.selected a
+			{
+				display: inline;
+				position: relative;
+			}
+
+
+
+/*---------------------------------------------
+                     ::4.4 Sidebar Navigation
+----------------------------------------------*/
+
+aside nav ul.mainNav {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	
+	li {
+		width: 100%;
+		float: none;
+		
+		a {
+			color: #000;
+			padding: 2px 0;
+			font: {
+				size: rem(13);
+				weight: 400;
+				family: $alt-body-font;
+				}
+			line-height: rem(15.6);
+			display: none;
+			
+			&:hover, &.selected {
+				text-decoration: none;
+				color: #47bddb;
+			}
+		} // END 1st anchor
+		
+		ul {
+			@extend .menuReset;
+			display: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		&.selected {
+			
+			> ul {
+				@extend .menuReset;
+				display: block;
+				
+				li {
+				
+					border-bottom:1px solid #c6c2ba;
+					padding:4px 0;
+				
+					a {
+						display: block;
+					}
+					
+					ul {
+						display: none;
+					}
+					
+					&.selected {
+										
+						ul {
+							display: block;
+							margin-left: 25px;
+							
+							li {
+								border-bottom: 0;
+							}
+						}
+						
+					}  // END 2nd Li.selected
+					
+				} // END 2nd level Li
+				
+			} // END 2nd level Ul
+			
+		}  // END 1st Li.selected
+		
+	} // END 1st Li
+	
+} // END 1st level Ul
+		
+.wrapContent aside ul.givingOptionNav {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	margin: 0 0 2rem;
+	
+	li {
+		display: inline-block;
+		float: left;
+		width: 50%;
+		
+		a {
+			font-size: $body-font-size;
+			color: #555;
+			text-decoration: underline;
+		}
+	}
+}
+
+/*
+aside nav ul.mainNav li.selected a.selected {
+	display: block;
+	
+	& + ul {
+		display: block;
+		
+		> li > a {display: block;}
+	}
+}
+*/
+
+
+/* Mobile - Nav */
+
+.mobileSubNav + ul.nccUlMenuSub1, .mobileSubNav + ul.nccUlMenuSub1 + ul.nccUlMenuSub2 {display: none;}
+
+.toggleMainNav {
+	color: #fff;
+	font-size: rem(18);
+	font-weight: 700;
+	font-family: $alt-body-font;
+	&:after {
+		content: '\f0c9';
+		font-family: $icon-font-family;
+		font-size: rem(25);
+		line-height: 1;
+		position: relative;
+		top: 2px;
+		font-weight: 300;
+		padding-left: 16px;
+		display: inline-block;
+	}
+	
+	&.active {
+		text-decoration: none;
+		
+		&:after {content: '\f057';}
+	}
+}
+
+@media (max-width: 767px) {
+
+	#uottawa-mobile-toggles.showOnMobile { position: relative; display: inline-block; float: right; }
+	
+	#uottawa-mobile-search-toggle, #uottawa-mobile-nav-toggle
+	{
+		background: linear-gradient(to bottom, #fafafa 59%, #e0e0e0 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    border-radius: 3px;
+	    height: 30px;
+	    position: relative;
+	    top: 10px;
+	    width: 30px;
+	    right: 15px;
+	    
+	    &:after {
+		    content: "";
+			display: inline-block;
+			height: 30px;
+			background: url("//alumni.uottawa.ca/image/2014-rwd/uottawa_site_icons.png") no-repeat -30px -30px / 367px auto;
+			width: 30px;
+			position: relative;
+	    }
+	}
+	
+	#uottawa-mobile-nav-toggle:after
+	{
+		background: url("document.doc?id=296") no-repeat scroll center center rgba(0, 0, 0, 0);
+		top: -17px;
+	}
+	
+	#uottawa-mobile-search-toggle { display: none; }
+
+}
+
+/*---------------------------------------------
+                     ::4.5 Footer Navigation
+----------------------------------------------*/
+
+footer ul {
+	width: 100%;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	
+	li {
+		position: relative;
+		display: inline-block;
+		float: left;
+		margin: 0;
+		padding: 0;
+		line-height: 17px;
+		font-size: 12px;
+		
+		a {
+			text-decoration: none;
+			font-family: 'Roboto',Verdana,Helvetica,sans-serif;
+			font-size: 12px;
+			color: #fff;
+			font-weight: normal;
+			display: block;
+			
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+}
+
+footer .footerTop  {
+	
+	ul {
+		width: auto;
+		padding: 8px 0 0;
+		
+		&.footerSocialNav { 
+			float: right;
+			margin-bottom: 13px;
+			
+			li {
+				
+				a {
+					padding: 4px 0 4px 8px;
+					width: 25px;
+					height: 25px;
+					display: block;
+					margin-left: 3px;
+					background: url('//alumni.uottawa.ca/image/2014-rwd/uottawa_site_icons.png') no-repeat 0 0 / 320px 209px;
+					
+					@media (max-width: 767px) {
+						margin: 0 auto;
+						text-align: center;
+						padding: 0;
+					}
+					
+					&:hover { 
+						opacity: 0.7;
+						text-decoration: none;
+						transition: all 0.3s ease-in-out 0s;
+					}
+				}
+				
+				&.linkedInIcon a { background-position: 0 -157px; }
+				
+				&.twitterIcon a { background-position: 0 -78px; }
+				
+				&.facebookIcon a { background-position: 0 -183px; }
+				
+				&.youTubeIcon a { background-position: 0 -52px; }
+				
+				&.tumblrIcon a { background-position: 0 -105px; }
+				
+				&.plusIcon a { background-position: 0 -131px; }
+				
+				@media (max-width: 767px) {
+					background-color: #222;
+					padding-top: 7px;
+					border-radius: 4px;
+					margin-left: 5px;
+					width: 42px;
+					height: 42px;
+					text-align: center;
+					
+					&:first-child { margin-left: 0;}
+				}
+			}
+			
+			@media (max-width: 767px) {
+				margin: 0 auto 0 3%;
+				text-align: center;
+				float: none;
+				overflow: hidden;
+				display: block;
+				position: relative;
+				bottom: -16.5rem;
+				padding-bottom: 3rem;
+			}
+		}
+		
+		&.footerTopNav { 
+			float: left;
+			top: 8px;
+			
+			li a {
+				padding: 2px 7px;
+				font-size: 12px;
+				display: block;
+				color: #fff;
+				text-decoration: none;
+			}
+			
+			@media (max-width: 767px) {
+				width: 100%;
+				position: relative;
+				top: -5rem;
+				
+				li {
+					width: 48%;
+					margin-bottom: 10px;
+					
+					a {
+						padding: 10px 10px 10px 25px;
+						background-color: #222;
+						border-radius: 4px;
+						text-align: left;
+					}
+					
+					&:nth-child(odd) { margin-right: 4%; }
+				}
+				
+			}
+		}
+	}
+
+}
+
+footer .footerBottom {
+	ul {
+		margin-bottom: 10px;
+		width: 100%;
+		
+		li {
+			line-height: 15px;
+			color: #c4bfba;
+			padding:10px 20px 10px 0;
+			
+			a {
+				margin-left: -2px;
+				padding: 2px 5px;
+				color: #fff;
+			}
+			
+			&.copyright a { color: #c4bfba; cursor: text; }
+			
+			&.right {
+				float: right;
+				position: relative;
+				right: 0;
+			}
+			
+			@media (max-width: 767px) {
+				display: none;
+				
+				&.right { 
+					display: inline-block;
+				}
+			}
+		}
+		
+		@media (max-width: 767px) {
+			position: relative;
+			display: none;
+		}
+	}
+}

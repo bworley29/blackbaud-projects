@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="donationForm">
+        <div class="validation"></div>
+
+        <div class="form">
+            <fieldset class="donationInformation">
+                <h3>Gift Information</h3>
+
+                <div>
+                    <div class="fundDesignation">
+                        <label for="designation">Designation:</label> <select class="BBFormSelectList DonationCaptureSelectList" id="designation" name=" ">
+                            <option value="" selected="selected">
+                                select a value
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="giftAmount">
+                        <label class="required">Select Gift Amount:</label>
+
+                        <ul>
+                            <li><input id="amt1000" type="radio" name="radioAmount" value="1000"> <label for="amt1000"><span class="term">Platinum</span> <span class="value">$1,000</span></label></li>
+
+                            <li><input id="amt500" type="radio" name="radioAmount" value="500"> <label for="amt500"><span class="term">Gold</span> <span class="value">$500</span></label></li>
+
+                            <li><input id="amt100" type="radio" name="radioAmount" value="100"> <label for="amt100"><span class="term">Silver</span> <span class="value">$100</span></label></li>
+
+                            <li><input id="amt25" type="radio" name="radioAmount" value="25"> <label for="amt25"><span class="term">Bronze</span> <span class="value">$25</span></label></li>
+
+                            <li class="other"><input id="amtOther" type="radio" name="radioAmount" value="-1" checked="checked"> <label for="amtOther"><span class="term">Enter an amount</span></label> <input id="txtAmount" type="text" placeholder="$" class="BBFormTextbox"></li>
+                        </ul>
+                    </div>
+
+                    <div class="recurrence">
+                        <label class="required">Recurrence:</label>
+
+                        <ul>
+                            <li><input id="recOneTime" type="radio" name="radioRecurrence" value="0" checked="checked"> <label for="recOneTime">Make a one time gift.</label></li>
+
+                            <li><input id="recMonthly" type="radio" name="radioRecurrence" value="1"> <label for="recMonthly">Give once a month.</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="formrow">
+                        <label for="comments">Comments:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="comments" maxlength="400">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="billingInformation">
+                <h3>Billing Information</h3>
+
+                <div>
+                    <div class="formrow required">
+                        <label class="required">Payment Method:</label>
+
+                        <ul>
+                            <li><input id="paymentCreditCard" type="radio" name="paymentMethod" value="0" checked="checked"> <label for="paymentCreditCard">Credit Card</label></li>
+
+                            <li><input id="paymentPledge" type="radio" name="paymentMethod" value="1"> <label for="paymentPledge">Pledge</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="tribueInformation">
+                <h3>Tribue /Acknowledgee Information</h3>
+
+                <div class="formrow">
+                    <label for="includeTribue">Include tribute:</label> <input type="checkbox" id="includeTribue">
+                </div>
+
+                <div class="invisible" id="tribute">
+                    <div class="tributeKind">
+                        <label class="required">What kind of tribute:</label>
+
+                        <ul>
+                            <li><input id="kindSpecific" type="radio" name="radioTribute" value="1" checked="checked"> <label for="kindSpecific"><span class="term">Specific</span></label></li>
+
+                            <li><input id="kindGeneral" type="radio" name="radioTribute" value="2"> <label for="kindGeneral"><span class="term">General</span></label></li>
+                        </ul>
+                    </div>
+
+                    <div id="specificTribute">
+                        <div class="formrow">
+                            <label for="tributeID">Tribute ID:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="tributeID" maxlength="60" placeholder="enter a tribute GUID">
+                        </div>
+                    </div>
+
+                    <div class="invisible" id="generalTribute">
+                        <div class="formrow">
+                            <label for="tributeFirstName">First name:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="tributeFirstName" placeholder="enter a first name">
+                        </div>
+
+                        <div class="formrow">
+                            <label for="tributeLastName">Last name:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="tributeLastName" placeholder="enter a last name">
+                        </div>
+
+                        <div class="formrow">
+                            <label for="tributeType">Type:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="tributeType" placeholder="enter a tribute type">
+                        </div>
+
+                        <div class="formrow">
+                            <label for="tributeDescription">Description:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="tributeDescription" placeholder="enter a description">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="attributeInformation">
+                <h3>Attributes</h3>
+
+                <div id="attribute1">
+                    <div class="formrow">
+                        <label for="attribute1ID">Class of:</label> <input type="text" class="BBFormTextbox DonationCaptureTextboxWide" id="attribute1ID" placeholder="enter attribute GUID">
+                    </div>
+                </div>
+            </fieldset><input id="donate" class="submit" type="button" value="Continue">
+        </div>
+
+        <div class="confirmation"></div>
+    </div>
+</body>
+</html>

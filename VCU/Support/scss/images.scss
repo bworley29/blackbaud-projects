@@ -1,0 +1,23 @@
+/*=========================================================================================
+                     ::10. IMAGES
+==========================================================================================*/
+img {
+	display: inline-block;
+	vertical-align: middle; 
+	max-width: 100%;
+	height: auto;
+}
+.left {
+	float: left !important; 
+}
+.right {
+	float: right !important; 
+}
+.imageLeft {
+	float: left;
+	margin: 0 0.5em 0.5em 0;
+}
+.imageRight {
+	float: right;
+	margin: 0 0 0.5em 0.5em;
+}
