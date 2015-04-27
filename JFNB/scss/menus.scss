@@ -45,6 +45,10 @@
 				font-weight: 700;
 				@include transition(all .35s ease-in-out 0s);
 				
+				@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+					font-size: 1.25vw;
+				}
+				
 				&:hover {border: solid 1px #B5BB14;}
 			}
 		}
@@ -299,6 +303,11 @@ nav.wrapNav ul.mainNav
 	
 	@media (max-width:767px) { z-index: 4000; }
 	
+	@media (max-device-width: 1024px) and (orientation: landscape) {
+		width: auto;
+		margin-left: 1.15rem;
+	}
+	
 	li
 	{
 		line-height: 30px;
@@ -449,7 +458,11 @@ nav.wrapNav ul.mainNav
 		
 		&.home {
 			
-			@media (max-width: 800px) { margin-left: .8rem; }
+			@media (max-width: 800px) { 
+				margin-left: .8rem;
+				
+				&:hover a { color: #B4BA13 !important; }
+			}
 			
 			a { 
 				padding-left: 0;
@@ -469,6 +482,12 @@ nav.wrapNav ul.mainNav
 						text-indent: 0;
 						font-size: rem(15);
 						line-height: 30px;
+					}
+					
+					&:hover { 
+						color: #B4BA13 !important;
+						
+						&:before { color: #B4BA13; }
 					}
 				}
 				
@@ -654,6 +673,12 @@ nav.breadcrumbs ul.mainNav a, nav.breadcrumbs ul.mainNav .parent.selected ul li 
 	margin: 1rem auto rem(30);
 	text-align: center;
 	
+	@media (max-width:1024px) and (max-device-width: 1024px) { 
+		display: table;
+	}
+	
+	@media (max-width: $small-breakpoint) { padding-left: 0; }
+	
 	li {
 		width: auto;
 		float: none;
@@ -661,6 +686,8 @@ nav.breadcrumbs ul.mainNav a, nav.breadcrumbs ul.mainNav .parent.selected ul li 
 		display: inline-block;
 		padding: 0;
 		margin: 0;
+		
+		@media (max-width:1024px) and (max-device-width: 1024px) { display: table-cell; }
 		
 		a {
 			display: block; 
@@ -678,6 +705,11 @@ nav.breadcrumbs ul.mainNav a, nav.breadcrumbs ul.mainNav .parent.selected ul li 
 			@include border-radius(6px 6px 0 0);
 			margin-right: 6px;
 			position: relative;
+			
+			@media (max-width: $small-breakpoint) {
+				font-size: 4vw;
+				margin-right: 3px;
+			}
 
 		}
 		

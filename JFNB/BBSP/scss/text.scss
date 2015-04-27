@@ -1,0 +1,549 @@
+/*=========================================================================================
+                     ::5. TEXT
+==========================================================================================*/
+
+body { 
+	color: $body-font-color;
+	line-height: $body-line-height;
+	font-size: 100%;
+	font-family: $body-font-family;
+}
+
+// Font size overrides for existing stylesheet
+#wrapContent section[role="content"], .LoginLink {
+	font-size: 0.875rem;
+}
+
+/*---------------------------------------------
+                     ::5.1 Headers
+----------------------------------------------*/
+
+/*** All headings ***/
+h1, 
+h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th,
+h3, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemTitleName, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.NewsChannelItemTitle, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SurveySubTitle, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName,
+h4, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail,
+h5, 
+h6 {
+  margin: 0 0 0.875em;
+  padding: 0;
+  font-weight: 400;
+  color: $site-primary-color;
+  line-height: normal;
+  text-align: left;
+  font-family: $header-font-family;
+}
+
+h1 {
+	color: #002C64;
+	font: {
+		weight:400;
+		size: rem(35);
+	}
+	line-height: 1;
+	display: inline-block;
+}
+
+.pageTitleAndCrumbs h1 {
+	color: #002C64;
+	font: {
+		weight:400;
+		size: rem(35);
+	}
+	line-height: 1;
+	margin: 15px 0 1px;
+	padding: 0;
+	
+	@media (max-width:800px) { font-size: 2rem;}
+}
+
+
+h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, .Ev2_TitleLabel, .Ev2_RegistrationEventTitle, .DiscussionGroupFormTitle, .EventItemTitleName, .SummaryGridEventTitle, .NewsChannelItemTitle, /* .EventCalendarPartContainer .DetailEventTitle, */ .ListViewEventDate  {
+  font-size: 1.75rem;
+  line-height: 1.925rem;
+  font-weight: 400;
+  color: #002C64;
+  background: transparent;
+  margin-bottom: 0.875rem;
+  padding: 0;
+  background: inherit;
+  height: auto;
+}
+
+  *.SurveyTitle, *.ReportTitle, *.NCC_Forms_Title, *.SearchFormTitle, *.EventCalendarName, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.DiscussionGroupFormTitle, *.JobBoardFormTitle, *.EventSectionHeader, *.LoginSectionHeader, *.LoginFormTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.CalendarFormLegend, *.DirectoryFormTitle, *.CalendarFormLegend, *.ProfileFormTitle, *.DiscussionGroupHeadingCell, *.BBPollsFormTitle, *.NewsChannelFormTitle, *.FRSectionHeader, .NewsChannelItemTitle {
+    padding: 0 0 0.875rem;
+    margin:0;
+  }
+  
+.sidebarContent h2 {
+	margin: 0 0 rem(25);
+	color: $site-primary-color;
+	padding: 0;
+	font-size: rem(30);
+	font-weight: 700;
+	line-height:1;
+}
+
+.wrapHomeCTA h2 {
+	color: #00336C;
+	font-size: rem(35);
+	line-height: 1;
+	font-weight: 300;
+	margin: 0;
+	text-transform: uppercase;
+	
+	strong:after, strong:before {display: none;}
+	
+}
+
+h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, *.SearchJobHeading, *.PostJobHeading, *.PostDiscussionTopicHeadingCell, .AdditionalDonation_Heading, .Ev2_SummaryHeader, .Ev2_RegistrantAddressHeader label, .Ev2_RegistrantHeader, .EventItemTitleDescription, .EventTicketsHeaderCell, .CalendarFormDateTimeContainer .CalendarFormLegend, .CalendarFormEventInfoContainer .CalendarFormLegend, #tblCalEventsLV [id*="SpanTitle"], *.ListViewDateLabel, .DetailEventTitle {
+  font: {
+  	size: rem(25);
+  	weight: 300;
+  	style: normal;
+  	}
+  line-height: rem(30);
+  color: #002C64;
+  margin-bottom: 10px;
+  padding: 0;
+  background: inherit;
+  height: auto;
+}
+
+
+ *.SurveyTitle, *.ReportTitle, *.NCC_Forms_Title, *.SearchFormTitle, *.EventCalendarName, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.DiscussionGroupFormTitle, *.JobBoardFormTitle, *.EventSectionHeader, *.LoginSectionHeader, *.LoginFormTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.CalendarFormLegend, *.DirectoryFormTitle, *.CalendarFormLegend, *.ProfileFormTitle, *.DiscussionGroupHeadingCell, *.BBPollsFormTitle, *.NewsChannelFormTitle, *.FRSectionHeader, .CalendarFormDateTimeContainer .CalendarFormLegend, .CalendarFormEventInfoContainer .CalendarFormLegend {
+    padding-bottom: 10px;
+    margin:0;
+  }
+  
+  #tblCalEventsLV [id*="SpanTitle"] {
+  	margin-bottom: 0;
+  	
+  	a {font-weight: 300;}
+ }
+  
+
+  
+h3 { margin: 2px 0 4px;} 
+
+.wrapCommunityContent h3 {
+	color: $body-font-color;
+	font-size: rem(30);
+	line-height: 1;
+	font-weight: 300;
+	margin:0 0 rem(12);
+}
+
+.BBDesignationSearchResult h3 { margin: 0;}
+
+h4, *.CalendarFormLegend, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName,  *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading,  *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
+  font-size: rem(18);
+  line-height: rem(30.5);
+  color: #002C64;
+  font-weight: 700;
+  margin-bottom: rem(25);
+}
+
+
+.sidebarNavContent h4 {
+	color: #FFFFFF;
+	font: {
+		size: rem(25);
+		weight: 400;
+	}
+	margin: 0 0 rem(20);
+	padding: 0;
+	display: inline-block;
+	width: 50%;
+	position: relative;
+	float: left;
+	
+	@media(max-width: 1024px) { display: block; width: 100%; }
+}
+
+.BBDesignationSearchResult h4 { margin-bottom: 0}
+
+h5, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
+  font-size: rem(14);
+  line-height: rem(17);
+  color: #002C64;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sidebarContent h5 {
+	color: #002C64;
+	font-size: rem(15);
+	line-height: rem(26);
+	text-transform: capitalize;
+	font-weight: 700;
+	
+	a {
+		font-weight: 700;
+	}
+}
+
+
+h6 {
+  font-size: .813rem;
+  color: #E74C3C;
+  font-weight: 500;
+  line-height: 0.894rem;
+  margin: 0.625rem 0;
+}
+
+/*---------------------------------------------
+                     ::5.1.1 Part Headers
+----------------------------------------------*/
+ 
+/*---------------------------------------------
+                     ::5.2 Links
+----------------------------------------------*/
+a, a:visited, a.LoginLink, a.PhotoLink, a.Album_BackToPhotosLink, a.Album_AlbumNameLink, a.Album_AlbumActionItem, a.BBLinkHelpIcon, a.PaymentPartClearLink, a.EventCalendarButtons, a.ListViewEventTitle, a.BBFormDisplayHelpImage, a.DiscussionTopicLink, a.DiscussionSearchLink, a.JobBoardSearchLink, a.JobBoardPostLink, a.JobResultsLink, a.BBNameLink, .BBNameLink:link, .DiscussionTopicLink:link, a.BBNameLink,  a.BBVolOpLink, .fc-content a, .fc-content a:visited, a.ChannelStoryDeleteButtonWAI, a.ChannelStoryEditButtonWAI {
+	@include link-style;
+}
+
+a {
+	h1, h2, h3, h4, h5, h6, p {
+		color: $link-color;
+		
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+}
+
+.fc-content a, .fc-content a:visited {
+	color: #fff;	
+}
+
+a:hover, a.LoginLink:hover, a.PhotoLink:hover, a.Album_BackToPhotosLink:hover, a.Album_AlbumNameLink:hover, a.Album_AlbumActionItem:hover, a.BBLinkHelpIcon:hover, a.PaymentPartClearLink:hover, a.EventCalendarButtons:hover, a.ListViewEventTitle:hover, a.BBFormDisplayHelpImage:hover, a.DiscussionTopicLink:hover, a.DiscussionSearchLink:hover, a.JobBoardSearchLink:hover, a.JobBoardPostLink:hover, a.JobResultsLink:hover, .DiscussionTopicLink:hover, .fc-content a:hover {
+	@include link-hover-style; 
+}
+ /* tab links */
+a.TransactionManagerTabLink, a.BBNotesTabLink {
+ 
+}
+a.TransactionManagerCurrentTabLink {
+ 
+}
+
+ /* event links in steps */
+.BBSequenceMapStepItem, .BBEventRegSequenceMapStepItem, .BBSequenceMapStepLink, .BBEventRegSequenceMapStepLink {
+ 
+}
+ 
+ /* recaptcha links*/
+a.recaptcha_only_if_image, a.recaptcha_only_if_audio {
+ 
+}
+
+#wrapContent section[role="content"] {line-height: $content-primary-line-height;}
+
+a.learnMore, a.ChannelNewStoryButtonWAI {
+	font-size: rem(14);
+	line-height: rem(24);
+	font-weight: 700;
+	text-transform: uppercase;
+	
+	&:after {
+		font-family: $icon-font-family;
+		content: '\f0da';
+		display: inline-block;
+		font-size: 1.65rem;
+		line-height: 1;
+		position: relative;
+		top: 5px;
+		padding-left: 6px;
+	}
+}
+
+a.ChannelNewStoryButtonWAI {
+	padding: 3px 16px 4px;
+	display: inline-block;
+	background: $link-color;
+	color: #fff;
+	font-weight: 400;
+	margin: 1rem 0;
+	
+	&:hover {background: $link-hover-color;}
+	&:after {display: none;}
+}
+
+.wrapHomeCTA a {
+	color: #666666;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	display: block;
+	
+	&:hover {
+		@include link-hover-style; 
+	}
+}
+
+.mostPopularEventTitle a {
+	font-weight: bold;
+}
+
+.footer {
+	a {
+		color: $footer-font-color;
+		
+		&:hover {
+			color: $footer-font-color;
+		}
+	}
+	
+	.footerAddressBlock {
+		address a {display: block;}
+	}
+
+}
+
+.footerAlt a {
+	display: inline-block;
+	
+	@media (max-width: $small-breakpoint) { display: block; }
+}
+  
+ 
+/*---------------------------------------------
+                     ::5.3 Paragraphs
+----------------------------------------------*/
+p, table.BBListingTable p {
+	padding:0 ;
+	margin: 0 0 0.625em;
+	line-height:rem(30.5);
+	color: $site-primary-color;
+	font: {
+		family: $body-font-family;
+		size: rem(18);
+		weight: 300;	
+	}
+	white-space: normal;
+}
+
+#tblCalEventsLV {
+	
+	.ListViewEventLocation, .ListViewEventTime { @extend .paragraphStyleBlock; }
+}
+
+.logo p, .banner p {margin: 0; padding:0;}
+
+.contentFullWidthLeftBottom p {
+				margin: 0;
+				padding: 0;
+				text-align:center;
+				font: {
+					size: rem(30);
+					weight: 300;
+				}
+			strong {
+				font-weight: 700;
+				
+				&:before, &:after {display: none;}
+			}
+}
+
+.contentFullWidthRight p {
+	font: {
+		size:rem(14);
+		weight:400;
+		}
+	line-height:rem(24);
+	color: $site-primary-color;	
+}
+
+.sidebarContent p {font-weight: 400; font-size: rem(15); line-height: rem(22.5);}
+
+.wrapCommunityContent p {
+	font-size: rem(14);
+	line-height: rem(24);
+	margin: 0 0 rem(20);
+}
+
+.wrapHomeCTA p {
+	color: #666666;
+	margin: 0;
+	padding: 0;
+	font-size: rem(15);
+	line-height: rem(26);
+	font-weight: 300;
+}
+
+footer p.footerEmailFormTitle {
+	color: #fff;
+	display: block;
+	margin: 0 0 5px;
+	padding: 0;
+	font-size: rem(13);
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+p.skipLink 
+{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #000; 
+	cursor: help;
+}
+blockquote, q {
+	margin: 0 0 20px;
+	border-left: 5px solid #EEEEEE;
+	padding: 10px 20px;
+	
+	p {
+		font-size: 1.094rem;
+		line-height: 1.368rem;
+		margin: 0 0 0.625rem;
+	}
+}
+q:before, q:after {
+	content:'';
+}
+pre, code, kbd, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 1em;
+}
+pre {
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-all;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+    @include border-radius(4px);
+    font-size: 0.813rem;
+    line-height: 1.160rem;
+    padding: 9.5px;
+    margin: 0 0 0.625rem;
+}
+small {
+    font-size: 0.85em;
+}
+sub, sup {
+    font-size: 0.75rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+hr {
+	display: block; 
+	height: 1px; 
+	border: 0; 
+	margin: 0.938rem 0 1.250rem; 
+	padding: 0;
+}
+
+hr.templateHR {margin-top: 0;}
+
+address {
+	line-height: rem(18);
+	font-size: rem(13);
+	margin-bottom: 10px;
+	font-style: normal;
+}
+
+strong { font-weight: 700; font-style: inherit;}
+
+em {font-style: italic; font-weight: inherit;}
+
+/*other text classes */
+.text-left {text-align: left !important; }
+.text-right {text-align: right !important; }
+.text-center {	text-align: center !important; }
+.text-justify {	text-align: justify !important; }
+.hide {  display: none; }
+/*---------------------------------------------
+                     ::5.4 Form Fields Typography
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::5.5 Lists
+----------------------------------------------*/
+ul, ol {
+    margin:0 0 20px;
+	
+}
+
+.wrapContent ul, .wrapContent ol
+{
+	padding: 0 0 0 1.15em;
+	font-weight: 300;
+	ul, ol {
+		padding-top: .75em;
+		padding-bottom: .75em;
+	}
+}
+ul {
+    list-style: disc outside none;
+}
+ol {
+    list-style: decimal outside none;
+}
+ul.square {
+    list-style: square outside none;
+}
+ul.circle {
+    list-style: circle outside none;
+}
+ul ul, ul ol, ol ol, ol ul {
+    margin: 5px 0px;
+}
+ul ul li, ul ol li, ol ol li, ol ul li {
+    margin-bottom: 6px;
+}
+li {
+    line-height:rem(30.5);
+	color: $site-primary-color;
+	font: {
+		family: $body-font-family;
+		size: rem(18);
+		weight: 300;	
+	}
+}
+ul.large li {
+    line-height: 21px;
+}
+li p {
+    line-height: 21px;
+}
+
+#wrapContent section[role="content"] ul.myHomeProfileLinks {
+	margin-left: 0;
+	padding-left: 0;
+	
+	li {
+		background-image: none; 
+		padding-left: 0;
+		}
+}
+
+#wrapContent section[role="content"] ul.socialMediaIcons {
+	list-style: none;
+	display: block;
+	position: relative;
+	width: 100%;
+	
+	li {
+		list-style: none;
+		display: inline-block;
+		position: relative;
+		float: left;
+		padding: 0;
+		margin: 0;
+	}
+}
+

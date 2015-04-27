@@ -9,13 +9,13 @@ $grid-gutter-small: 1.250rem; //20px
 
 $body-font-family: Arial,Helvetica,sans-serif;
 
-$alt-body-font: $body-font-family;
+$alt-body-font: 'Oswald', sans-serif;
 
 $body-font-color: #4e4e4e;
 
-$body-font-size: 1rem; 
+$body-font-size: 12px; 
 
-$body-line-height: 1.5rem; 
+$body-line-height: 1; 
 
 $body-background-color: #fff;
 
@@ -25,7 +25,7 @@ $general-margin: .75em;
 $content-primary-background-color:#fff;
 
 //
-$content-primary-line-height: 1.400rem; 
+$content-primary-line-height: 14.5px; 
 
 // $site-primary-color - dominant color used throughout the site IF different than body font color
 $site-primary-color: $body-font-color;
@@ -37,7 +37,7 @@ $footer-font-color: #ffffff;
 $site-accent-color: #777777;                  					
 
 // $form-header-row-background-color - background color used on form header rows 
-$form-header-row-background-color: #edf4fa;      		 
+$form-header-row-background-color: #194298;      		 
 
 // $form-header-row-text-color - text color used on form header rows 
 $form-header-row-text-color: $content-primary-background-color;
@@ -88,7 +88,7 @@ $link-hover-color: $link-color;
 // $icon-font-base - to use Fontawesome this font family must be used
 $icon-font-family: FontAwesome;
 
-$icon-button-color-primary: #ec720b;
+$icon-button-color-primary: #34AE23;
 
 //
 $icon-default-padding: 0.35em;

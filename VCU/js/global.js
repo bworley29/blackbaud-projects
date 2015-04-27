@@ -21,6 +21,7 @@ BBI = {
 			pageLoad: function(){
 			
 				BBI.VCU_Alumni.bbis.desktop();
+				BBI.VCU_Alumni.bbis.parts.profilePhotoForm();
 			}, 	
 			
 			paneRefresh: function(){
@@ -140,17 +141,7 @@ BBI = {
 					$('aside.returnUser .ProfilePhotoFormTable a[id*="lnkPhoto"].fa-edit').removeAttr('href');
 					
 					$('aside.returnUser .ProfilePhotoFormTable a[id*="lnkPhoto"].fa-edit').unbind('click').click(function(){
-					
-						/*
-$('.returnUser table.ProfilePhotoFormTable tr:nth-child(4), .returnUser table.ProfilePhotoFormTable tr:nth-child(5), .returnUser table.ProfilePhotoFormTable tr:nth-child(6)').slideToggle();
-						$(this).toggleClass('active');
-						
-						if($(this).hasClass('active')) {
-							$(this).removeClass('fa-edit').addClass('fa-times-circle');
-						} else {
-							$(this).removeClass('fa-times-circle').addClass('fa-edit');
-						}
-*/	
+	
 						$(this).attr('href','//bbis59760desval.blackbaudhosting.com/vcualumni/profile-update-forms/alumni---user-photo-form-page');
 					});
 					
@@ -159,6 +150,22 @@ $('.returnUser table.ProfilePhotoFormTable tr:nth-child(4), .returnUser table.Pr
 					}
 					
 				},
+				
+				profilePhotoForm: function () {
+					
+					if($('#imgPhoto').length === 0 && $('.mainContent table.ProfilePhotoFormTable').length === 0) {
+						
+						$('<div id="imgPhoto"><a href="../support-user-photo-form" title="Upload a profile photo"><i class="fa fa-camera">&nbsp;<\/i><br \/> Upload a photo<\/a><\/div>').appendTo('.mainContent div[id*="divProfilePhotoForm"]');
+						
+					}
+					
+					if($('#imgPhoto').length === 0 && $('.returnUser .wrapProfileBio').length && $('.PhotoLink').length === 0) {
+						
+						$('<div id="imgPhoto"><i class="fa fa-user">&nbsp;</i><br \/> No photo<\/div>').prependTo('.returnUser .wrapProfileBio');
+						
+					}
+				},
+				
 				// User Login Part classes and responsive behavior
 				userLogin: function() {
 	

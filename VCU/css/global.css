@@ -296,7 +296,7 @@ form[action*="pagedesign.aspx"] table td.emptyTD {
   display: table-cell;
 }
 
-body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce h5, body#tinymce h6, body#tinymce p, body#tinymce a, body#tinymce table, body#tinymce div, body#tinymce span, body#tinymce address, body#tinymce blockquote, body.AdminPageBody .AdminPageForm h1, body.AdminPageBody .AdminPageForm h2, body.AdminPageBody .AdminPageForm h3, body.AdminPageBody .AdminPageForm h4, body.AdminPageBody .AdminPageForm h5, body.AdminPageBody .AdminPageForm h6, body.AdminPageBody .AdminPageForm p, body.AdminPageBody .AdminPageForm a, body.AdminPageBody .AdminPageForm table, body.AdminPageBody .AdminPageForm div, body.AdminPageBody .AdminPageForm span, body.AdminPageBody .AdminPageForm address, body.AdminPageBody .AdminPageForm blockquote {
+body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce h5, body#tinymce h6, body#tinymce p, body#tinymce .profileSection label, .profileSection body#tinymce label, body#tinymce a, body#tinymce table, body#tinymce div, body#tinymce span, body#tinymce address, body#tinymce blockquote, body.AdminPageBody .AdminPageForm h1, body.AdminPageBody .AdminPageForm h2, body.AdminPageBody .AdminPageForm h3, body.AdminPageBody .AdminPageForm h4, body.AdminPageBody .AdminPageForm h5, body.AdminPageBody .AdminPageForm h6, body.AdminPageBody .AdminPageForm p, body.AdminPageBody .AdminPageForm .profileSection label, .profileSection body.AdminPageBody .AdminPageForm label, body.AdminPageBody .AdminPageForm a, body.AdminPageBody .AdminPageForm table, body.AdminPageBody .AdminPageForm div, body.AdminPageBody .AdminPageForm span, body.AdminPageBody .AdminPageForm address, body.AdminPageBody .AdminPageForm blockquote {
   font-family: arial;
 }
 
@@ -670,13 +670,13 @@ table.BBFormTable.PostJobFormTable {
 }
 
 .BBCalendarDayHeader {
-  background-color: #545454;
+  background-color: #F5DF9F;
   color: #fff;
   height: 1px;
 }
 
 .BBCalendarNextPrev {
-  background-color: #545454;
+  background-color: #F5DF9F;
   color: #fff;
 }
 
@@ -689,11 +689,11 @@ table.BBFormTable.PostJobFormTable {
 }
 
 .BBCalendarSelector {
-  background-color: #545454;
+  background-color: #F5DF9F;
 }
 
 .BBCalendarTitle {
-  background-color: #545454;
+  background-color: #F5DF9F;
   color: #fff;
   font-weight: 700;
 }
@@ -724,7 +724,7 @@ table.BBFormTable.PostJobFormTable {
 }
 
 .BBFormRequiredFieldMarker {
-  color: #545454 !important;
+  color: #F5DF9F !important;
   font-weight: 700;
   vertical-align: top;
 }
@@ -867,19 +867,19 @@ table.BBFormTable.PostJobFormTable {
 }
 
 .BBListingHeadingLink:active {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .BBListingHeadingLink:hover {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .BBListingHeadingLink:link {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .BBListingHeadingLink:visited {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .OCCHeader {
@@ -1085,10 +1085,10 @@ table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem
   padding-right: 1em;
 }
 table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem a.BBNameLink:link, table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem a {
-  color: #007099;
+  color: #504c46;
 }
 table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem a.BBNameLink:link:hover, table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem a:hover {
-  color: #504c46;
+  color: #007099;
 }
 
 table.DirectorySearchForm {
@@ -1130,14 +1130,16 @@ table.DirectorySearchForm .BBFieldControlCell.DirectoryFieldControlCell {
 
 .DirectoryListingTable {
   border-collapse: collapse;
-  width: 98%;
+  width: 100%;
 }
 .DirectoryListingTable th.BBListingHeading.DirectoryListingHeading {
   border: 0;
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #b79b7c;
+  line-height: 3;
+  background-color: #F5DF9F;
   font-weight: normal;
+  color: #007099;
 }
 
 .DonationHelpFormDDTable {
@@ -1627,7 +1629,7 @@ table.BBFormTable.EventTable {
 }
 
 .DiscussionTopicHeading {
-  background-color: #545454;
+  background-color: #F5DF9F;
   height: 21px;
   padding: 3px 5px 2px;
 }
@@ -1772,8 +1774,8 @@ input[type="button"].BBFormSubmitButton.DiscussionGroupSpellButton {
   padding: 0;
 }
 .BBDocumentDisplayTable tr.BBDocumentDisplayHeaderRow td a:hover {
-  background: transparent;
-  color: #ccc;
+  background: inherit;
+  color: inherit;
 }
 
 table.BBFormTable.BBDocumentFormTable {
@@ -2273,7 +2275,7 @@ a.EventCalendarButtons {
 }
 
 .CalendarViewDayHeader {
-  background-color: #545454;
+  background-color: #F5DF9F;
   color: #fff;
   height: 1px;
   font-weight: 400;
@@ -2475,7 +2477,7 @@ table[id*="CalendarEvent1_rblMapLink"] input[type="radio"] + label {
 }
 
 .CalendarViewCalendarContainer {
-  border-color: #545454;
+  border-color: #F5DF9F;
 }
 
 .CalendarViewContainer {
@@ -2684,7 +2686,7 @@ table.BBFormTable .DetailEventDetails {
   background: #47bddb;
   padding: 0.45em;
 }
-table.BBFormTable .DetailEventDetails p {
+table.BBFormTable .DetailEventDetails p, table.BBFormTable .DetailEventDetails .profileSection label, .profileSection table.BBFormTable .DetailEventDetails label {
   padding: 0;
 }
 table.BBFormTable .BBFieldControlCell.DetailRight {
@@ -3361,7 +3363,7 @@ table.BBFormTable.TransactionManagerGrid th {
   cursor: pointer;
   border: none;
   font-size: 0.76041875rem;
-  background-color: #545454;
+  background-color: #F5DF9F;
   color: #fff;
 }
 
@@ -3397,7 +3399,7 @@ table.BBFormTable.TransactionManagerGrid th {
 }
 
 .TransactionManagerGridHeaderCellSortedAscending {
-  background-color: #545454;
+  background-color: #F5DF9F;
   background-image: none;
 }
 .TransactionManagerGridHeaderCellSortedAscending::after {
@@ -3405,7 +3407,7 @@ table.BBFormTable.TransactionManagerGrid th {
 }
 
 .TransactionManagerGridHeaderCellSortedDescending {
-  background-color: #545454;
+  background-color: #F5DF9F;
   background-image: none;
 }
 .TransactionManagerGridHeaderCellSortedDescending::after {
@@ -3438,7 +3440,7 @@ table.BBFormTable.TransactionManagerGrid th {
 }
 
 .TransactionManagerSummaryHeaderRow {
-  background-color: #545454;
+  background-color: #F5DF9F;
   color: #fff;
 }
 
@@ -4562,7 +4564,7 @@ select.Ev2_RegistrantAddressControlDropDown {
 }
 .Ev2_TimerContainer .Ev2_Timer {
   font-weight: 700;
-  color: #545454;
+  color: #F5DF9F;
   float: left;
   position: relative;
   display: inline-block;
@@ -5381,7 +5383,7 @@ body {
   background-image: none;
 }
 body#BodyId {
-  background: url("vcualumni/image/bgBody.png") repeat-x 0 0 transparent;
+  background: url("alumni/image/bgBody.png") repeat-x 0 0 transparent;
 }
 
 /*---------------------------------------------
@@ -5437,7 +5439,7 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 .siteWrapperOuter {
   max-width: 64.6875em;
   width: 100%;
-  background: url("vcualumni/image/bgWrapper.png") repeat-x 0 0 transparent;
+  background: url("alumni/image/bgWrapper.png") repeat-x 0 0 transparent;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -5470,7 +5472,7 @@ form[action*="pagedesign.aspx"] .siteWrapperInner {
 
 .audienceUtility ul {
   width: 60.9574468085%;
-  background: url("vcualumni/image/util-navbar.gif") no-repeat 0 0;
+  background: url("alumni/image/util-navbar.gif") no-repeat 0 0;
   height: 30px;
   list-style: none;
   float: right;
@@ -5498,6 +5500,7 @@ header .logo {
 }
 header .logo h1 {
   position: relative;
+  bottom: -2.5rem;
 }
 header nav {
   position: relative;
@@ -5529,8 +5532,8 @@ header nav {
 .mainContent.returnUser {
   width: 66.66667%;
   float: right;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0px;
+  padding-right: 2.5rem;
   margin-bottom: 2rem;
 }
 .mainContent.returnUser .left {
@@ -5557,6 +5560,9 @@ header nav {
   float: left;
   margin-top: 2rem;
 }
+.mainContent.home {
+  width: 61.7021276596%;
+}
 
 aside.sidebar {
   float: left;
@@ -5570,13 +5576,33 @@ aside.sidebar:last-child {
 }
 aside.sidebar.returnUser {
   width: 30%;
-  padding-left: 30px;
+  padding-left: 2.5rem;
   margin-right: 0;
   padding-bottom: 2rem;
 }
+aside.sidebar.home {
+  width: 30.9574468085%;
+  float: right;
+}
+
+.slideshow {
+  height: 318px;
+  margin: 0 auto 20px;
+}
+
+.callOutBoxes article {
+  float: left;
+  width: 291px;
+  height: 210px;
+  margin-bottom: 10px;
+}
+.callOutBoxes article:nth-child(2) {
+  margin-right: 33px;
+  margin-left: 33px;
+}
 
 footer {
-  background: url("vcualumni/image/alumni_footer.jpg") repeat-x -350px bottom transparent;
+  background: url("alumni/image/alumni_footer.jpg") repeat-x -350px bottom transparent;
   -webkit-animation: animatedBackground 100s linear infinite;
   -moz-animation: animatedBackground 100s linear infinite;
   animation: animatedBackground 100s linear infinite;
@@ -5593,6 +5619,16 @@ footer section {
 }
 footer section:last-child {
   margin-right: 0;
+}
+footer .floatLeft {
+  width: 350px;
+  margin: 60px 0 0;
+}
+footer .clear, footer .clearfix {
+  width: 100%;
+  clear: both;
+  margin-top: 10px;
+  float: left;
 }
 
 @-webkit-keyframes animatedBackground {
@@ -5631,7 +5667,7 @@ footer section:last-child {
 /*---------------------------------------------
                      ::3.6 Skip Link
 ----------------------------------------------*/
-p.skip {
+p.skip, .profileSection label.skip {
   height: 0;
   padding: 0;
   margin: 0;
@@ -5874,7 +5910,7 @@ nav.mainNav ul.mainNav li a {
   font-size: 14px;
   margin: 1px 0 1px 1px;
   outline: 0 none;
-  padding: 7.5px 22.8px;
+  padding: 7.5px 22.5px;
   text-decoration: none;
 }
 nav.mainNav ul.mainNav li ul {
@@ -6414,10 +6450,10 @@ a, a:visited, a.LoginLink, a.PhotoLink, a.Album_BackToPhotosLink, a.Album_AlbumN
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a h1, a h2, a h3, a h4, a h5, a h6, a p {
+a h1, a h2, a h3, a h4, a h5, a h6, a p, a .profileSection label, .profileSection a label {
   color: #504c46;
 }
-a h1:hover, a h2:hover, a h3:hover, a h4:hover, a h5:hover, a h6:hover, a p:hover {
+a h1:hover, a h2:hover, a h3:hover, a h4:hover, a h5:hover, a h6:hover, a p:hover, a .profileSection label:hover, .profileSection a label:hover {
   color: #007099;
 }
 
@@ -6470,7 +6506,7 @@ footer .social a.donate {
 /*---------------------------------------------
                      ::5.3 Paragraphs
 ----------------------------------------------*/
-p, table.BBListingTable p {
+p, .profileSection label, table.BBListingTable p, table.BBListingTable .profileSection label, .profileSection table.BBListingTable label {
   padding: 0;
   margin: 5px 0 15px;
   line-height: 1.5;
@@ -6481,12 +6517,12 @@ p, table.BBListingTable p {
   white-space: normal;
 }
 
-.logo p, .banner p, .topBg p {
+.logo p, .logo .profileSection label, .profileSection .logo label, .banner p, .banner .profileSection label, .profileSection .banner label, .topBg p, .topBg .profileSection label, .profileSection .topBg label {
   margin: 0;
   padding: 0;
 }
 
-.utility p {
+.utility p, .utility .profileSection label, .profileSection .utility label {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   font-weight: 900;
@@ -6495,7 +6531,7 @@ p, table.BBListingTable p {
   margin: 0;
   padding: 0 5px 0 0;
 }
-.utility p a {
+.utility p a, .utility .profileSection label a, .profileSection .utility label a {
   display: block;
   line-height: 1.875rem;
   margin-right: 5px;
@@ -6507,8 +6543,8 @@ p, table.BBListingTable p {
   padding: 0 3px;
 }
 
-footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer p, footer a {
-  color: #efede9;
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer p, footer .profileSection label, .profileSection footer label, footer a {
+  color: #4C4841;
   font-family: Arial, Helvetica, sans-serif;
 }
 footer h5 {
@@ -6517,13 +6553,14 @@ footer h5 {
   letter-spacing: .18em;
   text-transform: uppercase;
 }
-footer p {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  margin-bottom: 30px;
+footer p, footer .profileSection label, .profileSection footer label {
+  font-size: 0.76041875rem;
+  line-height: 0.98854375rem;
+  margin: 0;
+  color: #4C4841;
 }
 
-p.skipLink {
+p.skipLink, .profileSection label.skipLink {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -6538,7 +6575,7 @@ blockquote, q {
   border-left: 5px solid #EEEEEE;
   padding: 10px 20px;
 }
-blockquote p, q p {
+blockquote p, blockquote .profileSection label, .profileSection blockquote label, q p, q .profileSection label, .profileSection q label {
   font-size: 1.094rem;
   line-height: 1.368rem;
   margin: 0 0 0.625rem;
@@ -7237,7 +7274,7 @@ table.BBListingTable.DiscussionGroupListingTable .DiscussionTopicList td {
                      ::11.1 Alternating Rows
 ----------------------------------------------*/
 tr.BBListEvenRowStyle > td, table.BBListingTable tr:nth-child(even) > td.BBListingItem {
-  background-color: #eee;
+  background-color: #F1F0EE;
 }
 
 table.DiscussionTopicList .BBListOddRowStyle {
@@ -7248,9 +7285,9 @@ table.DiscussionTopicList .BBListOddRowStyle {
                      ::11.2 Header Rows
 ----------------------------------------------*/
 table.BBListingTable th, tr.JobResultsListHeader td, tr.BBDocumentDisplayHeaderRow td, tr.DiscussionSearchHeader td, tr.DiscussionTopicListHeader td {
-  background: #545454;
+  background: #F5DF9F;
   /* $client-color-background */
-  color: #FFF;
+  color: #007099;
   /* $client-color-background-invert */
   text-align: left;
   font-weight: bold;
@@ -7260,8 +7297,7 @@ table.BBListingTable th, tr.JobResultsListHeader td, tr.BBDocumentDisplayHeaderR
                      ::11.3 Sortable Columns
 ----------------------------------------------*/
 table.BBListingTable th a, tr.BBDocumentDisplayHeaderRow td a {
-  color: #FFF;
-  /* $client-color-background-invert */
+  color: #007099;
   text-align: left;
   display: block;
   text-decoration: none;
@@ -7637,7 +7673,7 @@ table[id$=tblProgress] {
 }
 
 .EventProgressCell {
-  background: #545454;
+  background: #F5DF9F;
   border: 0;
   color: #fff;
 }
@@ -8025,7 +8061,7 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   padding: 5px;
   font-size: 0.76041875rem;
   color: #fff;
-  background-color: #545454;
+  background-color: #F5DF9F;
 }
 .PaymentPart_Cart .PaymentPart_CartItemType {
   border: 0;
@@ -8188,7 +8224,7 @@ aside.returnUser .ProfilePhotoFormTitle {
 .returnUser h5 span:empty {
   display: none;
 }
-.returnUser p {
+.returnUser p, .returnUser .profileSection label, .profileSection .returnUser label {
   margin: 0 0 20px;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -8197,14 +8233,14 @@ aside.returnUser .ProfilePhotoFormTitle {
   font-weight: normal;
   color: #504c46;
 }
-.returnUser p span {
+.returnUser p span, .returnUser .profileSection label span, .profileSection .returnUser label span {
   position: relative;
   display: inline-block;
   margin: 0;
   padding: 0;
   line-height: 1;
 }
-.returnUser p span:empty {
+.returnUser p span:empty, .returnUser .profileSection label span:empty, .profileSection .returnUser label span:empty {
   display: none;
 }
 .returnUser strong {
@@ -8256,6 +8292,37 @@ aside.returnUser .ProfilePhotoFormTitle {
   position: relative;
   margin-top: 2rem;
 }
+.returnUser .wrapEduInfo {
+  width: 100%;
+  float: left;
+}
+.returnUser .wrapEduInfo .wrapper {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+.returnUser .wrapEduInfo p, .returnUser .wrapEduInfo .profileSection label, .profileSection .returnUser .wrapEduInfo label {
+  display: inline-block;
+  float: left;
+}
+.returnUser .wrapEduInfo table.ProfileDisplayMultiRecordTable {
+  display: inline-block;
+  float: left;
+  width: auto;
+  margin-left: 8px;
+  line-height: 26px;
+}
+
+.wrapButtons {
+  width: 100%;
+  clear: both;
+  float: left;
+}
+
+.profileSection label {
+  margin: 0;
+  padding: 0;
+}
 
 .bbformbuilder-element-row input[type="checkbox"] {
   margin-right: 7px;
@@ -8306,6 +8373,78 @@ aside.returnUser .ProfilePhotoFormTitle {
 }
 .userLoginPart [id*="tdNewPasswordMessage"] {
   padding-left: 11rem;
+}
+
+#imgPhoto {
+  width: 220px;
+  height: 220px;
+  padding-top: 4vw;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-bottom: 11px;
+}
+#imgPhoto [class*="fa-"] {
+  position: relative;
+  font-size: 5vw;
+}
+#imgPhoto .fa-user {
+  font-size: 6vw;
+}
+#imgPhoto .fa-user::before {
+  padding-left: 1rem;
+}
+
+.siteWrapperInner .home h2 {
+  font-size: 1.52083125rem;
+  line-height: 3.04166875rem;
+  text-transform: none !important;
+  margin: 0;
+  padding: 0;
+}
+.siteWrapperInner .home ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.siteWrapperInner .home ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1;
+}
+.siteWrapperInner .home ul li a {
+  color: #007099;
+  font-weight: 600;
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 0.98854375rem;
+  line-height: 1.48333125rem;
+}
+.siteWrapperInner .home ul li p, .siteWrapperInner .home ul li .profileSection label, .profileSection .siteWrapperInner .home ul li label {
+  color: #504c46;
+  padding-right: 20px;
+  margin: 5px 0 15px;
+  line-height: 1.140625rem;
+  font-size: 0.76041875rem;
+}
+.siteWrapperInner .home #EventFeed a {
+  color: #007099;
+  font-weight: 600;
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 0.98854375rem;
+  line-height: 1.48333125rem;
+}
+.siteWrapperInner .home #EventFeed .event {
+  font-size: 0.83645625rem;
+  color: #504c46;
+  display: block;
+}
+.siteWrapperInner .home a.view_all {
+  color: #ad1b1b;
+  float: right;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-right: 20px;
 }
 
 /*=========================================================================================
@@ -8424,7 +8563,7 @@ aside.returnUser .ProfilePhotoFormTitle {
 
   /* bbnc form header row bgcolors & font colors */
   *.BBModalDialogTitle, *.CHDashBoardSectionHeading, *.ECardSectionSeparator, *.CalendarViewDayHeader, *.FRDashBoardSectionHeading, *.FRManagerDashBoardSectionHeading, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderRow, *.DirectoryListingHeading, *.DiscussionTopicListHeader td, *.SurveyAnswerTableHeaderRow td, *.BBDocumentDisplayHeaderRow, *.BBDocumentDisplayHeaderRow td, *.JobResultsListHeader, *.BBNotesNoteTopicCell, *.BBNotesNoteNameCell, *.BBNotesNoteLinkCell, *.BBNotesNoteDateCell, *.ReportListingHeading, *.BBVolOpJobListHeader, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderLabel, *.TransactionManagerSummaryHeaderValue, *.SubscriptionFormListHeader, *.BBVolOpJobListHeader td, *.DonationGridHeader td, *.PaymentPartGrid_Header, *.customDataTable th, *.NCCS_CartHeader td, *.NCCS_OrdersHeader td, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep {
-    background: #545454;
+    background: #F5DF9F;
     text-shadow: 0 0 2px #000000;
     color: #FFF;
     padding: 0.25em 0.5em;

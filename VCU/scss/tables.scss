@@ -17,7 +17,7 @@ table.BBListingTable.DiscussionGroupListingTable .DiscussionTopicList td {
                      ::11.1 Alternating Rows
 ----------------------------------------------*/
 tr.BBListEvenRowStyle>td, table.BBListingTable tr:nth-child(even)>td.BBListingItem{
-background-color: #eee;
+background-color: #F1F0EE;
 }
 
 table.DiscussionTopicList .BBListOddRowStyle {background-color: transparent;}
@@ -27,7 +27,7 @@ table.DiscussionTopicList .BBListOddRowStyle {background-color: transparent;}
 ----------------------------------------------*/
 table.BBListingTable th, tr.JobResultsListHeader td, tr.BBDocumentDisplayHeaderRow td, tr.DiscussionSearchHeader td, tr.DiscussionTopicListHeader td {
 	background:$form-header-row-background-color; /* $client-color-background */
-	color:#FFF; /* $client-color-background-invert */
+	color:$form-header-row-text-color; /* $client-color-background-invert */
 	text-align:left;
 	font-weight:bold;
 }
@@ -36,8 +36,7 @@ table.BBListingTable th, tr.JobResultsListHeader td, tr.BBDocumentDisplayHeaderR
                      ::11.3 Sortable Columns
 ----------------------------------------------*/
 table.BBListingTable th a, tr.BBDocumentDisplayHeaderRow td a {
-	//background:$link-color; /* $client-color-background */
-	color:#FFF; /* $client-color-background-invert */
+	color:$form-header-row-text-color; 
 	text-align:left;
 	display:block;
 	text-decoration:none;
@@ -45,7 +44,6 @@ table.BBListingTable th a, tr.BBDocumentDisplayHeaderRow td a {
 	margin:0 ;
 }
 table.BBListingTable th a:hover, tr.BBDocumentDisplayHeaderRow td a:hover {
-	//background:$link-color; /* transparentize($client-color-background, 0.5) */
 	text-decoration:none;
 }
 /*---------------------------------------------

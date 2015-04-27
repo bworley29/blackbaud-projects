@@ -6391,6 +6391,7 @@ input[type="text"], textarea, .BBFormTextArea, input[type="password"] {
   line-height: 28px;
   margin-bottom: 0.75rem;
   width: 80%;
+  min-height: 28px;
   padding: 0 12px;
   border: 1px solid #cccacc;
   transition: all 0.2s ease 0s;
@@ -6875,7 +6876,11 @@ select[id*="DonationCapture1_cboMonth"].BBFormSelectList {
 }
 
 select[id*="DonationCapture1_cboYear"].BBFormSelectList {
-  min-width: 80px;
+  min-width: 85px;
+}
+
+table[id*="tblAmount"] tr[id*="trOther"] .otherAmountTd input[type="text"][name*="txtAmount"] {
+  height: 28px;
 }
 
 table.DonationFormTable tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] {
@@ -6926,6 +6931,9 @@ tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] .Donation
   }
   table.BBFormTable.DonationFormTable .onlyOtherAmtShown .BBFieldControlCell {
     width: 80%;
+  }
+  table.BBFormTable.DonationFormTable .multipleAmtsShown [id*="trOther"] .DonationFieldControlCell .donateGivAmtLblTxt.givingAmount.radioLabel {
+    display: none;
   }
 }
 table.BBFormTable.DonationFormTable .BBFormTitle, table.BBFormTable.DonationFormTable .BBListingHeading {

@@ -62,7 +62,7 @@ table[id*="tblAmount"] .DonationFieldControlCell
     {
 	    vertical-align: top;
 	    padding-top: 8px;
-	    
+	    	    
 	    span {
 	    	position: relative;
 	    	
@@ -107,12 +107,14 @@ select[id*="DonationCapture1_cboMonth"].BBFormSelectList
 	padding-left: 2px;
 }
 
-select[id*="DonationCapture1_cboYear"].BBFormSelectList {min-width: 80px;}
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {min-width: 85px;}
 
 //select[id*="DonationCapture1_cboMonth"].BBFormSelectList {margin-right: 4%;}
 
 //select[id*="DonationCapture1_cboYear"].BBFormSelectList {margin-left: 9%;}
 
+
+table[id*="tblAmount"] tr[id*="trOther"] .otherAmountTd input[type="text"][name*="txtAmount"] { height: 28px; }
 
 // Shopping Cart Customization
 
@@ -168,6 +170,8 @@ table.BBFormTable.DonationFormTable {
 			
 			.BBFieldControlCell { width: 80%; }
 		}
+		
+		.multipleAmtsShown [id*="trOther"] .DonationFieldControlCell .donateGivAmtLblTxt.givingAmount.radioLabel { display: none; }
 	
 	} // END Min-Width 1024
 	

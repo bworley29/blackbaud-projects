@@ -1018,6 +1018,44 @@ aside.returnUser .ProfilePhotoFormTitle { display: none; }
 		}
 	}
 	
+	.wrapEduInfo {
+		width: 100%;
+		float: left;
+		
+		.wrapper {
+			width: 100%;
+			float: left;
+			clear: both;
+		}
+		
+		p {
+			display: inline-block;
+			float: left;
+		}
+		
+		table.ProfileDisplayMultiRecordTable {
+			display: inline-block;
+			float: left;
+			width: auto;
+			margin-left: 8px;
+			line-height: 26px;
+		}
+	}
+	
+}
+
+.wrapButtons {
+	width: 100%;
+	clear: both;
+	float: left;
+}
+
+.profileSection {
+	label {
+		@extend p;
+		margin: 0;
+		padding: 0;
+	}
 }
 
 // Custom Form - Affiliations
@@ -1077,4 +1115,91 @@ aside.returnUser .ProfilePhotoFormTitle { display: none; }
 	.BBFormChecklist { border: 0; background-color: transparent; }
 	
 	[id*="tdNewPasswordMessage"] { padding-left: 11rem; }
+}
+
+#imgPhoto {
+	width: 220px;
+	height: 220px;
+	padding-top: 4vw;
+	border-radius: 100%;
+	text-align: center;
+	background-color: #f5f5f5;
+	margin-bottom: 11px;
+	
+	[class*="fa-"] {
+		position: relative;
+		font-size: 5vw;
+	}
+	
+	.fa-user {
+		font-size: 6vw;
+		
+		&::before { padding-left: 1rem; }
+	}
+}
+
+
+.siteWrapperInner .home {
+	
+	h2 {
+		font-size: rem(24.3333);
+		line-height: rem(48.6667);
+		text-transform: none !important;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			line-height: 1;
+			
+			a {
+				color: #007099;
+				font-weight: 600;
+				font-family: Georgia,"Times New Roman",Times,serif;
+				font-size: rem(15.8167);
+				line-height: rem(23.7333);
+			}
+			
+			p {
+				color: #504c46;
+				padding-right: 20px;
+				margin: 5px 0 15px;
+				line-height: rem(18.25);
+				font-size: rem(12.1667);
+			}
+		}
+	}
+	
+	#EventFeed {
+		a {
+			color: #007099;
+			font-weight: 600;
+			font-family: Georgia,"Times New Roman",Times,serif;
+			font-size: rem(15.8167);
+			line-height: rem(23.7333);
+		}
+		
+		.event {
+			font-size: rem(13.3833);
+			color: #504c46;
+			display: block;
+		}
+	}
+	
+	a.view_all {
+		color: #ad1b1b;
+	    float: right;
+	    font-weight: bold;
+	    margin-bottom: 10px;
+	    padding-right: 20px;
+	}
+
 }

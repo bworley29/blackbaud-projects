@@ -10,27 +10,33 @@ input[type="submit"], input[type="button"], input.BBFormSubmitButton, button, a.
 	display:inline-block;
 	cursor: pointer;
 	text-decoration:none !important;
-	line-height:rem(30);
+	line-height:rem(20);
 	height: auto;
-	font-size: rem(22);
+	font-size: rem(14);
 	font-weight: 400;
 	font-family: $body-font-family;
-	padding: 0.54545em 20px;
+	padding: 4px 14px;
 	text-transform: none;
 	text-align: center;
 	width: auto;
 	vertical-align: middle;
 	color: $btn-text-color;
-	background: $primary-btn-color;
-	border: 1px solid #730f0f;
-	@include border-radius(0);
+	background: #A60020;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	@include border-radius(4px);
 	transition: all 0.15s ease 0s;
 }
 
 /* Default Button Hovers */
 input[type="submit"]:hover, input[type="button"]:hover, input.BBFormSubmitButton:hover, button:hover, a.PaymentPart_UpdateCartLink:hover, a.PaymentPart_CartItemRemoveText:hover, a[id$="UpdateLink"]:hover, a[id$="btnInsert"]:hover, a[id$="InsertLink"]:hover, div[id$="pnlAddNew"] a:hover, a.CommandButton:hover, a[id$="ExpandCollapseLinkButton"]:hover, a[id$="NewMessageHyperlink"]:hover, div[id$="MessageView1_ActionsMenu"] a[value="16"]:hover, div[id$="PanelOnlineStatus"]+div+div+div ul li a:hover, table.ProfilePhotoFormTable input[value="Update"]:hover, table.ProfilePhotoFormTable input[value="Remove Photo"]:hover, a[id$="LinkButtonYes"]:hover, input[id$="btnSave"].DonorGrantSubmitButton:hover, input[id$="btnCancel"].DonorGrantSubmitButton:hover, input.QuickSearchButton:hover, a.BBDocumentTabButton:hover, a.BBDocumentEditButtonWAI:hover, a.BBDocumentApproveButtonWAI, a.defaultGoldButton:hover, input.ListViewDateRangeGoButton[type="button"]:hover {
-	background: $btn-text-color;
-	color: $primary-btn-color;
+	background: #A60020;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	@include border-radius(4px);
+	color: $btn-text-color;
 }
  
 /*---------------------------------------------
@@ -84,26 +90,4 @@ background: transparent;
 color: #333;
 border: 0;
 cursor: default !important;
-}
-
-
-// Sidebar Button
-button.sidebarButton, a.sidebarButton {
-	font-size: rem(14);
-	line-height: rem(17);
-	display: block;
-	width: 100%;
-	background: #B5BB14;
-	border: solid 1px #fff;
-	text-transform: uppercase;
-	@include box-shadow(none);
-	@include border-radius(0);
-	margin: rem(10) 0 rem(8);
-	text-align: center;
-	color: #fff;
-	padding: .35rem 1.5rem;
-	
-	&:hover {
-		background: $link-color;
-	}
 }

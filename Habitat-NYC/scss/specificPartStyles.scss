@@ -35,6 +35,7 @@ table.DonationFormTable {
 	
 	.emptyTD { display: none; }
 	
+	
 }
 
 .wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table[style]
@@ -147,27 +148,22 @@ table.BBFormTable.DonationFormTable {
 	
 	@media (min-width: 1024px) {
 		  
-		width: 82%;
+		width: auto;
 		
 		//select.BBFormSelectList { max-width: 70%; }
 		
 		.BBFieldCaption {
 			text-align: left;
-			width: 0;
+			width: 180px;
 		}
 		
 		tbody[id*="tbdCart"] tr[id*="trAddToCart"] .emptyTD { display: table-cell; } 
 		
 		tr[id*="trTributeDesc2"] + tr td.emptyTD { display: table-cell; }
 	
-		.BBFieldControlCell { width: 20%; }
+		.BBFieldControlCell { width: auto; }
 		
-		.onlyOtherAmtShown {
-			
-			.otherAmountTd:after { display: none !important; }
-			
-			.BBFieldControlCell { width: 80%; }
-		}
+		.BBFieldControlCell input[type="checkbox"], .BBFieldControlCell input[type="radio"] { margin-bottom: 0.75rem; }
 	
 	} // END Min-Width 1024
 	
@@ -179,13 +175,13 @@ table.BBFormTable.DonationFormTable {
 		margin-bottom: 1rem; 
 		
 		.DonationFieldControlCell {
-			width: auto;
+			width: 58.5%; // auto;
 			vertical-align: top;
 			
 			input[name*="givingLevels"] { 
 				margin: 0 10px 13px 0;
 				
-				+ label[for*="rdo"] {display: none; }
+				//+ label[for*="rdo"] {display: none; }
 			}
 		}
 	}
@@ -862,4 +858,35 @@ table.userLoginPart.taCenter {
 	
 	table.BBFormTable .BBFieldControlCell { width: 80%; }
 	
+}
+
+// Bill Me Later Option
+
+.BBSequenceMapContent {
+	
+	label.DCFieldCaption + {
+		select, input {
+			max-width: 300px;
+		}
+		
+	}
+}
+
+// BBSP styles
+
+[id*="ev2errors"].Ev2_ValidationSummary:empty { display: none; }
+
+#bbpay_Payment {
+	clear: both !important;
+	width: 100% !important;
+	
+	input[type='text'] {
+		height: 21px !important;
+		line-height: 1;
+		min-width: 50px;
+	}
+	
+	.x-form-invalid, textarea.x-form-invalid { border: 0;}
+	
+	.x-box-inner { height: 22px !important; }
 }

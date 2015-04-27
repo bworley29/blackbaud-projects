@@ -1016,7 +1016,8 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	padding-bottom: rem(31);
 	
 	@media (max-width: 767px) {
-		
+		width: 88%;
+		float: left;
 		position: relative;
 		top: 2.65rem;
 	}
@@ -1053,6 +1054,10 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 			padding: 4px 10px 2px;
 			font-weight: 300;
 			
+			@media (max-width: 767px) {
+				width: 90%;
+			}
+			
 			&[id*="txtFirstName"], &[id*="txtLastName"] {width: 175px;}
 			
 			&[id*="ZipUS"] {width: 129px;}
@@ -1081,6 +1086,12 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 				weight:300;
 			}
 			
+			@media (max-width: 767px) {
+				width: 91px;
+				
+				&[id*="dd_Country"], &[id*="dd_State"] { width: 90%; }
+			}
+			
 			&[id*="cboCardType"] {width: auto;}
 		}
 		
@@ -1094,7 +1105,57 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 				display: block;
 			}
 		}
+		
+		.wrapBillingLastName {
+			@media (min-device-width: 768px) and (max-device-width: 1024px) {
+				display: block;
+				
+				label {
+					position: absolute;
+					left: 11.25vw;
+				}
+			}
+		}
+		
+		.wrapBillingZip {
+			@media (max-width: 1024px) {
+				display: block;
+				label {
+					position: absolute;
+					left: 16.75vw;
+				}
+			}
+			
+			@media (max-width: 800px) {
+				label {
+					left: 18vw;
+				}
+			}
+			
+			@media (max-width: 767px) {
+				label {
+					position: relative;
+					left: 0;
+				}
+			}
+		}
 	}
+}
+
+.EventTable .wrapPayBillInfo { 
+	top: 0;
+	
+	@media (min-device-width: 768px) and (max-width: 800px) {
+		.wrapBillingZip label {
+			left: 16.75vw;
+		}
+		
+		.wrapBillingLastName label {
+			left: 9.85vw;
+		}
+		
+	}
+	
 }
 
 // Type of Gift
@@ -1121,6 +1182,12 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	.wrapPayBillInfo .DonationButtonCell { padding-bottom: 2rem;}
 }
 
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	
+	.wrapPayBillInfo tr[id*="trGiftType"] [id*="lblGiftTypeCaption"] { white-space: nowrap; }
+}
+
+
 .fullWidthContent table.BBFormTable.DonationFormTable {
 	width: auto;
 	margin: 0 1.875rem 0 5rem;
@@ -1140,9 +1207,23 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	float: left;
 	margin: 0 1.875rem rem(20) 5rem;
 	
+	@media (min-device-width: 768px) and (max-device-width: 1024px) {
+		margin-right: .75rem;
+	}
+	
+	@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		margin-right: 0;
+		width: 85%;
+	}
+	
+	@media (max-width: 800px) and (max-device-width: 768px) {
+		margin-left: 0;
+	}
+	
 	@media (max-width: 767px) {
 		
-		margin-left: 1.875rem ;
+		margin-left:0;
+		margin-right: 0;
 	}
 	.amounts {
 		width: 200px;
@@ -1154,8 +1235,29 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		padding: 9px 15px;
 		margin-bottom: rem(45);
 		
+		@media (max-width: 1024px) and (max-device-width: 1024px) {
+			width: 30%;
+			height: 215px;
+		}
+		
+		@media (max-width: 768px) and (max-device-width: 768px) {
+			background-position-y: 4.25vw;
+			background-size: 60%;
+		}
+		
+		@media (max-width: 767px) {
+			width: 200px;
+			background-position-y: 6.25vw;
+			background-size: auto;
+		}
+		
 		&:nth-child(2), &:nth-child(5) {
 			margin-left: rem(43); margin-right: rem(43);
+			
+			@media (max-width: 1024px) and (max-device-width: 1024px) {
+				margin-right: 2vw;
+				margin-left: 2vw;
+			}
 			
 			@media (max-width: 767px) {
 		
@@ -1185,6 +1287,10 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 			line-height: 17px;
 			bottom: 0;
 			z-index: 1;
+			
+			@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) { 
+				left: 10px;
+			}
 
 			label, input {display: block; text-align: center; margin: 0 auto;}
 			
@@ -1199,6 +1305,18 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 				position: absolute;
 				left: 76px;
 				bottom: 20px;
+				
+				@media (max-width: 1024px) and (max-device-width: 1024px) {
+					left: 42%;
+				}
+				
+				@media (min-device-width: 768px) and (max-width: 800px) {
+					left: 39%;
+				}
+				
+				@media (max-width: 767px) {
+					left: 50%;
+				}
 			}
 		}
 	}
@@ -1238,6 +1356,10 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 			position: absolute;
 			bottom: 21px;
 			left: 48.5%;
+			
+			@media (max-width: 1024px) and (max-device-width: 1024px) {
+					left: 45%;
+			}
 		}
 		
 	&:last-child {
@@ -1246,6 +1368,8 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	    position: absolute;
 	    top: auto;
 	    width: 200px;
+	    
+	    @media (max-width: 1024px) and (max-device-width: 1024px) { width: 100%; }
 		
 		input {
 			background: none repeat scroll 0 0 #fff;
@@ -1273,6 +1397,10 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	    font-weight: 300;
 	    line-height: 17px;
 	    position: absolute;
+	    
+	    @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		    left: 10px;
+		}
 	}
 }
 
@@ -1313,6 +1441,16 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		float: left;
 		width: 90%;
 		
+		@media (min-device-width: 768px) and (max-device-width: 1024px) {
+			width: 98%;
+		}
+		
+		@media (max-width: 767px) {
+			width: 98%;
+			background-color: transparent;
+			border-bottom: 2px solid #ccc;
+		}
+		
 		th {
 			font-weight: 400;
 			font-size: .85rem;
@@ -1321,6 +1459,10 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		th.EventProgressCell {
 			color: #b5bb14;
 			background-color: transparent;
+			
+			@media (max-width: 767px) {
+				font-weight: bold;
+			}
 		}
 		
 		th.EventProgressCellFuture {
@@ -1381,6 +1523,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		font-weight: 700;
 		color: $body-font-color;
 		padding: 0 .5rem;
+		
+		@media (max-width: 767px) and (max-device-width: 720px) {
+			padding-left: .25em;
+			padding-right: .25em;
+		}
 	}
 	
 	.EventTicketsBodyCell {
@@ -1400,6 +1547,14 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		line-height: 1;
 		margin-right:10rem;
 		padding: 8px 40px 6px;
+		
+		@media (max-width: 767px) {
+			margin-right: 0;
+		}
+	}
+	
+	@media (max-width: 767px) {
+		input[type="button"][value="Next"] { float: left; margin-left: 10px; }
 	}
 	
 	select.BBFormSelectList {
@@ -1410,6 +1565,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		margin: 0 .5rem 1rem;
 		position: relative;
 		float: left;
+		
+		@media (max-width: 767px) and (max-device-width: 720px) {
+			padding-left: .25rem;
+			padding-right: .25rem;
+		}
 	}
 	
 	.EventItemRegistrationsTable tr { border-bottom: 0; }
@@ -1458,7 +1618,18 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	
 	.wrapPayBillInfo {
 		padding: 0 1.875rem 0 5rem;
-		.DonationCaptureFormTable .BBFieldCaption {width: 22%;}
+		
+		@media (max-width: 767px) {
+			padding: 20px 0 0 20px;
+		}
+		
+		.DonationCaptureFormTable .BBFieldCaption {
+			width: 22%;
+			
+			@media (max-width: 767px) {
+				width: auto;
+			}
+		}
 		
 		//.DonationCaptureFieldControlCell {width: auto;}
 		
@@ -1471,6 +1642,34 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	td.buttonTD {
 			background-color: #eee;
 			padding:1.5rem 0 1.75rem;
+			
+			@media (min-device-width: 768px) and (max-device-width: 1024px) {
+			
+				> table {
+					width: 90%;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				
+				input[type="button"] {
+					margin-left: 0;
+					margin-right: 0;
+				}	
+				
+			}
+			
+			@media (max-width: 767px) {
+				display: block;
+				clear: both;
+				width: 88%;
+				
+				input[type="button"] {
+					margin-left: 0;
+					margin-right: 0;
+					padding-left: 25px;
+					padding-left: 25px;
+				}
+			}
 			
 			.BBFormSubmitButton {margin-bottom: 0;}
 		}
@@ -1549,6 +1748,8 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 	margin: 0 0 2rem 2rem;
 	z-index: 1000;
 	
+	@media (max-width: $small-breakpoint) { top: 1rem !important; }
+	
 	.at-share-tbx-element.addthis_32x32_white_style.circular .at300bs {
 		@include border-radius(5px);
 		
@@ -1569,7 +1770,23 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 
 // Blog
 
+// Blog AddThis
+
+#blogAddThis {
+	display: none;
+	
+	+ style + .addthis_custom_sharing {
+		@media (min-device-width: 768px) and (max-device-width: 1024px) { top: 0; }
+	}
+	
+}
+
 .rssBody {
+	
+	@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		margin: 0 1.875rem 0 5rem;
+	}
+	
 
 	.rssRow {
 		border-bottom: 1px solid #ccc;
@@ -1578,6 +1795,10 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		clear: both;
 		width: 93%;
 		float: left;
+		
+		@media (max-width: 767px) {
+			width: 90%;
+		}
 		
 		h2 {
 			color: #002C64;
@@ -1612,8 +1833,21 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 		}
 		.rssImagePreview {
 			width: 27%;
+			
+			@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+				+ .rssContentWrapper { width: 69%; }
+			}
 		}
-		.rssContentWrapper { width: 70%; margin-right: 0; }
+		.rssContentWrapper { 
+			width: 70%; 
+			margin-right: 0;
+			
+			@media (min-device-width: 768px) and (max-device-width: 1024px) { width: 100%; }
+			
+			@media (max-width: 767px) {
+				width: 95%;
+			}
+		}
 		.rssContentText {
 			margin-right: 0;
 			font-size: rem(18);
@@ -1652,6 +1886,8 @@ table.NewsChannelListingTable {
 	table.NewsChannelStoryList {
 		margin: 0 rem(76) 0 5rem;
 		
+		@media (max-width: 800px) and (max-device-width: 768px) { margin: 1rem 1.75rem 0 0; }
+		
 		.NewsChannelItemDate {
 			font-size: rem(15);
 			line-height: rem(18);
@@ -1688,6 +1924,8 @@ table.NewsChannelListingTable {
 		
 		a.ChannelStoryDeleteButtonWAI, a.ChannelStoryEditButtonWAI {font-size: $body-font-size;}
 	}
+	
+	td.NewsChannelItemTitle { line-height: 1.1 }
 }
 
 .EventItemRegistrationControlCellQuantity .BBFormSelectList { margin-bottom: 1rem; }
@@ -1860,9 +2098,15 @@ tbody[id*="tbdyFinderNumber"] + .wrapPayBillInfo {margin-top: 1.5rem;}
 
 table.BBFormTable .CalendarFormDateTimeContainer {
 	margin-bottom: .5rem;
+	
 	.CalendarFormFieldCaption {
 		width: auto;
 		padding-top: 0;
+		
+		@media (max-width: 767px) {
+			display: block;
+			width: 100%;
+		}
 	}
 	
 	.CalendarEventRecurMsg {
@@ -1870,9 +2114,237 @@ table.BBFormTable .CalendarFormDateTimeContainer {
 		font-weight: 400;
 		text-transform: uppercase;
 	}
+	
+	@media (min-device-width:768px) and (max-device-width: 1024px) {
+		width: 75%;
+		
+		td { display: inline-block; }
+		
+		td.CalendarFormFieldCaption label[for*="CalendarEvent1_CheckAllDay"] {
+			padding-bottom: 10px;
+			padding-top: 0;
+		}
+		
+		input[id*="CalendarEvent1_CheckAllDay"] {
+			margin-bottom: 0;
+			position: relative;
+			bottom: -5px;
+		}
+		
+		// Start Date and Time
+		tr[id*="TRTimeZone"] + tr {
+			td.CalendarFormFieldCaption {
+				display: inline-block;
+				width: 20%;
+
+				
+				+ td {
+					display: inline-block;
+					
+					+ td[id*="TDStartTimeList"] { 
+						display: block;
+						width: 100%;
+						
+						label[id*="lblTxtHourStart"] {
+							display: inline-block;
+							width: 19%;
+							margin-bottom: 2rem;
+							margin-right: 4px;
+							float: left;
+
+						}
+					}
+				}
+			}
+			
+			// End Date and Time
+			+ tr {
+				td.CalendarFormFieldCaption {
+					display: inline-block;
+					width: 20%;
+
+					
+					+ td {
+						display: inline-block;
+
+						
+						+ td[id*="TDEndTimeList"] { 
+							display: block;
+							width: 100%;
+							
+							label[id*="lblTxtHourEnd"] {
+								display: inline-block;
+								width: 19%;
+								margin-bottom: 2rem;
+								margin-right: 4px;
+								float: left;
+
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		tr[id*="TRRecurrence"] {
+			td.CalendarFormFieldCaption { padding-right: 0; }
+		}
+	}
+	
+	@media (min-device-width:768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		width: 100%;
+		
+		tr[id*="TRRecurrence"] {
+			td.CalendarFormFieldCaption {
+				width: 18%;
+				
+				+ td { padding-left: 10px; }
+			}
+		}
+	}
+	
+	@media (max-width: 767px) and (max-device-width: 720px) {
+		width: 75%;
+		
+		td { display: inline-block; }
+		
+		td.CalendarFormFieldCaption label[for*="CalendarEvent1_CheckAllDay"] {
+			padding-bottom: 10px;
+			padding-top: 0;
+		}
+		
+		input[id*="CalendarEvent1_CheckAllDay"] {
+			margin-bottom: 0;
+			position: relative;
+			bottom: -5px;
+		}
+		
+		// Start Date and Time
+		tr[id*="TRTimeZone"] + tr {
+			td.CalendarFormFieldCaption {
+				display: block;
+				width: 100%;
+
+				
+				+ td {
+					display: block;
+					
+					+ td[id*="TDStartTimeList"] { 
+						display: block;
+						width: 100%;
+						
+						label[id*="lblTxtHourStart"] {
+							display: block;
+							width: 100%;
+							margin-bottom: 2rem;
+							margin-right: 4px;
+							float: left;
+
+							+ select { display: inline-block; float: left; 
+								
+								+ label.CalendarFormFieldCaption { display: inline-block; float: left; width: auto;
+								
+									+ select { display: inline-block; float: left;
+										
+										+ label.CalendarFormFieldCaption { display: inline-block; float: left; width: auto;
+									
+											+ select { display: inline-block; float: left; margin-left: 12px; } 
+									
+										}
+									} 
+								
+								}
+							}
+
+						}
+					}
+				}
+			}
+			
+			// End Date and Time
+			+ tr {
+				td.CalendarFormFieldCaption {
+					display: block;
+					width: 100%;
+
+					
+					+ td {
+						display: block;
+
+						
+						+ td[id*="TDEndTimeList"] { 
+							display: block;
+							width: 100%;
+							
+							label[id*="lblTxtHourEnd"] {
+								display: block;
+								width: 100%;
+								margin-bottom: 2rem;
+								margin-right: 4px;
+								float: left;
+								
+								+ select { display: inline-block; float: left; 
+								
+									+ label.CalendarFormFieldCaption { display: inline-block; float: left; width: auto;
+									
+										+ select { display: inline-block; float: left;
+										
+											+ label.CalendarFormFieldCaption { display: inline-block; float: left; width: auto;
+									
+												+ select { display: inline-block; float: left; margin-left: 12px; } 
+											
+											}
+										} 
+									
+									}
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		tr[id*="TRRecurrence"] {
+			td.CalendarFormFieldCaption { padding-right: 0; }
+		}
+		
+		
+	}
+}
+
+@media (max-width: 767px) and (max-device-width: 720px) {
+	
+	[id*="trEventLocation"] + tr td.CalendarFormFieldCaption + td {
+		display:block;
+		width: 100%;
+		
+		table[id*="CalendarEvent1_rblMapLink"] td {
+			display:block;
+			width: 100%;
+		}
+	}
+	
+	[id*="hlnkPreviewMap"] { display: none; }
 }
 
 table.BBFormTable .CalendarFormEventInfoContainer {
+	
+	@media (max-width: 767px) and (max-device-width: 720px) {
+		
+		.CalendarFormHTMLEditor { width: 100%; }
+		.wrapCalendarFormHTMLEditor, .CalendarFormHTMLEditorCaption {
+			width: 100%;
+			display: block;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		div.ribbon_tab_div {
+			width: 270px;
+		}
+	}
 
 	input, select, textarea {
 		@extend .formElementOverrides;
@@ -1898,7 +2370,25 @@ table.BBFormTable .CalendarFormEventInfoContainer {
 		padding-top: 0;
 	}
 	
-	.CalendarFormFieldCaption { width: 150px;}
+	.CalendarFormFieldCaption { 
+		width: 150px;
+		
+		@media (max-width: 767px) and (max-device-width: 720px) {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			display: block;
+			float: none;
+			
+			+ .BBFieldControlCell {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+				display: block;
+				float: none;
+			}
+		}
+	}
 	
 	.CalendarFormFieldCaption label {
 		@extend .paragraphStyleBlock;
@@ -1914,7 +2404,80 @@ table.BBFormTable .CalendarFormEventInfoContainer {
 		}
 	}
 	
-	.CalendarFormHTMLEditor div#divTinyMCEWrapper {width: 100%;}
+	.CalendarFormHTMLEditor div#divTinyMCEWrapper {
+		
+		width: 100%;
+		
+		@media (min-device-width: 768px) and (max-width: 1024px) {
+			width: 70%;
+			
+			.ribbon_tab_div {
+				width: 270px;
+			
+			}
+			
+			.ribbon_group {
+				width: 22%;
+				
+				+ .ribbon_group { width: 50%; }
+			}
+			
+			ul.ribbon_tab_btn {
+				display: table;
+				
+				li {
+					display: table-cell;
+					
+					span {
+						font-size: 2vw;
+						padding-left: 2.5vw;
+						padding-right: 2.5vw;
+					}
+				}
+			}
+		}
+		
+		@media (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+			width: 93%;
+			
+			.ribbon_group {
+				width: auto;
+				
+				+ .ribbon_group { width: auto; }
+			}
+			
+			ul.ribbon_tab_btn li span {
+				font-size: 1.75vw;
+				padding-left: 2.75vw;
+				padding-right: 2.75vw;
+			}
+		}
+		
+		@media (max-width: 767px) and (max-device-width: 720px) {
+			width: 100%;
+			
+			.ribbon_group {
+				width: 22%;
+				
+				+ .ribbon_group { width: 50%; }
+			}
+			
+			ul.ribbon_tab_btn {
+				display: table;
+				
+				li {
+					display: table-cell;
+					
+					span {
+						font-size: 4.5vw;
+						padding-left: 2.5vw;
+						padding-right: 2.5vw;
+					}
+				}
+			}
+			
+		}
+	}
 }
 
 [id*="TimeList"] select { 
@@ -2044,7 +2607,13 @@ td[id*="EventCalendar1_TDGo"] {vertical-align: bottom; }
 	}
 }
 
-table[id*="tableMain"][summary="Event Calendar"] { margin-top: 1rem;}
+table[id*="tableMain"][summary="Event Calendar"] { 
+	margin-top: 1rem;
+	
+	@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		margin-left: 1.875rem;
+	}
+}
 
 .EventCalendarButtonBar:empty, .EventCalendarButtonBar:hidden {padding: 0;}
 
@@ -2053,6 +2622,12 @@ table[id*="tableMain"][summary="Event Calendar"] { margin-top: 1rem;}
 		width: 100%;
 		display: block;
 		text-align: center;
+	}
+}
+
+@media (min-width: 801px) and (max-width:1024px) and (orientation: landscape) {
+	#calendar {
+		margin-left: 1.5rem !important;
 	}
 }
 
@@ -2191,6 +2766,8 @@ table[id*="tableMain"][summary="Event Calendar"] { margin-top: 1rem;}
 	}
 }
 
+.cse .gsc-control-cse, .gsc-control-cse { padding: 0 !important; }
+
 .gsc-control-wrapper-cse .gsc-results.gsc-webResult {
 	
 	font-family: $body-font-family !important;
@@ -2214,6 +2791,8 @@ table[id*="tableMain"][summary="Event Calendar"] { margin-top: 1rem;}
 	
 }
 
+.gsc-result .gs-title { height: auto !important }
+
 .gsc-control-cse {
 	// Filter Link Options
 	.gsc-above-wrapper-area .gsc-selected-option-container {
@@ -2226,7 +2805,7 @@ table[id*="tableMain"][summary="Event Calendar"] { margin-top: 1rem;}
 
 .gsc-control-cse, .gsc-control-cse .gsc-table-result {
 	font-family: $body-font-family !important;
-	font-size: $body-font-size !important;
+	font-size: .85rem !important;
 	color: $body-font-color !important;
 }
 

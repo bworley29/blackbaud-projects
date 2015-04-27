@@ -269,10 +269,12 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 		.mainContent {
 			padding-bottom: 1rem;
 		}
+/*
 		@include media(max-width $medium-viewport) {
 			width: 50%;
 			right: 50%;
 		}
+*/
 		
 		@media (max-width: $small-breakpoint) {
 			width: 100%;
@@ -357,9 +359,12 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 			}
 			.commTxt {
 				
-				p, div.learnMore {
+				p, div.learnMore, a.learnMore {
 					display: none;
 				}
+				
+				a.learnMore.visible { display: block !important; }
+				
 				&.hidden {
 					color: #666666;
 					background: #ccc;
@@ -373,9 +378,14 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 					
 					&:before {display: none;}
 				}
-			&.visible {padding-bottom: 1.5rem;}
+			&.visible {
+				padding-bottom: 1.5rem;
+				
+				a.learnMore { display: block; }
+				}
 			}
 		}
+/*
 		.wrapCommunityCTA.left {
 		
 			.commImg:first-child { 
@@ -389,6 +399,7 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 
 			}
 		}
+*/
 		
 		.wrapCommunityContent .wrapCommunityCTA .commTxt.visible + .commImg.hidden + .commTxt.hidden, .firstHidden { padding-top: rem(22); }
 		
@@ -482,6 +493,10 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 		width: 100%;
 		margin: 0;
 		padding: 0;
+		
+		@media (min-width:767px) and (max-width:1024px) {
+			margin-left: 2rem;
+		}
 				
 		.wrapper { 
 			@include span-columns(4);
@@ -489,9 +504,14 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 			width: percentage(200px / 1054px);
 			margin-bottom: rem(43);
 			
+			@media (min-width:767px) and (max-width:1024px) {
+				margin-right: 2.5rem;
+				height: 28vw;
+			}
+			
 			h3 {margin-top: 0;}
 			
-			@media(max-width: 768px) {
+			@media(max-width: 767px) {
 				 @include span-columns(12);
 				 margin-right: 0;
 				 
@@ -595,6 +615,11 @@ nav.inlineMenu {
 	@include span-columns(12);
 	margin-right: 0;
 	
+	@media (max-width: $small-breakpoint) {
+		padding-left: 0;
+		overflow-x: scroll;
+	}
+	
 	+ .mainContent {
 		padding-top: 0;
 		clear: both;
@@ -628,13 +653,17 @@ nav.inlineMenu {
 	.sidebarContent, .sidebarImg {
 		background: #ccc;
 		
-		@media (max-width: $small-breakpoint) { display: none; }
+		//@media (max-width: $small-breakpoint) { display: none; }
 	}
 	
 	.sidebarContent {
 		padding: rem(30) rem(40) 0;
 		
 		@media (max-width: $small-breakpoint) { padding-bottom: rem(30); }    
+	}
+	
+	.sidebarImg p {
+		margin-bottom: 0; 
 	}
 	
 	//
@@ -665,10 +694,17 @@ nav.inlineMenu {
 	
 	// Community
 	&.commSidebar {
+/*
 		@include media(max-width $medium-viewport) {
 			width: 50%;
 			left: 50%;
+			
+			&::after {
+				width: 50%;
+				left: 50%;
+			}
 		}
+*/
 		@media (max-width: $small-breakpoint) {
 			width: 100%;
 			left: 0;
@@ -681,6 +717,13 @@ nav.inlineMenu {
 			background: #ccc;
 			height: 314px;
 			padding: rem(54) rem(15) rem(44) rem(42);
+			
+			@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+				height: auto;
+				padding-left: 1rem;	
+			}
+			
+			@media (max-width: $small-breakpoint) { display: none; }
 			
 			.byTheNumTitle, .byTheNumNumbers {
 				font-size: rem(40);
@@ -699,6 +742,12 @@ nav.inlineMenu {
 				 padding-left: 6px;
 				 font-weight: 700;
 				 margin-bottom: 6px;
+				 
+				 @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+					padding-left: 0;
+					position: relative;
+					right: 10px;	
+				}
 			 }
 			 
 			 p {
@@ -707,11 +756,25 @@ nav.inlineMenu {
 				 line-height: rem(22.5);
 				 margin: 0 rem(50) 0 rem(66);
 				 padding: 0;
+				 
+				 @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+					 margin:1rem 1rem 0 2.5rem;
+				}
 			 }
 			&:empty {
 				//margin: 0;
 				//padding: 0;
 				//background: transparent;
+			}
+			
+			@media (max-width: $small-breakpoint) {
+				
+				.wrapByTheNum {
+					display: none;
+					
+					+ p { display: none; }
+				}
+				
 			}
 
 		}
@@ -730,7 +793,7 @@ nav.inlineMenu {
 		.wrapSidebarContent {
 			max-height: none;
 		}
-		.sidebarCTA { display: none; }
+		//.sidebarCTA { display: none; }
 	
 	}
 }

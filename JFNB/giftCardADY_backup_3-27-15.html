@@ -1,0 +1,257 @@
+<div class="adfValidationWrapper">
+
+</div>
+<style>
+  
+  .adfFormRow > h1 {
+    display: block;
+}
+</style>
+<div class="adfWrapper">
+    <div class="adfCardGridWrapper">
+    </div>
+    <div class="adfFormWrapper">
+        <fieldset>
+            <h1>Recipient's Information</h1>
+            <div class="adfFormRow">
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfGiftName">Recipient's Name</label>
+                <input class="adfTextInput" id="adfGiftName" name="adfGiftName"/>
+                </div>
+            </div>
+            <!--<div class="adfFormRow">
+                <label class="adfLabel" for="adfGiftEmail">Email Address</label>
+                <input class="adfTextInput" id="adfGiftEmail" name="adfGiftEmail"/>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfGiftPhone">Phone</label>
+                <input class="adfTextInput" id="adfGiftPhone" name="adfGiftPhone"/>
+            </div>-->
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfGiftAddress">Recipient's Address</label>
+                <textarea class="adfTextareaInput" id="adfGiftAddress" name="adfGiftAddress"></textarea>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfGiftCity">City</label>
+                <input class="adfTextInput" id="adfGiftCity" name="adfGiftCity"/>
+            </div>
+            <div class="adfFormRow">
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfGiftState">State</label>
+                <select class="adfSelectInput BBFormSelectList" id="adfGiftState" name="adfGiftState">
+                    <option value="-1">&nbsp;</option>
+                </select>
+                </div>
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfGiftZip">ZIP</label>
+                <input class="adfTextInput" id="adfGiftZip" name="adfGiftZip"/>
+                </div>
+            </div>
+            <div class="adfFormRow">
+                <h1>Dollar Amount</h1>
+                <button class="adfAmountButton">$18</button>
+                <button class="adfAmountButton">$36</button>
+                <button class="adfAmountButton">$54</button>
+                <button class="adfAmountButton">$100</button>
+                <div class="adfOtherAmountWrapper">
+                <span>Other</span><input class="adfTextInput adfNarrowInput" id="adfAmount" name="adfAmount" placeholder="Enter amount..."/>
+                <p class="adfMinMessage">$18 Minimum</p>
+                </div>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfHeaderLabel" for="adfGiftMessage">Message</label>
+                <textarea class="adfTextareaInput" id="adfGiftMessage" name="adfGiftMessage"></textarea>
+            </div>
+            <!--<div class="adfFormRow">
+                <label class="adfHeaderLabel" for="adfClosing">Closing</label>
+                <select class="adfTextInput" id="adfClosing" name="adfClosing">
+                    <option value="-1">&nbsp;</option>
+                </select>
+            </div>-->
+        </fieldset>
+
+        <fieldset class="blueBackground">
+            <h1>Your Information</h1>
+            <div class="adfFormRow">
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfBillingFirstName">First Name</label>
+                <input class="adfTextInput" id="adfBillingFirstName" name="adfBillingFirstName"/>
+                </div>
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfBillingLastName">Last Name</label>
+                <input class="adfTextInput" id="adfBillingLastName" name="adfBillingLastName"/>
+                </div>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfBillingEmail">Email Address</label>
+                <input class="adfTextInput" id="adfBillingEmail" name="adfBillingEmail"/>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfBillingPhone">Phone</label>
+                <input class="adfTextInput" id="adfBillingPhone" name="adfBillingPhone"/>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfBillingAddress">Address</label>
+                <textarea class="adfTextareaInput" id="adfBillingAddress" name="adfBillingAddress"></textarea>
+            </div>
+            <div class="adfFormRow">
+                <label class="adfLabel" for="adfBillingCity">City</label>
+                <input class="adfTextInput" id="adfBillingCity" name="adfBillingCity"/>
+            </div>
+            <div class="adfFormRow">
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfBillingState">State</label>
+                <select class="adfSelectInput BBFormSelectList" id="adfBillingState" name="adfBillingState">
+                    <option value="-1">&nbsp;</option>
+                </select>
+                </div>
+                <div class="adfSubFormRow">
+                <label class="adfLabel" for="adfBillingZip">ZIP</label>
+                <input class="adfTextInput" id="adfBillingZip" name="adfBillingZip"/>
+                </div>
+            </div>
+            <div class="adfSubmitWrapper">
+                <input type="button" value="Proceed to Payment" />
+            </div>
+        </fieldset>
+
+    </div>
+</div>
+<div class="adfConfirmationWrapper">
+
+</div>
+<style>
+    .BBPageTitle {
+        background: transparent;
+    }
+	.adfCardTitle {
+		font-size: 0.938rem;
+		text-transform: uppercase;
+		line-height: 1em;
+		margin: 0;
+		font-weight: bold;
+		padding: 22px 0 6px 16px;
+	}
+	.adfCardCell {
+		float: left;
+		margin: 0 40px 40px 0;
+		border: 1px solid #ccc;
+		position:relative;
+	}
+	.adfFormWrapper {
+		clear: both;
+	}
+	.adfCardRadioWrapper {
+		text-align: center;
+	}
+	.adfFormRow {
+		clear: both;
+	}
+	.adfWrapper fieldset {
+		border: 0;
+		margin: 0;
+	}
+	.adfWrapper fieldset.blueBackground {
+		background: #eee;
+	}
+	.adfWrapper h1, .adfHeaderLabel {
+	    font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+	    color: #002c64;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.875rem;
+        padding: 0.75em 0 0.875em;
+        margin: 0;
+	}
+	.adfLabel {
+	    color: #666;
+	    display: inline-block;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1;
+        padding: 6px 10px 0 0;
+        text-align: right;
+        width: 155px;
+	}
+	.adfHeaderLabel {
+	    min-width:195px;
+	    padding: 6px 10px 0 0;
+	    display: inline-block;
+	    text-align: left;
+	}
+	.adfTextInput, .adfTextareaInput {
+        border: 1px solid #ccc;
+        border-radius: 0;
+        font-size: 1.125rem;
+        font-weight: 300;
+        height: auto;
+        line-height: 1;
+        padding: 4px 10px 2px;
+        max-width: 259px;
+        width: 50%;
+        color: #666;
+        margin-bottom: 0.75rem;
+	}
+    .adfWrapper select {
+        background: none repeat scroll 0 0 #fff;
+        border-radius: 0;
+        font-size: 18px;
+        font-weight: 300;
+        padding: 4px 10px 2px;
+        width: 129px;
+        margin-bottom: 0.75rem;
+        border-radius: 0;
+    }
+    .adfSubFormRow {
+        float: left;
+    }
+    .adfSubFormRow + .adfSubFormRow {
+        padding-left: 30px;
+    }
+    .adfSubFormRow + .adfSubFormRow label {
+        width: auto;
+        min-width: auto;
+    }
+    .adfSubmitWrapper {
+        padding: 30px 0 60px;
+        text-align: right;
+        clear: both;
+    }
+    .adfLookInsideImg {
+        top: -10px;
+        float: right;
+        right: -10px;
+        position: absolute;
+    }
+    .validationMessage {
+        color: red;
+        display: inline;
+    }
+    .invalid {
+        border-color: red;
+    }
+    .adfOtherAmountWrapper, .adfAmountButton {
+        float: left;
+    }
+    .adfOtherAmountWrapper {
+        padding: 0 10px;
+    }
+    .adfOtherAmountWrapper p {
+        text-align: center;
+    }
+    #adfAmount {
+        width: 75%;
+    }
+    .adfOtherAmountWrapper span {
+        padding-right:10px;
+    }
+    .adfOtherAmountWrapper p.adfMinMessage {
+        font-size: 0.8em;
+        line-height: 1em;
+        padding: 0;
+    }
+    button.active {
+        background: #002c64;
+    }
+</style>

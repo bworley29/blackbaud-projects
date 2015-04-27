@@ -6138,6 +6138,9 @@ aside nav ul.mainNav li.selected > ul li.selected ul li {
   color: #555;
   text-decoration: underline;
 }
+.wrapContent aside ul.givingOptionNav li.menuItem1, .wrapContent aside ul.givingOptionNav li.menuItem2 {
+  line-height: normal;
+}
 
 /*
 aside nav ul.mainNav li.selected a.selected {

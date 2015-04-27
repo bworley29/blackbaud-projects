@@ -287,7 +287,7 @@ form[action*="pagedesign.aspx"] .community .banner img {
   width: auto;
 }
 
-form[action*="pagedesign.aspx"] #wrapContentOuter, form[action*="pagedesign.aspx"] .container aside .wrapSidebarContent, form[action*="pagedesign.aspx"] footer {
+form[action*="pagedesign.aspx"] #wrapContentOuter, form[action*="pagedesign.aspx"] .container aside .wrapSidebarContent, form[action*="pagedesign.aspx"] footer, form[action*="pagedesign.aspx"] .wrapContent section {
   overflow: visible;
 }
 
@@ -490,6 +490,10 @@ table.BBFormTable.PostJobFormTable {
 .BBFormCheckListContainer {
   height: 100px;
   overflow: auto;
+}
+
+.BBFormChecklist {
+  border: 0;
 }
 
 .BBCalendarWeekendDay {
@@ -5547,7 +5551,7 @@ header .sectionTitle p {
   padding: 0;
 }
 header .sectionTitle p a {
-  font-size: 1.45rem;
+  font-size: 1.6875rem;
   line-height: 1.25rem;
   color: #fff;
   margin: 0;
@@ -5559,10 +5563,17 @@ header .sectionTitle p a {
 header .sectionTitle p a:hover {
   text-decoration: none;
 }
+@media (max-width: 950px) {
+  header .sectionTitle p a {
+    font-size: 2vw;
+  }
+}
 @media (max-width: 767px) {
   header .sectionTitle p a {
     font-size: 1.4rem;
     padding: 0 15px;
+    display: inline-block;
+    float: left;
   }
 }
 header nav.utility {
@@ -5592,11 +5603,6 @@ header nav.utility {
     padding-right: 0;
   }
 }
-@media (max-width: 320px) {
-  .wrapMainNav {
-    background-color: #dedcdd;
-  }
-}
 
 .wrapContent {
   position: relative;
@@ -5606,13 +5612,16 @@ header nav.utility {
 .wrapContent section {
   width: 66.6667%;
   float: left;
-  padding: 20px 10px 0 0;
+  padding: 20px 10px 2rem 0;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .wrapContent section {
     width: 100%;
-    float: none;
+    clear: both;
+    margin-top: 1.25rem;
+    padding-right: 0;
   }
 }
 .wrapContent section.returnUser {
@@ -5627,10 +5636,24 @@ header nav.utility {
   float: left;
   padding-right: 15px;
 }
+@media (max-width: 767px) {
+  .wrapContent section.returnUser .left {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+}
 .wrapContent section.returnUser .right {
   width: 50%;
   float: right;
   padding-left: 15px;
+}
+@media (max-width: 767px) {
+  .wrapContent section.returnUser .right {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+  }
 }
 .wrapContent section.returnUser .right .BBDesignationSearchResult {
   display: none;
@@ -5645,6 +5668,25 @@ header nav.utility {
   position: relative;
   float: left;
 }
+@media (max-width: 767px) {
+  .wrapContent section.returnUser {
+    width: 100%;
+    float: none;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.wrapContent.oneCol section {
+  width: 100%;
+  padding-left: 10px;
+}
+@media (max-width: 767px) {
+  .wrapContent.oneCol section {
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
+}
 
 aside {
   width: 33.3333%;
@@ -5655,8 +5697,8 @@ aside {
 @media (max-width: 767px) {
   aside {
     width: 100%;
-    float: none;
     padding-left: 0;
+    clear: both;
   }
 }
 aside nav {
@@ -5673,6 +5715,15 @@ aside.returnUser {
   float: left;
   width: 33.33333%;
   padding-left: 42px;
+  padding-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  aside.returnUser {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    clear: both;
+  }
 }
 
 nav.returnUserNav {
@@ -5814,7 +5865,7 @@ a.skip:hover, a.skip:active, a.skip:focus {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     padding: 0;
     position: absolute;
-    top: 55px;
+    top: 100%;
     width: 100%;
   }
 }
@@ -5910,8 +5961,8 @@ header nav.utility ul li .fa::before {
   font-weight: 600;
   padding: 15px;
   text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.90625rem;
 }
 .wrapMainNav nav > ul > li > a:hover {
   text-decoration: none;
@@ -6294,14 +6345,28 @@ ul.returnUserNav li a {
   font-size: 16px;
   line-height: 16px;
 }
+@media (max-width: 767px) {
+  ul.returnUserNav li a {
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+}
 ul.returnUserNav li a i {
   font-size: 1.875rem;
   padding-right: 7px;
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  top: 6px;
+  top: 0;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  ul.returnUserNav li a i {
+    font-size: 1.875rem;
+    line-height: 16px;
+    visibility: visible;
+  }
 }
 ul.returnUserNav li a:hover {
   color: #2a6496;
@@ -6364,7 +6429,8 @@ body {
 h1,
 h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th,
 h3, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemTitleName, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.NewsChannelItemTitle, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SurveySubTitle, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName,
-h4, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail,
+h4,
+.PaymentPart_FormContainer .PaymentPart_SectionHeading, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail,
 h5,
 h6 {
   margin: 10px 0;
@@ -6380,6 +6446,9 @@ h1, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
+}
+
+h1 {
   display: block;
 }
 
@@ -6422,14 +6491,14 @@ h3 {
   margin: 2px 0 4px;
 }
 
-h4, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
+h4, .PaymentPart_FormContainer .PaymentPart_SectionHeading, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
   font-size: 1.125rem;
   line-height: 1;
   margin-bottom: 1.5625rem;
   font-weight: 700;
 }
 
-footer h4 {
+footer h4, footer .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer footer .PaymentPart_SectionHeading {
   font-size: 1.125rem;
   margin: 40px 0 10px;
   padding-bottom: 10px;
@@ -6437,7 +6506,7 @@ footer h4 {
   font-weight: 500;
 }
 
-footer .footerLinks h4 {
+footer .footerLinks h4, footer .footerLinks .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer footer .footerLinks .PaymentPart_SectionHeading {
   margin-top: 20px;
   text-align: center;
 }
@@ -6472,7 +6541,7 @@ article, aside {
   text-transform: none;
   clear: both;
 }
-#wrapSingleGivingForm h4 {
+#wrapSingleGivingForm h4, #wrapSingleGivingForm .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer #wrapSingleGivingForm .PaymentPart_SectionHeading {
   font-size: 1.4375rem;
   line-height: 2rem;
   font-weight: normal;
@@ -6480,7 +6549,7 @@ article, aside {
   clear: both;
 }
 
-.donationForm h4 {
+.donationForm h4, .donationForm .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer .donationForm .PaymentPart_SectionHeading {
   border-bottom: 2px solid #ebd087;
   display: block;
   margin-bottom: 1.75rem;
@@ -6518,20 +6587,20 @@ article, aside {
 .returnUser .fa::before {
   display: inline-block;
 }
-.returnUser h4 {
+.returnUser h4, .returnUser .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer .returnUser .PaymentPart_SectionHeading {
   margin: 0;
   padding: 0;
   font-size: 1.4375rem;
   line-height: 2rem;
   font-weight: normal;
 }
-.returnUser h4 span {
+.returnUser h4 span, .returnUser .PaymentPart_FormContainer .PaymentPart_SectionHeading span, .PaymentPart_FormContainer .returnUser .PaymentPart_SectionHeading span {
   margin: 3px 0 8px;
   position: relative;
   display: inline-block;
   line-height: 1;
 }
-.returnUser h4 span:empty {
+.returnUser h4 span:empty, .returnUser .PaymentPart_FormContainer .PaymentPart_SectionHeading span:empty, .PaymentPart_FormContainer .returnUser .PaymentPart_SectionHeading span:empty {
   display: none;
 }
 .returnUser h5 {
@@ -6591,14 +6660,14 @@ article, aside {
   color: #333;
   background-color: #bababa;
 }
-.returnUser .wrapProfileBio h4 {
+.returnUser .wrapProfileBio h4, .returnUser .wrapProfileBio .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer .returnUser .wrapProfileBio .PaymentPart_SectionHeading {
   margin: 0;
   padding: 0;
 }
-.returnUser .wrapProfileBio h4 span {
+.returnUser .wrapProfileBio h4 span, .returnUser .wrapProfileBio .PaymentPart_FormContainer .PaymentPart_SectionHeading span, .PaymentPart_FormContainer .returnUser .wrapProfileBio .PaymentPart_SectionHeading span {
   margin: 3px 0 8px;
 }
-.returnUser .wrapProfileBio h4 span:empty {
+.returnUser .wrapProfileBio h4 span:empty, .returnUser .wrapProfileBio .PaymentPart_FormContainer .PaymentPart_SectionHeading span:empty, .PaymentPart_FormContainer .returnUser .wrapProfileBio .PaymentPart_SectionHeading span:empty {
   display: none;
 }
 .returnUser .wrapProfileBio h5 .ProfileDisplayMultiRecordTable {
@@ -6621,6 +6690,10 @@ article, aside {
   margin-top: 2rem;
 }
 
+aside.returnUser h4, aside.returnUser .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer aside.returnUser .PaymentPart_SectionHeading {
+  font-size: 1.3rem;
+}
+
 /*---------------------------------------------
                      ::5.1.1 Part Headers
 ----------------------------------------------*/
@@ -6635,10 +6708,10 @@ a, a:visited, a.LoginLink, a.PhotoLink, a.Album_BackToPhotosLink, a.Album_AlbumN
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-a h1, a h2, a h3, a h4, a h5, a h6, a p {
+a h1, a h2, a h3, a h4, a .PaymentPart_FormContainer .PaymentPart_SectionHeading, .PaymentPart_FormContainer a .PaymentPart_SectionHeading, a h5, a h6, a p {
   color: #428bca;
 }
-a h1:hover, a h2:hover, a h3:hover, a h4:hover, a h5:hover, a h6:hover, a p:hover {
+a h1:hover, a h2:hover, a h3:hover, a h4:hover, a .PaymentPart_FormContainer .PaymentPart_SectionHeading:hover, .PaymentPart_FormContainer a .PaymentPart_SectionHeading:hover, a h5:hover, a h6:hover, a p:hover {
   color: #2a6496;
 }
 
@@ -6683,6 +6756,16 @@ p, table.BBListingTable p {
   font-size: 0.875rem;
   font-weight: 400;
   white-space: normal;
+}
+
+aside.returnUser {
+  line-height: 1.65rem;
+}
+aside.returnUser p, aside.returnUser span {
+  line-height: 1.65rem;
+}
+aside.returnUser hr {
+  background-color: #e9e9e9;
 }
 
 .logo p, .banner p {
@@ -7277,127 +7360,6 @@ e
 /*---------------------------------------------
                      ::12.2 Replication Classes & ID's
 ----------------------------------------------*/
-.blackCallOutBoxTitle {
-  border: 1px solid #7d7c7c;
-  margin: 0 auto;
-  padding: 6px;
-  text-align: center;
-}
-.blackCallOutBoxTitle h2 {
-  color: #fdb813;
-  font-size: 2.5375rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-align: center;
-}
-.blackCallOutBoxTitle p {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  color: #fff;
-}
-
-.blackCallOutBox {
-  float: left;
-  width: 100%;
-  position: relative;
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  margin-top: 20px;
-}
-.blackCallOutBox dl#givingRdoList {
-  margin: 0;
-  padding: 0;
-}
-.blackCallOutBox dl#givingRdoList dd {
-  margin: 0;
-}
-.blackCallOutBox dl#givingRdoList dd input#amountLevelOther {
-  margin: 0;
-  width: 170px;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  color: #555555;
-  display: inline-block;
-  font-size: 14px;
-  height: 34px;
-  line-height: 1.42857;
-  padding: 6px 12px;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-}
-.blackCallOutBox dl#givingRdoList dd input[type="submit"], .blackCallOutBox dl#givingRdoList dd input[disabled="disabled"] {
-  background-color: #7d7c7c;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857;
-  margin-bottom: 0;
-  padding: 6px 12px;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  float: right;
-  text-transform: none;
-  color: #fff;
-}
-.blackCallOutBox dl#givingRdoList dd input[type="submit"]:hover, .blackCallOutBox dl#givingRdoList dd input[disabled="disabled"]:hover {
-  background-color: #fdb813;
-  color: #fff;
-}
-.blackCallOutBox dl#givingRdoList dd:first-child {
-  margin: 10px 0;
-}
-.blackCallOutBox dl#givingRdoList dd span.invalid {
-  display: block;
-  color: red;
-  text-align: left;
-}
-.blackCallOutBox ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.blackCallOutBox ul li {
-  border-bottom: 1px solid #7d7c7c;
-  margin: 0;
-  padding: 0;
-  display: block;
-  float: none;
-  color: #fff;
-}
-.blackCallOutBox ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  padding: 10px 15px;
-  display: block;
-  width: 100%;
-}
-.blackCallOutBox ul li a:hover {
-  background-color: #333;
-}
-.blackCallOutBox ul li a:after {
-  content: '\f054';
-  font-family: FontAwesome;
-  display: inline-block;
-  float: right;
-  position: relative;
-  line-height: 1;
-  top: 1px;
-}
-.blackCallOutBox ul li:first-child {
-  border-top: 1px solid #7d7c7c;
-}
-
 /*=========================================================================================
                      ::13. SPECIFIC PARTS & STYLES
 ==========================================================================================*/
@@ -7942,6 +7904,45 @@ table.wrapLoginFormTable {
 table.wrapLoginFormTable tr[id*="trSignInBody"] table.taLeft {
   width: 100%;
 }
+table.wrapLoginFormTable .LoginFormTable .LoginFormTitle, table.wrapLoginFormTable .LoginFormTable .LoginSectionHeader {
+  display: table-cell;
+  text-align: left;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  table.wrapLoginFormTable .LoginFormTable .LoginFormTitle, table.wrapLoginFormTable .LoginFormTable .LoginSectionHeader {
+    display: block;
+    text-align: left;
+  }
+}
+table.wrapLoginFormTable .LoginFormTable .LoginFormTitle span, table.wrapLoginFormTable .LoginFormTable .LoginSectionHeader span {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  padding-bottom: 1.2rem;
+}
+table.wrapLoginFormTable .LoginFormTable .LoginSectionHeader span {
+  padding-top: 1rem;
+}
+table.wrapLoginFormTable .LoginFormTable [id*="tdNewPasswordMessage"].BBFieldCaption.LoginFieldMessage {
+  padding: 0 0 14px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  table.wrapLoginFormTable .LoginFormTable .emptyTD {
+    display: none;
+  }
+  table.wrapLoginFormTable .LoginFormTable .rememberLoginContainer {
+    display: block;
+    width: 100%;
+    text-align: left;
+    float: left;
+    position: relative;
+    white-space: nowrap;
+    left: -130px;
+    padding: 0;
+  }
+}
 
 .LoginFormCheckListContainer .LoginFormCheckList input[type="checkbox"] + label {
   padding-left: .7rem;
@@ -7950,9 +7951,25 @@ table.wrapLoginFormTable tr[id*="trSignInBody"] table.taLeft {
 .LoginFormTable .taCenter {
   padding-bottom: .65rem;
 }
+@media (max-width: 767px) {
+  .LoginFormTable .taCenter {
+    display: block;
+    text-align: left;
+    padding-bottom: 0;
+    width: 100%;
+  }
+}
 
 .LoginFormTable .BBFormButtonCell {
   padding-left: 2rem;
+}
+@media (max-width: 767px) {
+  .LoginFormTable .BBFormButtonCell {
+    display: block;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
 }
 
 /*---------------------------------------------
@@ -8064,6 +8081,24 @@ ul.myHomeProfileLinks li.personalNotes a:before {
 }
 .SurveyFormTable input[id*="btnExportResults"] {
   margin-right: 1.25rem;
+}
+.SurveyFormTable tr > td {
+  width: auto;
+}
+.SurveyFormTable .SurveyErrorMessage {
+  background-color: transparent;
+}
+.SurveyFormTable .SurveyErrorMessage:empty {
+  display: none;
+}
+.SurveyFormTable table.SurveyAnswerTable {
+  width: 100%;
+}
+.SurveyFormTable .SurveyAnswerRequiredMessage, .SurveyFormTable .BBFormRequiredFieldMarker {
+  display: inline-block;
+}
+.SurveyFormTable table[id*="rptQuestions"] input[type="radio"] {
+  margin-right: 7px;
 }
 
 /* Survey Print Preview */
@@ -8196,6 +8231,10 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   background-image: url("../images/cc-back.png");
 }
 
+[id*="divProfilePhotoForm"].taCenter {
+  text-align: left;
+}
+
 .returnUser table.ProfilePhotoFormTable tr:nth-child(4), .returnUser table.ProfilePhotoFormTable tr:nth-child(5), .returnUser table.ProfilePhotoFormTable tr:nth-child(6) {
   display: none;
 }
@@ -8217,6 +8256,9 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   font-size: 23px;
   line-height: 1;
 }
+.returnUser table.ProfilePhotoFormTable .PhotoLink {
+  position: relative;
+}
 .returnUser table.ProfilePhotoFormTable .PhotoLink.fa-edit:hover img {
   opacity: 0.5;
 }
@@ -8227,9 +8269,24 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   padding-bottom: 1rem;
 }
 
+#imgPhoto {
+  width: 220px;
+  height: 220px;
+  padding-top: 4vw;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin: 30px 0 11px;
+}
+#imgPhoto .fa-camera {
+  position: relative;
+  font-size: 5vw;
+}
+
 .donationForm {
   padding: 0 20px;
   width: 100%;
+  max-width: 800px;
 }
 .donationForm fieldset {
   border: 0;
@@ -8313,6 +8370,9 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   float: left;
   position: relative;
 }
+.donationForm fieldset p {
+  max-width: 92%;
+}
 .donationForm fieldset input[type="text"], .donationForm fieldset input[type="password"], .donationForm fieldset input[type="date"], .donationForm fieldset input[type="datetime"], .donationForm fieldset input[type="datetime-local"], .donationForm fieldset input[type="month"], .donationForm fieldset input[type="week"], .donationForm fieldset input[type="email"], .donationForm fieldset input[type="number"], .donationForm fieldset input[type="search"], .donationForm fieldset input[type="tel"], .donationForm fieldset input[type="time"], .donationForm fieldset input[type="url"], .donationForm fieldset input[type="color"], .donationForm fieldset textarea {
   background-color: #ffffff;
   border-color: #cccccc;
@@ -8329,8 +8389,9 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   padding: 0.5rem;
   transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
 }
-.donationForm fieldset input.mediumWidth {
+.donationForm fieldset .mediumWidth {
   width: 50%;
+  max-width: 260px !important;
 }
 .donationForm fieldset.row {
   width: 100%;
@@ -8354,10 +8415,10 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   margin-bottom: .5rem;
 }
 .donationForm fieldset.additionalInformation ul li label, .donationForm fieldset.tribueInformation ul li label {
-  padding: 10px 10px 0 0;
+  padding: 10px 0 0 0;
   font-weight: bold;
   width: 20%;
-  text-align: right;
+  text-align: left;
 }
 .donationForm fieldset.tribueInformation input[type="checkbox"] + label {
   width: auto;
@@ -8376,6 +8437,9 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 .donationForm fieldset.tribueInformation .tributeKind ul li:last-child {
   margin-bottom: 0;
 }
+.donationForm fieldset #tribute li:first-child {
+  margin-bottom: 1.5rem;
+}
 .donationForm input[type="button"]#donate {
   margin: 1.5rem 3rem 2rem 0;
   float: right;
@@ -8389,8 +8453,13 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 #wrapSingleGivingForm {
   margin-bottom: 2.5rem;
 }
+@media (min-width: 1025px) {
+  #wrapSingleGivingForm {
+    max-width: 70%;
+  }
+}
 #wrapSingleGivingForm fieldset {
-  margin: 0;
+  margin: 0 0 1.2rem;
   padding: 0;
   border: 0;
 }
@@ -8407,6 +8476,23 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   display: inline-block;
   margin-left: 1rem;
   font-size: 23px;
+}
+#wrapSingleGivingForm .fa-asterisk {
+  position: relative;
+  z-index: 100;
+  font-size: 11px;
+  line-height: 1;
+  opacity: 0.7;
+  padding: 2px 2px 3px;
+  color: #555;
+  background-color: #D4D4D4;
+}
+#wrapSingleGivingForm input[type="text"] + .fa-asterisk, #wrapSingleGivingForm input[type="tel"] + .fa-asterisk {
+  position: absolute;
+  z-index: 100;
+  font-size: 11px;
+  right: 1px;
+  top: 1px;
 }
 #wrapSingleGivingForm .siblingsComplete {
   opacity: .4;
@@ -8468,10 +8554,38 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 #wrapSingleGivingForm ul.fundDesignation {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  #wrapSingleGivingForm ul.givingAmountOptions {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #wrapSingleGivingForm ul.givingAmountOptions li {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+  }
+  #wrapSingleGivingForm ul.givingAmountOptions li.otherAmount {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
 #wrapSingleGivingForm ul.givingAmountOptions .otherAmount input + label + input[type="text"] {
   margin-left: 15px;
   position: relative;
-  top: -10px;
+  top: -12px;
+  margin-bottom: 0;
+}
+#wrapSingleGivingForm ul.givingAmountOptions .amountReqText {
+  width: 100%;
+  font-size: 14px;
+  position: relative;
+  top: -9px;
+  font-style: italic;
+}
+#wrapSingleGivingForm ul.givingAmountOptions .amountReqText .fa-asterisk {
+  position: relative;
+  top: 2px;
 }
 #wrapSingleGivingForm ul.personalInfoList li {
   display: block;
@@ -8491,10 +8605,12 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   margin-right: 2rem;
 }
 #wrapSingleGivingForm ul.personalInfoList .donorTitle {
-  width: 20%;
+  margin-top: 0;
+  width: auto;
 }
 #wrapSingleGivingForm ul.personalInfoList .donorTitle select#nameTitleList {
-  max-width: 80%;
+  max-width: 100%;
+  margin-right: 2rem;
 }
 #wrapSingleGivingForm ul.personalInfoList .wrapCity, #wrapSingleGivingForm ul.personalInfoList .wrapState, #wrapSingleGivingForm ul.personalInfoList .wrapZip {
   position: relative;
@@ -8505,8 +8621,17 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 #wrapSingleGivingForm ul.personalInfoList .wrapCity input#billingCity {
   width: 87%;
 }
+#wrapSingleGivingForm ul.personalInfoList .wrapCity input#billingCity + .fa-asterisk {
+  right: 2.1rem;
+  top: 0;
+}
 #wrapSingleGivingForm ul.personalInfoList .wrapState {
-  width: 28%;
+  width: 17%;
+}
+#wrapSingleGivingForm ul.personalInfoList .wrapState .fa-asterisk {
+  position: absolute;
+  left: 2.5rem;
+  background-color: transparent;
 }
 #wrapSingleGivingForm ul.personalInfoList .wrapZip {
   width: 25%;
@@ -8514,10 +8639,44 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 #wrapSingleGivingForm ul.personalInfoList .wrapZip input#zip {
   width: 88%;
 }
+#wrapSingleGivingForm ul.personalInfoList .wrapZip input#zip + .fa-asterisk {
+  top: 0;
+  right: 1.2rem;
+}
 #wrapSingleGivingForm input, #wrapSingleGivingForm label {
   display: inline-block;
   float: left;
   position: relative;
+}
+#wrapSingleGivingForm #billingCountry {
+  margin-bottom: 1rem;
+}
+#wrapSingleGivingForm #billingAddress + .fa-asterisk {
+  left: 20.95rem;
+  right: auto;
+  top: 0;
+}
+#wrapSingleGivingForm #billingPhone + .fa-asterisk {
+  left: 9.75rem;
+  right: auto;
+  top: 0;
+}
+#wrapSingleGivingForm #email + .fa-asterisk {
+  top: 0;
+  position: absolute;
+  right: auto;
+  left: 9.75rem;
+}
+#wrapSingleGivingForm #cardholder + .fa-asterisk {
+  right: auto;
+  left: 21rem;
+}
+#wrapSingleGivingForm #cardNumber + .fa-asterisk {
+  right: auto;
+  left: 12.9rem;
+}
+#wrapSingleGivingForm #cscCode + .fa-asterisk {
+  right: 2.95rem;
 }
 #wrapSingleGivingForm input[type="text"], #wrapSingleGivingForm input[type="password"], #wrapSingleGivingForm input[type="date"], #wrapSingleGivingForm input[type="datetime"], #wrapSingleGivingForm input[type="datetime-local"], #wrapSingleGivingForm input[type="month"], #wrapSingleGivingForm input[type="week"], #wrapSingleGivingForm input[type="email"], #wrapSingleGivingForm input[type="number"], #wrapSingleGivingForm input[type="search"], #wrapSingleGivingForm input[type="tel"], #wrapSingleGivingForm input[type="time"], #wrapSingleGivingForm input[type="url"], #wrapSingleGivingForm input[type="color"], #wrapSingleGivingForm textarea {
   background-color: #ffffff;
@@ -8535,9 +8694,11 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   padding: 0.5rem;
   transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
   max-width: 350px;
+  position: relative;
 }
 #wrapSingleGivingForm input.mediumWidth {
   width: 50%;
+  max-width: 260px;
 }
 #wrapSingleGivingForm fieldset.credit-card-group {
   position: relative;
@@ -8595,12 +8756,28 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   display: inline-block;
   width: 40%;
 }
+@media (max-width: 767px) {
+  #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li[class*="card"] {
+    width: 100%;
+  }
+}
 #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardNumber input#cardNumber {
   width: 87%;
+}
+@media (max-width: 767px) {
+  #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardNumber {
+    margin-bottom: 10px;
+  }
 }
 #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardExp {
   width: 29%;
   clear: none;
+}
+@media (max-width: 767px) {
+  #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardExp {
+    width: 100%;
+    margin-bottom: 21px;
+  }
 }
 #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardExp #cardExpMonth {
   margin-right: 10px;
@@ -8608,6 +8785,11 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardCsc {
   width: 20%;
   clear: none;
+}
+@media (max-width: 767px) {
+  #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardCsc {
+    width: 100%;
+  }
 }
 #wrapSingleGivingForm fieldset.credit-card-group ul.paymentInfo li.cardCsc input#cscCode {
   width: 63%;
@@ -8622,7 +8804,7 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   width: 100%;
 }
 #wrapSingleGivingForm input[type="submit"].DonationSubmitButton {
-  margin: 1.5rem 0 2rem 0;
+  margin: 1.5rem 7.3rem 2rem 0;
   float: right;
   padding: 12px 15px;
   background-color: #428bca;
@@ -8632,7 +8814,7 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   display: none;
 }
 
-.bbformbuilder-form-part > div[style] {
+.bbformbuilder-form-part > div[style], .bbformbuilder-form-part div[style] {
   width: 100% !important;
 }
 
@@ -8640,6 +8822,18 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   margin: 0 0 2rem 1.5rem;
   width: 100%;
   float: left;
+}
+.bbformbuilder-form-part div {
+  background-color: transparent !important;
+}
+
+.bbProfilePhotoChange, .bbProfilePhotoRemove {
+  text-decoration: none !important;
+  color: #428bca !important;
+}
+.bbProfilePhotoChange:hover, .bbProfilePhotoRemove:hover {
+  color: #2a6496 !important;
+  text-decoration: underline !important;
 }
 
 .bbformbuilder-form-part .BBSequenceMapContentContainer {
@@ -8662,6 +8856,9 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section .bbformbuilder-section-column1 {
   width: 100% !important;
 }
+.bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section input[type="text"] + input[id*="PrivacyCheckBox"][type="checkbox"], .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section select + input[id*="PrivacyCheckBox"][type="checkbox"] {
+  margin-left: 1rem;
+}
 .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section .bbformbuilder-element-row {
   padding: 0;
 }
@@ -8670,19 +8867,22 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 }
 .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section .bbformbuilder-element-row label {
   display: inline-block;
-  padding: 13px 8px 0 0;
-  text-align: right;
+  padding: 4px 8px 0 0;
+  text-align: left;
   font-weight: bold;
   font-size: 14px;
+  line-height: 1;
+  vertical-align: top;
+  margin-bottom: 15px;
 }
 .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section .bbformbuilder-element-row input + label {
   margin-left: 8px;
 }
 .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section .bbformbuilder-float-lalign {
   padding: 0;
-  text-align: right;
+  text-align: left;
   float: left;
-  width: 25% !important;
+  width: 30% !important;
 }
 .bbformbuilder-form-part .BBSequenceMapContentContainer .bbformbuilder-section .bbformbuilder-float-lalign + div {
   float: left;
@@ -8803,13 +9003,48 @@ aside .BBPollsFormTable .BBPollsFormTitle {
   width: 58%;
 }
 [id*="commPrefs"].bbformbuilder-element-block #item > div {
-  width: 3%;
+  width: 3% !important;
 }
 [id*="commPrefs"].bbformbuilder-element-block #item > div + div + div {
   width: 35%;
 }
+[id*="commPrefs"].bbformbuilder-element-block #item > div + div + div[id*="commPrefs_rptPrefs"] {
+  width: 90% !important;
+}
 [id*="commPrefs"].bbformbuilder-element-block #item > div + div + div + div {
   width: 58%;
+}
+
+.BBFormOrganizationEmploymentFieldsContainer {
+  display: block;
+  clear: both;
+  margin-bottom: 2rem;
+}
+
+.bbformbuilder-form-part .bbformbuilder-section .bbformbuilder-element-row table[id*="CheckBoxList"] {
+  width: 100% !important;
+}
+.bbformbuilder-form-part .bbformbuilder-section .bbformbuilder-element-row table[id*="CheckBoxList"] label {
+  padding: 4px 0 0;
+  margin-bottom: 15px;
+  width: 92%;
+  text-align: left;
+}
+
+.BBFormOrganizationFieldsContainer {
+  clear: both;
+  margin-bottom: 3rem;
+}
+.BBFormOrganizationFieldsContainer + a + a[id*="CancelLink"] {
+  margin-left: 1rem;
+}
+
+.BBFormOrganizationContainer [id*="pnlPrivacy"] {
+  margin-top: 1.5rem;
+}
+.BBFormOrganizationContainer [id*="pnlPrivacy"] [id*="lblPrivacy"] {
+  display: block;
+  padding-bottom: 1rem;
 }
 
 .wrapSidebar .PaymentPartSummary_Container {
@@ -8871,15 +9106,16 @@ aside .BBPollsFormTable .BBPollsFormTitle {
 }
 
 .wrapMainContent .BBDesignationSearchResultContainer {
-  float: left;
   clear: both;
+  float: left;
+  position: relative;
   width: 100%;
   margin: 1.5rem 0;
 }
 .wrapMainContent .BBDesignationSearchResultContainer .BBDesignationSearchResult {
-  display: inline-block;
-  float: left;
   width: 47%;
+  float: left;
+  display: inline-block;
   position: relative;
   margin-bottom: 1.85rem;
   background: rgba(240, 240, 240, 0.8);
@@ -9627,6 +9863,7 @@ textarea.coer {
 */
 .matchingGiftText {
   display: none;
+  clear: both;
 }
 
 [id*="tbdyMatchingGifts"] .matchingGiftText {
@@ -9636,8 +9873,231 @@ textarea.coer {
   padding-bottom: 0;
 }
 
+.PaymentPart_Cart {
+  font-size: 0.875rem !important;
+}
+
+.PaymentPart_CartList {
+  border: 0 !important;
+}
+
 .PaymentPart_FormContainer {
   overflow: auto;
+  clear: both;
+}
+.PaymentPart_FormContainer .DCTextboxWide, .PaymentPart_FormContainer .BBFormTextArea {
+  width: 300px !important;
+}
+.PaymentPart_FormContainer .BBFormRequiredFieldMarker {
+  display: inline-block;
+}
+.PaymentPart_FormContainer .PaymentPart_SectionHeading {
+  background-color: transparent;
+  border: 0;
+}
+
+.PaymentPart_PesonalInfoCheckbox {
+  margin-left: 0;
+  display: block;
+}
+.PaymentPart_PesonalInfoCheckbox input {
+  margin-right: 7px;
+}
+.PaymentPart_PesonalInfoCheckbox input + label {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  #calendar .fc-header [class*="fc-header"] {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  #calendar .fc-header .fc-header-title h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+#calendar .fc-header .fc-button-prev {
+  position: relative;
+}
+#calendar .fc-header .fc-button-prev .fc-text-arrow:before {
+  font-family: FontAwesome;
+  display: block;
+  position: relative;
+  content: '\f104';
+  font-size: 18px;
+  line-height: 1;
+  top: -27px;
+}
+#calendar .fc-header .fc-button-next {
+  position: relative;
+}
+#calendar .fc-header .fc-button-next .fc-text-arrow:before {
+  font-family: FontAwesome;
+  display: block;
+  position: relative;
+  content: '\f105';
+  font-size: 18px;
+  line-height: 1;
+  top: -27px;
+}
+
+.TransactionManagerAccDD .acc-section {
+  width: 168px;
+}
+.TransactionManagerAccDD .acc-section .acc-content {
+  padding: 5px 10px;
+  background-color: #fff;
+}
+.TransactionManagerAccDD .acc-section .acc-content .TransactionManagerGridEditGiftDiv {
+  margin-right: 0;
+  white-space: normal;
+}
+.TransactionManagerAccDD .acc-section .acc-content .TransactionManagerGridEditGiftLink {
+  font-weight: 400;
+  text-decoration: none;
+  color: #428bca;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.blackCallOutBoxTitle {
+  border: 1px solid #7d7c7c;
+  margin: 0 auto;
+  padding: 6px;
+  text-align: center;
+}
+.blackCallOutBoxTitle h2 {
+  color: #fdb813;
+  font-size: 2.5375rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+.blackCallOutBoxTitle p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #fff;
+}
+
+.blackCallOutBox {
+  float: left;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+.blackCallOutBox dl#givingRdoList {
+  margin: 0;
+  padding: 0;
+}
+.blackCallOutBox dl#givingRdoList dd {
+  margin: 0;
+}
+.blackCallOutBox dl#givingRdoList dd input#amountLevelOther {
+  margin: 0;
+  width: 170px;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555555;
+  display: inline-block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.blackCallOutBox dl#givingRdoList dd input[type="submit"], .blackCallOutBox dl#givingRdoList dd input[disabled="disabled"] {
+  background-color: #7d7c7c;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  float: right;
+  text-transform: none;
+  color: #fff;
+}
+.blackCallOutBox dl#givingRdoList dd input[type="submit"]:hover, .blackCallOutBox dl#givingRdoList dd input[disabled="disabled"]:hover {
+  background-color: #fdb813;
+  color: #fff;
+}
+.blackCallOutBox dl#givingRdoList dd:first-child {
+  margin: 10px 0;
+}
+.blackCallOutBox dl#givingRdoList dd span.invalid {
+  display: block;
+  color: red;
+  text-align: left;
+}
+.blackCallOutBox ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.blackCallOutBox ul li {
+  border-bottom: 1px solid #7d7c7c;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: none;
+  color: #fff;
+}
+.blackCallOutBox ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 10px 15px;
+  display: block;
+  width: 100%;
+}
+.blackCallOutBox ul li a:hover {
+  background-color: #333;
+}
+.blackCallOutBox ul li a:after {
+  content: '\f054';
+  font-family: FontAwesome;
+  display: inline-block;
+  float: right;
+  position: relative;
+  line-height: 1;
+  top: 1px;
+}
+.blackCallOutBox ul li:first-child {
+  border-top: 1px solid #7d7c7c;
+}
+
+[id*="PROFILEIMAGECOMPOSIT_imageSelector"] {
+  text-align: left;
+  float: left;
+}
+
+.bbformbuilder-element-row label.bbformbuilder-label {
+  display: inline-block;
+}
+.bbformbuilder-element-row label.bbformbuilder-label + .bbformbuilder-required-mark {
+  display: inline-block !important;
+}
+
+.bbformbuilder-element-block.bbformbuilder-text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 0.875rem !important;
 }
 
 /*=========================================================================================

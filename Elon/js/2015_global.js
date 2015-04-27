@@ -66,7 +66,6 @@ var BBI = BBI || {
 		// runs on full page load
 		pageLoad: function () {
 			BBI.Methods.getHeaderAndFooter();
-			BBI.Methods.fixedSidebar();
 			BBI.Methods.dynamicBreadcrumb();
 			BBI.Methods.mobileSidebarToggle();
 			BBI.Methods.checkWindowInitialSize();
@@ -85,6 +84,8 @@ var BBI = BBI || {
 				// For when only the Other Giving option is configured
 				if($('table[id$="tblAmount"] input[name$="givingLevels"]').length === 0) {
 					$('[id*="TB_pnlDonation"]').addClass('onlyOtherAmtShown');
+				} else {
+					$('[id*="TB_pnlDonation"]').addClass('multipleAmtsShown');
 				}
 				
 				if($('table[id*="tblAmount"]').length){

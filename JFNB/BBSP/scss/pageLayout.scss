@@ -1,0 +1,354 @@
+	/*=========================================================================================
+                     ::3. PAGE LAYOUT & STRUCTURE
+==========================================================================================*/
+
+body {
+	background-color: #fff;
+}
+/*---------------------------------------------
+                     ::3.1 Responsive Grid
+----------------------------------------------*/
+
+
+$column: 60px;
+$gutter: 40px;
+$grid-columns: 12;
+$max-width: em(1200);
+$small-breakpoint: em(767);
+$large-breakpoint: em(1024);
+$medSmall-breakpoint: em(800);
+$medium-viewport: em(900);
+
+
+
+// Box sizing, applying only to container to avoid issues in BBIS/NC admin bar
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after {
+  @include box-sizing(border-box); }
+  
+/*
+.container *::before, .container *::after {
+	content:" ";
+	display:table;
+}
+*/
+
+form[action*="pagedesign.aspx"] .wrapper *::before, form[action*="pagedesign.aspx"] .wrapper *::after { display: none; }
+
+
+/* Admin Fixes to Box Sizing rendering issue */
+
+.bb_mainMenu img {
+	@include box-sizing(content-box);
+}
+
+
+/*---------------------------------------------
+                     ::3.2 Layout
+----------------------------------------------*/
+
+.wrapper {
+	@include outer-container;
+	position: relative;
+	width: 100%;
+}
+
+.logo, .utility, .pageTitleAndCrumbs, .socialMedia {
+	@include span-columns(6);
+
+}
+
+.logo {
+	margin-right: 0;
+	
+	img {max-width: 253px; height: auto; margin-top: 13px;}
+	
+}
+
+.wrapNav {
+	background: $site-primary-color;
+	color: #fff;
+	min-height: 65px;
+
+}
+
+.wrapToggleMainNav {
+	padding: .8rem rem(29) 0;
+}
+
+.pageTitleAndCrumbs, .socialMedia {
+	margin-right: 0;
+	background: #fff;
+	position: relative;
+	z-index: 2;
+	
+	
+
+}
+
+.pageTitleAndCrumbs { 
+	width: 60%;
+	
+}
+
+.socialMedia { width: 40%; }
+
+.utility {
+	background: #eee;
+	float: right;
+	max-height: rem(78);
+	.utilityContent, .audienceNav {
+		@include span-columns(12);
+		margin-right: 0;
+		position: relative;
+		}
+	.utilityContent {
+		float: right;
+		
+		.QuickSearchFormTable {
+			width: 204px;
+			float: right; 
+			margin: 5px 10px 0 0; 
+			height: 24px;
+			padding: 0;
+			
+			input.QuickSearchTextbox {
+				height: 24px;
+				padding: 5px 10px;
+				@include border-radius(0);
+				width: 100%;
+			}
+			
+			input.QuickSearchButton {
+				height: 23px !important;
+				line-height: 23px;
+				font-size: 12px;
+				display: block !important;
+				visibility: visible !important;
+				color: #fff;
+				background: $body-font-color;
+				font-weight: 400;
+				width: 50px !important;
+				text-align: center;
+				cursor: pointer;
+				@include border-radius(0);
+				border: 0;
+				position: relative !important;
+				left: 0 !important;
+				padding: 0;
+			}
+			
+		}
+		
+	}
+	.audienceNav { 
+		@extend .utility;
+	}
+
+}
+
+.socialMedia {
+	@extend .utility;
+	background: transparent;
+}
+
+.banner, .fullWidthContent, .sidebarImg {
+	@include fill-parent;
+}
+
+.wrapPromoBoxes {
+	float: left;
+	background: url('image/bgPromoRepeating.png') repeat-y 0 0 transparent;
+	position: relative;
+}
+
+.community .banner img {
+	width: 100%;
+}
+
+.wrapContent {
+	@include span-columns(8);
+	width: percentage(800px / 1200px);
+	margin-right: 0;
+			
+	.mainContent {
+		padding: rem(35) rem(30) rem(35) rem(80);
+		position: relative;
+		
+	&:empty {padding: 0;}
+	&:before, &:after {display: none;}
+	}
+	
+	
+	.contentFullWidthLeft {
+		@include span-columns(6);
+		width: percentage(400px / 800px);
+		margin-right: 0;
+		min-height: 379px;
+		background: #ccc;
+		
+		.contentFullWidthLeftBottom {
+			padding: rem(55);
+			text-align: center;
+			overflow: hidden;
+
+		}
+
+	}
+	
+	.contentFullWidthRight {
+		@extend .contentFullWidthLeft; 
+		background: #eee;
+		padding: rem(25) rem(30);
+		min-height: 404px;
+		
+
+	}
+	
+	.mainContentAlt {
+		@include span-columns(12);
+		margin-right: 0;
+		margin-top: 1.25rem;
+		// IF Empty
+		&:empty {margin-top: 0; padding: 0;}
+		
+		&:before, &:after {display: none;}
+	}
+	
+	//
+	&.community {
+		.mainContent {
+			padding-bottom: 1rem;
+		}
+
+	}
+
+}
+
+// Inline Content Nav
+
+div.inlineMenu {
+	position: relative;
+	@include span-columns(12);
+	margin-right: 0;
+	
+	+ .mainContent {
+		padding-top: 0;
+		clear: both;
+	}
+}
+
+
+// Sidebar
+.wrapper .wrapSidebar {
+	@include span-columns(4);
+	margin-right: 0;
+	width: percentage(400px / 1200px);
+
+	.wrapSidebarContent {
+		@extend .wrapNav;
+		padding: rem(34) rem(18) rem(25) rem(30);
+		overflow: hidden;
+		min-height: 275px;
+
+	}
+	// Child elements
+	.sidebarContent, .sidebarImg {
+		background: #ccc;
+	}
+	
+	.sidebarContent {
+		padding: rem(30) rem(40) 0;
+		
+	}
+	
+	//
+	&:after {
+		position: absolute;
+		content: '';
+		z-index: -1;
+		top: rem(84);
+		width: 33.3333%;
+		height: 100%;
+		left: 66.6667%;
+		background: #ccc;
+		display: block;
+	}
+
+	
+	// Stories Sidebar
+	
+	&.stories {
+		.wrapSidebarContent { max-height: 275px; }
+		&:after { display: none; }
+	}
+ 
+}
+
+
+.wrapTopContent {
+	width: 100%;
+	clear: both;
+	float: left;	
+}
+
+.wrapFooter, .wrapOuterNav {
+	width: 100%;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	background: #676767;
+}
+
+.footer {
+	background: #676767;
+	color: $footer-font-color;
+	overflow: hidden;
+	
+	.footerAddressBlock {
+		@include span-columns(4);
+		margin-right: 0;
+		width: percentage(450px / 1200px);
+		padding:rem(35) 0 rem(35) rem(80);
+		
+	}
+	.footerNav {
+		@include span-columns(4);
+		margin-right: 0;
+		float: right;
+		width: percentage(750px / 1200px);
+		padding:rem(35) rem(80) rem(35) 0;
+		
+
+	}
+}
+
+.footerAlt {
+	text-align: center;
+	padding: rem(58) 0;
+}
+
+/*---------------------------------------------
+                     ::3.6 Skip Link
+----------------------------------------------*/
+p.skip {
+height:0;
+padding:0;
+margin:0;
+}
+a.skip {
+position: absolute;
+top: -50em;
+}
+a.skip:hover,a.skip:active,a.skip:focus {
+position: absolute;
+left: 50%;
+top: 0;
+display: block;
+background: $content-primary-background-color;
+padding: .5em;
+text-align: center;
+margin: 0 auto 0 -10em;
+width: 20em;
+}

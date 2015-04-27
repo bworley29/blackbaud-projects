@@ -1,0 +1,87 @@
+// ------------------------------------------------------------
+// :: Font Variables Used Sitewide
+// ------------------------------------------------------------
+
+
+/* ::Basic variables */
+/* ------------------------------------------------------------ */
+
+$sans: Verdana, Helvetica, sans-serif;
+$serif: 'Crimson Text', Georgia, serif;
+$icon-font: FontAwesome;
+
+$light-weight: 100;
+$regular-weight: 400;
+$semibold-weight: 600;
+$bold-weight: 700;
+
+// These are legacy variables once used for font weights. Make them the same as new variables in case they are used in older
+// SASS files
+$light-font: $light-weight;
+$regular-font: $regular-weight;
+$semibold-font : $semibold-weight;
+$bold-font: $bold-weight;
+
+
+/* ::Assign fonts/weights to variable roles */
+/* ------------------------------------------------------------ */
+
+$body-font: $sans;
+$header-font : $serif;
+
+$body-font-weight: $regular-weight;
+$header-font-weight: $regular-weight;
+
+
+/* ::Type sizes/scale */
+/* ------------------------------------------------------------ */
+ 
+// Example: Hero message on home page if fitttext is not available
+$hero-font: 88px;
+
+// Example: H1
+$xxxlarge-font: 44px;
+
+// Example: H2
+$xxlarge-font: 36px;
+
+// Example: H3
+$xlarge-font: 28px;
+
+// Example: H4
+$large-font: 24px;
+
+// Example: H5
+$medium-font: 22px;
+
+// Example: H6
+$small-font: 18px;
+
+// Example: Paragraph and default body font size
+$xsmall-font: 16px;
+
+// Example: Blockquotes
+$xxsmall-font: 14px;
+
+// Example: 
+$xxxsmall-font: 12px;
+
+/*$alpha    : 88px;
+$beta   : 48px;
+$gamma    : 36px;
+$delta    : 28px;
+$epsilon  : 24px;
+$zeta   : 22px;
+$eta    : 18px;
+$theta    : 16px;
+$iota     : 14px;
+$kappa    : 12px;*/
+
+
+/* ::Type defaults for compass' rhythm */
+/* ------------------------------------------------------------ */
+
+$base-font-size: $xsmall-font;   // Sets the browser default size. Shouldn't need to change this.
+$base-line-height: 6px;    // Baseline grid. Set to a sensible, small size.
+$round-to-nearest-half-line : false;  // Round the line height to the nearest half line height. Off by default 
+            

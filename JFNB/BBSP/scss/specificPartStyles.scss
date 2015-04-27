@@ -1,0 +1,1338 @@
+/*=========================================================================================
+                     ::13. SPECIFIC PARTS & STYLES
+==========================================================================================*/
+
+// Paragraph Style block
+
+.paragraphStyleBlock {
+	line-height:rem(30.5);
+	color: $site-primary-color;
+	font: {
+		family: $body-font-family;
+		size: rem(18);
+		weight: 300;	
+	}
+	white-space: normal;
+}
+
+/*---------------------------------------------
+                     ::13.3 Transaction Manager
+----------------------------------------------*/
+
+.TransactionManagerWrapper select.BBFormSelectList {
+	padding-top:1%;
+	padding-bottom:1%;
+}
+ 
+/*---------------------------------------------
+                     ::13.4 Event Registration Form Classic
+----------------------------------------------*/
+
+.EventAttendeesComplete {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesCurrent {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	font-weight:400;
+	padding-left:0;
+}
+
+.EventAttendeesFuture {
+	background-color:#fafafa;
+	color:#333;
+	font-size:1em;
+	padding-left:0;
+	font-weight:400;
+}
+
+.EventAttendeesGrid {
+	background-color:#fafafa;
+	border:1px solid #888;
+	color:#333;
+	font-size:1em;
+	margin:1em 0;
+	padding-right:0;
+	vertical-align:top;
+}
+
+.EventAttendeesOverallTotal {
+	background-color:#fafafa;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventItemRegistrantsEventName {
+	background-color:transparent;
+	border:medium none;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemsSelectionGrid {
+	border:0 none;
+	margin:0;
+}
+
+.EventSectionHeader {
+	font-weight:400;
+	font-size:18px;
+	background-color:transparent;
+	border:medium none;
+	padding:1em 0 .25em;
+	text-align:left;
+}
+
+.EventTicketsBodyCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:400;
+	padding-right:.25em;
+}
+
+.EventTicketsHeaderCell {
+	color:#333;
+	font-size:.92em;
+	font-weight:700;
+	padding:.25em .25em 1em 0;
+}
+
+.SummaryGridEventTitle {
+	font-size:1em;
+	font-style:normal;
+	font-weight:700;
+}
+
+.EventItemRegistrantControlCellName {
+	width:33%;
+	padding-bottom:10px;
+}
+
+.EventItemRegistrantControlCellName .BBFieldCaption {
+	white-space:nowrap;
+}
+
+.EventItemRegistrantsHeader {
+	background-color:transparent;
+	border-bottom:0 none;
+	color:#000;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventItemRegistrationControlCellDescription {
+	width:55%;
+	padding:0 1em;
+	vertical-align:middle;
+}
+
+.EventItemRegistrationControlCellNumParticipants {
+	width:15%;
+	white-space:nowrap;
+}
+
+.EventItemRegistrationControlCellPrice {
+	width:20%;
+}
+
+.EventItemRegistrationsHeader {
+	background-color:transparent;
+	color:#333;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	padding:0 0 .25em;
+	text-align:left;
+}
+
+.EventProgressCell {
+	background-color:transparent;
+	border-bottom:3px solid #000;
+	color:#333;
+/* $heading-color */
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellFuture {
+	background:transparent none repeat scroll 0 0;
+	border-bottom:3px solid #ccc;
+	color:#999;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventProgressCellPast {
+	background:transparent;
+	border-bottom:3px solid #ccc;
+	color:#ccc;
+	font-family:inherit;
+	font-size:1em;
+	font-weight:700;
+	height:auto;
+	line-height:normal;
+	padding:.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantControlCell {
+	padding-bottom:10px;
+	white-space:nowrap;
+}
+
+.EventItemRegistrantSelectList {
+	width:auto;
+}
+
+.EventItemRegistrantsTable {
+	font-size:1em;
+}
+
+.EventItemRegistrationsTable {
+	width:100%;
+	margin:0;
+	font-size:1em;
+	
+}
+
+.EventItemRegistrationsTable tr {
+	border-bottom:1px solid #888;
+}
+
+.EventItemsTable {
+	border:0 none;
+	border-collapse:collapse;
+}
+
+.EventTable {
+	margin:0;
+	width:100%;
+}
+
+.EventTable .BBFieldCheckboxCaption {
+	display:block;
+	margin:0;
+}
+
+.EventTable .BBFieldCheckboxCaption input {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable .EventItemTitleName {
+	line-height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table table {
+	margin-left:0;
+}
+
+.EventTable .BBFormSubmitButton {
+	display:block;
+	margin:0 0 0 auto;
+}
+
+.EventTable .BBListEvenRowStyle {
+	background-color:transparent!important;
+}
+
+.EventTable .LoginFormTextbox {
+	width:100%;
+}
+
+.EventItemRegistrantTextbox {
+	width:95%;
+}
+
+table.EventItemsTable .EventItemTitleDescription {
+	display:block;
+}
+
+.EventItemTitleName {
+	border:medium none;
+	display:block;
+	text-align:left;
+}
+
+.EventItemTitleTime {
+	text-transform:none;
+}
+
+table.EventItemsTable .EventItemTitleTime {
+	border:medium none;
+	color: $body-font-color;
+	display:block;
+	font-family:inherit;
+	font-size: $body-font-size;
+	font-weight:400;
+	padding:0;
+}
+
+table[id$=tblProgress] {
+	background-color:#f9f9f9;
+}
+
+.EventProgressCell {
+	background: $form-header-row-background-color;
+	border:0;
+	color: $content-primary-background-color;
+}
+
+.EventProgressCellFuture,.EventProgressCellPast {
+	padding-left:20px;
+	margin-left:-10px;
+	border:0;
+	color: $body-font-color;
+}
+
+.EventProgressCell,.EventProgressCellFuture,.EventProgressCellPast {
+	padding:10px;
+	text-align:center;
+}
+
+
+.EventItemsSelectionGrid {
+	min-width:0;
+}
+
+td.EventItemRegistrationsHeader {
+	padding-bottom:10px;
+}
+
+input[id*=Attributes][type=checkbox] {
+	height:24px;
+/* $checkbox-line-height */
+}
+
+.EventTable table[id*=dgEventItems] td {
+	padding-top:0;
+	padding-bottom:0;
+}
+
+.EventTable table[id*=dgEventItems] td.EventItemRegistrantsHeader {
+	padding-top:15px;
+}
+
+input[id*=Attributes][type=checkbox] + label {
+	line-height:24px;
+/* $checkbox-line-height */
+	padding-left:10px;
+/* $checkbox-to-label-spacing */
+}
+
+// Event Reg 2.0
+.EventItemTitleTime:before {
+	content:'\f017';
+	display:inline-block;
+	font-family:$icon-font-family;
+	font-style:normal;
+	font-weight:400;
+	line-height:1;
+	padding-right:.25em;
+}
+
+
+/*---------------------------------------------
+                     ::13.11 Donation Styles
+----------------------------------------------*/
+
+
+.DonationFormTable, .ProfileFormTable, .DonationCaptureFormTable, .BBFormTable {
+	.BBFieldCaption > .required {
+		
+		&:after {
+			content: '\f069';
+			font-family: $icon-font-family;
+			//display: inline-block;
+			display: none;
+			color: #F39C12;
+			font-weight: 300;
+			font-size: .75rem;
+			padding-left: $icon-default-padding;
+		}
+	}
+	.BBFormRequiredFieldMarker {display: none !important;}
+}
+
+a[id*="DonationCapture1_lnkcsc_help"].BBLinkHelpIcon img
+{
+	max-width: 21px;
+	vertical-align: middle !important;
+}
+
+td[id*="tdGiftTypeCaption"].DonationFieldCaption, tr[id*="DonationCapture1_trPaymentOption"] td.BBFieldCaption {padding-top: 4px;}
+
+table[id*="tblAmount"] .DonationFieldControlCell
+{
+	color: $body-font-color;
+	padding-bottom: $form-input-bottom-margin;
+    font:{
+    	size:$body-font-size;
+    }
+    line-height: $body-line-height;
+    width: auto;
+   
+}
+	tr[id*="trOther"] td[id*="tdOther"]
+    {
+	    vertical-align: top;
+	    padding-top: 8px;
+
+	    span {
+	    	position: relative;
+
+	    label[for*="rdoOther"] {
+	    	position: absolute;
+	    	right: -4.25em;
+	    	top: -0.05em;
+	    	display: none;
+	    	}
+	    }
+    }
+
+
+tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"] {width: 60%;}
+  
+tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"], table[id*="rdoGiftType"] label[for*="rdoGiftType"] {
+	margin-bottom: $form-input-bottom-margin;
+	background-color: transparent;
+}
+
+tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"] td:first-child {padding-right: 5%;}
+
+table[id*="rdoGiftType"] label[for*="rdoGiftType"]
+{
+	display: inline-block;
+	padding-left: .25em;
+}
+
+tr[id*="trAnonymous"] td.DonationFieldControlCell 
+{
+	padding-bottom:$form-input-bottom-margin ;
+	padding-top: 7px;
+}
+
+.bannerPhoto, .hideDesgOther, tr[id*="trDesignationOther"][style*="hidden;"] {display: none !important;}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList, select[id*="DonationCapture1_cboYear"].BBFormSelectList
+{
+	width: 61px;
+	padding: .25em .5em;
+	position: relative;
+}
+
+select[id*="DonationCapture1_cboMonth"].BBFormSelectList {margin-right: 4%;}
+
+select[id*="DonationCapture1_cboYear"].BBFormSelectList {margin-left: 9%; width: 71px;}
+
+td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
+	padding: 0;
+}
+
+
+// Footer Email Signup
+
+.BBSequenceMapContentContainer {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	float: left;
+	width: 100%;
+	
+	.bbformbuilder-element-row {padding: 0;}
+	
+	
+	[id*="EMAIL_EmailAddress_label"] {
+		display: none;
+	}
+	
+	.bbformbuilder-float-none {padding: 0;}
+	
+	input.x-form-text.x-form-field {
+		margin: 0;
+		float: left;
+		height: 24px;
+		padding: 5px;
+		@include border-radius(0);
+		width: 250px !important;
+		
+		@include placeholder {
+			color: $body-font-color;
+			font-style: italic;
+		}
+		
+		@media (max-width: $small-breakpoint) { 
+		
+			width: 73% !important;
+		}
+	}
+	
+	input[id*="finishWizardButton"] {
+		float: left;
+		background: #DDDDDD;
+		text-transform: uppercase;
+		@include border-radius(0);
+		height: 24px !important;
+		line-height: 24px;
+		border: 0;
+		padding: 0;
+		margin: 0 0 0 2px;
+		font-size: 11px;
+		width: 50px !important;
+		text-align: center;
+		cursor: pointer;
+		color: $body-font-color;
+		font-weight: 700;
+	}
+	
+	[id*="EMAIL_EmailAddress_msg"] { padding: 0; }
+	
+}
+
+.BBSequenceMapCommandContainer {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	float: left;
+	
+	.BBSequenceMapNavigationContainer {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#Column1Div.bbformbuilder-section-column1, [id*="EMAIL_EmailAddress_content"].bbformbuilder-validator-boundry, [id*="EMAIL_EmailAddress_inputandmsg"].bbformbuilder-inputandmsg-container, #SectionContainer.bbformbuilder-section {width: 100% !important;}
+
+[id*="EMAIL_EmailAddress_input"].bbformbuilder-input-container.bbformbuilder-float-none {width: auto !important;}
+
+.wrapFootEmailSignUp {
+	@media (max-width: $small-breakpoint) {
+		width: 100% !important;
+	}
+}
+
+// Make A Gift
+
+.fullWidthContent table.DonationFormTable tbody[id*="pnlDonation"] td[id*="thCaptionAmount"], .fullWidthContent table.DonationFormTable .wrapAmts, .wrapPayBillInfo tr[id*="trSource"] { display: none !important; }
+
+.wrapPayBillInfo {
+	display: none; 
+	width: 100%;
+	background: #eee; 
+	clear: both;
+	padding-bottom: rem(31);
+	
+	@media (max-width: 767px) {
+		
+		position: relative;
+		top: 2.65rem;
+	}
+	
+	.DonationCaptureFormTable {
+		
+		.BBFieldCaption {
+			padding: 0;
+			width: auto;
+		}
+		
+		label, span[id*="EmailLabel"] {
+			font-weight: 300;
+			color: #666666;
+			font-size: 18px;
+			line-height: 1;
+			text-align: right;
+			padding: 6px 10px 0 0;
+			display: inline-block;
+			
+			@media (max-width: 767px) {
+		
+				padding-bottom: 8px;
+			}
+		}
+		
+		input[type="text"] {
+			height: auto;
+			font-size: rem(18);
+			line-height:1;
+			@include border-radius(0);
+			border: 1px solid #CCCCCC;
+			width: 259px;
+			padding: 4px 10px 2px;
+			font-weight: 300;
+			
+			&[id*="txtFirstName"], &[id*="txtLastName"] {width: 175px;}
+			
+			&[id*="ZipUS"] {width: 129px;}
+			
+			&[id*="txtCSC"] {
+				width: 126px;
+				
+				& + .BBLinkHelpIcon {display: none;}
+			}
+		}
+		
+		textarea {
+			font-size: rem(18);
+			line-height:1;
+			font-weight: 300;
+		}
+		
+		select.BBFormSelectList, select {
+			padding: 4px 10px 2px;
+			@include border-radius(0);
+			background: #fff;
+			width: 129px;
+			font: {
+				size:18px;
+				line-height: 1;
+				weight:300;
+			}
+			
+			&[id*="cboCardType"] {width: auto;}
+		}
+		
+		.wrapBillingLastName label, .wrapBillingZip label { 
+			padding-left: rem(37);
+			
+			@media (max-width: 767px) {
+		
+				text-align: left;
+				padding-left: 0;
+				display: block;
+			}
+		}
+	}
+}
+
+// Type of Gift
+
+.wrapPayBillInfo tr[id*="trGiftType"] .DonationFieldCaption, .wrapPayBillInfo tr[id*="trGiftType"] .DonationFieldControlCell label, .wrapPayBillInfo .DonationFieldCaption, .wrapPayBillInfo .DonationFieldControlCell  {
+		font-weight: 300;
+		color: #666666;
+		font-size: 18px;
+		line-height: 1;
+		text-align: right;
+		padding: 6px 10px 0 0;
+}
+
+
+.fullWidthContent table.BBFormTable.DonationFormTable {
+	width: auto;
+	margin: 0 1.875rem 0 5rem;
+	
+	.BBFieldControlCell { width: auto; }
+}
+
+.wrapAmts {
+	width: auto;
+	display: block;
+	float: left;
+	margin: 0 1.875rem rem(20) 5rem;
+	
+	.amounts {
+		width: 200px;
+		height: 200px;
+		float: left;
+		display: inline-block;
+		position: relative;
+		border: solid 1px #CCCCCC;
+		padding: 9px 15px;
+		margin-bottom: rem(45);
+		
+		&:nth-child(2), &:nth-child(5) {
+			margin-left: rem(43); margin-right: rem(43);
+			
+			@media (max-width: 767px) {
+		
+				margin-left: 0 ;
+				margin-right: 0;
+			}
+		}
+		
+		.amtDetails {
+			
+			span {
+				display: block;
+				text-align: left;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 1;
+				
+				&:empty {display: none;}
+			}
+		}
+		.amtDetails:last-child {
+			position: absolute;
+			top: 115px;
+			text-align: center;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			bottom: 0;
+			z-index: 1;
+
+			label, input {display: block; text-align: center; margin: 0 auto;}
+			
+			label {
+				font-size: 14px;
+				line-height: 17px;
+				font-weight: 300;
+				text-align: left;
+			}
+			
+			input {
+				position: absolute;
+				left: 76px;
+				bottom: 20px;
+			}
+		}
+	}
+			.amounts.wrapOtherGiveAmt {
+				.amounts {
+					width: auto;
+					float: none;
+					display: block;
+					border: 0;
+					background-image: none;
+					height: auto;
+					padding: 0;
+					margin-bottom: 0;
+					&:nth-child(2), &:nth-child(5) {
+						margin-left: 0; margin-right: 0; 
+					}
+				}			
+		}
+}
+
+.dollarIcon {
+	position: absolute;
+	z-index: 20;
+	font-weight: bold;
+	top: 6px;
+	left: 10px;
+}
+
+.wrapAmts [id*="trOther"].amounts {
+	.wrapAmts {display: inline-block; float: none; margin: 0; width: auto;}
+	
+	.amtDetails {
+	
+		label[for*="rdoOther"] {display: none;}
+		
+		input[id*="rdoOther"] {
+			position: absolute;
+			bottom: 21px;
+			left: 48.5%;
+		}
+		
+	&:last-child {
+		bottom: -3.65em;
+	    left: -1px;
+	    position: absolute;
+	    top: auto;
+	    width: 200px;
+		
+		input {
+			background: none repeat scroll 0 0 #fff;
+		    border: 1px solid #ccc;
+		    padding: 7px 10px 7px 20px;
+		    @include border-radius(0);
+		    bottom: 0;
+		    left: 0;
+		    position: relative;
+		    width: 100%;
+		    text-align: left;
+		    
+		    @include placeholder { text-align: left; font-weight: 300; color: #666666; font-style: italic; }
+		    
+			}
+		
+		}
+	}
+	
+	[id*="tdOther"].amtDetails::before {
+		top: 115px;
+	    content: "We inspire people to make a positive difference";
+	    display: block;
+	    font-size: 14px;
+	    font-weight: 300;
+	    line-height: 17px;
+	    position: absolute;
+	}
+}
+
+// Give Amount Background Images
+
+.amounts {
+	background-position: center 21px;
+	background-size: auto;
+	background-repeat: no-repeat;
+	
+	&:nth-child(1) {background-image: url('../image/bgGiveAmtBook.png'); background-position:center 33px; }
+	&:nth-child(2) {background-image: url('../image/bgGiveAmtLeaf.png'); }
+	&:nth-child(3) {background-image: url('../image/bgGiveAmtHouse.png'); }
+	&:nth-child(4) {background-image: url('../image/bgGiveAmtGlobe.png'); }
+	&:nth-child(5) {background-image: url('../image/bgGiveAmtPuzzle.png'); }
+	&:nth-child(6) {
+		background-image: url('../image/bgGiveAmtHeart.png'); 
+		margin-bottom: 0;
+		
+		&:before {
+			position: relative;
+			content: 'OTHER';
+			font-weight: bold;
+		}
+	}	
+}
+
+.wrapPayBillInfo td[id*="Recurrence_tdFrequency"] {text-align: left;}
+
+// Event Registration Customization
+
+.emptyTD {display: none;}
+
+.EventTable {
+	table[id$="tblProgress"] {
+		margin: 1rem 0 2rem;
+		background-color: #fafafa;
+		float: left;
+		width: 90%;
+		
+		th {
+			font-weight: 400;
+			font-size: .85rem;
+		}
+		
+		th.EventProgressCell {
+			color: #b5bb14;
+			background-color: transparent;
+		}
+		
+		th.EventProgressCellFuture {
+			background-color: transparent;
+			color: $body-font-color;
+		}
+		
+		th.EventProgressCellPast {
+			background-color: transparent;
+			color: #ccc;
+		}
+	}
+	.EventSectionHeader {display: none;}
+	tr.BBListEvenRowStyle > td {background-color: transparent !important; }
+	
+	.EventItemTitleName {
+		line-height: 1;
+		margin-bottom: .5rem;
+	}
+	
+	.EventItemTitleTime { font-size: 1rem !important;}
+	
+	.EventItemTitleName {display: block;}
+	
+	table[id*="dgPriceList"] table.EventItemRegistrationsTable {
+		.EventItemRegistrationControlCellQuantity, .EventItemRegistrationControlCellDescription, .EventItemRegistrationControlCellNumParticipants, .EventItemRegistrationControlCellPrice { width: auto; }
+	}
+	
+	.BBFormSubmitButton {
+		margin-right: 4.5rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.EventItemRegistrationControlCellQuantity .BBFormSubmitButton.stepOneBtn {
+		margin: 0 0 0 5rem;
+		float: left;
+		position: relative;
+		display: inline-block;
+	}
+	
+	.EventTicketsHeaderCell, .eventRegTicketText {
+		padding: 0;
+		color: #002c64;
+		font: {
+		  	size: 1rem;
+		  	weight: 400;
+		  	style: normal;
+		  } 
+	}
+	
+	.eventRegTicketText {
+		display: inline-block;
+		position: relative;
+		float: left;
+	}
+	
+	.eventRegTicketText.dollarAmt {
+		font-weight: 700;
+		color: $body-font-color;
+		padding: 0 .5rem;
+	}
+	
+	.EventTicketsBodyCell {
+		color: #999;
+		font-size: 1rem;
+		font-weight: 300;
+		padding-right: 0;
+	}
+	
+	.SummaryGridEventTitle { font-size: 1.75rem !important; font-weight: 400; }
+	
+	// Previous/Back Button
+	input[type="button"][value="Previous"] {
+		border: 0 !important;
+		background-color: #ccc !important;
+		color: $body-font-color !important;
+		line-height: 1;
+		margin-right:10rem;
+		padding: 8px 40px 6px;
+	}
+	
+	select.BBFormSelectList {
+		padding: .5%;
+	}
+	
+	.EventItemRegistrationControlCellQuantity select.BBFormSelectList {
+		margin: 0 .5rem 1rem;
+		position: relative;
+		float: left;
+	}
+	
+	.EventItemRegistrationsTable tr { border-bottom: 0; }
+	
+	// Step Two
+	
+	.EventAttendeesGrid {
+		background-color: transparent;
+		border: 0;
+		color: $body-font-color;
+		font-size: $body-font-size;
+		width: 90%;
+		margin-bottom: 0;
+		
+		.EventAttendeesOverallTotal, .EventAttendeesCurrent {
+			background-color: transparent;
+			font-size: 1rem;
+			padding-right: 0;
+		}
+		
+		.EventAttendeesComplete + .EventAttendeesOverallTotal {
+			padding-bottom: 1.5rem;
+		}
+		
+		.SummaryGridEventTitle { font-size: $body-font-size; }
+		
+		.EventAttendeesOverallTotal {
+			border-top: 1px solid #eee;
+		}
+	}
+	
+	table[id*="dgEventItems3_dgRegistrationsList"] {
+		.EventItemRegistrantsEventName, .EventItemRegistrantsHeader {display: none;}
+		
+		.w100p, .EventItemRegistrantControlCellName, .EventItemRegistrantControlCell { width: auto;}
+		
+		.EventItemRegistrantControlCellName label {
+			font-size: 1rem;
+			font-weight: 400;
+			color: #002c64;
+			padding-right: 8px;
+		}
+	}
+	
+	table.EventItemRegistrationsTable {display: none;}
+	
+	.wrapPayBillInfo {
+		padding: 0 1.875rem 0 5rem;
+		.DonationCaptureFormTable .BBFieldCaption {width: 22%;}
+		
+		//.DonationCaptureFieldControlCell {width: auto;}
+		
+	}
+	
+	.EventAttendeesComplete {
+		background-color: transparent;
+	}
+	
+	td.buttonTD {
+			background-color: #eee;
+			padding:1.5rem 0 1.75rem;
+			
+			.BBFormSubmitButton {margin-bottom: 0;}
+		}
+	
+}
+
+.BBFormTable.EventTable [id*="Attributes"].required::before {
+	content: '*';
+	font-family: $icon-font-family;
+	display: inline-block;
+	color: #e71414;
+	font-weight: bold;
+	font-size: rem(13);
+	padding-right: .45rem;
+}
+
+
+
+// Gift Card Styles 
+
+.adfWrapper {
+	
+	.adfCardGridWrapper {
+		float: left;
+		padding: 0 1.875rem 0 5rem;
+	}
+	
+	.adfCardCell {
+		margin-right: 10.4%;
+		
+		&:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12) {
+			margin-right: 0;
+		}
+	}
+	
+	.adfCardRadioWrapper {
+		padding: .25rem 0;
+	}
+	
+	.adfFormWrapper {
+		
+		fieldset {
+			padding: 0.35rem 1.875rem 0.75rem 5rem;
+			
+			.adfOtherAmountWrapper, .adfAmountButton {
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+			
+			.adfOtherAmountWrapper {
+				padding-left: 1.25rem;
+				
+				#adfAmount.adfTextInput { margin-bottom: 7px; }
+			}
+			
+			h1, .adfHeaderLabel { font-weight: 400;}
+		}
+	}
+	
+}
+
+//
+.userLoginValidationContainer td.emptyTD {
+	display: table-cell;
+}
+
+// AddThis Sharing
+
+.addthis_custom_sharing {
+	
+	display: inline-block;
+	position: relative;
+	top: 1rem;
+	right: 0;
+	float: right;
+	margin: 0 0 2rem 2rem;
+	z-index: 1000;
+	
+	.at-share-tbx-element.addthis_32x32_white_style.circular .at300bs {
+		@include border-radius(5px);
+		
+	}
+	&:before, &:after {display: none;}
+	
+	.at_flat_counter {
+		top: -42px;
+		left: -44px;
+		
+		&:after {
+			left: 12px !important;
+			top: 31px !important;
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+.EventItemRegistrationControlCellQuantity .BBFormSelectList { margin-bottom: 1rem; }
+
+.tagcloud {
+                list-style:none;
+                margin: 0;
+                padding: 0;
+                text-align:center;
+}
+.tagcloud li {
+                display:inline-block;
+                float: none;
+                padding: 0 10px;
+                line-height: 1.3em;
+                margin: 0;
+}
+
+// Event Reg AddThis 
+
+.addthis_responsive_sharing {display: none;}
+
+.confirmationTellFriend {
+	.addthis_responsive_sharing {display: block; margin: .75rem 0;}
+}
+
+.confirmationTellFriend + .addthis_responsive_sharing {display: none !important;}
+
+.EventItemsSelectionGrid .EventItemsTable .EventItemTitleTime { display: none; }
+
+.upcomingEventLink + span { display: block;}
+
+.sidebarContent p.mostPopularEventTitle { margin-bottom: 0;}
+
+[id*="trAdditionalDonation"] .BBFieldCaption { 
+	font-size: 1rem;
+	
+	.BBFormTextbox {
+		height: auto;
+		padding-bottom: 1%;
+		padding-top: 1%;
+		width: 100px !important;
+	}
+}
+
+table[id*="tableMain"][summary="Event Calendar"] { margin-top: 1rem;}
+
+.EventCalendarButtonBar:empty, .EventCalendarButtonBar:hidden {padding: 0;}
+
+@media (max-width:800px) {
+	.fc-header td {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	#calendar {
+		margin: 0 !important;
+		
+		.fc-content {
+			width: 90%;
+			margin: 0 5%;
+		}
+	}
+	.fc-header td {
+		
+		&.fc-header-right { padding-bottom: 1rem;}
+	}
+	
+	table[id*="tableMain"][summary="Event Calendar"].BBFormTable, table.BBFormTable.CalendarViewContainer { width: 100%; margin-bottom: 1.5rem; }
+	
+	.EventCalendarPartContainer table.w100p.BBFormTable {
+		width: 91%; 
+		margin: 0 auto;
+	}
+	
+	a#atedrop1.addthisevent-drop { margin: 1rem 0 .5rem 1rem !important;}
+}
+
+.clone > aside > .wrapSidebarContent > .sidebarNavContent + nav + #calendarControl { display: none !important;}
+
+
+.EventTable {
+	.EventTicketsHeaderCell:nth-child(3) {display: none;}
+	
+	.EventTicketsBodyCell:nth-child(3) {display: none;}
+}
+ 
+.adfFormRow .adfHeaderLabel[for="adfGiftMessage"] { 
+	min-width: 0; 
+	
+	& + #adfGiftMessage { min-height: 80px; }
+}
+
+.BBFormTable.EventTable input[id*="Attributes"] {
+	margin-bottom: 0.75rem;
+	
+&.hasDatepicker {margin-bottom: 0.75rem;}
+}
+
+.fullWidthContent p .eventRegTicketText { display: none; }
+
+// Google CSE
+
+.QuickSearchFormTable {
+	height: 29px !important;
+	.gsc-control-cse {
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		font-family: $body-font-family;
+		
+		.gsc-control-wrapper-cse {
+			font-family: $body-font-family;
+			font-size: 12px;
+			font-weight: normal;
+			
+			form.gsc-search-box {
+				font-size: inherit;
+				margin: 0;
+				
+				table.gsc-search-box {
+					height: 24px;
+					margin: 5px 10px 0 0;
+				    padding: 0;
+				    width: 204px;
+				    
+				    .gsc-input { padding: 0; }
+				    .gsc-input-box {
+					    border: 0;
+					    background: transparent;
+					    height: auto;
+					    
+					    table.gsc-search-box {
+						    padding: 0;
+					    }
+				    }
+				}
+				
+				td.gsib_a { 
+				    padding: 0;
+			    
+				    input[type="text"].gsc-input {
+					    border: 1px solid #d6d6d6 !important;
+					    border-radius: 0;
+					    height: 24px !important;
+					    padding: 0 10px !important;
+					    width: 100%;
+					    color: #666;
+					    display: inline-block;
+					    font-family: "myriad-pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+					    font-size: 0.75rem;
+					    font-weight: 400;
+					    line-height: 26px;
+					    background-color: #fff !important;
+					    background-image: none !important;
+					}
+					
+					& + .gsib_b { display: none !important; }
+				}
+				.gsc-search-button { display: none; }
+				.gsc-search-button input.gsc-search-button.gsc-search-button-v2 {
+					text-decoration: none !important;
+				    text-transform: uppercase;
+				    vertical-align: middle;
+				    height: auto;
+				    background: none repeat scroll 0 0 #666;
+				    border: 0 none;
+				    border-radius: 0;
+				    color: #fff;
+				    cursor: pointer;
+				    display: block !important;
+				    font-size: 12px;
+				    font-weight: 400;
+				    height: 23px !important;
+				    left: 0 !important;
+				    line-height: 23px;
+				    padding: 0;
+				    margin: 0;
+				    position: relative !important;
+				    text-align: center;
+				    visibility: visible !important;
+				    width: 50px !important;
+				}    
+
+			}
+		}
+	}
+}
+
+.cse .gsc-control-cse, .gsc-control-cse { padding: 0 !important; }
+
+.gsc-control-wrapper-cse .gsc-results.gsc-webResult {
+	
+	font-family: $body-font-family !important;
+	font-size: $body-font-size !important;
+	color: $body-font-color !important;
+		
+	.gs-title {
+		text-decoration: none !important;
+		a {
+			color: $link-color !important;
+			text-decoration: none !important;
+			
+			&:hover {
+				color: $link-hover-color !important;
+				text-decoration: underline !important;
+			}
+		}
+	}
+	
+	.gsc-url-top, .gsc-thumbnail-inside { padding: 0 !important; }
+	
+}
+
+.gsc-result .gs-title { height: auto !important }
+
+.gsc-control-cse {
+	// Filter Link Options
+	.gsc-above-wrapper-area .gsc-selected-option-container {
+		max-width: none !important;
+		width: auto !important;
+	}
+}
+
+.gsc-wrapper .gsc-webResult.gsc-result { border-bottom: 1px solid #ccc !important; }
+
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+	font-family: $body-font-family !important;
+	font-size: .85rem !important;
+	color: $body-font-color !important;
+}
+
+.gsc-cursor-box .gsc-cursor {
+	
+	.gsc-cursor-page { padding: 5px 8px; font-size: 15px; }
+	
+	.gsc-cursor-current-page {
+		background-color: #ccc !important;
+		color: #fff !important;
+		font-weight: 400 !important;
+	}
+}
+
+.gsc-wrapper iframe #adBlock, body #adBlock, .gsc-adBlock { display: none !important; }
+
+// Search Modal
+.gsc-results-wrapper-overlay {
+	height: 90% !important;
+	.gsc-adBlock, .gsc-adBlockVertical { display: none !important; }
+	.gsc-thinWrapper { width: 100% !important; }
+	.gsc-wrapper.gsc-thinWrapper { border: 0 !important; }
+	
+	.gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b { color: #002c64; }
+}

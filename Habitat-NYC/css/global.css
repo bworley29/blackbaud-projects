@@ -240,7 +240,7 @@ div.DesignPanePage, div.DesignPanePageHover {
 form[action*="pagedesign.aspx"] .community .banner img {
   width: auto; }
 
-form[action*="pagedesign.aspx"] #wrapContentOuter, form[action*="pagedesign.aspx"] .container aside .wrapSidebarContent, form[action*="pagedesign.aspx"] footer {
+form[action*="pagedesign.aspx"] .wrapBanner, form[action*="pagedesign.aspx"] .wrapContent, form[action*="pagedesign.aspx"] .wrapBanner {
   overflow: visible; }
 
 form[action*="pagedesign.aspx"] .mobileSidebarToggle.showOnMobile {
@@ -313,7 +313,7 @@ body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce
 
 table.BBFormTable {
   width: 90%;
-  font-size: 1rem;
+  font-size: 12px;
   border: 0;
   background: transparent;
   margin-left: 0;
@@ -449,7 +449,7 @@ table.BBFormTable.PostJobFormTable {
     z-index: 100;
     font-family: FontAwesome;
     content: '\f0da';
-    color: #edf4fa; }
+    color: #194298; }
   .BBSequenceMapCurrentStep:last-child::after {
     content: '';
     display: none; }
@@ -550,12 +550,12 @@ table.BBFormTable.PostJobFormTable {
   color: #194298; }
 
 .BBCalendarDayHeader {
-  background-color: #edf4fa;
+  background-color: #194298;
   color: #fff;
   height: 1px; }
 
 .BBCalendarNextPrev {
-  background-color: #edf4fa;
+  background-color: #194298;
   color: #fff; }
 
 .BBCalendarOtherMonthDay {
@@ -565,10 +565,10 @@ table.BBFormTable.PostJobFormTable {
   font-weight: 700; }
 
 .BBCalendarSelector {
-  background-color: #edf4fa; }
+  background-color: #194298; }
 
 .BBCalendarTitle {
-  background-color: #edf4fa;
+  background-color: #194298;
   color: #fff;
   font-weight: 700; }
 
@@ -592,7 +592,7 @@ table.BBFormTable.PostJobFormTable {
   font-style: italic; }
 
 .BBFormRequiredFieldMarker {
-  color: #edf4fa !important;
+  color: #194298 !important;
   font-weight: 700;
   vertical-align: top; }
 
@@ -600,31 +600,30 @@ table.BBFormTable.PostJobFormTable {
   color: Red;
   font-weight: 700; }
 
-.BBFormValidatorSummary {
+.mainContent .BBFormValidatorSummary {
   color: #4e4e4e;
-  text-align: left;
-  background: #fdf4f4;
-  padding: .5rem .75rem;
-  border: 1px solid #ea3429; }
-  .BBFormValidatorSummary ul {
+  text-align: left; }
+  .mainContent .BBFormValidatorSummary ul {
     margin: 0 !important;
-    padding: 0 auto !important; }
-    .BBFormValidatorSummary ul li {
-      font-size: 1rem; }
+    background: #fdf4f4;
+    padding: .5rem .75rem;
+    border: 1px solid #ea3429; }
+    .mainContent .BBFormValidatorSummary ul li {
+      font-size: 12px; }
 
 .BBListingHeading {
   text-align: left; }
 
 .BBMessage {
   font-style: italic;
-  font-size: 1rem;
-  line-height: 1.5rem; }
+  font-size: 12px;
+  line-height: 1; }
 
 .PagedListFooter {
   background-color: transparent;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem; }
+  font-size: 12px;
+  line-height: 1; }
 
 .PagedListFooterLink:hover {
   color: #194298;
@@ -914,9 +913,9 @@ table.DirectorySearchForm {
     border: 0;
     padding-left: 1em;
     padding-right: 1em;
-    background-color: #edf4fa; }
+    background-color: #194298; }
     .DirectoryListingTable th.BBListingHeading.DirectoryListingHeading a:hover {
-      background-color: #c5dcef; }
+      background-color: #122f6c; }
 
 .DonationHelpFormDDTable {
   height: 275px; }
@@ -1013,7 +1012,7 @@ tbody[id*="tbdCart"] tr[id*="trCart"] table[id*="dgCart"].DonationGrid {
   border: 0;
   margin-bottom: 0.75rem; }
   tbody[id*="tbdCart"] tr[id*="trCart"] table[id*="dgCart"].DonationGrid tr.DonationGridHeader td.DonationGridHeaderCell {
-    background: #edf4fa;
+    background: #194298;
     color: #fff;
     padding: 0.45em;
     border: 0; }
@@ -1305,14 +1304,14 @@ table.BBFormTable.EventTable {
 
 .DiscussionTopicFieldValue, .DiscussionReplyFieldValue {
   text-align: left;
-  font-size: 1rem;
+  font-size: 12px;
   display: inline-block; }
 
 [id*="lblMessage"].DiscussionTopicFieldValue {
   padding-bottom: 1rem; }
 
 .DiscussionTopicHeading {
-  background-color: #edf4fa;
+  background-color: #194298;
   height: 21px;
   padding: 3px 5px 2px; }
   .DiscussionTopicHeading span {
@@ -1320,14 +1319,14 @@ table.BBFormTable.EventTable {
 
 .DiscussionTopicList {
   background-color: transparent;
-  font-size: 1rem; }
+  font-size: 12px; }
   .DiscussionTopicList td {
     padding: 0 .5rem; }
 
 .DiscussionTopicTable td {
   padding: 0 .5rem; }
   .DiscussionTopicTable td a {
-    font-size: 1rem; }
+    font-size: 12px; }
 
 .DiscussionTopicSepHR {
   width: 95%; }
@@ -1359,7 +1358,7 @@ table.BBFormTable.EventTable {
 
 input[type="button"].BBFormSubmitButton.DiscussionGroupSpellButton {
   margin: 1em;
-  background: #ec720b;
+  background: #34AE23;
   border: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1407,10 +1406,10 @@ input[type="button"].BBFormSubmitButton.DiscussionGroupSpellButton {
 .DiscussionThreadList {
   background-color: transparent; }
   .DiscussionThreadList a {
-    font-size: 1rem; }
+    font-size: 12px; }
 
 .DiscussionTopicNumReplies {
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .BBDocumentDisplayNew {
   color: red; }
@@ -1777,7 +1776,7 @@ table.BBFormTable[id*="tableMain"][summary="Event Calendar"] td.EventCalendarBut
   table.BBFormTable[id*="tableMain"][summary="Event Calendar"] td.EventCalendarButtonBar a.EventCalendarButtons::before {
     font-family: FontAwesome;
     display: inline-block;
-    color: #ec720b;
+    color: #34AE23;
     font-size: 1rem;
     padding-right: .25em;
     position: relative;
@@ -1802,23 +1801,23 @@ table.BBFormTable[id*="tableMain"][summary="Event Calendar"] td.EventCalendarBut
   content: '\f14d'; }
 
 a.EventCalendarButtons {
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .ListViewDateLabel {
   height: 17px; }
 
 .ListViewEventItemContainer {
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .CalendarViewMonthYearLabel {
   height: 17px; }
 
 .CalendarViewDayHeader {
-  background-color: #edf4fa;
+  background-color: #194298;
   color: #fff;
   height: 1px;
   font-weight: 400;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .CalendarViewOtherMonthDay {
   border: 1px solid #d6d6d6;
@@ -1936,7 +1935,7 @@ table[id*="CalendarEvent1_rblMapLink"] input[type="radio"] + label {
     font-weight: 700; }
 
 .bbAthMgrLocationAddLink {
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .defaultSkin ul.ribbon_tab_btn {
   padding: 3px 0 0 15px !important; }
@@ -1975,10 +1974,10 @@ table[id*="CalendarEvent1_rblMapLink"] input[type="radio"] + label {
 .CalendarViewContainer {
   width: 100%; }
   .CalendarViewContainer select {
-    font-size: 1rem; }
+    font-size: 12px; }
 
 .CalendarViewCalendarContainer td {
-  font-size: 1rem;
+  font-size: 12px;
   padding: 0 0.45em; }
 
 td[id*="EventCalendar1_TDGo"] {
@@ -2006,7 +2005,7 @@ td[id*="EventCalendar1_TDGo"] {
 .CalendarViewTopRight {
   width: 35%;
   text-align: right;
-  font-size: 1rem;
+  font-size: 12px;
   vertical-align: bottom;
   padding-bottom: .5em !important; }
 
@@ -2016,7 +2015,7 @@ table.BBFormTable[summary="Event Calendar"] a[id*="lbtnFilterEvents"]::before {
   content: '\f0b0';
   font-family: FontAwesome;
   display: inline-block;
-  color: #ec720b;
+  color: #34AE23;
   font-size: 1rem;
   padding-right: .25em;
   position: relative;
@@ -2026,11 +2025,11 @@ table.BBFormTable[summary="Event Calendar"] a[id*="lbtnFilterEvents"]:hover::bef
 
 .CalendarViewTodayText {
   white-space: nowrap;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .CalendarViewBottomIcons {
   text-align: right;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .CalendarFilterSaveContainer {
   text-align: right; }
@@ -2062,7 +2061,7 @@ table.BBFormTable[summary="Event Calendar"] a[id*="lbtnFilterEvents"]:hover::bef
 
 .CalendarFormOptionalText {
   vertical-align: top;
-  font-size: 1rem;
+  font-size: 12px;
   display: inline-block;
   padding: 7px 0 0 5px; }
 
@@ -2080,7 +2079,7 @@ table.BBFormTable[summary="Event Calendar"] a[id*="lbtnFilterEvents"]:hover::bef
 .EventCalendarButtonBar {
   height: auto;
   padding: .5em 0 1.5em;
-  font-size: 1rem;
+  font-size: 12px;
   text-align: left; }
   .EventCalendarButtonBar input[id*="ImageButtonNewEvent"].vaMiddle {
     margin-left: .5em; }
@@ -2130,7 +2129,7 @@ table.BBFormTable .BBFieldCaption.DetailLeft {
   padding: 0.45em 0.45em 0.45em 0;
   text-align: right;
   vertical-align: top;
-  line-height: 1.5rem; }
+  line-height: 1; }
 table.BBFormTable .DetailEventDetails {
   border-bottom: solid 1px #DCDCDC;
   background: #777777;
@@ -2141,7 +2140,7 @@ table.BBFormTable .BBFieldControlCell.DetailRight {
   padding: 0.45em 0.45em 0.45em 0;
   text-align: left;
   vertical-align: top;
-  line-height: 1.5rem; }
+  line-height: 1; }
 
 table.BBListingTable {
   border: 0; }
@@ -2684,8 +2683,8 @@ table.BBFormTable.TransactionManagerGrid {
   padding: 0.45em;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
-  background-color: #edf4fa;
+  font-size: 12px;
+  background-color: #194298;
   color: #fff; }
 
 .TransactionManagerGridDetailCell {
@@ -2715,13 +2714,13 @@ table.BBFormTable.TransactionManagerGrid {
   padding-left: 1em; }
 
 .TransactionManagerGridHeaderCellSortedAscending {
-  background-color: #edf4fa;
+  background-color: #194298;
   background-image: none; }
   .TransactionManagerGridHeaderCellSortedAscending::after {
     content: '\f0d8'; }
 
 .TransactionManagerGridHeaderCellSortedDescending {
-  background-color: #edf4fa;
+  background-color: #194298;
   background-image: none; }
   .TransactionManagerGridHeaderCellSortedDescending::after {
     content: '\f0d7'; }
@@ -2739,7 +2738,7 @@ table.BBFormTable.TransactionManagerGrid {
   clear: left;
   width: 100%;
   margin-bottom: 10px;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .TransactionManagerSummaryTable {
   width: 100%; }
@@ -2747,7 +2746,7 @@ table.BBFormTable.TransactionManagerGrid {
     font-weight: normal; }
 
 .TransactionManagerSummaryHeaderRow {
-  background-color: #edf4fa;
+  background-color: #194298;
   color: #fff; }
 
 .TransactionManagerSummaryHeaderLabel {
@@ -2840,7 +2839,7 @@ table.BBFormTable.TransactionManagerGrid {
   float: left;
   margin: 0;
   margin-bottom: 10px;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .PagerInfo {
   float: left;
@@ -2951,7 +2950,7 @@ table.BBFormTable.TransactionManagerGrid {
 
 .TransactionManagerTabsContainer {
   clear: both;
-  background-color: #173752;
+  background-color: black;
   border-color: #EBEBEB #EBEBEB #ccc;
   border-style: solid;
   border-width: 1px;
@@ -2976,7 +2975,7 @@ table.BBFormTable.TransactionManagerGrid {
 
 .TransactionManagerTab {
   float: left;
-  font-size: 1rem;
+  font-size: 12px;
   margin: 0 0 0 4px;
   padding: 7px 10px; }
   .TransactionManagerTab a {
@@ -3077,7 +3076,7 @@ table.BBFormTable.TransactionManagerGrid {
 .BBFormDisplayTextContainer {
   padding: 5px;
   overflow: auto;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .BBFormDisplayDropdownContainer {
   padding: 5px; }
@@ -3285,7 +3284,7 @@ input[type="text"].BBFormDisplayTextbox {
   white-space: normal;
   word-wrap: break-word;
   color: #4e4e4e;
-  font-size: 1rem !important;
+  font-size: 12px !important;
   border: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -3302,7 +3301,7 @@ input[type="text"].BBFormDisplayTextbox {
   text-decoration: none; }
 
 .BBEventRegSequenceMapCurrentStepItem {
-  background-color: #edf4fa;
+  background-color: #194298;
   color: #fff; }
 
 .BBEventRegSequenceMapNavigationNextButton {
@@ -3325,7 +3324,7 @@ input[type="text"].BBFormDisplayTextbox {
 .BBEventRegSequenceMapContentContainer {
   width: 100%;
   margin-left: 0;
-  line-height: 1.5rem; }
+  line-height: 1; }
 
 .BBEventRegSequenceMapNavigationContainer {
   clear: both;
@@ -3352,7 +3351,7 @@ input[type="text"].BBFormDisplayTextbox {
 
 .Ev2_SummaryRow {
   display: table-row;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .Ev2_SummaryCell {
   display: table-cell;
@@ -3451,7 +3450,7 @@ input[type="text"].BBFormDisplayTextbox {
     .Ev2_RegistrantFieldCell label[id*="ctlRegBox"].required:after {
       content: '*';
       display: inline-block;
-      color: #edf4fa;
+      color: #194298;
       font-weight: normal;
       font-size: 14px;
       padding-left: 0.35em; }
@@ -3545,7 +3544,7 @@ select.Ev2_RegistrantAddressControlDropDown {
   padding: 0 0 .5em; }
 
 .Ev2_RegistrantLink a {
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 400;
   text-decoration: none;
   color: #194298;
@@ -3622,7 +3621,7 @@ select.Ev2_RegistrantAddressControlDropDown {
       content: '\f073';
       font-family: FontAwesome;
       font-size: 2rem;
-      color: #ec720b;
+      color: #34AE23;
       margin-right: .3em;
       top: .1em;
       position: relative; }
@@ -3638,7 +3637,7 @@ select.Ev2_RegistrantAddressControlDropDown {
     content: '\f073';
     font-family: FontAwesome;
     font-size: 2rem;
-    color: #ec720b;
+    color: #34AE23;
     margin-right: 0.35em;
     top: .1em;
     position: relative; }
@@ -3662,7 +3661,7 @@ select.Ev2_RegistrantAddressControlDropDown {
     content: '\f017';
     font-family: FontAwesome;
     font-size: 2rem;
-    color: #ec720b;
+    color: #34AE23;
     margin-right: .3em;
     top: .1em;
     position: relative; }
@@ -3670,7 +3669,7 @@ select.Ev2_RegistrantAddressControlDropDown {
 .Ev2_RegistrationEventTime {
   display: block;
   width: auto;
-  font-size: 1rem;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   color: #4e4e4e; }
@@ -3678,7 +3677,7 @@ select.Ev2_RegistrantAddressControlDropDown {
     content: '\f017';
     font-family: FontAwesome;
     font-size: 2rem;
-    color: #ec720b;
+    color: #34AE23;
     margin-right: 0.35em;
     top: .1em;
     position: relative; }
@@ -3697,7 +3696,7 @@ select.Ev2_RegistrantAddressControlDropDown {
     display: inline-block; }
   .Ev2_TimerContainer .Ev2_Timer {
     font-weight: 700;
-    color: #edf4fa;
+    color: #194298;
     float: left;
     position: relative;
     display: inline-block;
@@ -3716,16 +3715,16 @@ select.Ev2_RegistrantAddressControlDropDown {
   color: #000; }
 
 .Ev2_TimespanSeparatorLabel {
-  vertical-align: top;
+  vertical-align: middle;
   display: inline-block;
-  padding-top: 4px; }
+  padding-top: 0; }
 
 .Ev2_DescriptionContainer {
   display: block;
   width: 97%;
   margin: 1.5em 0 0;
   padding: 0;
-  font-size: 1rem; }
+  font-size: 12px; }
   .Ev2_DescriptionContainer div[id*="ctlDescription"] {
     display: inline-block; }
     .Ev2_DescriptionContainer div[id*="ctlDescription"]:before {
@@ -3752,7 +3751,7 @@ select.Ev2_RegistrantAddressControlDropDown {
     color: #fff;
     font-weight: bold;
     font-weight: 400;
-    font-size: 1rem; }
+    font-size: 12px; }
 
 .Ev2_PriceTypesCell {
   display: table-cell;
@@ -3762,7 +3761,7 @@ select.Ev2_RegistrantAddressControlDropDown {
   padding: .45em 1rem;
   white-space: normal;
   line-height: 1.3;
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 700;
   color: #4e4e4e; }
   .Ev2_PriceTypesCell span[id*="lblPrice"] {
@@ -3777,11 +3776,11 @@ select.Ev2_RegistrantAddressControlDropDown {
   margin: 0 !important; }
 
 .AdditionalDonation_Error {
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .AdditionalDonation_Currency {
   margin-left: 5px !important;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 input.AdditionalDonation_Amount {
   display: inline-block !important;
@@ -3792,7 +3791,7 @@ input.AdditionalDonation_Amount {
   background-color: #fff; }
   .Ev2_PriceTypesRow .Ev2_PriceTypesCell {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 12px;
     color: #4e4e4e;
     border-bottom: 1px solid #dddddd; }
     .Ev2_PriceTypesRow .Ev2_PriceTypesCell .Ev2_PriceCount {
@@ -3813,7 +3812,7 @@ input.AdditionalDonation_Amount {
 .Ev2_PriceTypeQtyColumn input[id*="txtQty"][type="text"] {
   width: 30px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 12px;
   padding: 3% 3% 1%; }
 
 .Ev2_PriceTypeValidatorColumn {
@@ -3825,7 +3824,7 @@ label.Ev2_PriceName.BBFieldCaption {
   text-align: center;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5rem; }
+  line-height: 1; }
   label.Ev2_PriceName.BBFieldCaption label.Ev2_PriceTypesCell {
     font-weight: 300; }
 
@@ -3913,7 +3912,7 @@ label.Ev2_PriceName.BBFieldCaption {
 
 .Ev2_RegistrationStepContainer {
   margin: 0;
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .Ev2_PriceDescriptionCell {
   display: block;
@@ -3925,18 +3924,18 @@ label.Ev2_PriceName.BBFieldCaption {
   color: red; }
 
 .Ev2_BillMeLaterContainer {
-  width: 150px;
-  height: 46px;
-  background-color: #ffe8c8;
-  float: right;
-  clear: right;
-  border: 1px solid #797979;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  float: left;
+  clear: both;
+  border: 0;
+  border-radius: 0;
   display: block;
   margin-right: 25px;
   margin-bottom: 10px; }
+  .Ev2_BillMeLaterContainer input[id*="chkBillMeLater"] {
+    margin-right: 6px; }
 
 .Ev2_BillMeLaterText {
   margin-top: 12px;
@@ -4261,7 +4260,7 @@ table.DirectoryFormTable {
   width: 80%; }
 
 a.DiscussionGroupNewTopicButtonWAI {
-  font-size: 1rem; }
+  font-size: 12px; }
 
 .wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table[style] {
   margin-left: 0 !important;
@@ -4319,7 +4318,7 @@ table.BBFormTable.SearchFormTable {
         border: 1px solid #ccc;
         background-color: #777777;
         content: '\f002';
-        color: #ec720b;
+        color: #34AE23;
         font-family: FontAwesome; }
   table.BBFormTable.SearchFormTable tr:nth-child(2) table td:nth-child(2) {
     width: 70%; }
@@ -4386,76 +4385,141 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
                      ::3.2 Layout
 ----------------------------------------------*/
 .container {
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1002px;
+  margin: 0 auto;
   position: relative;
-  width: 100%; }
-  .container:before, .container:after {
-    content: "";
-    display: table; }
-  .container:after {
-    clear: both; }
-  @media (max-width: 1199px) {
-    .container {
-      padding-left: 20px !important;
-      padding-right: 20px !important; } }
+  line-height: 0; }
 
-.wrapPageHeader {
-  background-color: #ededed;
-  padding-top: 1.3125rem;
-  padding-bottom: 1.125rem; }
-  @media (max-width: 900px) {
-    .wrapPageHeader #breadcrumbs {
-      display: none; } }
+.wrapHeader {
+  background: #E9E9E9 url(../image/headerbg.jpg) repeat-x 0 0;
+  height: 86px;
+  position: relative;
+  clear: both; }
 
-.wrapContent {
-  padding: 2.625rem 0; }
-  @media (max-width: 900px) {
-    .wrapContent {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem; } }
-  .wrapContent .mainContent {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 65.8807828007%;
-    width: 66.0833333333%;
-    float: left;
-    left: 33.8889%;
-    margin-right: 0;
-    position: relative; }
-    .wrapContent .mainContent:last-child {
-      margin-right: 0; }
-    @media (max-width: 900px) {
-      .wrapContent .mainContent {
-        left: 0;
-        width: 100%; } }
-  .wrapContent .sidebar {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 31.7615656014%;
-    width: 23.75%;
-    right: 66.0833%;
-    float: left;
-    position: relative; }
-    .wrapContent .sidebar:last-child {
-      margin-right: 0; }
-    @media (min-width: 1025px) {
-      .wrapContent .sidebar .fixeSidebar {
-        width: 285px;
-        position: fixed;
-        top: 10px; } }
-    @media (max-width: 900px) {
-      .wrapContent .sidebar {
+.wrapUtility {
+  width: 200px;
+  float: right;
+  text-align: right;
+  margin: 38px 30px 0px 0px;
+  position: relative; }
+
+.wrapLogo {
+  background: url(../image/logo-bg.png) no-repeat 0 0;
+  width: 223px;
+  height: 173px;
+  left: 0px;
+  top: -6px;
+  position: absolute;
+  float: left;
+  z-index: 10; }
+  .wrapLogo p {
+    margin: 0;
+    padding: 0; }
+  .wrapLogo .logo {
+    margin: 38px 0px 0px 12px; }
+
+.wrapNav {
+  background: url(../image/nav-bg.jpg) repeat-x 0 0;
+  height: 61px;
+  clear: both;
+  position: relative;
+  width: 100%;
+  z-index: 5; }
+
+.wrapContentOuter {
+  clear: both;
+  width: 100%;
+  position: relative;
+  background: url(../image/body-bg.jpg) repeat-x 0 0;
+  padding-top: 13px;
+  top: -12px; }
+  .wrapContentOuter .wrapInnerContent {
+    background: url(../image/page-body.png) repeat-y 0 0; }
+  .wrapContentOuter .wrapBanner {
+    clear: both;
+    width: 973px;
+    margin: 0 auto;
+    padding: 3px 0 5px;
+    background-color: #fff;
+    overflow: hidden; }
+    .wrapContentOuter .wrapBanner .bannerImg {
+      width: 648px;
+      float: left; }
+      .wrapContentOuter .wrapBanner .bannerImg p {
+        margin: 0;
+        padding: 0; }
+    .wrapContentOuter .wrapBanner .ctaButtons {
+      width: 325px;
+      float: left; }
+  .wrapContentOuter .wrapContent {
+    clear: both;
+    width: 971px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #EDF4FA;
+    overflow: hidden; }
+    .wrapContentOuter .wrapContent .mainContent {
+      width: 637px;
+      padding: 13px 0px 0px 12px;
+      float: left; }
+      .wrapContentOuter .wrapContent .mainContent .content {
+        padding: 0px 17px;
+        border-right: 1px solid #C8D8E6;
+        border-left: 1px solid #C8D8E6;
+        background-color: #FFF;
+        line-height: 14.5px;
+        font-size: 12px;
+        float: left;
         width: 100%;
-        right: 0;
-        display: none; } }
+        max-width: 100%; }
+    .wrapContentOuter .wrapContent .greenCTA {
+      background: transparent url("../image/ft-green-holder.png") no-repeat scroll 0px 0px;
+      width: 605px;
+      height: 60px;
+      margin: 12px 0px 0px 12px;
+      padding: 17px;
+      font-size: 15px;
+      line-height: 15px;
+      color: #FFF;
+      clear: both; }
+    .wrapContentOuter .wrapContent .wrapSidebar {
+      float: right;
+      width: 309px;
+      padding-top: 13px; }
 
-/*---------------------------------------------
-                     ::3.3 Flexi Layout
-----------------------------------------------*/
+.wrapFooter {
+  background: transparent url("../image/footerbg.png") repeat-x scroll 0px 0px;
+  height: 120px;
+  width: 990px;
+  margin: 0px auto; }
+  .wrapFooter .footerContentLeft {
+    width: 382px;
+    float: left;
+    font-size: 11px;
+    color: #FFF;
+    margin: 31px 0px 0px 33px; }
+    .wrapFooter .footerContentLeft .address {
+      width: 213px;
+      height: 64px;
+      border-right: 1px solid #fff;
+      float: left; }
+    .wrapFooter .footerContentLeft .contact {
+      float: right;
+      width: 141px; }
+  .wrapFooter .footerContentRight {
+    width: 287px;
+    float: right;
+    padding-top: 29px;
+    margin-right: 14px; }
+
+.bgGreenFooterBar {
+  background-color: #34AE23;
+  height: 23px;
+  clear: both;
+  width: 100%;
+  position: relative;
+  line-height: 0; }
+
 /*---------------------------------------------
                      ::3.4 Utility Area
 ----------------------------------------------*/
@@ -4492,15 +4556,15 @@ a.skip:hover, a.skip:active, a.skip:focus {
                      ::4.1 Global Menu Styles
 ----------------------------------------------*/
 /* menu list reset */
-.menuReset, #breadcrumbs ul, .sidebar nav ul, .sidebar nav ul li ul, .sidebar nav ul li.selected > ul, .mobileSidebarToggle.showOnMobile ul {
+.menuReset, .wrapSidebar ul, .wrapSidebar ul li ul, .wrapSidebar ul li.selected > ul {
   list-style: none outside none;
   margin: 0;
   padding: 0; }
-  .menuReset li, #breadcrumbs ul li, .sidebar nav ul li, .sidebar nav ul li ul li, .sidebar nav ul li.selected > ul li, .mobileSidebarToggle.showOnMobile ul li {
+  .menuReset li, .wrapSidebar ul li, .wrapSidebar ul li ul li, .wrapSidebar ul li.selected > ul li {
     float: left;
     margin: 0;
     padding: 0; }
-    .menuReset li a, #breadcrumbs ul li a, .sidebar nav ul li a, .sidebar nav ul li.selected > ul li a, .mobileSidebarToggle.showOnMobile ul li a {
+    .menuReset li a, .wrapSidebar ul li a, .wrapSidebar ul li.selected > ul li a {
       cursor: pointer;
       text-decoration: none;
       display: block; }
@@ -4511,216 +4575,118 @@ a.skip:hover, a.skip:active, a.skip:focus {
 /*---------------------------------------------
                      ::4.2 Main Horizontal Navigation
 ----------------------------------------------*/
-/*---------------------------------------------
-                     ::4.3 Breadcrumb Navigation
-----------------------------------------------*/
-#breadcrumbs ul {
-  width: 100%;
-  color: #97929D;
-  margin-bottom: 0.75em;
-  float: left; }
-  #breadcrumbs ul li {
-    width: auto;
-    position: relative;
-    display: inline-block;
+.wrapNav ul.mainNav {
+  list-style: none;
+  padding: 0;
+  float: right;
+  width: 788px;
+  color: #fff;
+  margin: 0 0 1em;
+  position: relative; }
+  .wrapNav ul.mainNav li {
+    margin: 2px 0px 0px;
+    padding: 0;
+    list-style: none;
     float: left;
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-    color: #97929D; }
-    #breadcrumbs ul li:before {
-      content: '\f105';
-      font-family: FontAwesome;
-      margin-left: 6px;
-      margin-right: 5px;
-      position: relative;
-      float: left;
-      font-size: 12px;
-      line-height: 18px; }
-    #breadcrumbs ul li a {
-      font-size: 0.75rem;
-      line-height: 1.125rem;
-      float: left;
-      color: #194298; }
-      #breadcrumbs ul li a:hover {
-        color: #194298;
-        text-decoration: none; }
-    #breadcrumbs ul li.home:before {
-      content: '\f015';
-      color: #194298; }
-    #breadcrumbs ul li.currentPage a h1 {
-      font-size: 0.75rem;
-      line-height: 1.125rem;
-      cursor: text;
-      color: #97929d;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif; }
-    #breadcrumbs ul li.currentPage a:hover {
-      border-bottom: 0;
-      color: inherit; }
+    display: inline-block; }
+    .wrapNav ul.mainNav li a {
+      font-family: "Oswald", sans-serif;
+      font-size: 13px;
+      color: #FFF;
+      line-height: 55px;
+      padding: 0px 2.25em 0 8px;
+      font-weight: 300;
+      min-width: 1px;
+      text-transform: uppercase; }
+    .wrapNav ul.mainNav li ul {
+      display: none; }
+
+ul.ctaButtons {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+  width: 100%; }
+  ul.ctaButtons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: none;
+    display: block;
+    width: 100%; }
+    ul.ctaButtons li a {
+      display: block;
+      width: 325px;
+      height: 76px;
+      color: #E6E6E6;
+      line-height: 76px;
+      padding: 0px 10px 0px 91px;
+      font-size: 23px;
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      text-decoration: none; }
+    ul.ctaButtons li.first a {
+      background: url(../image/rt-navbg1.jpg) no-repeat 0 0; }
+      ul.ctaButtons li.first a:hover {
+        background: url(../image/rt-navbg1-hover.jpg) no-repeat 0 0; }
+    ul.ctaButtons li.donate a {
+      background: url(../image/rt-navbg2.jpg) no-repeat 0 0;
+      margin: 7px 0; }
+      ul.ctaButtons li.donate a:hover {
+        background: url(../image/rt-navbg2-hover.jpg) no-repeat 0 0; }
+    ul.ctaButtons li.last a {
+      background: url(../image/rt-navbg3.jpg) no-repeat 0 0; }
+      ul.ctaButtons li.last a:hover {
+        background: url(../image/rt-navbg3-hover.jpg) no-repeat 0 0; }
 
 /*---------------------------------------------
                      ::4.4 Sidebar Navigation
 ----------------------------------------------*/
-.sidebar nav ul {
+.wrapSidebar ul {
   width: 100%;
   float: left; }
-  .sidebar nav ul h5 {
-    line-height: 1;
-    margin: 0;
-    font-size: 1.203125rem;
-    color: #4e4e4e;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase; }
-  .sidebar nav ul li {
+  .wrapSidebar ul li {
     width: 100%;
     float: none;
     border-top: 1px solid #d4d2d4; }
-    .sidebar nav ul li a {
+    .wrapSidebar ul li a {
       font-size: 0.875rem;
       font-weight: normal;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Oswald", sans-serif;
       padding: 0.875rem 0.875rem 0.875rem 1.75rem;
       line-height: 1.3125rem;
       border: 0;
       color: #4e4e4e; }
-      .sidebar nav ul li a:before {
-        content: '\f105';
-        font-family: FontAwesome;
-        position: absolute;
-        left: 1em; }
-      .sidebar nav ul li a:hover, .sidebar nav ul li a.selected {
+      .wrapSidebar ul li a:hover, .wrapSidebar ul li a.selected {
         text-decoration: none;
         color: #194298;
         border: 0; }
-      .sidebar nav ul li a.selected {
+      .wrapSidebar ul li a.selected {
         font-weight: bold; }
-    .sidebar nav ul li ul {
+    .wrapSidebar ul li ul {
       display: none;
       margin: 0;
       padding: 0.4375rem 0.875rem 0.875rem 0.875rem;
       background-color: #f0f0f0; }
-      .sidebar nav ul li ul li a {
+      .wrapSidebar ul li ul li a {
         padding-bottom: 0.4375rem;
         padding-top: 0.4375rem;
         color: #4e4e4e;
         background-color: transparent; }
-        .sidebar nav ul li ul li a:hover {
+        .wrapSidebar ul li ul li a:hover {
           background-color: #e5e5e5;
           color: #194298; }
-    .sidebar nav ul li.selected a {
-      background-color: #194298;
+    .wrapSidebar ul li.selected a {
+      background-color: #34AE23;
       color: #fff; }
-    .sidebar nav ul li.selected > ul {
+    .wrapSidebar ul li.selected > ul {
       display: block; }
-      .sidebar nav ul li.selected > ul li a {
+      .wrapSidebar ul li.selected > ul li a {
         display: block; }
-      .sidebar nav ul li.selected > ul li ul {
+      .wrapSidebar ul li.selected > ul li ul {
         display: none; }
-      .sidebar nav ul li.selected > ul li.selected ul {
+      .wrapSidebar ul li.selected > ul li.selected ul {
         display: block; }
-    .sidebar nav ul li.first a:before {
-      font-family: FontAwesome;
-      color: #c7c5c7;
-      display: inline-block;
-      content: '\f015';
-      font-size: 0.90208125rem;
-      line-height: 1.32395625rem;
-      left: 0.7em; }
-    .sidebar nav ul li.first a:hover {
-      background-color: #e5e5e5;
-      color: #194298; }
-      .sidebar nav ul li.first a:hover:before {
-        color: #194298; }
-      .sidebar nav ul li.first a:hover h5 {
-        color: #194298; }
-
-/* Mobile - Nav */
-@media (max-width: 900px) {
-  .mobileSidebarToggle.showOnMobile {
-    display: block; } }
-.mobileSidebarToggle.showOnMobile {
-  border: 1px solid #D4D2D4;
-  color: #4e4e4e;
-  margin-bottom: 1.5rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  float: left;
-  width: 100%; }
-  .mobileSidebarToggle.showOnMobile .mobileSidebarToggle {
-    padding: 0.875rem 0.875rem 0.875rem 2.1875rem;
-    color: #194298;
-    position: relative;
-    cursor: pointer; }
-    .mobileSidebarToggle.showOnMobile .mobileSidebarToggle:before {
-      content: '\f0c9';
-      font-family: FontAwesome;
-      display: inline-block;
-      font-size: 0.875rem;
-      line-height: 1;
-      position: absolute;
-      left: 1em;
-      top: 1.15em; }
-    .mobileSidebarToggle.showOnMobile .mobileSidebarToggle.active {
-      font: 0/0 a;
-      background-color: #E5E5E5; }
-      .mobileSidebarToggle.showOnMobile .mobileSidebarToggle.active:before {
-        content: '\f00d'; }
-      .mobileSidebarToggle.showOnMobile .mobileSidebarToggle.active:after {
-        position: relative;
-        content: 'Close';
-        font-size: 0.875rem;
-        line-height: 1;
-        top: 2px;
-        font-family: Arial, Helvetica, sans-serif; }
-  .mobileSidebarToggle.showOnMobile ul {
-    width: 100%;
-    display: none;
-    clear: both; }
-    .mobileSidebarToggle.showOnMobile ul.active {
-      display: block; }
-    .mobileSidebarToggle.showOnMobile ul li {
-      border-top: 1px solid #d4d2d4;
-      margin: 0;
-      width: 100%;
-      position: relative; }
-      .mobileSidebarToggle.showOnMobile ul li a {
-        border-bottom: 0;
-        color: #4e4e4e;
-        padding: 0.875rem 0.875rem 0.875rem 1.75rem;
-        font-size: 0.875rem;
-        line-height: 1.3125rem;
-        position: relative; }
-        .mobileSidebarToggle.showOnMobile ul li a:before {
-          color: #c7c5c7;
-          content: '\f105';
-          font-family: FontAwesome;
-          position: absolute;
-          left: 1em; }
-        .mobileSidebarToggle.showOnMobile ul li a h5 {
-          margin: 0;
-          padding: 0; }
-      .mobileSidebarToggle.showOnMobile ul li.first a {
-        color: #535961; }
-        .mobileSidebarToggle.showOnMobile ul li.first a h5 {
-          color: #535961;
-          font-size: 0.875rem;
-          line-height: 1;
-          font-family: Arial, Helvetica, sans-serif; }
-        .mobileSidebarToggle.showOnMobile ul li.first a:before {
-          font-family: FontAwesome;
-          color: #c7c5c7;
-          display: inline-block;
-          content: '\f015';
-          font-size: 0.7875rem;
-          line-height: 1.3125rem;
-          left: 0.7em;
-          top: 0.85em; }
-        .mobileSidebarToggle.showOnMobile ul li.first a:hover {
-          background-color: #e5e5e5;
-          color: #194298; }
-          .mobileSidebarToggle.showOnMobile ul li.first a:hover:before {
-            color: #194298; }
 
 /*---------------------------------------------
                      ::4.5 Footer Navigation
@@ -4730,12 +4696,9 @@ a.skip:hover, a.skip:active, a.skip:focus {
 ==========================================================================================*/
 body {
   color: #4e4e4e;
-  line-height: 1.5rem;
+  line-height: 1;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif; }
-
-#wrapContent section[role="content"], .LoginLink {
-  font-size: 1rem; }
 
 /*---------------------------------------------
                      ::5.1 Headers
@@ -4760,28 +4723,8 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 2.75rem;
-  letter-spacing: -0.015em;
   display: block;
   line-height: 3rem; }
-  @media (max-width: 767px) {
-    h1 {
-      font-size: 2.115625rem;
-      line-height: 2.625rem; } }
-
-.wrapPageHeader h1 {
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: 100%;
-  clear: both; }
-  .wrapPageHeader h1:empty {
-    display: none; }
-  @media (max-width: 767px) {
-    .wrapPageHeader h1 {
-      font-size: 2.115625rem;
-      line-height: 2.625rem;
-      letter-spacing: -0.5px;
-      margin: 0; } }
 
 h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, .Ev2_TitleLabel, .Ev2_RegistrationEventTitle, .DiscussionGroupFormTitle, .EventItemTitleName, .SummaryGridEventTitle, .NewsChannelItemTitle, .EventCalendarPartContainer .DetailEventTitle, *.LoginSectionHeader, .DonorGrantListingHeading, .headerOneStyle {
   background: transparent;
@@ -4793,10 +4736,6 @@ h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
   line-height: 2.625rem;
   font-weight: normal;
   font-family: Arial, Helvetica, sans-serif; }
-  @media (max-width: 767px) {
-    h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, .Ev2_TitleLabel, .Ev2_RegistrationEventTitle, .DiscussionGroupFormTitle, .EventItemTitleName, .SummaryGridEventTitle, .NewsChannelItemTitle, .EventCalendarPartContainer .DetailEventTitle, *.LoginSectionHeader, .DonorGrantListingHeading, .headerOneStyle {
-      font-size: 1.875rem;
-      line-height: 2.25rem; } }
 
 *.BBFormTitle, *.SurveyTitle, *.ReportTitle, *.NCC_Forms_Title, *.SearchFormTitle, *.EventCalendarName, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.DiscussionGroupFormTitle, *.JobBoardFormTitle, *.EventSectionHeader, *.LoginSectionHeader, *.LoginFormTitle, *.DonationListingHeading, *.CalendarFormLegend, *.DirectoryFormTitle, *.CalendarFormLegend, *.ProfileFormTitle, *.DiscussionGroupHeadingCell, *.BBPollsFormTitle, *.NewsChannelFormTitle, *.FRSectionHeader, .NewsChannelItemTitle, .DonorGrantListingHeading {
   margin: 0;
@@ -4805,14 +4744,10 @@ h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
 h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, *.SearchJobHeading, *.PostJobHeading, *.PostDiscussionTopicHeadingCell, .AdditionalDonation_Heading, .Ev2_SummaryHeader, .Ev2_RegistrantAddressHeader label, .Ev2_RegistrantHeader, .EventItemTitleDescription, .EventTicketsHeaderCell {
   background: inherit;
   height: auto;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 2.25rem;
   font-weight: normal;
   font-family: Arial, Helvetica, sans-serif; }
-  @media (max-width: 767px) {
-    h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, *.SearchJobHeading, *.PostJobHeading, *.PostDiscussionTopicHeadingCell, .AdditionalDonation_Heading, .Ev2_SummaryHeader, .Ev2_RegistrantAddressHeader label, .Ev2_RegistrantHeader, .EventItemTitleDescription, .EventTicketsHeaderCell {
-      font-size: 1.590625rem;
-      line-height: 1.875rem; } }
 
 /*
 *.SurveyTitle, *.ReportTitle, *.NCC_Forms_Title, *.SearchFormTitle, *.EventCalendarName, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.DiscussionGroupFormTitle, *.JobBoardFormTitle, *.EventSectionHeader, *.LoginSectionHeader, *.LoginFormTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.CalendarFormLegend, *.DirectoryFormTitle, *.CalendarFormLegend, *.ProfileFormTitle, *.DiscussionGroupHeadingCell, *.BBPollsFormTitle, *.NewsChannelFormTitle, *.FRSectionHeader {
@@ -4821,25 +4756,16 @@ h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeadi
 */
 h4, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
   color: #535961;
-  letter-spacing: -0.01em;
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: normal;
   font-family: Arial, Helvetica, sans-serif; }
-  @media (max-width: 767px) {
-    h4, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
-      font-size: 1.36354375rem;
-      line-height: 1.875rem; } }
 
 h5, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
   font-size: 1.375rem;
   line-height: 1.875rem;
   font-weight: normal;
   font-family: Arial, Helvetica, sans-serif; }
-  @media (max-width: 767px) {
-    h5, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
-      font-size: 1.309375rem;
-      line-height: 1.875rem; } }
 
 h6 {
   color: #535961;
@@ -4879,7 +4805,7 @@ p, table.BBListingTable p {
   padding: 0;
   margin: 0 0 0.75em;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 400;
   white-space: normal; }
 
@@ -4987,10 +4913,13 @@ em {
 ul, ol {
   margin: 0 0 20px; }
 
-.wrapContent ul, .wrapContent ol {
+.mainContent ul, .mainContent ol {
   padding: 0 0 0 1.15em;
-  font-weight: 300; }
-  .wrapContent ul ul, .wrapContent ul ol, .wrapContent ol ul, .wrapContent ol ol {
+  font-weight: normal;
+  font-size: 12px; }
+  .mainContent ul li, .mainContent ol li {
+    font-size: 12px; }
+  .mainContent ul ul, .mainContent ul ol, .mainContent ol ul, .mainContent ol ol {
     padding-top: .75em;
     padding-bottom: .75em; }
 
@@ -5035,30 +4964,40 @@ input[type="submit"], input[type="button"], input.BBFormSubmitButton, button, a.
   display: inline-block;
   cursor: pointer;
   text-decoration: none !important;
-  line-height: 1.875rem;
+  line-height: 1.25rem;
   height: auto;
-  font-size: 1.375rem;
+  font-size: 0.875rem;
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0.54545em 20px;
+  padding: 4px 14px;
   text-transform: none;
   text-align: center;
   width: auto;
   vertical-align: middle;
   color: white;
-  background: #194298;
-  border: 1px solid #730f0f;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
+  background: #A60020;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
   transition: all 0.15s ease 0s; }
 
 /* Default Button Hovers */
 input[type="submit"]:hover, input[type="button"]:hover, input.BBFormSubmitButton:hover, button:hover, a.PaymentPart_UpdateCartLink:hover, a.PaymentPart_CartItemRemoveText:hover, a[id$="UpdateLink"]:hover, a[id$="btnInsert"]:hover, a[id$="InsertLink"]:hover, div[id$="pnlAddNew"] a:hover, a.CommandButton:hover, a[id$="ExpandCollapseLinkButton"]:hover, a[id$="NewMessageHyperlink"]:hover, div[id$="MessageView1_ActionsMenu"] a[value="16"]:hover, div[id$="PanelOnlineStatus"] + div + div + div ul li a:hover, table.ProfilePhotoFormTable input[value="Update"]:hover, table.ProfilePhotoFormTable input[value="Remove Photo"]:hover, a[id$="LinkButtonYes"]:hover, input[id$="btnSave"].DonorGrantSubmitButton:hover, input[id$="btnCancel"].DonorGrantSubmitButton:hover, input.QuickSearchButton:hover, a.BBDocumentTabButton:hover, a.BBDocumentEditButtonWAI:hover, a.BBDocumentApproveButtonWAI, a.defaultGoldButton:hover, input.ListViewDateRangeGoButton[type="button"]:hover {
-  background: white;
-  color: #194298; }
+  background: #A60020;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: white; }
 
 /*---------------------------------------------
                      ::6.2 Primary Buttons
@@ -5106,31 +5045,6 @@ input[type="submit"][disabled], input[type="button"][disabled], a.aspNetDisabled
   border: 0;
   cursor: default !important; }
 
-button.sidebarButton, a.sidebarButton {
-  font-size: 0.875rem;
-  line-height: 1.0625rem;
-  display: block;
-  width: 100%;
-  background: #B5BB14;
-  border: solid 1px #fff;
-  text-transform: uppercase;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  margin: 0.625rem 0 0.5rem;
-  text-align: center;
-  color: #fff;
-  padding: .35rem 1.5rem; }
-  button.sidebarButton:hover, a.sidebarButton:hover {
-    background: #194298; }
-
 /*=========================================================================================
                      ::7. FORMS
 ==========================================================================================*/
@@ -5145,7 +5059,7 @@ input[type="text"][class*="Narrow"].DonationTextboxNarrow {
 ----------------------------------------------*/
 input[type="text"], textarea, .BBFormTextArea, input[type="password"] {
   color: #867f8c;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 28px;
@@ -5179,9 +5093,9 @@ label.QuickSearchFieldCaption {
 
 label, .BBFieldCaption, select.BBFormSelectList {
   color: #867f8c;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1rem;
+  line-height: 12px;
   font-weight: normal;
   text-align: left; }
 
@@ -5189,16 +5103,15 @@ label, .BBFieldCaption, select.BBFormSelectList {
   vertical-align: top;
   text-align: right;
   padding: 7px 2% 0 0;
-  font-weight: 400;
-  text-transform: lowercase;
-  font-variant: small-caps;
+  text-transform: none;
   color: #4e4e4e;
   font-weight: normal;
   text-align: left; }
 
 select.BBFormSelectList, select {
   margin-bottom: 0.75rem;
-  padding: 1%;
+  padding: 0 5px;
+  line-height: 21px;
   width: auto;
   max-width: 95%;
   -webkit-border-radius: 0;
@@ -5208,7 +5121,7 @@ select.BBFormSelectList, select {
   border-radius: 0;
   border: 1px solid #cccacc;
   outline: 0;
-  color: #867f8c; }
+  color: #4e4e4e; }
 
 .BBFormRequiredFieldMarker {
   color: red;
@@ -5375,44 +5288,6 @@ img {
   float: right;
   margin: 0 0 0.5em 0.5em; }
 
-#wrapContent header aside#pageImage {
-  float: right;
-  text-align: right; }
-
-.sidebarContent, .commTxt {
-  position: relative;
-  z-index: 1; }
-  .sidebarContent::before, .commTxt::before {
-    font-family: FontAwesome;
-    content: '\f0d8';
-    position: absolute;
-    z-index: 200;
-    font-size: 7.5rem;
-    line-height: 1;
-    color: #ccc;
-    top: -.65em;
-    left: 2.5rem; }
-  .sidebarContent:empty::before, .commTxt:empty::before {
-    display: none; }
-
-.commTxt::before {
-  color: #eee; }
-
-.footerAlt img {
-  margin-right: 0.8125rem; }
-  @media (max-width: 47.9375em) {
-    .footerAlt img {
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 10px;
-      text-align: center;
-      display: block; } }
-  .footerAlt img:nth-child(2) {
-    margin-right: 1.25rem; }
-    @media (max-width: 47.9375em) {
-      .footerAlt img:nth-child(2) {
-        margin-right: 0; } }
-
 /*=========================================================================================
                      ::11. TABLES
 ==========================================================================================*/
@@ -5440,7 +5315,7 @@ table.DiscussionTopicList .BBListOddRowStyle {
                      ::11.2 Header Rows
 ----------------------------------------------*/
 table.BBListingTable th, tr.JobResultsListHeader td, tr.BBDocumentDisplayHeaderRow td, tr.DiscussionSearchHeader td, tr.DiscussionTopicListHeader td {
-  background: #edf4fa;
+  background: #194298;
   /* $client-color-background */
   color: #FFF;
   /* $client-color-background-invert */
@@ -5521,9 +5396,9 @@ a[id*="DonationCapture1_lnkcsc_help"].BBLinkHelpIcon img {
 
 table[id*="tblAmount"] .DonationFieldControlCell {
   color: #4e4e4e;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1rem; }
+  line-height: 12px; }
 
 tr[id*="trOther"] td[id*="tdOther"] {
   vertical-align: top;
@@ -5584,31 +5459,27 @@ tbody[id*="tbdCart"] tr[id*="trCart"] table.DonationGrid[id*="dgCart"] .Donation
 
 @media (min-width: 1024px) {
   table.BBFormTable.DonationFormTable {
-    width: 82%; }
+    width: auto; }
     table.BBFormTable.DonationFormTable .BBFieldCaption {
       text-align: left;
-      width: 0; }
+      width: 180px; }
     table.BBFormTable.DonationFormTable tbody[id*="tbdCart"] tr[id*="trAddToCart"] .emptyTD {
       display: table-cell; }
     table.BBFormTable.DonationFormTable tr[id*="trTributeDesc2"] + tr td.emptyTD {
       display: table-cell; }
     table.BBFormTable.DonationFormTable .BBFieldControlCell {
-      width: 20%; }
-    table.BBFormTable.DonationFormTable .onlyOtherAmtShown .otherAmountTd:after {
-      display: none !important; }
-    table.BBFormTable.DonationFormTable .onlyOtherAmtShown .BBFieldControlCell {
-      width: 80%; } }
+      width: auto; }
+    table.BBFormTable.DonationFormTable .BBFieldControlCell input[type="checkbox"], table.BBFormTable.DonationFormTable .BBFieldControlCell input[type="radio"] {
+      margin-bottom: 0.75rem; } }
 table.BBFormTable.DonationFormTable .BBFormTitle, table.BBFormTable.DonationFormTable .BBListingHeading {
   padding-top: 1rem; }
 table.BBFormTable.DonationFormTable table[id*="tblAmount"] {
   margin-bottom: 1rem; }
   table.BBFormTable.DonationFormTable table[id*="tblAmount"] .DonationFieldControlCell {
-    width: auto;
+    width: 58.5%;
     vertical-align: top; }
     table.BBFormTable.DonationFormTable table[id*="tblAmount"] .DonationFieldControlCell input[name*="givingLevels"] {
       margin: 0 10px 13px 0; }
-      table.BBFormTable.DonationFormTable table[id*="tblAmount"] .DonationFieldControlCell input[name*="givingLevels"] + label[for*="rdo"] {
-        display: none; }
 table.BBFormTable.DonationFormTable .donateGivAmtLblTxt {
   margin-left: 8px;
   color: #867f8c; }
@@ -5847,7 +5718,7 @@ table.EventItemsTable .EventItemTitleTime {
   color: #4e4e4e;
   display: block;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 400;
   padding: 0; }
 
@@ -5855,7 +5726,7 @@ table[id$=tblProgress] {
   background-color: #f9f9f9; }
 
 .EventProgressCell {
-  background: #edf4fa;
+  background: #194298;
   border: 0;
   color: #fff; }
 
@@ -5948,11 +5819,11 @@ td[id*="rpFileList_EditBtnCell"] {
   font-size: 1.25em;
   color: #fff;
   padding: .25em .65em;
-  background: #ec720b; }
+  background: #34AE23; }
 
 [id*="btnAddDocument"]:hover:after {
   color: #fff;
-  background: #bb5a09; }
+  background: #27841a; }
 
 a[id*="rpFileList_btnEdit"]:before, a[id*="rpFileList_btnDelete"]:before {
   display: inline-block;
@@ -5965,7 +5836,7 @@ a[id*="rpFileList_btnEdit"]:before, a[id*="rpFileList_btnDelete"]:before {
   font-size: 1rem;
   height: auto;
   text-shadow: none;
-  color: #ec720b; }
+  color: #34AE23; }
 
 a[id*="rpFileList_btnEdit"]:before {
   content: '\f044'; }
@@ -6001,10 +5872,10 @@ a[id*="rpFileList_FileLink"]:before {
   font-size: 1rem;
   line-height: 1;
   padding-right: .25em;
-  color: #ec720b; }
+  color: #34AE23; }
 
 table[id*="tblDocUpload"] tr[id*="trOriginalFile"] td:last-child {
-  font-size: 1rem;
+  font-size: 12px;
   padding: 5px 0 1em; }
 
 .BBDocumentDisplayTable tr > td > hr {
@@ -6022,8 +5893,8 @@ table[id*="tblDocUpload"] tr[id*="trOriginalFile"] td:last-child {
 dl.myHomeProfileDisplay {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
-  line-height: 1.5rem; }
+  font-size: 12px;
+  line-height: 1; }
   dl.myHomeProfileDisplay dd {
     margin: 0 0 0.75rem;
     padding: 0; }
@@ -6041,8 +5912,8 @@ dl.myHomeProfileDisplay {
 ul.myHomeProfileLinks {
   margin: 0;
   padding: 0 0 0 .15em !important;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 12px;
+  line-height: 1;
   list-style: none; }
   ul.myHomeProfileLinks li {
     margin: 0 0 0.75rem;
@@ -6052,7 +5923,7 @@ ul.myHomeProfileLinks {
       font-family: FontAwesome;
       display: inline-block;
       padding-right: .5em;
-      color: #ec720b;
+      color: #34AE23;
       font-size: .875rem; }
   ul.myHomeProfileLinks li.myProfile a:before {
     content: '\f007'; }
@@ -6067,8 +5938,8 @@ ul.myHomeProfileLinks {
                      ::13.9 Survey Styles
 ----------------------------------------------*/
 *.SurveySubTitle {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 12px;
+  line-height: 1;
   color: #4e4e4e;
   display: block;
   margin-bottom: 0.75rem; }
@@ -6084,7 +5955,7 @@ ul.myHomeProfileLinks {
 .SurveyQuestionSequence {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 12px;
   color: #4e4e4e;
   background: #eee;
   width: 25px;
@@ -6145,1215 +6016,20 @@ table.userLoginPart.taCenter {
   table.userLoginPart.taCenter table.BBFormTable .BBFieldControlCell {
     width: 80%; }
 
-/*=========================================================================================
-                     ::14. PRINT STYLES
-==========================================================================================*/
-@media print {
-  body {
-    font-family: arial, helvetica, sans-serif;
-    color: #000; }
+.BBSequenceMapContent label.DCFieldCaption + select, .BBSequenceMapContent label.DCFieldCaption + input {
+  max-width: 300px; }
 
-  .SurveyAnswerTableHeaderRow, .BBListOddRowStyle {
-    background-color: transparent; }
-
-  .SurveyAnswer {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 12px;
-    padding: 5px; }
-
-  .BBAdminButtonLabel, input[id*="btnPrintResults"].BBFormSubmitButton.SurveyButton, .AdminModalTitle {
-    display: none !important; } }
-/*=========================================================================================
-                     ::15. RESPONSIVE STYLES
-==========================================================================================*/
-.showOnMobile {
+[id*="ev2errors"].Ev2_ValidationSummary:empty {
   display: none; }
 
-/*---------------------------------------------
-                     ::15.3 Mobile
-----------------------------------------------*/
-@media (max-width: 767px) {
-  .showOnMobile {
-    display: block; }
-
-  /* --- TABLE STYLES --- */
-  .BBFormTable {
-    width: 100%; }
-
-  td.dInlineBlock {
-    display: table-cell; }
-
-  /* --- IMAGE STYLES --- */
-  img.ui-datepicker-trigger {
-    vertical-align: middle; }
-
-  *.BBLinkHelpIcon img {
-    vertical-align: middle; }
-
-  .imgBorder {
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    border: 1px solid #f79151;
-    padding: 1px;
-    position: relative; }
-
-  /* --- CUSTOM CLASSES ---*/
-  .vaMiddle {
-    vertical-align: middle; }
-
-  .taRight {
-    text-align: right; }
-
-  .clearFloat {
-    clear: both; }
-
-  .displayNone {
-    display: none; }
-
-  .w100pImage, *.w100pImage img {
-    width: 100%; }
-
-  /* --- BBNC FORM BRANDING OVERRIDES ---*/
-  /* bbnc form border colors */
-  *.MatchFinderEvenRowStyle, *.MatchFinderOddRowStyle, *.ReportEvenRowStyle, *.ReportOddRowStyle, *.SpellSuggestionList, *.CHFormTable fieldset div, *.DirectoryListingItem, *.ECardSectionSeparator, *.DetailCaptionContainer, *.EventItemRegistrationsTable tr, *.FRFormTable fieldset div, *.GivingSearchSearchForm, *.JobResultsEvenRowStyle, *.JobResultsOddRowStyle, *.BBMembershipBenefitsGridItem td, *.PaymentPartGrid, *.PaymentPartGrid tr, *.PaymentPartGrid th, *.PaymentPartGrid td, *.PagerContainerTable, *.TransactionManagerGrid, *.TransactionManagerGridHeaderCell, *.EventAttendeesGrid, *.ProfileFieldControlCell div, *.LoginFormCheckListContainer, *.NewsChannelStoryList, *.ClassPageRosterTable, *.ClassAveragesTable, *.UpcomingAssignmentsTable, *.TeacherAttendanceTable, *.FacultyClassRosterTable, *.ClassScheduleTable, *.TeamScheduleTable, *.StudentRecentlyGradedAssignmentsTable, *.StudentCumulativeGradesTable, *.StudentAttendanceTotalTable, *.StudentAttendanceRecentTable, *.TeamCoachesTable, *.TeamRosterTable {
-    border-color: #ccc; }
-
-  /* bbnc form header row bgcolors & font colors */
-  *.BBModalDialogTitle, *.CHDashBoardSectionHeading, *.ECardSectionSeparator, *.CalendarViewDayHeader, *.FRDashBoardSectionHeading, *.FRManagerDashBoardSectionHeading, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderRow, *.DirectoryListingHeading, *.DiscussionTopicListHeader td, *.SurveyAnswerTableHeaderRow td, *.BBDocumentDisplayHeaderRow, *.BBDocumentDisplayHeaderRow td, *.JobResultsListHeader, *.BBNotesNoteTopicCell, *.BBNotesNoteNameCell, *.BBNotesNoteLinkCell, *.BBNotesNoteDateCell, *.ReportListingHeading, *.BBVolOpJobListHeader, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderLabel, *.TransactionManagerSummaryHeaderValue, *.SubscriptionFormListHeader, *.BBVolOpJobListHeader td, *.DonationGridHeader td, *.PaymentPartGrid_Header, *.customDataTable th, *.NCCS_CartHeader td, *.NCCS_OrdersHeader td, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep {
-    background: #edf4fa;
-    text-shadow: 0 0 2px #000000;
-    color: #FFF;
-    padding: 0.25em 0.5em;
-    text-align: left;
-    font-weight: normal; }
-
-  *.CalendarViewDayHeader {
-    height: auto;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1em;
-    font-family: inherit;
-    font-weight: normal; }
-
-  /* bbnc form shading */
-  *.BBListEvenRowStyle, *.CHFormTable fieldset div, *.EventAttendeesComplete, *.EventAttendeesCurrent, *.EventAttendeesFuture, *.EventAttendeesGrid, *.EventAttendeesOverallTotal, *.FRDonorListSetCaption, *.FRFormTable fieldset div, *.GivingSearchResultEvenRow, *.GivingSearchSearchForm, *.TransactionManagerDetailsEvenRow, *.TransactionManagerEvenRow, *.TransactionManagerSummaryDetailEvenRow, *.Scroller, #trEmailLists, *.DonationGridEvenRow, *.PaymentPartGrid_EvenRows, *.DiscussionTopicBody, *.UpcomingAssignmentsTable, *.FacultyClassRosterTable, *.StudentRecentlyGradedAssignmentsTable, *.StudentCumulativeGradesTable, *.StudentAttendanceTotalTable, *.StudentAttendanceRecentTable, *.customDataTable_rowShade {
-    background-color: #FFFFFF;
-    text-align: left; }
-
-  /*--- CLEARFIX---*/
-  *.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
-
-  *.clearfix {
-    display: inline-block; }
-
-  /* Hides from IE-mac \*/
-  * html .clearfix {
-    height: 1%; }
-
-  *.clearfix {
-    display: block; }
-
-  /* End hide from IE-mac */
-  /*--- ADMIN FIXES --- */
-  *.iefix {
-    /* IE hack */
-    background: none\9;
-    /* Targets IE only */
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(); }
-
-  header.row[role="banner"] #utility.columns table.QuickSearchFormTable {
-    display: table !important; }
-
-  /*----------------------
-   Mobile Part Styles
-  ---------------------- */
-  input[type="text"], textarea, .BBFormTextArea, input[type="password"], input.BBFormTextbox, select.BBFormSelectList {
-    margin-bottom: 1.7rem; }
-
-  table.BBFormTable.LoginFormTable {
-    width: 100%; }
-    table.BBFormTable.LoginFormTable td[id*="LastName"].LoginFieldCaption + .BBFieldControlCell {
-      margin-left: 0 !important; }
-
-  table.BBFormTable .BBFieldCaption, table.BBFormTable .BBFieldControlCell, tr[id*="trComments"] td.DonationFieldCaption + td {
-    display: block;
-    width: 100%; }
-
-  table.BBFormTable .BBFieldCaption:after, table.BBFormTable .BBFieldControlCell:after, table.BBFormTable .BBFieldCaption:before, table.BBFormTable .BBFieldControlCell:before {
-    content: " ";
-    display: table; }
-
-  table.BBFormTable .BBFieldCaption:after, table.BBFormTable .BBFieldControlCell:after {
-    clear: both; }
-
-  td.hideEmptyTD {
-    display: none !important; }
-
-  fieldset {
-    border: none;
-    font-family: inherit;
-    font-size: 1em;
-    padding: 0;
-    margin: 1em 0.5em; }
-
-  label {
-    font-family: inherit;
-    font-size: 1rem; }
-
-  fieldset legend {
-    margin-top: 1em; }
-
-  /* global classes */
-  .taCenter {
-    margin: 0 auto; }
-
-  table.taCenter {
-    width: 100%; }
-
-  .BBListingHeading {
-    border: 0 none; }
-
-  [id*="tdDesignationOther"] {
-    padding: 0.5em 0;
-    text-align: right;
-    font-weight: bold;
-    display: block;
-    width: 100% !important; }
-    [id*="tdDesignationOther"] input.BBFormTextbox {
-      max-width: 260px;
-      float: left; }
-
-  .BBFieldCaption, label.BBFieldCaption {
-    float: none;
-    text-align: left;
-    white-space: normal; }
-
-  .BBFieldControlCell {
-    padding: 0.5em;
-    vertical-align: center;
-    display: block;
-    width: 100%; }
-
-  td:empty {
-    display: none !important; }
-
-  .BBFormTextbox, .BBFormTextboxWide, .BBFormTextArea, .ECardTextBox {
-    padding: 0.5em;
-    width: 80%;
-    -webkit-appearance: none;
-    border-radius: 0;
-    border: 1px solid #BCBCBC; }
-
-  .BBFormChecklist {
-    border: 0 none; }
-
-  .hasDatepicker {
-    width: auto; }
-
-  /* Directory Form */
-  *.DirectoryListingTable, *.DirectoryFormTable {
-    width: 100%; }
-
-  *.DirectorySearchForm {
-    width: auto; }
-
-  .BBPager {
-    margin: 1em 0; }
-
-  *.DirectoryFieldCaption {
-    padding-bottom: 6px;
-    width: 100% !important;
-    text-align: left; }
-
-  *.DirectoryFieldCaption label {
-    position: absolute; }
-
-  *.DirectoryFieldControlCell {
-    padding: 1.5em 0 1em; }
-
-  .DirectoryFormSelectList {
-    max-width: 250px; }
-
-  #contentPrimary .BBListingHeadingLink {
-    text-decoration: none;
-    text-transform: none;
-    font-size: 1em; }
-
-  *.DirectoryListingItem {
-    padding: 8px 0 8px 6px; }
-
-  *.DirectoryNameLink {
-    display: block;
-    text-decoration: none; }
-
-  a.DirectoryPagingButton {
-    margin: 1em auto;
-    width: 12%;
-    text-align: center; }
-
-  a.DirectoryPagingButton {
-    width: 55px;
-    padding: 3px; }
-
-  /* Donation Form */
-  td.DonationListingHeading, td.DonationCaptureListingHeading {
-    background-color: transparent;
-    color: inherit;
-    font-weight: inherit;
-    margin: 0;
-    padding: 0 0 1em;
-    text-align: left; }
-
-  td {
-    padding: 0;
-    vertical-align: top; }
-
-  table {
-    border-collapse: collapse; }
-
-  .DonationCaptureFieldCaption, .DonationFieldCaption {
-    background: none repeat scroll 0 0 transparent;
-    padding: 0 0 6px;
-    text-align: left;
-    vertical-align: top !important;
-    width: 0; }
-
-  .DonationCaptureFieldCaption label, .DonationFieldCaption label, .DonationFieldCaption span {
-    position: relative; }
-
-  .DonationCaptureFieldControlCell, .DonationFieldControlCell, .sDonationCaptureFieldControlCell, .DonationFieldCaption + td {
-    padding: 0.25em 0 1em;
-    display: block;
-    width: 100%; }
-
-  .DonationFieldControlCell .DonationFieldControlCell {
-    padding: 6px 0; }
-
-  tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"] {
-    width: auto;
-    margin-bottom: 1.75rem; }
-    tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"] td {
-      width: 100%;
-      display: block;
-      float: left; }
-    tbody[id*="tbdyPaymentInfo"] table[id*="rdoPaymentOption"] td:first-child {
-      padding-bottom: 12px; }
-
-  tr[id*="trAnonymous"] td.DonationFieldControlCell {
-    padding-top: 0; }
-
-  tr[id*="trGiftType"] table[id*="rdoGiftType"] {
-    margin-bottom: 1.75rem; }
-
-  /* Giving Levels */
-  .DonationCaptureRequiredFieldMarker {
-    display: none; }
-
-  td.BBFieldControlCell table[style] {
-    margin: 0 !important; }
-
-  td.DonationFieldControlCell table[style] td {
-    vertical-align: middle; }
-
-  div[id$="UpdatePanel"] table[id$="tblAmount"] td.DonationFieldControlCell {
-    display: table-cell;
-    width: auto;
-    padding-right: 5px; }
-
-  tr[id*="trOther"] td:last-child > table {
-    border-collapse: separate; }
-
-  tr[id*="trOther"] td:last-child > table td:first-child {
-    width: 9px !important; }
-
-  table[id*="tblAmount"] tr[id*="trOther"] .donateGivAmtLblTxt.radioLabel {
-    display: none !important; }
-
-  table[id*="tblAmount"] tr[id*="trOther"] td.wsNowrap.BBFieldControlCell.DonationFieldControlCell table td[id*="Td1"]::after {
-    color: #fff; }
-
-  table[id*="tblAmount"] tr[id*="trOther"] td.wsNowrap.BBFieldControlCell.DonationFieldControlCell table td[id*="Td1"].boxChecked::after {
-    color: #535961; }
-
-  span[id$="lblSymbol"] {
-    padding: 0 3px 0 0; }
-
-  a.BBLinkHelpIcon {
-    font-size: 1em;
-    margin-left: 0;
-    display: inline-block; }
-
-  a.BBLinkHelpIcon img {
-    vertical-align: middle !important; }
-
-  td.DonationVerificationCell {
-    padding: 0; }
-
-  .DonationCaptureTextArea, .DonationCaptureTextbox, .DonationCaptureTextboxWide {
-    width: 90%; }
-
-  .DonationButtonCell {
-    text-align: left; }
-
-  .DonationSubmitButton {
-    margin: 1em auto; }
-
-  .DonationSelectList {
-    margin-top: 0.5em; }
-
-  table[id$='tblAmount'] {
-    margin-top: 0.5em; }
-
-  #divHeading {
-    background-color: transparent;
-    border: 0 none;
-    color: #91002C;
-    font-family: inherit;
-    font-size: 1em;
-    font-weight: bold;
-    height: auto;
-    line-height: normal;
-    overflow: visible;
-    padding: 0;
-    white-space: normal; }
-
-  #divModalPage {
-    position: static;
-    overflow: visible; }
-
-  #divContentPane {
-    position: static;
-    overflow: visible; }
-
-  #divContentPane td {
-    width: auto !important;
-    font-size: 0.75em !important; }
-
-  #divContentPane td img {
-    width: 100%;
-    max-width: 170px; }
-
-  #divContentPane td + td {
-    width: 60% !important; }
-
-  #dialogButtonsContainer {
-    display: none; }
-
-  #tblOther {
-    margin: 1em 0 0; }
-
-  div[id$=divFrequency] {
-    padding: 2em 0 1em;
-    position: relative; }
-
-  div[id$=divFrequency] label {
-    position: absolute;
-    top: 0; }
-
-  div[id$=divFrequency] input {
-    margin: 0.25em 0.25em 0.25em 0;
-    width: auto; }
-
-  /* Hide Other Label
-  
-  input[id$='_rdoOther']+label {
-  	display: none;
-  }*/
-  /* Event Calendar */
-  .EventCalendarButtonBar {
-    visibility: hidden;
-    display: none; }
-
-  .ListViewEventSubtitle {
-    font-weight: bold; }
-
-  .ListViewDateLabel {
-    display: block;
-    font-weight: bold; }
-
-  .DetailCaption {
-    text-transform: uppercase;
-    font-weight: bold; }
-
-  .DetailCaptionContainer {
-    padding: 0.5em; }
-
-  /* Custom Event Calendar  */
-  .CalendarViewCalendarContainer {
-    border: 0 none; }
-
-  .CalendarViewTopLeft label, .CalendarViewTopLeft select, .CalendarViewTopRight input, .CalendarViewEventItemContainer, .CalendarViewTopRight .EventCalendarButtons, .CalendarViewTodayText, .CalendarViewBottomIcons, .CalendarViewCalendarContainer + table {
-    display: none; }
-
-  #prevMonth, #nextMonth {
-    background: url("../image/leftArrow_wht.png") no-repeat scroll 50% 50% #022F54;
-    -webkit-border-radius: 12px 12px 12px 12px;
-    -moz-border-radius: 12px 12px 12px 12px;
-    border-radius: 12px 12px 12px 12px;
-    height: 24px;
-    text-indent: -50000px;
-    width: 24px; }
-
-  #nextMonth {
-    background-image: url("../image/rightArrow_wht.png");
-    float: right; }
-
-  .CalendarViewDayHeader, .CalendarViewToday, .CalendarViewOtherMonthDay, .CalendarViewWeekendDay, .CalendarViewDay {
-    text-align: center;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 3px solid #ffffff;
-    height: auto; }
-
-  .CalendarViewTopMiddle, .CalendarViewTopLeft, .CalendarViewTopRight {
-    padding: 0.5em 0;
-    vertical-align: middle; }
-
-  .CalendarViewTopRight {
-    text-align: left !important;
-    width: 10%; }
-
-  .CalendarViewTopLeft {
-    width: 10%; }
-
-  .CalendarViewDayHeader {
-    border: 0 none;
-    font-weight: bold;
-    color: #ffffff;
-    padding: 0.5em 0; }
-
-  .hasEvent {
-    background: #676767;
-    color: #ffffff;
-    font-weight: bold; }
-
-  .hasEvent:hover, .hasEvent:active {
-    background: #cc0000; }
-
-  .CalendarViewEventItemContainer {
-    position: absolute;
-    border: 3px solid #343434;
-    background: #ffffff;
-    padding: 0.25em;
-    box-shadow: 2px 4px 3px rgba(128, 128, 128, 0.6);
-    width: 85%;
-    color: #333333; }
-
-  .CalendarViewEvent {
-    font-size: 0.92em;
-    font-weight: normal;
-    color: #333333; }
-
-  .CalendarViewAllDayEvent {
-    border: 0 none; }
-
-  .closeEventItem {
-    text-align: right;
-    color: #cc0000;
-    padding: 0.5em; }
-
-  /* Event Listing Container */
-  #printStartCV {
-    position: relative; }
-
-  #EventListingContainer {
-    display: none;
-    border: 2px solid #676767;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -ms-border-radius: 3px;
-    border-radius: 3px;
-    background: #ffffff;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e0e0e0));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0', GradientType=0 );
-    /* IE6-9 */
-    box-shadow: 2px 4px 4px rgba(128, 128, 128, 0.6);
-    width: 95%;
-    margin: 0 auto;
-    color: #333333; }
-
-  .EventListing {
-    padding: 0.5em; }
-
-  /* Event Registration Form/ eCard Form */
-  table[id$="tblProgress"] {
-    background: #D5D5D5;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #D5D5D5));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#D5D5D5', GradientType=0 );
-    /* IE6-9 */
-    border-collapse: separate !important;
-    border: 1px solid #D5D5D5;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    margin: 0 0 2em; }
-
-  table[id$="tblProgress"] th:first-child, table[id$="tblProgress"] td:first-child {
-    -webkit-border-radius: 10px 0 0 10px;
-    -moz-border-radius: 10px 0 0 10px;
-    border-radius: 10px 0 0 10px; }
-
-  table[id$="tblProgress"] th:last-child, table[id$="tblProgress"] td:last-child {
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-    border-radius: 0 10px 10px 0; }
-
-  .EventProgressCellFuture, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep, .ECardFutureStep {
-    width: 18%;
-    padding: 0.25em 1%;
-    border: 0 none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    background-color: #01589B;
-    font-size: 0.92em;
-    color: #FFF;
-    text-shadow: 1px 1px 0 #333; }
-
-  .EventProgressCellFuture, .ECardFutureStep {
-    background-color: transparent; }
-
-  .EventProgressCellFuture .progContent, .EventProgressCellPast .progContent, .ECardFutureStep .progContent, .ECardPastStep .progContent {
-    display: none; }
-
-  .progContent br {
-    display: none; }
-
-  .EventItemRegistrationsTable tr {
-    border: 0 none; }
-
-  .EventItemRegistrationsTable .BBFieldControlCell {
-    padding: 0;
-    width: auto;
-    vertical-align: middle; }
-
-  .EventItemRegistrationsTable select {
-    width: auto !important; }
-
-  .EventTable input[value=Previous] {
-    float: left; }
-
-  .EventAttendeesOverallTotal {
-    padding-right: 0.25em; }
-
-  .EventItemRegistrantControlCellName, table[id*=dgRegistrantList] .BBFieldCaption {
-    width: auto;
-    padding: 0; }
-
-  .EventItemRegistrantControlCellName label, table[id*=dgRegistrantList] .BBFieldCaption label {
-    width: auto !important;
-    position: absolute; }
-
-  .EventItemRegistrantControlCell, table[id*=dgRegistrantList] .BBFieldCaption + td {
-    padding: 1.5em 0 1em; }
-
-  .EventAttendeesGrid {
-    border-collapse: separate !important;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    background-color: #FFF; }
-
-  .EventAttendeesCurrent, .EventAttendeesComplete, .EventAttendeesGrid tr {
-    background-color: transparent; }
-
-  .EventAttendeesGrid tr:first-child td {
-    padding: 1em 1em 0 0; }
-
-  .EventAttendeesGrid tr:first-child + tr td {
-    background-color: transparent;
-    padding: 0 1em 1em 0; }
-
-  .EventAttendeesGrid tr:first-child td td {
-    padding: 0; }
-
-  .EventAttendeesGrid img {
-    display: none; }
-
-  .Ev2_DateTimeLeftContainer, .Ev2_DateTimeRightContainer {
-    float: left;
-    display: block;
-    width: 100%;
-    margin: 1rem 0; }
-
-  .Ev2_TimeContainer {
-    margin: 0; }
-    .Ev2_TimeContainer .Ev2_TimeLabels {
-      margin: 0; }
-
-  .BBEventRegSequenceMap {
-    counter-reset: event-steps;
-    background-color: transparent; }
-    .BBEventRegSequenceMap li {
-      counter-increment: event-step;
-      width: 26%;
-      margin-bottom: 0;
-      margin-right: 1em; }
-    .BBEventRegSequenceMap .BBEventRegSequenceMapStepItem {
-      list-style: none;
-      white-space: nowrap;
-      overflow: hidden;
-      font-size: 0 !important; }
-      .BBEventRegSequenceMap .BBEventRegSequenceMapStepItem:before {
-        content: 'Step';
-        font-size: .75rem;
-        display: inline-block;
-        padding-right: .35rem;
-        padding-left: 1rem; }
-      .BBEventRegSequenceMap .BBEventRegSequenceMapStepItem:after {
-        content: counter(event-step,decimal);
-        font-size: .75rem;
-        padding: 0.8rem 0;
-        display: inline-block; }
-
-  .Ev2_RegistrationEventDateContainer, .Ev2_RegistrationEventTimeContainer {
-    width: 100%;
-    display: block; }
-
-  .BBSequenceMapCurrentStep:after {
-    font-size: 6.15rem;
-    top: -1.3rem;
-    right: -2rem; }
-
-  .Ev2_RegistrantFieldCell label[id*="ctlRegBox"] {
-    width: 100%;
-    text-align: left;
-    margin-top: .75rem;
-    margin-bottom: .5rem; }
-
-  .Ev2_RegistrantFieldCell input[type="checkbox"] + label[id*="ctlRegBox"] {
-    width: 90%; }
-
-  .Ev2_PriceTypeValidatorColumn.eventRegCartValidatorCell {
-    width: auto;
-    padding: 0; }
-
-  .ECardPreviewBlock {
-    padding: 0; }
-
-  .ECardPreviewBlock img {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 1px solid #D5D5D5;
-    width: 100% !important;
-    height: auto !important;
-    -webkit-box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.6);
-    -moz-box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.6);
-    box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.6); }
-
-  .ECardTextBox {
-    width: auto !important; }
-
-  .ECardSection {
-    padding: 0 1em;
-    margin: 1em 0; }
-
-  .ECardSection table {
-    border-collapse: collapse;
-    width: 100%; }
-
-  .ECardSection th {
-    padding: 0 0 6px;
-    vertical-align: top;
-    width: 0; }
-
-  .ECardSection th label {
-    position: absolute; }
-
-  .ECardSection td {
-    padding: 1.5em 0 1em; }
-
-  .ECardSection td input {
-    width: 90% !important; }
-
-  .ECardSectionSeparator {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px; }
-
-  /* User Login Form */
-  .LoginSectionHeader {
-    background: transparent;
-    font-style: normal;
-    padding: 0; }
-
-  .LoginLink {
-    display: block;
-    padding: 1em 0 0; }
-
-  .LoginLink:active {
-    text-decoration: underline; }
-
-  .LoginFieldCaption {
-    background: none repeat scroll 0 0 transparent;
-    padding: 0 0 6px;
-    text-align: left;
-    vertical-align: top;
-    width: 0; }
-
-  .LoginFieldCaption label {
-    position: absolute; }
-
-  input[id$='cbRememberLogin'] + label {
-    position: static; }
-
-  .LoginFormCheckList td {
-    padding: 0.25em 0; }
-
-  .LoginFormCheckListContainer {
-    padding: 1.5em 0 1em; }
-
-  .LoginFormTable {
-    width: 100%; }
-
-  .LoginFormTable .BBFieldControlCell, .LoginFormTable .BBFieldCaption + td {
-    padding: 1.5em 0 0;
-    display: block; }
-
-  .LoginFormTextArea, .LoginFormTextbox {
-    width: 90%; }
-
-  .LoginFormTitle {
-    padding: 0 0 0.5em; }
-
-  .LoginFormTable .BBFormRequiredFieldMarker {
-    width: 5%; }
-
-  /* Email Preferences Form */
-  label[id$=txtEmailAddress] {
-    padding: 0 0 6px;
-    display: block; }
-
-  input[id$=txtEmailAddress] {
-    display: block;
-    width: 95%; }
-
-  /* user profile form */
-  .ProfileFormTitle {
-    padding: 1em 0 1em; }
-
-  .ProfileFormTitle + .ProfileFormTitle {
-    display: none; }
-
-  .ProfileFieldCaption, .ProfileFormTable .BBFieldCaption {
-    padding: 1em 0 .25em;
-    text-align: left;
-    vertical-align: top; }
-
-  .ProfileFieldCaption label, .ProfileFieldCaption span, .ProfileFormTable .BBFieldCaption label, .ProfileFormTable .BBFieldCaption span {
-    position: relative; }
-
-  .ProfileFormSelectList {
-    max-width: 240px; }
-
-  .ProfileFieldControlCell {
-    padding: 0; }
-
-  .ProfileFieldControlCell + td {
-    vertical-align: middle; }
-
-  .ProfileFormPrivateControlCell {
-    text-align: center;
-    vertical-align: middle;
-    width: 20%;
-    white-space: nowrap;
-    padding: 0; }
-
-  .ProfileFormPrivateControlCell span.ProfileFormCheckbox {
-    display: inline-block;
-    margin-bottom: .75em; }
-
-  .ProfileFormRequiredFieldMarkerTD {
-    width: 0;
-    display: inline-block; }
-
-  .ProfileFormRequiredFieldMarker {
-    position: relative;
-    text-align: right !important;
-    padding-left: .5em;
-    vertical-align: bottom; }
-
-  .ProfileFormTextbox {
-    width: 90%; }
-
-  table.ProfileFormTable[id*="tbMain"] td.LoginFieldMessage {
-    white-space: normal;
-    text-align: left !important; }
-
-  div[id*="ProfileImageSelector"] {
-    margin-top: 1em; }
-
-  /* job board */
-  .JobSearchFieldCaption, .JobPostFieldCaption {
-    width: 0;
-    padding: 0 0 6px;
-    vertical-align: top; }
-
-  .JobSearchFieldCaption label, .JobPostFieldCaption label {
-    position: absolute; }
-
-  .JobSearchFieldControlCell, .JobPostFieldControlCell {
-    padding: 1.5em 0 1em;
-    width: auto; }
-
-  .JobPostFieldControlCell td {
-    width: auto !important;
-    vertical-align: middle; }
-
-  .JobPostSelectList, .JobSearchSelectList {
-    width: 50%; }
-
-  label[for$=txtSalaryMax] {
-    margin-right: 1em; }
-
-  .JobPostCheckboxCaption {
-    white-space: normal; }
-
-  /* news reader */
-  .NewsReaderFormTable img {
-    max-width: 100%; }
-
-  .NewsReaderFormImage {
-    padding-bottom: 1em; }
-
-  .NewsReaderItemDesc * {
-    font-size: 1em !important; }
-
-  label[for$=chkHeadlines], input[id$=chkHeadlines] {
-    display: none; }
-
-  /* Weblog */
-  .ChannelStoryDeleteButtonWAI {
-    margin: 0 0 0 1em; }
-
-  /* Personal Notes */
-  .BBNotesFieldCaption {
-    padding: 0 0 6px;
-    width: 0; }
-
-  .BBNotesFieldCaption label {
-    position: absolute; }
-
-  .BBNotesControlCell {
-    padding: 1.5em 0 1em; }
-
-  .BBNotesTextBox {
-    width: 95%; }
-
-  /* search part */
-  .SearchFormTable table {
-    border-collapse: collapse;
-    width: 100%;
-    position: relative; }
-
-  .SearchFormTable table td {
-    padding: 1.5em 0 3em; }
-
-  .SearchFormTable table td:first-child {
-    padding: 0 0 6px;
-    width: 0; }
-
-  label.SearchFieldCaption {
-    position: absolute;
-    width: auto;
-    margin: 0; }
-
-  .SearchTextBox {
-    width: 95%; }
-
-  .SearchButton {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin: 0 0 0 -25px; }
-
-  /* Payment Part */
-  .PaymentPartGrid {
-    width: 100%; }
-
-  div[id$='UpdatePanel'] table {
-    width: 100%; }
-
-  div[id$='UpdatePanel'] table div table table {
-    width: auto; }
-
-  div[id$='upDonationCapture'] .DonationCaptureListingHeading {
-    padding-top: 1.5em; }
-
-  *.PaymentPartGrid_Header th {
-    text-align: left; }
-
-  *.PaymentPartGrid td, *.PaymentPartGrid th {
-    vertical-align: middle;
-    padding: 0.25em; }
-
-  table.PaymentPartGrid {
-    border-color: #ffffff;
-    /* match content bg */ }
-
-  /* navigation buttons */
-  *.BBNavBarTable {
-    border-collapse: collapse;
-    clear: both; }
-
-  *.BBNavBarTable td {
-    padding: 0;
-    text-align: left; }
-
-  /* custom confirmation screen */
-  #wrapper dt {
-    float: left;
-    clear: left;
-    width: 33%; }
-
-  #wrapper label.DonationFieldCaption {
-    display: block;
-    float: none;
-    text-align: right;
-    width: auto; }
-
-  dd.DonationFieldControlCell {
-    display: block;
-    float: left;
-    font-style: italic;
-    line-height: 1.5em;
-    margin: 0.25em 0;
-    padding: 0;
-    text-align: left; }
-
-  .mergefield {
-    clear: left;
-    padding: 0;
-    margin: 0; }
-
-  /* profile display */
-  .ProfileDisplayFormTable td {
-    vertical-align: middle; }
-
-  .ProfileDisplayFieldCaption {
-    width: 40%;
-    text-align: left; }
-
-  .BBEventRegSequenceMapStep {
-    margin-right: 15px; }
-
-  .BBEventRegSequenceMapStepItem, .BBSequenceMapStepItem, .BBSequenceMapCurrentStepItem, .BBSequenceMapFutureStepItem, .BBEventRegSequenceMapStepLink:link {
-    padding: 0; }
-
-  .Ev2_RegistrantFieldCell, .Ev2_RegistrantFieldCell > div {
-    width: 100%; }
-
-  .Ev2_RegistrantContent input[type="text"], .Ev2_RegistrantContent textarea {
-    width: 225px;
-    height: auto; }
-
-  .Ev2_RegistrantAddressControlLabel {
-    margin-top: 1.25em; }
-
-  .Ev2_RegistrantFieldCell {
-    padding: 0; }
-    .Ev2_RegistrantFieldCell label {
-      display: block;
-      margin-top: 1.25em; }
-
-  input[id*="DonationCapture1_txtCSC"] {
-    width: auto !important; }
-
-  /* Volunteer Signup */
-  .BBVolOpJobDetailCaption, .BBVolOpSignUpControlCell {
-    display: block;
-    float: left;
-    width: 100%;
-    text-align: left; }
-
-  .BBVolOpSignUpControlCell {
-    padding: 0 0 .5em; }
-
-  .BBVolOpSignUpTextBox {
-    width: 80%; }
-
-  .BBVolOpJobDetailCaption {
-    text-align: left; }
-
-  input.hasDatepicker {
-    width: auto; }
-
-  /* Documents */
-  .BBDocumentDisplayTable tr.BBDocumentDisplayHeaderRow td {
-    padding: 0.45em 0.5em 0.25em;
-    background: #666666;
-    color: #fff; }
-
-  td[id*="UploadDocAddCell"], .BBDocumentFormTable td.BBDocumentFormTitle {
-    display: block;
-    width: 100%; }
-
-  .BBDocumentDisplayTable tr.BBDocumentDisplayHeaderRow td a {
-    color: #fff; }
-
-  /* Quick Search */
-  #wrapUtility table.QuickSearchFormTable input.QuickSearchTextbox {
-    margin-bottom: 8px; }
-  #wrapUtility table.QuickSearchFormTable input.BBFormSubmitButton.QuickSearchButton {
-    height: auto;
-    padding-top: 10px; }
-
-  /* Hide empty TDs and empty Spans */
-  .LoginFormTable .emptyTD, .LoginFormTable .emptyTDSpan {
-    display: none !important; }
-
-  select.BBFormSelectList {
-    max-width: 84%; }
-    select.BBFormSelectList.DonationSelectList {
-      max-width: 250px; }
-
-  div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] {
-    margin-bottom: 1.5rem; }
-    div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd {
-      position: relative;
-      padding: 10px 35px;
-      color: #fff;
-      background-color: #4e4e4e;
-      border: 1px solid #474c53; }
-      div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd input[id*="txtAmount"] {
-        margin: 0 0 0 5px; }
-      div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd:before {
-        content: '\f096';
-        font-family: FontAwesome;
-        display: inline-block;
-        font-size: 1.25rem;
-        line-height: 1;
-        position: absolute;
-        left: 0.5em;
-        top: 0.65em; }
-      div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd.boxChecked {
-        background-color: #fff;
-        color: #4e4e4e; }
-        div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd.boxChecked:before {
-          content: '\f14a'; }
-      div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd.emptyTD {
-        display: block; }
-      div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.otherAmountTd + td {
-        display: none; }
-    div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD {
-      display: none; }
-      div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell {
-        padding: 0 0 1rem; }
-        div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell .donateGivAmtLblTxt {
-          display: none;
-          width: 100%;
-          color: #fff;
-          background-color: #4e4e4e;
-          border: 1px solid #4e4e4e;
-          padding: 0 0 12px 34px;
-          margin-left: 0; }
-        div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell .radioLabel {
-          display: block;
-          width: 100%;
-          color: #fff;
-          background-color: #4e4e4e;
-          border: 1px solid #4e4e4e;
-          padding: 10px 35px;
-          position: relative; }
-          div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell .radioLabel:before {
-            content: '\f096';
-            font-family: FontAwesome;
-            display: inline-block;
-            font-size: 1.25rem;
-            line-height: 1;
-            position: absolute;
-            left: 0.5em;
-            top: 0.4em; }
-          div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell .radioLabel.boxChecked {
-            background-color: #fff;
-            color: #4e4e4e; }
-            div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell .radioLabel.boxChecked:before {
-              content: '\f14a'; }
-            div[id$="UpdatePanel"] table.BBFormTable.DonationFormTable table[id$="tblAmount"] td.givingAmountInputTD + td.BBFieldControlCell .radioLabel.boxChecked + span + .donateGivAmtLblTxt {
-              background-color: #fff;
-              color: #4e4e4e; }
-
-  .Ev2_AttributesItem {
-    display: block;
-    width: 100%;
-    padding-bottom: 8px;
-    text-align: left; }
-
-  .ListViewTopLeft {
-    display: block;
-    width: 100%;
-    padding: 0;
-    text-align: left; }
-    .ListViewTopLeft .ListViewDateLabel {
-      margin: 0;
-      padding: 0; }
-
-  .ListViewTopRight {
-    display: block;
-    width: 100%;
-    padding: 0 0 1rem;
-    text-align: left; }
-
-  td[id*="EventCalendar1_TDGo"] {
-    vertical-align: bottom; }
-    td[id*="EventCalendar1_TDGo"] input.ListViewDateRangeGoButton[type="button"] {
-      padding: 0 1em !important;
-      margin: 0 0 8px 10px; }
-
-  .TransactionManagerFilterContainer {
-    padding: 0; }
-
-  .TransactionManagerFieldContainer .BBFieldCaption {
-    display: block;
-    width: 100%;
-    padding-bottom: 8px; }
-
-  table.userLoginPart.taCenter table.taLeft {
-    width: 100%; }
-  table.userLoginPart.taCenter table.BBFormTable input.BBFormTextbox, table.userLoginPart.taCenter table.BBFormTable textarea.BBFormTextArea {
-    width: 100%;
-    max-width: none; }
-  table.userLoginPart.taCenter table.BBFormTable table.BBFormTable .BBFieldControlCell {
-    width: 100%; }
-    table.userLoginPart.taCenter table.BBFormTable table.BBFormTable .BBFieldControlCell .rememberLoginContainer {
-      width: 100%; }
-  table.userLoginPart.taCenter table.BBFormTable .BBFieldControlCell input[type="checkbox"] + label {
-    padding-top: 0; }
-
-  tbody[id*="tbdCart"] tr[id*="trAddToCart"] .DonationSubmitButton {
-    float: left; }
-
-  /* END Mobile Part Styles at 768 max width */ }
+#bbpay_Payment {
+  clear: both !important;
+  width: 100% !important; }
+  #bbpay_Payment input[type='text'] {
+    height: 21px !important;
+    line-height: 1;
+    min-width: 50px; }
+  #bbpay_Payment .x-form-invalid, #bbpay_Payment textarea.x-form-invalid {
+    border: 0; }
+  #bbpay_Payment .x-box-inner {
+    height: 22px !important; }

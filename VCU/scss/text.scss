@@ -236,8 +236,8 @@ p, table.BBListingTable p {
 
 footer {
 	h1, h2, h3, h4, h5, h6, p, a {
-		color: #efede9;
-		font-family: $alt-body-font;
+		color: #4C4841;
+		font-family: $body-font-family;
 		}
 	h5 {
 		font-weight:900;
@@ -246,9 +246,10 @@ footer {
 		text-transform:uppercase;
 	}
 	p {
-		font-size: rem(13);
-		line-height: rem(18);
-		margin-bottom: 30px;
+		font-size: rem(12.1667);
+		line-height: rem(15.8167);
+		margin: 0;
+		color: #4C4841;
 	}
 }
 p.skipLink 

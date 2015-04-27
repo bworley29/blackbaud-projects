@@ -5734,14 +5734,16 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 .wrapContent .mainContentAlt:before, .wrapContent .mainContentAlt:after {
   display: none;
 }
+.wrapContent.community {
+  /*
+  		@include media(max-width $medium-viewport) {
+  			width: 50%;
+  			right: 50%;
+  		}
+  */
+}
 .wrapContent.community .mainContent {
   padding-bottom: 1rem;
-}
-@media screen and (max-width: 56.25em) {
-  .wrapContent.community {
-    width: 50%;
-    right: 50%;
-  }
 }
 @media (max-width: 47.9375em) {
   .wrapContent.community {
@@ -5821,8 +5823,11 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
   .wrapCommunityContent .wrapCommunityCTA .commImg {
     display: none;
   }
-  .wrapCommunityContent .wrapCommunityCTA .commTxt p, .wrapCommunityContent .wrapCommunityCTA .commTxt div.learnMore {
+  .wrapCommunityContent .wrapCommunityCTA .commTxt p, .wrapCommunityContent .wrapCommunityCTA .commTxt div.learnMore, .wrapCommunityContent .wrapCommunityCTA .commTxt a.learnMore {
     display: none;
+  }
+  .wrapCommunityContent .wrapCommunityCTA .commTxt a.learnMore.visible {
+    display: block !important;
   }
   .wrapCommunityContent .wrapCommunityCTA .commTxt.hidden {
     color: #666666;
@@ -5840,17 +5845,25 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
   .wrapCommunityContent .wrapCommunityCTA .commTxt.visible {
     padding-bottom: 1.5rem;
   }
-
-  .wrapCommunityCTA.left .commImg:first-child {
-    display: block;
-  }
-  .wrapCommunityCTA.left .commImg:first-child + .commTxt {
-    display: block;
-  }
-  .wrapCommunityCTA.left .commImg:first-child + .commTxt p, .wrapCommunityCTA.left .commImg:first-child + .commTxt .learnMore {
+  .wrapCommunityContent .wrapCommunityCTA .commTxt.visible a.learnMore {
     display: block;
   }
 
+  /*
+  		.wrapCommunityCTA.left {
+  		
+  			.commImg:first-child { 
+  				display: block; 
+  				& + .commTxt {
+  				display: block;
+  				
+  					p, .learnMore { display: block; }
+  				
+  				}
+  
+  			}
+  		}
+  */
   .wrapCommunityContent .wrapCommunityCTA .commTxt.visible + .commImg.hidden + .commTxt.hidden, .firstHidden {
     padding-top: 1.375rem;
   }
@@ -5986,6 +5999,11 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
   margin: 0;
   padding: 0;
 }
+@media (min-width: 767px) and (max-width: 1024px) {
+  .container.stories article {
+    margin-left: 2rem;
+  }
+}
 .container.stories article .wrapper {
   float: left;
   display: block;
@@ -5998,10 +6016,16 @@ form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.a
 .container.stories article .wrapper:last-child {
   margin-right: 0;
 }
+@media (min-width: 767px) and (max-width: 1024px) {
+  .container.stories article .wrapper {
+    margin-right: 2.5rem;
+    height: 28vw;
+  }
+}
 .container.stories article .wrapper h3 {
   margin-top: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container.stories article .wrapper {
     float: left;
     display: block;
@@ -6123,6 +6147,12 @@ nav.inlineMenu {
 nav.inlineMenu:last-child {
   margin-right: 0;
 }
+@media (max-width: 47.9375em) {
+  nav.inlineMenu {
+    padding-left: 0;
+    overflow-x: scroll;
+  }
+}
 nav.inlineMenu + .mainContent {
   padding-top: 0;
   clear: both;
@@ -6154,21 +6184,19 @@ nav.inlineMenu + .mainContent {
     max-height: none;
   }
 }
-.container aside .sidebarContent, .container aside .commTxt, .container aside .sidebarImg {
+.container aside .sidebarContent, .container aside .sidebarImg {
   background: #ccc;
 }
-@media (max-width: 47.9375em) {
-  .container aside .sidebarContent, .container aside .commTxt, .container aside .sidebarImg {
-    display: none;
-  }
-}
-.container aside .sidebarContent, .container aside .commTxt {
+.container aside .sidebarContent {
   padding: 1.875rem 2.5rem 0;
 }
 @media (max-width: 47.9375em) {
-  .container aside .sidebarContent, .container aside .commTxt {
+  .container aside .sidebarContent {
     padding-bottom: 1.875rem;
   }
+}
+.container aside .sidebarImg p {
+  margin-bottom: 0;
 }
 .container aside:after, .container.stories aside:after, .container.videos aside:after {
   position: absolute;
@@ -6202,11 +6230,18 @@ nav.inlineMenu + .mainContent {
 .container aside.stories:after {
   display: none;
 }
-@media screen and (max-width: 56.25em) {
-  .container aside.commSidebar {
-    width: 50%;
-    left: 50%;
-  }
+.container aside.commSidebar {
+  /*
+  		@include media(max-width $medium-viewport) {
+  			width: 50%;
+  			left: 50%;
+  			
+  			&::after {
+  				width: 50%;
+  				left: 50%;
+  			}
+  		}
+  */
 }
 @media (max-width: 47.9375em) {
   .container aside.commSidebar {
@@ -6218,6 +6253,17 @@ nav.inlineMenu + .mainContent {
   background: #ccc;
   height: 314px;
   padding: 3.375rem 0.9375rem 2.75rem 2.625rem;
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container aside.commSidebar .sidebarCTA {
+    height: auto;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .container aside.commSidebar .sidebarCTA {
+    display: none;
+  }
 }
 .container aside.commSidebar .sidebarCTA .byTheNumTitle, .container aside.commSidebar .sidebarCTA .byTheNumNumbers {
   font-size: 2.5rem;
@@ -6235,12 +6281,32 @@ nav.inlineMenu + .mainContent {
   font-weight: 700;
   margin-bottom: 6px;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container aside.commSidebar .sidebarCTA .byTheNumNumbers {
+    padding-left: 0;
+    position: relative;
+    right: 10px;
+  }
+}
 .container aside.commSidebar .sidebarCTA p {
   color: #002C64;
   font-size: 0.9375rem;
   line-height: 1.40625rem;
   margin: 0 3.125rem 0 4.125rem;
   padding: 0;
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container aside.commSidebar .sidebarCTA p {
+    margin: 1rem 1rem 0 2.5rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .container aside.commSidebar .sidebarCTA .wrapByTheNum {
+    display: none;
+  }
+  .container aside.commSidebar .sidebarCTA .wrapByTheNum + p {
+    display: none;
+  }
 }
 
 @media (max-width: 47.9375em) {
@@ -6250,9 +6316,6 @@ nav.inlineMenu + .mainContent {
 }
 .container.clone aside .wrapSidebarContent, .container.clone .commSidebar .wrapSidebarContent {
   max-height: none;
-}
-.container.clone aside .sidebarCTA, .container.clone .commSidebar .sidebarCTA {
-  display: none;
 }
 
 .wrapTopContent {
@@ -6438,6 +6501,11 @@ a.skip:hover, a.skip:active, a.skip:focus {
   -moz-transition: all 0.35s ease-in-out 0s;
   -o-transition: all 0.35s ease-in-out 0s;
   transition: all 0.35s ease-in-out 0s;
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .utility nav ul li a, .socialMedia nav ul li a, .utility section ul li a, .socialMedia section ul li a {
+    font-size: 1.25vw;
+  }
 }
 .utility nav ul li a:hover, .socialMedia nav ul li a:hover, .utility section ul li a:hover, .socialMedia section ul li a:hover {
   border: solid 1px #B5BB14;
@@ -6705,6 +6773,12 @@ nav.wrapNav ul.mainNav, .container aside nav.wrapSidebarContent ul.mainNav {
     z-index: 4000;
   }
 }
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  nav.wrapNav ul.mainNav, .container aside nav.wrapSidebarContent ul.mainNav {
+    width: auto;
+    margin-left: 1.15rem;
+  }
+}
 nav.wrapNav ul.mainNav li, .container aside nav.wrapSidebarContent ul.mainNav li {
   line-height: 30px;
   border-left: solid 1px #ccc;
@@ -6844,6 +6918,9 @@ nav.wrapNav ul.mainNav li.donate a:hover, .container aside nav.wrapSidebarConten
   nav.wrapNav ul.mainNav li.home, .container aside nav.wrapSidebarContent ul.mainNav li.home {
     margin-left: .8rem;
   }
+  nav.wrapNav ul.mainNav li.home:hover a, .container aside nav.wrapSidebarContent ul.mainNav li.home:hover a {
+    color: #B4BA13 !important;
+  }
 }
 nav.wrapNav ul.mainNav li.home a, .container aside nav.wrapSidebarContent ul.mainNav li.home a {
   padding-left: 0;
@@ -6864,6 +6941,12 @@ nav.wrapNav ul.mainNav li.home a, .container aside nav.wrapSidebarContent ul.mai
     text-indent: 0;
     font-size: 0.9375rem;
     line-height: 30px;
+  }
+  nav.wrapNav ul.mainNav li.home a:hover, .container aside nav.wrapSidebarContent ul.mainNav li.home a:hover {
+    color: #B4BA13 !important;
+  }
+  nav.wrapNav ul.mainNav li.home a:hover:before, .container aside nav.wrapSidebarContent ul.mainNav li.home a:hover:before {
+    color: #B4BA13;
   }
 }
 @media (max-width: 767px) {
@@ -7023,6 +7106,16 @@ nav.breadcrumbs ul.mainNav a.selected, nav.breadcrumbs ul.mainNav .parent.select
   margin: 1rem auto 1.875rem;
   text-align: center;
 }
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .inlineMenu ul.inlineNav {
+    display: table;
+  }
+}
+@media (max-width: 47.9375em) {
+  .inlineMenu ul.inlineNav {
+    padding-left: 0;
+  }
+}
 .inlineMenu ul.inlineNav li {
   width: auto;
   float: none;
@@ -7030,6 +7123,11 @@ nav.breadcrumbs ul.mainNav a.selected, nav.breadcrumbs ul.mainNav .parent.select
   display: inline-block;
   padding: 0;
   margin: 0;
+}
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .inlineMenu ul.inlineNav li {
+    display: table-cell;
+  }
 }
 .inlineMenu ul.inlineNav li a {
   display: block;
@@ -7049,6 +7147,12 @@ nav.breadcrumbs ul.mainNav a.selected, nav.breadcrumbs ul.mainNav .parent.select
   border-radius: 6px 6px 0 0;
   margin-right: 6px;
   position: relative;
+}
+@media (max-width: 47.9375em) {
+  .inlineMenu ul.inlineNav li a {
+    font-size: 4vw;
+    margin-right: 3px;
+  }
 }
 .inlineMenu ul.inlineNav li.selected a {
   background: #fff;
@@ -7549,9 +7653,9 @@ h1 {
   margin: 15px 0 1px;
   padding: 0;
 }
-@media (max-width: 800px) {
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
   .pageTitleAndCrumbs h1 {
-    font-size: 2rem;
+    font-size: 2.75vw;
   }
 }
 
@@ -7572,7 +7676,7 @@ h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
   margin: 0;
 }
 
-.sidebarContent h2, .commTxt h2 {
+.sidebarContent h2 {
   margin: 0 0 1.5625rem;
   color: #666666;
   padding: 0;
@@ -7672,14 +7776,14 @@ h5, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
   margin: 0;
 }
 
-.sidebarContent h5, .commTxt h5 {
+.sidebarContent h5 {
   color: #002C64;
   font-size: 0.9375rem;
   line-height: 1.625rem;
   text-transform: capitalize;
   font-weight: 700;
 }
-.sidebarContent h5 a, .commTxt h5 a {
+.sidebarContent h5 a {
   font-weight: 700;
 }
 
@@ -7835,7 +7939,7 @@ p, table.BBListingTable p {
   color: #666666;
 }
 
-.sidebarContent p, .commTxt p {
+.sidebarContent p {
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.40625rem;
@@ -8422,9 +8526,24 @@ table[id$="tblProgress"] th {
   position: relative;
   padding: 0.5em 1em 0.5em 5em;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  table[id$="tblProgress"] th {
+    padding: .5rem 1rem;
+  }
+}
+@media (max-width: 767px) {
+  table[id$="tblProgress"] th {
+    padding-left: 1em;
+  }
+}
 
 table[id$="tblProgress"] th:first-child {
   padding: 0.5em 1em 0.5em 4em;
+}
+@media (max-width: 767px) {
+  table[id$="tblProgress"] th:first-child {
+    padding-left: 1em;
+  }
 }
 
 /* Step Number */
@@ -8522,11 +8641,10 @@ img {
   text-align: right;
 }
 
-.sidebarContent, .commTxt {
+.sidebarContent {
   position: relative;
-  z-index: 1;
 }
-.sidebarContent::before, .commTxt::before {
+.sidebarContent::before {
   font-family: FontAwesome;
   content: '\f0d8';
   position: absolute;
@@ -8537,10 +8655,13 @@ img {
   top: -.65em;
   left: 2.5rem;
 }
-.sidebarContent:empty::before, .commTxt:empty::before {
+.sidebarContent:empty::before {
   display: none;
 }
 
+.commTxt {
+  position: relative;
+}
 .commTxt::before {
   color: #eee;
 }
@@ -8653,7 +8774,7 @@ e
   float: left;
 }
 
-.sidebarContent .floatRight, .commTxt .floatRight, .sidebarContent .floatLeft, .commTxt .floatLeft {
+.sidebarContent .floatRight, .sidebarContent .floatLeft {
   margin: 1.5625rem 0;
 }
 
@@ -10047,6 +10168,8 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 }
 @media (max-width: 767px) {
   .wrapPayBillInfo {
+    width: 88%;
+    float: left;
     position: relative;
     top: 2.65rem;
   }
@@ -10083,6 +10206,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   padding: 4px 10px 2px;
   font-weight: 300;
 }
+@media (max-width: 767px) {
+  .wrapPayBillInfo .DonationCaptureFormTable input[type="text"] {
+    width: 90%;
+  }
+}
 .wrapPayBillInfo .DonationCaptureFormTable input[type="text"][id*="txtFirstName"], .wrapPayBillInfo .DonationCaptureFormTable input[type="text"][id*="txtLastName"] {
   width: 175px;
 }
@@ -10113,6 +10241,14 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   font-line-height: 1;
   font-weight: 300;
 }
+@media (max-width: 767px) {
+  .wrapPayBillInfo .DonationCaptureFormTable select.BBFormSelectList, .wrapPayBillInfo .DonationCaptureFormTable select {
+    width: 91px;
+  }
+  .wrapPayBillInfo .DonationCaptureFormTable select.BBFormSelectList[id*="dd_Country"], .wrapPayBillInfo .DonationCaptureFormTable select.BBFormSelectList[id*="dd_State"], .wrapPayBillInfo .DonationCaptureFormTable select[id*="dd_Country"], .wrapPayBillInfo .DonationCaptureFormTable select[id*="dd_State"] {
+    width: 90%;
+  }
+}
 .wrapPayBillInfo .DonationCaptureFormTable select.BBFormSelectList[id*="cboCardType"], .wrapPayBillInfo .DonationCaptureFormTable select[id*="cboCardType"] {
   width: auto;
 }
@@ -10124,6 +10260,47 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
     text-align: left;
     padding-left: 0;
     display: block;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .wrapPayBillInfo .DonationCaptureFormTable .wrapBillingLastName {
+    display: block;
+  }
+  .wrapPayBillInfo .DonationCaptureFormTable .wrapBillingLastName label {
+    position: absolute;
+    left: 11.25vw;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapPayBillInfo .DonationCaptureFormTable .wrapBillingZip {
+    display: block;
+  }
+  .wrapPayBillInfo .DonationCaptureFormTable .wrapBillingZip label {
+    position: absolute;
+    left: 16.75vw;
+  }
+}
+@media (max-width: 800px) {
+  .wrapPayBillInfo .DonationCaptureFormTable .wrapBillingZip label {
+    left: 18vw;
+  }
+}
+@media (max-width: 767px) {
+  .wrapPayBillInfo .DonationCaptureFormTable .wrapBillingZip label {
+    position: relative;
+    left: 0;
+  }
+}
+
+.EventTable .wrapPayBillInfo {
+  top: 0;
+}
+@media (min-device-width: 768px) and (max-width: 800px) {
+  .EventTable .wrapPayBillInfo .wrapBillingZip label {
+    left: 16.75vw;
+  }
+  .EventTable .wrapPayBillInfo .wrapBillingLastName label {
+    left: 9.85vw;
   }
 }
 
@@ -10154,6 +10331,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
     padding-bottom: 2rem;
   }
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .wrapPayBillInfo tr[id*="trGiftType"] [id*="lblGiftTypeCaption"] {
+    white-space: nowrap;
+  }
+}
 .fullWidthContent table.BBFormTable.DonationFormTable {
   width: auto;
   margin: 0 1.875rem 0 5rem;
@@ -10174,9 +10356,26 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   float: left;
   margin: 0 1.875rem 1.25rem 5rem;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .wrapAmts {
+    margin-right: .75rem;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .wrapAmts {
+    margin-right: 0;
+    width: 85%;
+  }
+}
+@media (max-width: 800px) and (max-device-width: 768px) {
+  .wrapAmts {
+    margin-left: 0;
+  }
+}
 @media (max-width: 767px) {
   .wrapAmts {
-    margin-left: 1.875rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .wrapAmts .amounts {
@@ -10189,9 +10388,34 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   padding: 9px 15px;
   margin-bottom: 2.8125rem;
 }
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .wrapAmts .amounts {
+    width: 30%;
+    height: 215px;
+  }
+}
+@media (max-width: 768px) and (max-device-width: 768px) {
+  .wrapAmts .amounts {
+    background-position-y: 4.25vw;
+    background-size: 60%;
+  }
+}
+@media (max-width: 767px) {
+  .wrapAmts .amounts {
+    width: 200px;
+    background-position-y: 6.25vw;
+    background-size: auto;
+  }
+}
 .wrapAmts .amounts:nth-child(2), .wrapAmts .amounts:nth-child(5) {
   margin-left: 2.6875rem;
   margin-right: 2.6875rem;
+}
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .wrapAmts .amounts:nth-child(2), .wrapAmts .amounts:nth-child(5) {
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
 }
 @media (max-width: 767px) {
   .wrapAmts .amounts:nth-child(2), .wrapAmts .amounts:nth-child(5) {
@@ -10219,6 +10443,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   bottom: 0;
   z-index: 1;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .wrapAmts .amounts .amtDetails:last-child {
+    left: 10px;
+  }
+}
 .wrapAmts .amounts .amtDetails:last-child label, .wrapAmts .amounts .amtDetails:last-child input {
   display: block;
   text-align: center;
@@ -10234,6 +10463,21 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   position: absolute;
   left: 76px;
   bottom: 20px;
+}
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .wrapAmts .amounts .amtDetails:last-child input {
+    left: 42%;
+  }
+}
+@media (min-device-width: 768px) and (max-width: 800px) {
+  .wrapAmts .amounts .amtDetails:last-child input {
+    left: 39%;
+  }
+}
+@media (max-width: 767px) {
+  .wrapAmts .amounts .amtDetails:last-child input {
+    left: 50%;
+  }
 }
 .wrapAmts .amounts.wrapOtherGiveAmt .amounts {
   width: auto;
@@ -10272,12 +10516,22 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   bottom: 21px;
   left: 48.5%;
 }
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .wrapAmts [id*="trOther"].amounts .amtDetails input[id*="rdoOther"] {
+    left: 45%;
+  }
+}
 .wrapAmts [id*="trOther"].amounts .amtDetails:last-child {
   bottom: -3.65em;
   left: -1px;
   position: absolute;
   top: auto;
   width: 200px;
+}
+@media (max-width: 1024px) and (max-device-width: 1024px) {
+  .wrapAmts [id*="trOther"].amounts .amtDetails:last-child {
+    width: 100%;
+  }
 }
 .wrapAmts [id*="trOther"].amounts .amtDetails:last-child input {
   background: none repeat scroll 0 0 #fff;
@@ -10327,6 +10581,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   line-height: 17px;
   position: absolute;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .wrapAmts [id*="trOther"].amounts [id*="tdOther"].amtDetails::before {
+    left: 10px;
+  }
+}
 
 .amounts {
   background-position: center 21px;
@@ -10373,6 +10632,18 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   float: left;
   width: 90%;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .EventTable table[id$="tblProgress"] {
+    width: 98%;
+  }
+}
+@media (max-width: 767px) {
+  .EventTable table[id$="tblProgress"] {
+    width: 98%;
+    background-color: transparent;
+    border-bottom: 2px solid #ccc;
+  }
+}
 .EventTable table[id$="tblProgress"] th {
   font-weight: 400;
   font-size: .85rem;
@@ -10380,6 +10651,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 .EventTable table[id$="tblProgress"] th.EventProgressCell {
   color: #b5bb14;
   background-color: transparent;
+}
+@media (max-width: 767px) {
+  .EventTable table[id$="tblProgress"] th.EventProgressCell {
+    font-weight: bold;
+  }
 }
 .EventTable table[id$="tblProgress"] th.EventProgressCellFuture {
   background-color: transparent;
@@ -10435,6 +10711,12 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   color: #666666;
   padding: 0 .5rem;
 }
+@media (max-width: 767px) and (max-device-width: 720px) {
+  .EventTable .eventRegTicketText.dollarAmt {
+    padding-left: .25em;
+    padding-right: .25em;
+  }
+}
 .EventTable .EventTicketsBodyCell {
   color: #999;
   font-size: 1rem;
@@ -10453,6 +10735,17 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   margin-right: 10rem;
   padding: 8px 40px 6px;
 }
+@media (max-width: 767px) {
+  .EventTable input[type="button"][value="Previous"] {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .EventTable input[type="button"][value="Next"] {
+    float: left;
+    margin-left: 10px;
+  }
+}
 .EventTable select.BBFormSelectList {
   padding: .5%;
 }
@@ -10460,6 +10753,12 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   margin: 0 .5rem 1rem;
   position: relative;
   float: left;
+}
+@media (max-width: 767px) and (max-device-width: 720px) {
+  .EventTable .EventItemRegistrationControlCellQuantity select.BBFormSelectList {
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
 }
 .EventTable .EventItemRegistrationsTable tr {
   border-bottom: 0;
@@ -10504,8 +10803,18 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 .EventTable .wrapPayBillInfo {
   padding: 0 1.875rem 0 5rem;
 }
+@media (max-width: 767px) {
+  .EventTable .wrapPayBillInfo {
+    padding: 20px 0 0 20px;
+  }
+}
 .EventTable .wrapPayBillInfo .DonationCaptureFormTable .BBFieldCaption {
   width: 22%;
+}
+@media (max-width: 767px) {
+  .EventTable .wrapPayBillInfo .DonationCaptureFormTable .BBFieldCaption {
+    width: auto;
+  }
 }
 .EventTable .EventAttendeesComplete {
   background-color: transparent;
@@ -10513,6 +10822,30 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 .EventTable td.buttonTD {
   background-color: #eee;
   padding: 1.5rem 0 1.75rem;
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .EventTable td.buttonTD > table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .EventTable td.buttonTD input[type="button"] {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .EventTable td.buttonTD {
+    display: block;
+    clear: both;
+    width: 88%;
+  }
+  .EventTable td.buttonTD input[type="button"] {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-left: 25px;
+  }
 }
 .EventTable td.buttonTD .BBFormSubmitButton {
   margin-bottom: 0;
@@ -10571,6 +10904,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   margin: 0 0 2rem 2rem;
   z-index: 1000;
 }
+@media (max-width: 47.9375em) {
+  .addthis_custom_sharing {
+    top: 1rem !important;
+  }
+}
 .addthis_custom_sharing .at-share-tbx-element.addthis_32x32_white_style.circular .at300bs {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -10591,6 +10929,20 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   transform: rotate(-90deg);
 }
 
+#blogAddThis {
+  display: none;
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  #blogAddThis + style + .addthis_custom_sharing {
+    top: 0;
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .rssBody {
+    margin: 0 1.875rem 0 5rem;
+  }
+}
 .rssBody .rssRow {
   border-bottom: 1px solid #ccc;
   padding: 0 0 2.3125rem;
@@ -10598,6 +10950,11 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
   clear: both;
   width: 93%;
   float: left;
+}
+@media (max-width: 767px) {
+  .rssBody .rssRow {
+    width: 90%;
+  }
 }
 .rssBody .rssRow h2 {
   color: #002C64;
@@ -10634,9 +10991,24 @@ td[id*="thCaptionAmount"].DonationFieldCaption label[id*="lblAmountCaption"] {
 .rssBody .rssRow .rssImagePreview {
   width: 27%;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .rssBody .rssRow .rssImagePreview + .rssContentWrapper {
+    width: 69%;
+  }
+}
 .rssBody .rssRow .rssContentWrapper {
   width: 70%;
   margin-right: 0;
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .rssBody .rssRow .rssContentWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .rssBody .rssRow .rssContentWrapper {
+    width: 95%;
+  }
 }
 .rssBody .rssRow .rssContentText {
   margin-right: 0;
@@ -10669,6 +11041,11 @@ table.NewsChannelListingTable td {
 table.NewsChannelListingTable table.NewsChannelStoryList {
   margin: 0 4.75rem 0 5rem;
 }
+@media (max-width: 800px) and (max-device-width: 768px) {
+  table.NewsChannelListingTable table.NewsChannelStoryList {
+    margin: 1rem 1.75rem 0 0;
+  }
+}
 table.NewsChannelListingTable table.NewsChannelStoryList .NewsChannelItemDate {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -10697,6 +11074,9 @@ table.NewsChannelListingTable table.NewsChannelStoryList .NewsChannelItemDesc ul
 }
 table.NewsChannelListingTable table.NewsChannelStoryList a.ChannelStoryDeleteButtonWAI, table.NewsChannelListingTable table.NewsChannelStoryList a.ChannelStoryEditButtonWAI {
   font-size: 0.75rem;
+}
+table.NewsChannelListingTable td.NewsChannelItemTitle {
+  line-height: 1.1;
 }
 
 .EventItemRegistrationControlCellQuantity .BBFormSelectList {
@@ -10860,11 +11240,214 @@ table.BBFormTable .CalendarFormDateTimeContainer .CalendarFormFieldCaption {
   width: auto;
   padding-top: 0;
 }
+@media (max-width: 767px) {
+  table.BBFormTable .CalendarFormDateTimeContainer .CalendarFormFieldCaption {
+    display: block;
+    width: 100%;
+  }
+}
 table.BBFormTable .CalendarFormDateTimeContainer .CalendarEventRecurMsg {
   font-weight: 400;
   text-transform: uppercase;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  table.BBFormTable .CalendarFormDateTimeContainer {
+    width: 75%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer td {
+    display: inline-block;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer td.CalendarFormFieldCaption label[for*="CalendarEvent1_CheckAllDay"] {
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer input[id*="CalendarEvent1_CheckAllDay"] {
+    margin-bottom: 0;
+    position: relative;
+    bottom: -5px;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption {
+    display: inline-block;
+    width: 20%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td {
+    display: inline-block;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] {
+    display: block;
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] {
+    display: inline-block;
+    width: 19%;
+    margin-bottom: 2rem;
+    margin-right: 4px;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption {
+    display: inline-block;
+    width: 20%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td {
+    display: inline-block;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] {
+    display: block;
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] {
+    display: inline-block;
+    width: 19%;
+    margin-bottom: 2rem;
+    margin-right: 4px;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRRecurrence"] td.CalendarFormFieldCaption {
+    padding-right: 0;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  table.BBFormTable .CalendarFormDateTimeContainer {
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRRecurrence"] td.CalendarFormFieldCaption {
+    width: 18%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRRecurrence"] td.CalendarFormFieldCaption + td {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 767px) and (max-device-width: 720px) {
+  table.BBFormTable .CalendarFormDateTimeContainer {
+    width: 75%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer td {
+    display: inline-block;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer td.CalendarFormFieldCaption label[for*="CalendarEvent1_CheckAllDay"] {
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer input[id*="CalendarEvent1_CheckAllDay"] {
+    margin-bottom: 0;
+    position: relative;
+    bottom: -5px;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption {
+    display: block;
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td {
+    display: block;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] {
+    display: block;
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-right: 4px;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] + select {
+    display: inline-block;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] + select + label.CalendarFormFieldCaption {
+    display: inline-block;
+    float: left;
+    width: auto;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] + select + label.CalendarFormFieldCaption + select {
+    display: inline-block;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] + select + label.CalendarFormFieldCaption + select + label.CalendarFormFieldCaption {
+    display: inline-block;
+    float: left;
+    width: auto;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr td.CalendarFormFieldCaption + td + td[id*="TDStartTimeList"] label[id*="lblTxtHourStart"] + select + label.CalendarFormFieldCaption + select + label.CalendarFormFieldCaption + select {
+    display: inline-block;
+    float: left;
+    margin-left: 12px;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption {
+    display: block;
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td {
+    display: block;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] {
+    display: block;
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-right: 4px;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] + select {
+    display: inline-block;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] + select + label.CalendarFormFieldCaption {
+    display: inline-block;
+    float: left;
+    width: auto;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] + select + label.CalendarFormFieldCaption + select {
+    display: inline-block;
+    float: left;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] + select + label.CalendarFormFieldCaption + select + label.CalendarFormFieldCaption {
+    display: inline-block;
+    float: left;
+    width: auto;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRTimeZone"] + tr + tr td.CalendarFormFieldCaption + td + td[id*="TDEndTimeList"] label[id*="lblTxtHourEnd"] + select + label.CalendarFormFieldCaption + select + label.CalendarFormFieldCaption + select {
+    display: inline-block;
+    float: left;
+    margin-left: 12px;
+  }
+  table.BBFormTable .CalendarFormDateTimeContainer tr[id*="TRRecurrence"] td.CalendarFormFieldCaption {
+    padding-right: 0;
+  }
+}
 
+@media (max-width: 767px) and (max-device-width: 720px) {
+  [id*="trEventLocation"] + tr td.CalendarFormFieldCaption + td {
+    display: block;
+    width: 100%;
+  }
+  [id*="trEventLocation"] + tr td.CalendarFormFieldCaption + td table[id*="CalendarEvent1_rblMapLink"] td {
+    display: block;
+    width: 100%;
+  }
+
+  [id*="hlnkPreviewMap"] {
+    display: none;
+  }
+}
+@media (max-width: 767px) and (max-device-width: 720px) {
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor {
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .wrapCalendarFormHTMLEditor, table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditorCaption {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer div.ribbon_tab_div {
+    width: 270px;
+  }
+}
 table.BBFormTable .CalendarFormEventInfoContainer textarea, table.BBFormTable .CalendarFormEventInfoContainer input.EditEventTextBox {
   height: auto;
   line-height: 1.90625rem;
@@ -10879,6 +11462,22 @@ table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormFieldCaption, tab
 }
 table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormFieldCaption {
   width: 150px;
+}
+@media (max-width: 767px) and (max-device-width: 720px) {
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormFieldCaption {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    float: none;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormFieldCaption + .BBFieldControlCell {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    float: none;
+  }
 }
 table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormFieldCaption label {
   font-weight: 700;
@@ -10896,6 +11495,69 @@ table.BBFormTable .CalendarFormEventInfoContainer .bbAthMgrLocationAddLink:hover
 }
 table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper {
   width: 100%;
+}
+@media (min-device-width: 768px) and (max-width: 1024px) {
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper {
+    width: 70%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_tab_div {
+    width: 270px;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_group {
+    width: 22%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_group + .ribbon_group {
+    width: 50%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn {
+    display: table;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn li {
+    display: table-cell;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn li span {
+    font-size: 2vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+  }
+}
+@media (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper {
+    width: 93%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_group {
+    width: auto;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_group + .ribbon_group {
+    width: auto;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn li span {
+    font-size: 1.75vw;
+    padding-left: 2.75vw;
+    padding-right: 2.75vw;
+  }
+}
+@media (max-width: 767px) and (max-device-width: 720px) {
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper {
+    width: 100%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_group {
+    width: 22%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper .ribbon_group + .ribbon_group {
+    width: 50%;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn {
+    display: table;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn li {
+    display: table-cell;
+  }
+  table.BBFormTable .CalendarFormEventInfoContainer .CalendarFormHTMLEditor div#divTinyMCEWrapper ul.ribbon_tab_btn li span {
+    font-size: 4.5vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+  }
 }
 
 [id*="TimeList"] .CalendarFormFieldCaption {
@@ -11010,7 +11672,7 @@ td[id*="EventCalendar1_TDGo"] {
   display: block;
 }
 
-.sidebarContent p.mostPopularEventTitle, .commTxt p.mostPopularEventTitle {
+.sidebarContent p.mostPopularEventTitle {
   margin-bottom: 0;
 }
 
@@ -11027,6 +11689,11 @@ td[id*="EventCalendar1_TDGo"] {
 table[id*="tableMain"][summary="Event Calendar"] {
   margin-top: 1rem;
 }
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  table[id*="tableMain"][summary="Event Calendar"] {
+    margin-left: 1.875rem;
+  }
+}
 
 .EventCalendarButtonBar:empty, .EventCalendarButtonBar:hidden {
   padding: 0;
@@ -11037,6 +11704,11 @@ table[id*="tableMain"][summary="Event Calendar"] {
     width: 100%;
     display: block;
     text-align: center;
+  }
+}
+@media (min-width: 801px) and (max-width: 1024px) and (orientation: landscape) {
+  #calendar {
+    margin-left: 1.5rem !important;
   }
 }
 @media (max-width: 767px) {
@@ -11178,6 +11850,10 @@ table[id*="tableMain"][summary="Event Calendar"] {
   width: 50px !important;
 }
 
+.cse .gsc-control-cse, .gsc-control-cse {
+  padding: 0 !important;
+}
+
 .gsc-control-wrapper-cse .gsc-results.gsc-webResult {
   font-family: "myriad-pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif !important;
   font-size: 0.75rem !important;
@@ -11198,6 +11874,10 @@ table[id*="tableMain"][summary="Event Calendar"] {
   padding: 0 !important;
 }
 
+.gsc-result .gs-title {
+  height: auto !important;
+}
+
 .gsc-control-cse .gsc-above-wrapper-area .gsc-selected-option-container {
   max-width: none !important;
   width: auto !important;
@@ -11209,7 +11889,7 @@ table[id*="tableMain"][summary="Event Calendar"] {
 
 .gsc-control-cse, .gsc-control-cse .gsc-table-result {
   font-family: "myriad-pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif !important;
-  font-size: 0.75rem !important;
+  font-size: .85rem !important;
   color: #666666 !important;
 }
 
@@ -11905,53 +12585,25 @@ table[id*="tableMain"][summary="Event Calendar"] {
 
   /* Event Registration Form/ eCard Form */
   table[id$="tblProgress"] {
-    background: #D5D5D5;
+    background: transparent;
     /* Old browsers */
-    background: -moz-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #D5D5D5));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#D5D5D5', GradientType=0 );
-    /* IE6-9 */
     border-collapse: separate !important;
-    border: 1px solid #D5D5D5;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
     margin: 0 0 2em;
   }
-
-  table[id$="tblProgress"] th:first-child, table[id$="tblProgress"] td:first-child {
-    -webkit-border-radius: 10px 0 0 10px;
-    -moz-border-radius: 10px 0 0 10px;
-    border-radius: 10px 0 0 10px;
-  }
-
-  table[id$="tblProgress"] th:last-child, table[id$="tblProgress"] td:last-child {
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-    border-radius: 0 10px 10px 0;
+  table[id$="tblProgress"] th {
+    text-align: left;
+    padding-left: 0 !important;
   }
 
   .EventProgressCellFuture, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep, .ECardFutureStep {
     width: 18%;
     padding: 0.25em 1%;
     border: 0 none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     background-color: #01589B;
     font-size: 0.92em;
     color: #FFF;
-    text-shadow: 1px 1px 0 #333;
+    text-shadow: none;
   }
 
   .EventProgressCellFuture, .ECardFutureStep {
@@ -11995,7 +12647,7 @@ table[id*="tableMain"][summary="Event Calendar"] {
 
   .EventItemRegistrantControlCellName label, table[id*=dgRegistrantList] .BBFieldCaption label {
     width: auto !important;
-    position: absolute;
+    position: relative;
   }
 
   .EventItemRegistrantControlCell, table[id*=dgRegistrantList] .BBFieldCaption + td {
@@ -12569,4 +13221,276 @@ table[id*="tableMain"][summary="Event Calendar"] {
   }
 
   /* END Mobile Part Styles at 768 max width */
+}
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top;
+}
+
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020;
+}
+
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.fancybox-opened {
+  z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+  position: relative;
+}
+
+.fancybox-inner {
+  overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url("/image/2014-fancybox/fancybox_sprite.png");
+}
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url("/image/2014-fancybox/fancybox_loading.gif") center center no-repeat;
+}
+
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 8040;
+}
+
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url("/image/2014-fancybox/blank.gif");
+  /* helps IE */
+  -webkit-tap-highlight-color: transparent;
+  z-index: 8040;
+}
+
+.fancybox-prev {
+  left: 0;
+}
+
+.fancybox-next {
+  right: 0;
+}
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden;
+}
+
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px;
+}
+
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+  visibility: visible;
+}
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important;
+}
+
+/* Overlay helper */
+.fancybox-lock {
+  overflow: hidden !important;
+  width: auto;
+}
+
+.fancybox-lock body {
+  overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+  overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: url("/image/2014-fancybox/fancybox_overlay.png");
+}
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+/* Title helper */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url("/image/2014-fancybox/fancybox_sprite@2x.png");
+    background-size: 44px 152px;
+    /*The size of the normal image, half the size of the hi-res image*/
+  }
+
+  #fancybox-loading div {
+    background-image: url("/image/2014-fancybox/fancybox_loading@2x.gif");
+    background-size: 24px 24px;
+    /*The size of the normal image, half the size of the hi-res image*/
+  }
 }

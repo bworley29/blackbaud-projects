@@ -547,42 +547,25 @@ input[id$='_rdoOther']+label {
 /* Event Registration Form/ eCard Form */
 
 table[id$="tblProgress"] {
-	background: #D5D5D5; /* Old browsers */
-	background: -moz-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #D5D5D5)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* IE10+ */
-	background: linear-gradient(top, #FFFFFF 0%, #D5D5D5 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#D5D5D5', GradientType=0 ); /* IE6-9 */
+	background: transparent; /* Old browsers */
 	border-collapse: separate !important;
-    border: 1px solid #D5D5D5;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
     margin: 0 0 2em;
+    
+    th {
+	    text-align: left;
+	    padding-left: 0 !important;
+    }
 }
-table[id$="tblProgress"] th:first-child, table[id$="tblProgress"] td:first-child {
-	-webkit-border-radius: 10px 0 0 10px;
-	-moz-border-radius: 10px 0 0 10px;
-	border-radius: 10px 0 0 10px;
-}
-table[id$="tblProgress"] th:last-child, table[id$="tblProgress"] td:last-child {
-	-webkit-border-radius: 0 10px 10px 0;
-	-moz-border-radius: 0 10px 10px 0;
-	border-radius: 0 10px 10px 0;
-}
+
 .EventProgressCellFuture, .EventProgressCellPast, .EventProgressCell, .ECardPastStep, .ECardCurrentStep, .ECardFutureStep {
 	width: 18%;
 	padding: 0.25em 1%;
 	border: 0 none;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
 	border-radius: 0;
 	background-color: #01589B;
 	font-size: 0.92em;
 	color: #FFF;
-	text-shadow: 1px 1px 0 #333;
+	text-shadow: none;
 }
 .EventProgressCellFuture, .ECardFutureStep {
 	background-color: transparent;
@@ -616,7 +599,7 @@ table[id$="tblProgress"] th:last-child, table[id$="tblProgress"] td:last-child {
 }
 .EventItemRegistrantControlCellName label, table[id*=dgRegistrantList] .BBFieldCaption label {
 	width: auto!important;
-	position: absolute;
+	position: relative;
 }
 .EventItemRegistrantControlCell, table[id*=dgRegistrantList] .BBFieldCaption + td {
 	padding: 1.5em 0 1em;

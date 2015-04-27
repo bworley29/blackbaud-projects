@@ -429,16 +429,16 @@ table.BBFormTable.PostJobFormTable {width: 100%;}
 	font-weight:700;
 }
 
-.BBFormValidatorSummary {
+.mainContent .BBFormValidatorSummary {
 	color: $body-font-color;
 	text-align:left;
-	background: #fdf4f4;
-	padding: .5rem .75rem;
-	border: 1px solid #ea3429;
 	
 	ul {
 		margin: 0 !important;
-		padding: 0 auto !important;
+		//padding: 0 auto !important;
+		background: #fdf4f4;
+		padding: .5rem .75rem;
+		border: 1px solid #ea3429;
 		
 		li {
 			font-size: $body-font-size;
@@ -4292,9 +4292,9 @@ font-size: $body-font-size;
 }
 
 .Ev2_TimespanSeparatorLabel {
-	vertical-align:top;
+	vertical-align:middle;
 	display: inline-block;
-	padding-top: 4px;
+	padding-top: 0;
 }
 
 .Ev2_DescriptionContainer {
@@ -4541,18 +4541,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
 }
 
 .Ev2_BillMeLaterContainer {
-	width:150px;
-	height:46px;
-	background-color:#ffe8c8;
-	float:right;
-	clear:right;
-	border:1px solid #797979;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
+	width:auto;
+	height:auto;
+	background-color:transparent;
+	float:left;
+	clear:both;
+	border:0;
+	border-radius:0;
 	display:block;
 	margin-right:25px;
 	margin-bottom:10px;
+	
+	input[id*="chkBillMeLater"] { margin-right: 6px; }
 }
 
 .Ev2_BillMeLaterText {

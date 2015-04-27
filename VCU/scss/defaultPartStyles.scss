@@ -560,19 +560,19 @@ table.BBFormTable.PostJobFormTable {width: 100%;}
 }
 
 .BBListingHeadingLink:active {
-	font-weight:400;
+	font-weight:700;
 }
 
 .BBListingHeadingLink:hover {
-	font-weight:400;
+	font-weight:700;
 }
 
 .BBListingHeadingLink:link {
-	font-weight:400;
+	font-weight:700;
 }
 
 .BBListingHeadingLink:visited {
-	font-weight:400;
+	font-weight:700;
 }
 
 .OCCHeader {
@@ -779,9 +779,9 @@ table.BBListingTable.DirectoryListingTable td.BBListingItem.DirectoryListingItem
 	padding-right: 1em;
 	
 	a.BBNameLink:link, a { 
-		color: #007099;
+		color: $link-color;
 		
-		&:hover { color: #504c46; }
+		&:hover { color: $link-hover-color; }
 	}
 }
 
@@ -821,14 +821,16 @@ table.DirectorySearchForm {
 
 .DirectoryListingTable {
 	border-collapse:collapse;
-	width: 98%;
+	width: 100%;
 	
 	th.BBListingHeading.DirectoryListingHeading {
 		border: 0;
 		padding-left: 1em;
 		padding-right: 1em;
-		background-color: #b79b7c;
+		line-height: 3;
+		background-color: $form-header-row-background-color;
 		font-weight: normal;
+		color: $form-header-row-text-color;
 		
 		a {
 			&:hover {
@@ -1470,8 +1472,8 @@ input[type="button"].BBFormSubmitButton.DiscussionGroupSpellButton {
 			padding: 0;
 			
 			a:hover {
-				background: transparent;
-				color: #ccc;
+				background: inherit;
+				color: inherit;
 			}
 		}
 	}

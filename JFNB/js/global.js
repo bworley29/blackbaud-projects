@@ -21,10 +21,12 @@ BBI = {
             pageLoad: function(){
 
                 BBI.JFNB.bbnc.desktop();
+                BBI.JFNB.bbnc.parts.mainMenuPart();
                 BBI.JFNB.bbnc.viewMoreToggle();
                 BBI.JFNB.bbnc.eventCalendarContent();
                 BBI.JFNB.bbnc.mobile.mobileToggles();
                 BBI.JFNB.bbnc.mobile.utilityMenu();
+                BBI.JFNB.bbnc.parts.utilityMenuPart();
                 BBI.JFNB.bbnc.mobile.communityMobileCallToActions();
                 BBI.JFNB.bbnc.parts.asideContent();
                 BBI.JFNB.bbnc.parts.bottomPromoContentBoxes();
@@ -34,8 +36,8 @@ BBI = {
             },
 
             paneRefresh: function(){
-                BBI.JFNB.bbnc.parts.mainMenuPart();
-                BBI.JFNB.bbnc.parts.utilityMenuPart();
+                //BBI.JFNB.bbnc.parts.mainMenuPart();
+                //BBI.JFNB.bbnc.parts.utilityMenuPart();
                 BBI.JFNB.bbnc.parts.userLogin();
                 BBI.JFNB.bbnc.parts.donationForm.donateGiveAmtReorder();
                 BBI.JFNB.bbnc.parts.donationForm.reformatGiveDollarAmts();
@@ -128,9 +130,15 @@ BBI = {
 $('.upcomingEventWrapper .upcomingEventDate .upcomingEventMonth').each(function(){
                     $(this).insertAfter($(this).next());
                 });
-*/
+*/					
+				if($('.EventCalendarPartContainer table[id*="TableEditEvent"]').length) {
+					$('.CalendarFormHTMLEditor').parent().addClass('wrapCalendarFormHTMLEditor');
+					
+					$('.CalendarFormHTMLEditor').parent().prev().addClass('CalendarFormHTMLEditorCaption');
+				}
 
             },
+            
             
             blogNavReorder: function() {
 	            var blogCloudNav, mainNavBlogLi;
@@ -191,9 +199,13 @@ $('.upcomingEventWrapper .upcomingEventDate .upcomingEventMonth').each(function(
                     //
                     var desktopUtilityLinks;
 
-                    desktopUtilityLinks = $('.utility section ul').clone().addClass('showOnMobile');
-
-                    $(desktopUtilityLinks).prependTo('.utility > section');
+                    desktopUtilityLinks = $('.utility section ul').clone();
+                    
+                    desktopUtilityLinksCloned = $(desktopUtilityLinks).addClass('showOnMobile');
+                    
+					if($('.utility > section ul.showOnMobile').length === 0) {
+                    	$(desktopUtilityLinksCloned).prependTo('.utility > section');
+                    }
                 },
 
                 eventRegCart: function () {
@@ -222,7 +234,7 @@ $('.upcomingEventWrapper .upcomingEventDate .upcomingEventMonth').each(function(
                     // Finds first hidden text block based on first visible
                     //firstHiddenTxt = $('.wrapCommunityContent .wrapCommunityCTA .commTxt.hidden').first();
 
-                    $(commCallToActFirst).removeClass('hidden').addClass('visible');
+                    //$(commCallToActFirst).removeClass('hidden').addClass('visible');
 
                     $('.wrapCommunityContent .wrapCommunityCTA div').each(function () {
 
@@ -237,7 +249,7 @@ $('.upcomingEventWrapper .upcomingEventDate .upcomingEventMonth').each(function(
                     });
 
                     // Toggle Hidden Comm CTA
-                    $('.wrapCommunityContent .wrapCommunityCTA .commTxt.hidden h3').on('click',function() {
+                    $('.wrapCommunityContent .wrapCommunityCTA .commTxt h3').on('click',function() {
                         $(this).parent().toggleClass('hidden visible');
                         // Hidden Sibling Image
                         $(this).parent().prev().slideToggle('slow').toggleClass('hidden visible');
@@ -416,14 +428,21 @@ $('.upcomingEventWrapper .upcomingEventDate .upcomingEventMonth').each(function(
                     utilitySearchIcon = 'ul.utilityNav li.search a';
                     audienceUtilityToggle = '<div class="showOnMobile audienceUtilityToggle"><a class="showOnMobile audienceUtilityToggle">Get Involved</a></div>';
                     utilityMobileGiveBtn = $('nav.wrapNav ul.mainNav li.donate a').clone();
-
-                    $('<li class="search"><a class="fa fa-search" href="#"></a></li>').insertAfter('.utilityNav li:last-child');
-
-                    //
-                    $(utilitySearchClone).insertAfter(utilitySearchIcon);
-
-                    // Insert Audience Mobile Toggle Link
-                    $(audienceUtilityToggle).insertBefore('.utility .audienceNav');
+					
+					
+					if($('.utility li.search').length === 0) {
+                    	$('<li class="search"><a class="fa fa-search" href="#"></a></li>').insertAfter('.utilityNav li:last-child');
+					}
+					
+					if($('ul.utilityNav table.QuickSearchFormTable').length === 0) {
+	                    //
+	                    $(utilitySearchClone).insertAfter(utilitySearchIcon);
+	                }
+					
+					if($('.utility .audienceUtilityToggle').length === 0) {
+	                    // Insert Audience Mobile Toggle Link
+	                    $(audienceUtilityToggle).insertBefore('.utility .audienceNav');
+                    }
 
                     $('div.audienceUtilityToggle').on('click',function() {
 
@@ -431,10 +450,12 @@ $('.upcomingEventWrapper .upcomingEventDate .upcomingEventMonth').each(function(
                         $(this).toggleClass('active');
 
                     });
-
-                    // Mobile Give Btn
-                    $(utilityMobileGiveBtn).addClass('showOnMobile utilityMobileGiveBtn').insertBefore('div.audienceUtilityToggle');
-
+					
+					
+					if($('.utility .utilityMobileGiveBtn').length === 0) {
+	                    // Mobile Give Btn
+	                    $(utilityMobileGiveBtn).addClass('showOnMobile utilityMobileGiveBtn').insertBefore('div.audienceUtilityToggle');
+					}
 
                     // Quick Search toggle event
                     $(utilitySearchIcon).on('click',function() {

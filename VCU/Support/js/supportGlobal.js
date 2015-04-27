@@ -5,7 +5,7 @@
  Author(s): Ben Worley
  Product(s): BBIS
  Created: Dec 2014
- Updated:
+ Updated: April 2015 by BW
 ***********************************************
  CHANGE LOG 
 ***********************************************
@@ -19,15 +19,12 @@ BBI = {
 		bbis: {
 
 			pageLoad: function(){
-			
+				BBI.VCU_Support.bbis.browserDetection();
+				BBI.VCU_Support.bbis.placeholderPlugin();
 				BBI.VCU_Support.bbis.desktop();
 				BBI.VCU_Support.bbis.mobile.mobileToggles();
 				BBI.VCU_Support.bbis.miniDonation();
 				BBI.VCU_Support.bbis.customSingleDonationForm.tbodyClasses();
-				BBI.VCU_Support.bbis.paymentPartInlineNav();
-			}, 	
-			
-			paneRefresh: function(){
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepOneGivingDetails.fundDesignationOption();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepOneGivingDetails.clickHiddenAmount();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepOneGivingDetails.donationAmount();
@@ -38,8 +35,6 @@ BBI = {
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingZip();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingPhone();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingEmail();
-				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingCountryList();
-				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingStateList();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepThreePaymentInfo.cardholder();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepThreePaymentInfo.cardNumber();
 				BBI.VCU_Support.bbis.customSingleDonationForm.stepThreePaymentInfo.cardExp();
@@ -56,11 +51,21 @@ BBI = {
 				BBI.VCU_Support.bbis.parts.quickSearch();
 				BBI.VCU_Support.bbis.parts.commPrefForm();
 				BBI.VCU_Support.bbis.parts.paymentSummary();
+				BBI.VCU_Support.bbis.parts.paymentPart();
 				BBI.VCU_Support.bbis.parts.eventReg();
 				BBI.VCU_Support.bbis.parts.userPhotoForm();
 				BBI.VCU_Support.bbis.mobile.eventRegCart();
+				BBI.VCU_Support.bbis.paymentPartInlineNav();
+				BBI.VCU_Support.bbis.parts.profilePhotoForm();
+				BBI.VCU_Support.bbis.parts.fundDesgSearch();
+			}, 	
+			
+			paneRefresh: function(){
+				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingCountryList();
+				BBI.VCU_Support.bbis.customSingleDonationForm.stepTwoDonorInfo.billingStateList();
 				BBI.VCU_Support.bbis.addClassToEmptyTableCells();
 				BBI.VCU_Support.bbis.addClassToRequiredInputs();
+				
 			}, 	
 			
 			// Desktop
@@ -117,7 +122,8 @@ BBI = {
 						
 					});
 					
-					$(document).on('click',function() {
+					/*
+$(document).on('click',function() {
 						
 						if($('nav.utility').hasClass('active')) {
 							
@@ -127,6 +133,7 @@ BBI = {
 						}
 						
 					});
+*/
 
 
 				},
@@ -190,7 +197,7 @@ BBI = {
 							
 						}
 						
-						window.location = 'https://bbis59760desval.blackbaudhosting.com/online-giving/single-donation-form?amount=' + dntAmnt;
+						window.location = 'https://bbis59760desval.blackbaudhosting.com/giving-form?amount=' + dntAmnt;
 						return false;
 						
 					});
@@ -359,7 +366,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 	                    });
 	                    
 	                    otherAmountRadio.click(function(){
-		                   otherAmountText.removeAttr('disabled', true); 
+		                   otherAmountText.attr('disabled', false); 
 	                    });
 	
 	                    otherAmountText.keyup(function () {
@@ -382,7 +389,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						hiddenLastName = '.billingInfo [id*="txtLastName"]';
 						
 						// Get First Name entered
-	                    $(billingFirstName).keyup(function () {
+	                    $(billingFirstName).blur(function () {
 	                        var billingFirstNameEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -391,7 +398,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 	                    });
 	                    
 	                    // Get Last Name entered
-	                    $(billingLastName).keyup(function () {
+	                    $(billingLastName).blur(function () {
 	                        var billingLastNameEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -407,7 +414,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						hiddenBillingAddress = '.billingInfo [id*="AddressLine"]';
 						
 						// Get Address entered
-	                    $(billingAddress).keyup(function () {
+	                    $(billingAddress).change(function () {
 	                        var billingAddressEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -425,6 +432,8 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						if($('select#nameTitleList option').length === 0) {
 							$(hiddenTitleList).prependTo(shownTitleList);
 						}
+						
+						$('#nameTitleList option:eq(0)').text('Title');
 						
 						$('select#nameTitleList option').click(function () {
                             $('select#nameTitleList option:selected').removeAttr('checked', 'true');
@@ -449,7 +458,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						hiddenCity = '.billingInfo [id*="City"]';
 						
 						// Get City entered
-	                    $(billingCity).keyup(function () {
+	                    $(billingCity).blur(function () {
 	                        var billingCityEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -468,19 +477,26 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 							$(hiddenCountryList).prependTo(shownCountryList);
 						}
 						
-						$('select#billingCountry option').click(function () {
-	                            $('select#billingCountry option:selected').removeAttr('checked', 'true');
-	                            $(this).attr('checked', 'true');
+					/*
+$('select#billingCountry option').click(function () {
+	                            $('select#billingCountry option:selected').removeAttr('selected', true);
+	                            $(this).attr('selected', true);
+	                            $(hiddenCountryList).find('option[value="' + $(this).val() + '"]')
+	                            .attr('selected', true);
+								$('.DonationCaptureFormTable [id*="Country"] option').trigger('change');
 	                            
 	                    });
-	                    
+*/
 	                    // Match Selected Fund to Hidden Fund
-	                    $(shownCountryList).on('change', function () {
+	                    $('select#billingCountry option').click(function () {
 	                        var shownCountryListSelected = $('select#billingCountry option:selected');
 	                        var hiddenCountryList = '.DonationCaptureFormTable [id*="Country"]';
 	
 	                        $(hiddenCountryList).find('option[value="' + shownCountryListSelected.val() + '"]')
 	                            .attr('selected', true);
+	                        var hiddenCountrySelected = $('.DonationCaptureFormTable [id*="Country"]').find('option:selected');
+	                           // $(hiddenCountrySelected).trigger('change');
+	                            console.log(hiddenCountrySelected);
 	                    });
 					},
 					
@@ -493,6 +509,8 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						if($('select#billingState option').length === 0) {
 							$(hiddenStateList).prependTo(shownStateList);
 						}
+						
+						$('#billingState option:eq(0)').text('State');
 						
 						$('select#billingState option').click(function () {
 	                            $('select#billingState option:selected').removeAttr('checked', 'true');
@@ -514,10 +532,10 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						var billingZip, hiddenZip;
 						
 						billingZip = '.wrapZip #zip';
-						hiddenZip = '.billingInfo [id*="Zip"]';
+						hiddenZip = '.DonationFormTable [id*="Zip"]';
 						
 						// Get ZIP entered
-	                    $(billingZip).keyup(function () {
+	                    $(billingZip).blur(function () {
 	                        var billingZipEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -533,7 +551,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						hiddenBillingPhone = '.billingInfo [id*="txtPhone"]';
 						
 						// Get Phone entered
-	                    $(billingPhone).keyup(function () {
+	                    $(billingPhone).blur(function () {
 	                        var billingPhoneEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -549,7 +567,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 						hiddenBillingEmail = '.billingInfo [id*="txtEmailAddress"]';
 						
 						// Get Email entered
-	                    $(billingEmail).keyup(function () {
+	                    $(billingEmail).blur(function () {
 	                        var billingEmailEnt = $(this).val();
 	
 	                        if ($(this).val() !== '') {
@@ -716,7 +734,7 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 	                        } else {
 	                            $(this).removeClass('invalid').addClass('valid');
 	                            $(hiddenCardSecurityCode).val(cscEnt);
-	                            $('.paymentInfo ul.paymentInfo li[class*="card"]').addClass('siblingsComplete');
+	                            //$('.paymentInfo ul.paymentInfo li[class*="card"]').addClass('siblingsComplete');
 	                            $('.paymentInfo h3').addClass('complete');
 	                        }
 	                    });
@@ -728,41 +746,63 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 					
 				},
 				
+				stepOneToggleAnimations: function() {
+					$('.donateAmount h3').addClass('complete');
+		            $('.donorInfo .personalInfoList').removeClass('hide').slideDown();
+		            $('.donorInfo').find('h3').removeClass();
+		            $('#billingFirstName').focus();
+				},
+				
 				stepToggles: function () {
 					$('#wrapSingleGivingForm .givingAmountOptions .rdoAmount input[type="radio"]').click(function() {
-			            if($(this).is(':checked')) {
-				            console.log('not the Other Rdo');
-				            $('.donateAmount h3').addClass('complete');
-				            $('.donorInfo .personalInfoList').slideDown();
-				            $('.donorInfo').find('h3').removeClass();
-				            $('#billingFirstName').focus();
+			            if($(this).is(':checked') && $('ul.giftType').length === 0) {
+				            BBI.VCU_Support.bbis.customSingleDonationForm.stepOneToggleAnimations();
 			            }
 			        });
 
 					$('#wrapSingleGivingForm .givingAmountOptions .otherAmount input[type="text"]').blur(function() {
-			            if($(this).val() !== '') {
-				            $('.donateAmount h3').addClass('complete');
-				            $('.donorInfo .personalInfoList').slideDown();
-				            $('.donorInfo').find('h3').removeClass();
-				            $('#billingFirstName').focus();
+			            if($(this).val() !== '' && $('ul.giftType').length === 0) {
+				            BBI.VCU_Support.bbis.customSingleDonationForm.stepOneToggleAnimations();
 						}
 			        });
-
+					
+					$('#wrapSingleGivingForm .giftType li input[type="checkbox"]').click(function() {
+			            if($(this).is(':checked')) {
+				            BBI.VCU_Support.bbis.customSingleDonationForm.stepOneToggleAnimations();
+			            }
+			        });
 			
-			        $('input#email[type="email"]').blur(function() {
+			        $('input#email[type="email"]').keyup(function() {
 			
 			            var emailValidator = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
 			
 			            if ($(this).val().match(emailValidator)) {
 			
-			                $('.paymentInfo').slideDown();
+			                $('.paymentInfo').removeClass('hide').slideDown();
 			                $('.donorInfo').find('h3').addClass('complete');
 			                $('.paymentInfo').find('h3').removeClass();
-			                $('#cardholder').focus();
+			                //$('#cardholder').focus();
 			
 			            } 
 			
 			        });
+			        
+			        if($('body').hasClass('Explorer')) {
+				        $('.personalInfoList input#email').keyup(function() {
+				
+				            var emailValidator = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+				
+				            if ($(this).val().match(emailValidator)) {
+				
+				                $('.paymentInfo').removeClass('hide').slideDown();
+				                $('.donorInfo').find('h3').addClass('complete');
+				                $('.paymentInfo').find('h3').removeClass();
+				                //$('#cardholder').focus();
+				
+				            } 
+				
+				        });
+			        }
 	
 				},
                                 
@@ -988,6 +1028,14 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 	
 				},
 				
+				paymentPart: function () {
+					
+					if($('.donationConfirmation').is(':visible')) {
+						$('ul.givingStepsNav').hide();
+					}
+					
+				},
+				
 				eventReg: function () {
 					if($('.EventTable').length) {
 						$('.EventTable .EventSectionHeader').parent('tr').remove();
@@ -1008,25 +1056,146 @@ tributeNameInput = '.tributeInfo [id*="trTributeName"] input[id*="txtTribute"]';
 					$('aside.returnUser .ProfilePhotoFormTable a[id*="lnkPhoto"].fa-edit').removeAttr('href');
 					
 					$('aside.returnUser .ProfilePhotoFormTable a[id*="lnkPhoto"].fa-edit').unbind('click').click(function(){
-					
-						/*
-$('.returnUser table.ProfilePhotoFormTable tr:nth-child(4), .returnUser table.ProfilePhotoFormTable tr:nth-child(5), .returnUser table.ProfilePhotoFormTable tr:nth-child(6)').slideToggle();
-						$(this).toggleClass('active');
 						
-						if($(this).hasClass('active')) {
-							$(this).removeClass('fa-edit').addClass('fa-times-circle');
-						} else {
-							$(this).removeClass('fa-times-circle').addClass('fa-edit');
-						}
-*/
-						
-						$(this).attr('href','//bbis59760desval.blackbaudhosting.com/my-profile/support-user-photo-form');
+						$(this).attr('href','../support-user-photo-form');
 					
 					});
 					
 				},
+				
+				profilePhotoForm: function () {
+					
+					if($('.wrapContent aside.returnUser table.ProfilePhotoFormTable').length === 0) {
+						$('<a href="../support-user-photo-form" title="Upload a profile photo"><div id="imgPhoto"><i class="fa fa-camera">&nbsp;<\/i><br \/> Upload a photo<\/div><\/a>').appendTo('.wrapContent aside.returnUser div[id*="divProfilePhotoForm"]');
+					}
+				},
+				
+				fundDesgSearch: function () {
+					if($('.BBDesignationSearchContainer').length) {
+						$('.BBDesignationSearchResult').each(function() {
+							$(this).find('p:eq(0)').addClass('designationTitle');
+						});
+						
+						
+						$('.BBDesignationSearchResult p a').not('.BBAddToCartLink').each(function() {
+							$(this).addClass('makeGiftLink');
+						});
+						
+						
+						$('.BBDesignationSearchResult').each(function() {
+							var newHref = $(this).find('.makeGiftLink').attr('href') + '&name=' + $(this).find('.designationTitle').text();
+							$(this).find('.makeGiftLink').attr('href', newHref);
+						});
+					}
+					
+					if ($('.donationForm').length) {
+						var desingationID, desingationName ;
+						// pass designation ID via url
+						if (window.location.href.indexOf('?id') != -1) {
+							 desingationID = window.location.href.split('=')[1];
+							 desingationName = window.location.href.split('=')[2];
+							$('#designation').append('<option class="newOption" value="' + desingationID + '">' + desingationName + '</option>');
+							var newValID = $('.newOption').val().replace(/&name/g,'');
+							$('.newOption').val(newValID);
+							
+							var newText = $('.newOption').html().replace(/%20/g,' ');
+							//newTextUpdated = $(newText).html().replace(/&name/g,'');
+							$('.newOption').html(newText);
+							newTextUpdated = $('.newOption').html().split('&')[0];
+							$('.newOption').html(newTextUpdated).attr('selected',true);
+							$('#designation').addClass('disabled').prop('disabled', true);
+						}
+					}
 
-			}
+				},
+
+			},
+			
+			browserDetection: function () {
+				var userAgent = navigator.userAgent.toLowerCase(),
+			    browser   = '',
+			    version   = 0;
+			
+				$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+				
+				// Is this a version of IE?
+				if ($.browser.msie) {
+				  userAgent = $.browser.version;
+				  userAgent = userAgent.substring(0,userAgent.indexOf('.'));	
+				  version = userAgent;
+				  browser = "Internet Explorer";
+				  $('body').addClass(browser);
+				}
+				
+				// Is this a version of Chrome?
+				if ($.browser.chrome) {
+				  userAgent = userAgent.substring(userAgent.indexOf('chrome/') + 7);
+				  userAgent = userAgent.substring(0,userAgent.indexOf('.'));	
+				  version = userAgent;
+				  // If it is chrome then jQuery thinks it's safari so we have to tell it it isn't
+				  $.browser.safari = false;
+				  browser = "Chrome";
+				  $('body').addClass(browser);
+				}
+				
+				// Is this a version of Safari?
+				if ($.browser.safari) {
+				  userAgent = userAgent.substring(userAgent.indexOf('safari/') + 7);	
+				  userAgent = userAgent.substring(0,userAgent.indexOf('.'));
+				  version = userAgent;	
+				  browser = "Safari";
+				  $('body').addClass(browser);
+				}
+				
+				// Is this a version of Mozilla?
+				if ($.browser.mozilla) {
+					//Is it Firefox?
+					if (navigator.userAgent.toLowerCase().indexOf('firefox') != -1) {
+						userAgent = userAgent.substring(userAgent.indexOf('firefox/') + 8);
+						userAgent = userAgent.substring(0,userAgent.indexOf('.'));
+						version = userAgent;
+						browser = "Firefox"
+						$('body').addClass(browser);
+					}
+					// If not then it must be another Mozilla
+					else {
+					  browser = "Mozilla (not Firefox)"
+					}
+				}
+				
+			},
+			
+			placeholderPlugin: function () {
+				
+				if($('body').hasClass('Explorer')) {
+					/* Placeholders.js v4.0.1 */
+					/*!
+					 * The MIT License
+					 *
+					 * Copyright (c) 2012 James Allardice
+					 *
+					 * Permission is hereby granted, free of charge, to any person obtaining a copy
+					 * of this software and associated documentation files (the "Software"), to
+					 * deal in the Software without restriction, including without limitation the
+					 * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+					 * sell copies of the Software, and to permit persons to whom the Software is
+					 * furnished to do so, subject to the following conditions:
+					 *
+					 * The above copyright notice and this permission notice shall be included in
+					 * all copies or substantial portions of the Software.
+					 *
+					 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+					 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+					 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+					 * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+					 * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+					 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+					 * IN THE SOFTWARE.
+					 */
+					!function(a){"use strict";function b(){}function c(){try{return document.activeElement}catch(a){}}function d(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return!0;return!1}function e(a,b,c){return a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent?a.attachEvent("on"+b,c):void 0}function f(a,b){var c;a.createTextRange?(c=a.createTextRange(),c.move("character",b),c.select()):a.selectionStart&&(a.focus(),a.setSelectionRange(b,b))}function g(a,b){try{return a.type=b,!0}catch(c){return!1}}function h(a,b){if(a&&a.getAttribute(B))b(a);else for(var c,d=a?a.getElementsByTagName("input"):N,e=a?a.getElementsByTagName("textarea"):O,f=d?d.length:0,g=e?e.length:0,h=f+g,i=0;h>i;i++)c=f>i?d[i]:e[i-f],b(c)}function i(a){h(a,k)}function j(a){h(a,l)}function k(a,b){var c=!!b&&a.value!==b,d=a.value===a.getAttribute(B);if((c||d)&&"true"===a.getAttribute(C)){a.removeAttribute(C),a.value=a.value.replace(a.getAttribute(B),""),a.className=a.className.replace(A,"");var e=a.getAttribute(I);parseInt(e,10)>=0&&(a.setAttribute("maxLength",e),a.removeAttribute(I));var f=a.getAttribute(D);return f&&(a.type=f),!0}return!1}function l(a){var b=a.getAttribute(B);if(""===a.value&&b){a.setAttribute(C,"true"),a.value=b,a.className+=" "+z;var c=a.getAttribute(I);c||(a.setAttribute(I,a.maxLength),a.removeAttribute("maxLength"));var d=a.getAttribute(D);return d?a.type="text":"password"===a.type&&g(a,"text")&&a.setAttribute(D,"password"),!0}return!1}function m(a){return function(){P&&a.value===a.getAttribute(B)&&"true"===a.getAttribute(C)?f(a,0):k(a)}}function n(a){return function(){l(a)}}function o(a){return function(){i(a)}}function p(a){return function(b){return v=a.value,"true"===a.getAttribute(C)&&v===a.getAttribute(B)&&d(x,b.keyCode)?(b.preventDefault&&b.preventDefault(),!1):void 0}}function q(a){return function(){k(a,v),""===a.value&&(a.blur(),f(a,0))}}function r(a){return function(){a===c()&&a.value===a.getAttribute(B)&&"true"===a.getAttribute(C)&&f(a,0)}}function s(a){var b=a.form;b&&"string"==typeof b&&(b=document.getElementById(b),b.getAttribute(E)||(e(b,"submit",o(b)),b.setAttribute(E,"true"))),e(a,"focus",m(a)),e(a,"blur",n(a)),P&&(e(a,"keydown",p(a)),e(a,"keyup",q(a)),e(a,"click",r(a))),a.setAttribute(F,"true"),a.setAttribute(B,T),(P||a!==c())&&l(a)}var t=document.createElement("input"),u=void 0!==t.placeholder;if(a.Placeholders={nativeSupport:u,disable:u?b:i,enable:u?b:j},!u){var v,w=["text","search","url","tel","email","password","number","textarea"],x=[27,33,34,35,36,37,38,39,40,8,46],y="#ccc",z="placeholdersjs",A=new RegExp("(?:^|\\s)"+z+"(?!\\S)"),B="data-placeholder-value",C="data-placeholder-active",D="data-placeholder-type",E="data-placeholder-submit",F="data-placeholder-bound",G="data-placeholder-focus",H="data-placeholder-live",I="data-placeholder-maxlength",J=100,K=document.getElementsByTagName("head")[0],L=document.documentElement,M=a.Placeholders,N=document.getElementsByTagName("input"),O=document.getElementsByTagName("textarea"),P="false"===L.getAttribute(G),Q="false"!==L.getAttribute(H),R=document.createElement("style");R.type="text/css";var S=document.createTextNode("."+z+" {color:"+y+";}");R.styleSheet?R.styleSheet.cssText=S.nodeValue:R.appendChild(S),K.insertBefore(R,K.firstChild);for(var T,U,V=0,W=N.length+O.length;W>V;V++)U=V<N.length?N[V]:O[V-N.length],T=U.attributes.placeholder,T&&(T=T.nodeValue,T&&d(w,U.type)&&s(U));var X=setInterval(function(){for(var a=0,b=N.length+O.length;b>a;a++)U=a<N.length?N[a]:O[a-N.length],T=U.attributes.placeholder,T?(T=T.nodeValue,T&&d(w,U.type)&&(U.getAttribute(F)||s(U),(T!==U.getAttribute(B)||"password"===U.type&&!U.getAttribute(D))&&("password"===U.type&&!U.getAttribute(D)&&g(U,"text")&&U.setAttribute(D,"password"),U.value===U.getAttribute(B)&&(U.value=T),U.setAttribute(B,T)))):U.getAttribute(C)&&(k(U),U.removeAttribute(B));Q||clearInterval(X)},J);e(a,"beforeunload",function(){M.disable()})}}(this);
+				}
+			},
+
 
 		}
 
@@ -1070,20 +1239,4 @@ catch(err) {
            BBI.VCU_Support.bbis.paneRefresh();
      });
 }
-
-$(window).bind("load", function() {
-   
-   setTimeout(function facebookFrame() {
-		  if ($('.sidebarContent iframe').length > 0) {
-		  
-			    $('.sidebarContent iframe').addClass('facebookFrame');
-			    
-		  } else {
-		  
-			    setTimeout(facebookFrame, 50);
-			    
-		  }
-	  }, 50);
-   
-});
 

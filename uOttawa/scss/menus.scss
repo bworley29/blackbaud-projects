@@ -509,6 +509,8 @@ aside nav ul.mainNav {
 			color: #555;
 			text-decoration: underline;
 		}
+		
+		&.menuItem1, &.menuItem2 { line-height: normal; }
 	}
 }
 

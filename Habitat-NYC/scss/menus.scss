@@ -33,90 +33,108 @@
                      ::4.2 Main Horizontal Navigation
 ----------------------------------------------*/
 
-/*---------------------------------------------
-                     ::4.3 Breadcrumb Navigation
-----------------------------------------------*/
-
-#breadcrumbs ul {
-	@extend .menuReset;
-	width: 100%;
-	color: #97929D;
-	margin-bottom: $general-margin;
-	float: left;
+.wrapNav ul.mainNav {
+	list-style: none;
+	padding: 0;
+	float: right;
+	width: 788px;
+	color: #fff;
+	margin:0 0 1em;
+	position: relative;
 	
 	li {
-		width: auto;
-		position: relative;
-		display: inline-block;
+		margin: 2px 0px 0px;
+		padding: 0;
+		list-style: none;
 		float: left;
-		font-size: rem(12);
-		line-height: rem(18);
-		color: #97929D;
-		
-		&:before {
-			content: '\f105';
-			font-family: $icon-font-family;
-			margin-left: 6px;
-			margin-right: 5px;
-			position: relative;
-			float: left;
-			font-size: 12px;
-			line-height: 18px;
-		}
+		display: inline-block;
 		
 		a {
-			font-size: rem(12);
-			line-height: rem(18);
-			float: left;
-			color: $link-color;
-			
-			&:hover {
-				@include link-hover-style;
-			}
+			font-family: $alt-body-font;
+			font-size: 13px;
+			color: #FFF;
+			line-height: 55px;
+			padding: 0px 2.25em 0 8px;
+			font-weight: 300;
+			min-width: 1px;
+			text-transform: uppercase;
 		}
 		
-		&.home:before {
-			content: '\f015';
-			color: $link-color;
+		ul {
+			display: none;
 		}
-		
-		&.currentPage a {
-			h1 {
-				font-size: rem(12);
-				line-height: rem(18);
-				cursor: text;
-				color: #97929d;
-				margin: 0;
-				padding: 0;
-				font-family: $body-font-family;
-			}
-			
-			&:hover {
-				border-bottom: 0;
-				color: inherit;
-			}
-		}
-		
 	}
+	
 }
+
+// CTA Button Menu
+
+ul.ctaButtons {
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style: none;
+	width: 100%;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		float: none;
+		display: block;
+		width: 100%;
+		
+		a {
+			display: block;
+			width: 325px;
+			height: 76px;
+			color: #E6E6E6;
+			line-height: 76px;
+			padding: 0px 10px 0px 91px;
+			font-size: 23px;
+			font-family: $alt-body-font;
+			font-weight: 400;
+			text-decoration: none;
+		}
+		
+		&.first a {
+			background: url(../image/rt-navbg1.jpg) no-repeat 0 0;
+			
+			&:hover {
+				background: url(../image/rt-navbg1-hover.jpg) no-repeat 0 0;
+			}
+		}
+		
+		&.donate a {
+			background: url(../image/rt-navbg2.jpg) no-repeat 0 0;
+			margin: 7px 0;
+			
+			&:hover {
+				background: url(../image/rt-navbg2-hover.jpg) no-repeat 0 0;
+			}
+		}
+		
+		&.last a {
+			background: url(../image/rt-navbg3.jpg) no-repeat 0 0;
+			
+			&:hover {
+				background: url(../image/rt-navbg3-hover.jpg) no-repeat 0 0;
+			}
+		}
+	}
+
+}
+
 
 /*---------------------------------------------
                      ::4.4 Sidebar Navigation
 ----------------------------------------------*/
 
-.sidebar nav ul {
+.wrapSidebar ul {
 	@extend .menuReset;
 	width: 100%;
 	float: left;
-	
-	h5 { 
-		line-height: 1; 
-		margin: 0;
-		font-size: rem(19.25);
-		color: $body-font-color;
-		font-family: $header-font-family;
-		text-transform: uppercase;
-	}
+
 	
 	li {
 		width: 100%;
@@ -127,19 +145,12 @@
 			font: {
 				size: rem(14);
 				weight: normal;
-				family: $body-font-family;
+				family: $alt-body-font;
 				}
 			padding: rem(14) rem(14) rem(14) rem(28);
 			line-height: rem(21);
 			border: 0;
 			color: $body-font-color;
-			
-			&:before {
-				content: '\f105';
-				font-family: $icon-font-family;
-				position: absolute;
-				left: 1em;
-			}
 			
 			&:hover, &.selected {
 				text-decoration: none;
@@ -174,7 +185,7 @@
 		&.selected {
 			
 			a {
-				background-color: $link-color;
+				background-color: #34AE23;;
 				color: #fff;
 			}
 			
@@ -207,152 +218,10 @@
 			
 		}  // END 1st Li.selected
 		
-		&.first a {
-			
-			&:before {
-				font-family: $icon-font-family;
-				color: #c7c5c7;
-				display: inline-block;
-				content: '\f015';
-				font-size: rem(14.4333);
-				line-height: rem(21.1833);
-				left: 0.7em;
-			}
-			
-			&:hover {
-				background-color: #e5e5e5;
-				color: $link-color;
-				
-				&:before { color: $link-color; }
-				
-				h5 {
-					color: $link-color;					
-				}
-			
-			}
-		}
-		
 	} // END 1st Li
 	
 } // END 1st level Ul
-		
-		
 
-/* Mobile - Nav */
-
-@media (max-width: 900px) {
-	.mobileSidebarToggle.showOnMobile { display: block; }
-}
-
-.mobileSidebarToggle.showOnMobile {
-	border: 1px solid #D4D2D4;
-	color: $body-font-color;
-	margin-bottom: rem(24);
-	font-size: rem(14);
-	line-height: rem(18);
-	float: left;
-	width: 100%;
-	
-	.mobileSidebarToggle {
-		padding: rem(14) rem(14) rem(14) rem(35);
-		color: $link-color;
-		position: relative;
-		cursor: pointer;
-		
-		&:before {
-			content: '\f0c9';
-			font-family: $icon-font-family;
-			display: inline-block;
-			font-size: rem(14);
-			line-height: 1;
-			position: absolute;
-			left: 1em;
-			top: 1.15em;
-		}
-		&.active{
-			font: 0/0 a;
-			background-color: #E5E5E5;
-			
-			&:before { content: '\f00d';}
-			
-			&:after {
-				position: relative;
-				content: 'Close';
-				font-size: rem(14);
-				line-height: 1;
-				top: 2px;
-				font-family: $body-font-family;
-			}
-		}
-	}
-	ul {
-		@extend .menuReset;
-		width: 100%;
-		display: none;
-		clear: both;
-		
-		&.active { display: block; }
-		
-		li {
-			border-top: 1px solid #d4d2d4;
-			margin: 0;
-			width: 100%;
-			position: relative;
-			
-			a {
-				border-bottom: 0;
-				color: $body-font-color;
-				padding: rem(14) rem(14) rem(14) rem(28);
-				font-size: rem(14);
-				line-height: rem(21);
-				position: relative;
-				
-				&:before {
-					color: #c7c5c7;
-					content: '\f105';
-					font-family: $icon-font-family;
-					position: absolute;
-					left: 1em;
-				}
-				
-				h5 {
-					margin: 0;
-					padding: 0;
-				}
-			}
-			
-			&.first a {
-				color: #535961;
-				
-				h5 {
-					color: #535961;
-					font-size: rem(14);
-					line-height: 1;
-					font-family: $body-font-family;				
-				}
-				
-				&:before {
-					font-family: $icon-font-family;
-					color: #c7c5c7;
-					display: inline-block;
-					content: '\f015';
-					font-size: rem(12.6);
-					line-height: rem(21);
-					left: 0.7em;
-					top: 0.85em;
-				}
-				
-				&:hover {
-					background-color: #e5e5e5;
-					color: $link-color;
-					
-					&:before { color: $link-color; }
-									
-				}
-			}
-		}
-	}
-}
 
 /*---------------------------------------------
                      ::4.5 Footer Navigation

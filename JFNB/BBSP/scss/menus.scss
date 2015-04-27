@@ -1,0 +1,762 @@
+/*=========================================================================================
+                     ::4. MENUS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::4.1 Global Menu Styles
+----------------------------------------------*/
+/* menu list reset */
+.menuReset {
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+	    float: left;
+	    margin: 0;
+	    padding: 0;
+	    
+	    a {
+		    cursor: pointer;
+		    text-decoration: none;
+		    display: block;
+	    }
+    }
+}
+
+/*---------------------------------------------
+                     ::4.1 Utility Navigation
+----------------------------------------------*/
+
+.utility {
+	
+	.wrapAudienceNav ul, .utilityContent ul {
+		@extend .menuReset;
+		float: right;
+		margin: 8px rem(10) 11px 0;
+		width: auto;
+		
+		li {
+			line-height: 1;
+			a {
+				color: #525252;
+				font-size: rem(13);
+				padding: 4px rem(7);
+				border: solid 1px transparent;
+				font-weight: 700;
+				@include transition(all .35s ease-in-out 0s);
+				
+				&:hover {border: solid 1px #B5BB14;}
+			}
+		}
+	}
+	//
+	.utilityContent ul {
+		margin:8px 30px 0;
+		li {
+			line-height: rem(21);
+			border-right: solid 1px #525252;
+			a  {
+				font-size: rem(12);
+				line-height: rem(16);
+				text-transform: uppercase;
+				padding-top: 2px;
+				padding-bottom: 0;
+				border: 0;
+				font-weight: 700;
+				
+				&:hover {text-decoration: underline; border: 0;}
+			}
+		&:last-child { border: 0; a { padding-right: 0; } }
+		}
+	}
+	
+	.wrapAudienceNav ul, section ul {
+		@media (max-width: $small-breakpoint) {
+			display: none;
+			
+		}
+	}
+}
+
+
+@media (min-width:1024px) {
+	.utility .audienceNav {display: block !important;}
+}
+
+
+/*---------------------------------------------
+                     ::4.2 Social Media Menu
+----------------------------------------------*/
+
+.socialMedia ul.socialIcons, footer ul.socialIcons {
+	@extend .menuReset;
+	width: auto;
+	float: right;
+	margin-top: rem(24);
+	li {
+		margin-right: 7px;
+		a {
+			visibility: hidden;
+			font-size: 0;
+			line-height: 0;
+			&:before {
+				content: '';
+				font-family: $icon-font-family;
+				display: inline-block;
+				background: #c2c2c2;
+				@include border-radius(2rem);
+				color: #fff;
+				height: 32px;
+				width: 32px;
+				line-height: 32px;
+				font-size: 1rem;
+				visibility: visible;
+				text-align: center;
+				@include transition(all .35s ease-in-out 0s);
+			}
+			&:hover:before {
+				background: $body-font-color;
+			}
+		}
+		
+		&.iconCalendar a:before{ content: '\f073'; }
+		&.iconFacebook a:before { content: '\f09a'; }
+		&.iconTwitter a:before { content: '\f099'; }
+		&.iconYouTube a:before { content: '\f167'; }
+		&.iconLinkedIn a:before { content: '\f0e1'; }
+	}
+
+}
+
+li[class*="icon"].showOnMobile {
+	display: inline !important;
+	width: auto !important;
+	position: relative;
+	float: left !important;
+	
+	a {
+		display: inline-block !important;
+		width: auto !important;
+		margin-bottom: rem(18) !important;
+		padding: 7px 1.4rem !important;
+	
+			&:before {
+				content: '';
+				font-family: $icon-font-family;
+				display: inline-block;
+				background: #a3a3a3;
+				@include border-radius(2rem);
+				color: #fff;
+				height: rem(40);
+				width: rem(40);
+				line-height: rem(40);
+				text-align: center;
+				font-weight: normal !important;
+				font-size: 1rem !important;
+				@include transition(all .35s ease-in-out 0s);
+			}
+			&:hover:before {
+				background: $body-font-color;
+			}
+		}
+		
+		&.iconCalendar a:before{ content: '\f073'; }
+		&.iconFacebook a:before { content: '\f09a'; }
+		&.iconTwitter a:before { content: '\f099'; }
+		&.iconYouTube a:before { content: '\f167'; }
+		&.iconLinkedIn a:before { content: '\f0e1'; }
+}
+
+/*---------------------------------------------
+                     ::4.2 Main Horizontal Navigation
+----------------------------------------------*/
+.wrapNav ul.mainNav
+{
+	@extend .menuReset;
+	width: 100%;
+	position: relative;
+	z-index: 210;
+	
+	li
+	{
+		line-height: 30px;
+		border-left: solid 1px #ccc;
+		margin-top: 17px;
+		position: relative;
+		
+		&:hover { > a { color: #B4BA13;} }
+
+		a
+		{
+			color: #fff;
+			padding: 2px rem(14) 0;
+			text-transform: uppercase;
+			position: relative;
+			z-index: 100;
+			@include transition(all .35s ease-in-out 0s);
+			font: {
+				weight:700;
+				size: rem(15);
+				family: inherit;
+				}
+			float: left;
+			z-index: 200;
+			
+			&:hover {
+				text-decoration: none;
+				color: #B4BA13;
+			}
+
+		}
+				
+		ul {
+			display: none;
+			position: absolute;
+			top: 0;
+			margin: 0;
+			padding: 49px 0 0;
+			left: -1px;
+			float: none;
+			width: auto;
+			width: 200px;
+			background: transparent;
+			z-index: 2;
+			
+			
+			li {
+				float: none;
+				display: block;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				border: 0;
+				
+				a {
+					color: $body-font-color;
+					font-weight: 400;
+					font-size: rem(14);
+					line-height: 1;
+					text-align: left;
+					margin: 0;
+					padding: rem(7) rem(17);
+					display: block;
+					width: 100%;
+					background: #ccc;
+					text-transform: none;
+					
+					&:hover {
+						color: $body-font-color;
+						text-decoration: underline;
+					}
+					
+				}
+				
+				// Hide 3rd, 4th and 5th level UL
+				ul {
+					display: none;
+					
+					ul {
+						display: none;
+						
+						ul {
+							display: none;
+						}
+					}
+				}
+				&:first-child a {
+						padding-top: rem(18);
+					}
+				&:last-child a {
+						padding-bottom: rem(40);
+					}
+			}
+		}
+		&:hover {
+			
+			a {
+				text-decoration: none;
+				
+			}
+			
+			ul {
+				display: block;
+				
+				ul {
+					display: none;
+					
+					ul {
+						display: none;
+					}
+				}
+			}
+		}
+		&:first-child {border-left: 0;}
+		&.showInFooter, &.showOnMobile {
+			display: none !important;
+			
+		}
+		&.showOnMobile {
+			display: none !important;
+			
+		}
+		&.donate {
+			border-left: 0;
+			float: right;
+			margin-top: 0;
+			line-height: 1;
+			
+			a {
+				background: #B5BB14;
+				color: #535353;
+				line-height: 1;
+				padding: 25px 19px;
+				
+				&:hover {
+					background: lighten(#B5BB14, 5%);
+					color: #000;
+					//color: #fff;
+				}
+		
+			}
+			
+		}
+		
+		&.home {
+			
+			
+			a { 
+				padding-left: 0;
+				
+			}
+		}
+	}
+	
+}
+
+
+/*---------------------------------------------
+                     ::4.3 Breadcrumb Navigation
+----------------------------------------------*/
+
+.pageTitleAndCrumbs nav {
+	position: relative;
+	float: left;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+
+}
+
+.pageTitleAndCrumbs nav ul {
+	@extend .menuReset;
+	display: inline-block;
+	float: left;
+	
+	
+	li {
+		display: none;
+		position: relative;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		a {
+			font: {
+				size: rem(13);
+				weight: 400;
+				}
+			line-height: 1;
+			margin-bottom: 0;
+			padding-left: 7px;
+			padding-right: 4px;
+		}
+		
+		&.selected {
+			display: inline;
+			line-height: 1;
+			
+			&:after {
+				content: '/';
+				display: inline-block;
+				color: $link-color;
+				font: {
+					size: rem(13);
+					weight: 400;
+				}
+				line-height: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			a.selected {
+				display: inline-block !important;
+				
+				&:hover {
+					color: $link-color;
+					cursor: text;
+				}
+			}
+			
+		}		
+	}
+	
+}
+
+a.breadcrumbHome {
+	display: inline-block;
+	width: auto;
+	float: left;
+	padding: 0 3px 0 0;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font: {
+		size: rem(13);
+		weight: 400;
+	}
+	line-height: 1;
+}
+
+.breadcrumbs ul.mainNav a, .breadcrumbs ul.mainNav .parent.selected ul li a, .breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li a, .breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected ul li a, .breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected ul li.parent.selected ul li a
+  		{
+  			display: none;
+  			float: left;
+  		}
+  		
+
+		.breadcrumbs ul.mainNav a.selected, .breadcrumbs ul.mainNav .parent.selected a, .breadcrumbs ul.mainNav .parent.selected ul li a.selected, .breadcrumbs ul.mainNav .parent.selected ul li .parent.selected ul li a.selected, .breadcrumbs ul.mainNav .parent.selected ul li .parent.selected ul li .parent.selected ul li a.selected, .breadcrumbs ul.mainNav .home a, .breadcrumbs ul.mainNav .parent.selected ul li.parent.selected a, .breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected a, .breadcrumbs ul.mainNav .parent.selected ul li.parent.selected ul li.parent.selected ul li.selected a
+			{
+				display: inline;
+				position: relative;
+			}
+
+/*---------------------------------------------
+                     ::4.4 Inline Content Menu
+----------------------------------------------*/
+
+.inlineMenu ul.inlineNav {
+	width: auto;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	display: block;
+	margin: 1rem auto rem(30);
+	text-align: center;
+	
+	li {
+		width: auto;
+		float: none;
+		position: relative;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		
+		a {
+			display: block; 
+			padding: rem(13) rem(25);
+			line-height: 1;
+			background: #CCCCCC;
+			border: 1px solid #ccc;
+			border-bottom: 0;
+			font: {
+				size:rem(14);
+				weight:700;
+			}
+			text-transform: uppercase;
+			color: $body-font-color;
+			@include border-radius(6px 6px 0 0);
+			margin-right: 6px;
+			position: relative;
+
+		}
+		
+		&.selected a {
+			background: #fff;
+			border-bottom-color: #fff;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				bottom: -2px;
+				width: 100%;
+				left: 0;
+				background: #fff;
+			}
+		}
+	}
+}
+
+
+/*---------------------------------------------
+                     ::4.5 Sidebar Navigation
+----------------------------------------------*/
+
+.wrapSidebar .sidebarNav ul.mainNav {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	
+	
+	li {
+		width: 100%;
+		float: none;
+		
+		a {
+			color: #fff;
+			font: {
+				size: rem(14);
+				weight: 700;
+				}
+			line-height: rem(24);
+			text-transform: uppercase;
+			display: none;
+		}
+		
+		ul { // 2nd level
+			@extend .menuReset;
+			//display: none;
+			
+			li {
+				width: 100%;
+				a {
+					font-weight: 400;
+					text-transform: uppercase;
+					padding-left: 1rem;
+					
+					&:hover {text-decoration: underline;}
+					
+					&.selected {
+						font-weight: 400;
+						text-decoration: underline;
+					}
+				}
+				
+				ul li a { // 3rd level
+					padding-left: 2rem;
+					text-transform: none;
+						
+					+ ul li a { // 4th level
+						padding-left: 3rem;
+						
+						+ ul li a { // 5th level
+							padding-left: 3rem;
+						}
+					} 
+				}
+			}
+		}
+		
+		/*
+&.selected {
+			a {
+				text-decoration: underline;
+				display: block;
+			}
+			// Second level menu
+			ul {
+				@extend .menuReset;
+				display: block;
+				
+				li {
+					width: 100%;
+					a {
+						font-weight: 400;
+						text-transform: none;
+						padding-left: 1rem;
+						
+						&:hover {text-decoration: underline;}
+						
+						&.selected {
+							font-weight: 700;
+							text-decoration: underline;
+						}
+					}
+					// 3rd level menu
+					ul {display: none;}
+					
+					&.selected {
+						// 3rd level menu
+						> ul {
+							display: block;
+						}
+					}		
+				}
+			}
+		}
+*/
+		&:nth-child(n+4) {clear: left;}
+	&.showInFooter {
+		display: none;
+	}
+	
+	&.selected.showInFooter {
+		display: block;
+	}
+	&.parent.selected > a {
+		font-weight: bold;
+		display: block;
+		
+		+ ul > li.selected > a {
+			font-weight: 400;
+			
+			&.selected { 
+				font-weight: 400;
+				}
+			}
+		}
+	}	
+}
+
+.wrapSidebar .sidebarNav ul.mainNav li.selected a.selected {
+	display: block;
+	
+	& + ul {
+		display: block;
+		
+		> li > a {display: block;}
+	}
+}
+
+.wrapSidebar .sidebarNav ul.mainNav li.sibling > a {
+	display: block;
+}
+
+.wrapSidebar .sidebarNav ul.mainNav li.home.sibling > a { display: none; }
+
+// Top level parent change when FOUR levels are visible
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li > a { padding-left: 0 !important; font-weight: bold !important; } // 2 levels
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li > ul > li > a { padding-left: 1rem !important; text-transform: uppercase !important; } // 3 levels
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li > ul > li > ul > li > a { padding-left: 2rem !important;  text-transform: none !important; } // 4 levels
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li > ul > li > ul > li > ul > li > a { padding-left: 3rem !important;  text-transform: none !important; } // 5 levels
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li > ul > li > ul > li > ul > li > ul > li > a { padding-left: 4rem !important;  text-transform: none !important; } // 6 levels
+
+// Top level parent change when FIVE levels are visible
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li.topLevelChanged > ul > li > a { font-weight: bold !important; padding-left: 0 !important; }
+
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li.topLevelChanged > ul > li > ul > li > a { padding-left: 1rem !important; text-transform: uppercase !important; }
+
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li.topLevelChanged > ul > li > ul > li ul > li > a { padding-left: 2rem !important;  text-transform: none !important; }
+
+// Top level parent change when SIX levels are visible
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li.topLevelChanged > ul > li.topLevelChanged > ul > li > a { font-weight: bold !important; padding-left: 0 !important; }
+
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li.topLevelChanged > ul > li.topLevelChanged > ul > li > ul > li > a { padding-left: 1rem !important; text-transform: uppercase !important; }
+
+.wrapSidebar .sidebarNav ul.mainNav > li.topLevelChanged > ul > li.topLevelChanged > ul > li.topLevelChanged > ul > li ul > li > ul > li > a { padding-left: 2rem !important;  text-transform: none !important; }
+
+
+
+
+	.asideNavLeft {
+		width: 50%; 
+		float: left;
+		
+		@media (max-width: 800px) {
+			width: 100%;
+			display: block;
+			float: none;
+		}
+		
+	}
+	.asideNavRight {
+		width: 50%; 
+		float: right;
+		
+		@media (max-width: 800px) {
+			width: 100%;
+			display: block;
+			float: none;
+		}
+	}
+
+
+/* Mobile - Nav */
+
+.mobileSubNav + ul.nccUlMenuSub1, .mobileSubNav + ul.nccUlMenuSub1 + ul.nccUlMenuSub2 {display: none;}
+
+
+/*---------------------------------------------
+                     ::4.5 Footer Navigation
+----------------------------------------------*/
+
+.footer .footerNav ul.mainNav {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	margin-top: rem(15);
+	
+	li {
+		display: none;
+		
+		&.showInFooter {
+			display: block;
+			margin-right: rem(32);
+			
+			a {
+				color: $footer-font-color;
+				font-size: rem(13);
+				font-weight: 700;
+				line-height: rem(18);
+				text-transform: uppercase;
+								
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			
+			ul {
+				@extend .menuReset;
+				display: block;
+				margin-top: 0;
+				
+				
+				li {
+					display: block;
+					float: none;
+					width: auto;
+					
+					a {
+						padding:2px 0 2px rem(14);
+						text-transform: capitalize;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+		&:nth-child(10) { 
+			width: percentage(153px/670px);
+
+		}
+		&:nth-child(11) { 
+			width: percentage(210px/670px);
+ 
+		}
+		&:nth-child(12) { 
+			width: percentage(105px/670px);
+ 
+		}
+		&:nth-child(13) {
+			margin-right: 0;
+			
+			
+		}
+	}
+
+	
+}
+
+.footer ul.socialIcons {
+	float: left;
+	margin-top: 0;
+}
+
+.footer ul.socialIcons li a:before {
+	background-color: $body-font-color;
+	border: 1px solid #ccc;
+}
+
+.footer ul.socialIcons li a:hover:before {
+	background-color: #ccc;
+	color: $body-font-color;
+}
+
+.showOnMobile { display: none; }

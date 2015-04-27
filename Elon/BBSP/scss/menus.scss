@@ -1,0 +1,366 @@
+/*=========================================================================================
+                     ::4. MENUS
+==========================================================================================*/
+
+/*---------------------------------------------
+                     ::4.1 Global Menu Styles
+----------------------------------------------*/
+
+/* menu list reset */
+.menuReset {
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+	    float: left;
+	    margin: 0;
+	    padding: 0;
+	    
+	    a {
+		    cursor: pointer;
+		    text-decoration: none;
+		    display: block;
+	    }
+    }
+}
+
+/*---------------------------------------------
+                     ::4.1 Utility Navigation
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::4.2 Main Horizontal Navigation
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::4.3 Breadcrumb Navigation
+----------------------------------------------*/
+
+#breadcrumbs ul {
+	@extend .menuReset;
+	width: 100%;
+	color: #97929D;
+	margin-bottom: $general-margin;
+	float: left;
+	
+	li {
+		width: auto;
+		position: relative;
+		display: inline-block;
+		float: left;
+		font-size: rem(12);
+		line-height: rem(18);
+		color: #97929D;
+		
+		&:before {
+			content: '\f105';
+			font-family: $icon-font-family;
+			margin-left: 6px;
+			margin-right: 5px;
+			position: relative;
+			float: left;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		
+		a {
+			font-size: rem(12);
+			line-height: rem(18);
+			float: left;
+			color: $link-color;
+			
+			&:hover {
+				@include link-hover-style;
+			}
+		}
+		
+		&.home:before {
+			content: '\f015';
+			color: $link-color;
+		}
+		
+		&.currentPage a {
+			h1 {
+				font-size: rem(12);
+				line-height: rem(18);
+				cursor: text;
+				color: #97929d;
+				margin: 0;
+				padding: 0;
+				font-family: $body-font-family;
+			}
+			
+			&:hover {
+				border-bottom: 0;
+				color: inherit;
+			}
+		}
+		
+	}
+}
+
+/*---------------------------------------------
+                     ::4.4 Sidebar Navigation
+----------------------------------------------*/
+
+.sidebar #secondary-nav ul {
+	@extend .menuReset;
+	width: 100%;
+	float: left;
+	
+	h5 { 
+		line-height: 1; 
+		margin: 0;
+		font-size: rem(19.25);
+		color: $body-font-color;
+		font-family: $header-font-family;
+		text-transform: uppercase;
+	}
+	
+	li {
+		width: 100%;
+		float: none;
+		border-top: 1px solid #d4d2d4;
+		
+		a {
+			font: {
+				size: rem(14);
+				weight: normal;
+				family: $body-font-family;
+				}
+			padding: rem(14) rem(14) rem(14) rem(28);
+			line-height: rem(21);
+			border: 0;
+			color: $body-font-color;
+			background: url("../image/css/chevron15.png") no-repeat 11px center/ 9px transparent;
+			
+			&:before {
+				content: '\f105';
+				font-family: $icon-font-family;
+				position: absolute;
+				left: 1em;
+				display: none;
+			}
+			
+			&:hover, &.selected {
+				text-decoration: none;
+				color: $elon-maroon;
+				border: 0;
+			}
+			
+			&.selected { font-weight: bold; }
+			
+		} // END 1st anchor
+		
+		ul {
+			@extend .menuReset;
+			display: none;
+			margin: 0;
+			padding: rem(7) rem(14) rem(14) rem(14);
+			background-color: #f0f0f0;
+			
+			li a {
+				padding-bottom: rem(7);
+				padding-top: rem(7);
+				color: $body-font-color;
+				background-color: transparent;
+				
+				&:hover {
+					background-color: #e5e5e5;
+					color: $elon-maroon;
+				}
+			}
+		}
+		
+		&.selected {
+			
+			a {
+				background-color: $elon-maroon;
+				color: #fff;
+			}
+			
+			> ul {
+				@extend .menuReset;
+				display: block;
+				
+				li {
+								
+					a {
+						display: block;
+					}
+					
+					ul {
+						display: none;
+					}
+					
+					&.selected {
+										
+						ul {
+							display: block;
+						
+						}
+						
+					}  // END 2nd Li.selected
+					
+				} // END 2nd level Li
+				
+			} // END 2nd level Ul
+			
+		}  // END 1st Li.selected
+		
+		&.first a {
+			
+			background: url(../image/css/main-page.png ) no-repeat 11px center/ 12px transparent;
+			
+			&:before {
+				font-family: $icon-font-family;
+				color: #c7c5c7;
+				display: none;
+				content: '\f015';
+				font-size: rem(14.4333);
+				line-height: rem(21.1833);
+				left: 0.7em;
+			}
+			
+			&:hover {
+				background-color: #e5e5e5;
+				color: $elon-maroon;
+				
+				&:before { color: $elon-maroon; }
+				
+				h5 {
+					color: $elon-maroon;					
+				}
+			
+			}
+		}
+		
+	} // END 1st Li
+	
+} // END 1st level Ul
+		
+		
+
+/* Mobile - Nav */
+
+@media (max-width: 900px) {
+	.mobileSidebarToggle.showOnMobile { display: block; }
+}
+
+.mobileSidebarToggle.showOnMobile {
+	border: 1px solid #D4D2D4;
+	color: $body-font-color;
+	margin-bottom: rem(24);
+	font-size: rem(14);
+	line-height: rem(18);
+	float: left;
+	width: 100%;
+	
+	.mobileSidebarToggle {
+		padding: rem(14) rem(14) rem(14) rem(35);
+		color: $elon-maroon;
+		position: relative;
+		cursor: pointer;
+		
+		&:before {
+			content: '\f0c9';
+			font-family: $icon-font-family;
+			display: inline-block;
+			font-size: rem(14);
+			line-height: 1;
+			position: absolute;
+			left: 1em;
+			top: 1.15em;
+		}
+		&.active{
+			font: 0/0 a;
+			background-color: #E5E5E5;
+			
+			&:before { content: '\f00d';}
+			
+			&:after {
+				position: relative;
+				content: 'Close';
+				font-size: rem(14);
+				line-height: 1;
+				top: 2px;
+				font-family: $body-font-family;
+			}
+		}
+	}
+	ul {
+		@extend .menuReset;
+		width: 100%;
+		display: none;
+		clear: both;
+		
+		&.active { display: block; }
+		
+		li {
+			border-top: 1px solid #d4d2d4;
+			margin: 0;
+			width: 100%;
+			position: relative;
+			
+			a {
+				border-bottom: 0;
+				color: $body-font-color;
+				padding: rem(14) rem(14) rem(14) rem(28);
+				font-size: rem(14);
+				line-height: rem(21);
+				position: relative;
+				
+				&:before {
+					color: #c7c5c7;
+					content: '\f105';
+					font-family: $icon-font-family;
+					position: absolute;
+					left: 1em;
+				}
+				
+				h5 {
+					margin: 0;
+					padding: 0;
+				}
+			}
+			
+			&.first a {
+				color: #535961;
+				
+				h5 {
+					color: #535961;
+					font-size: rem(14);
+					line-height: 1;
+					font-family: $body-font-family;				
+				}
+				
+				&:before {
+					font-family: $icon-font-family;
+					color: #c7c5c7;
+					display: inline-block;
+					content: '\f015';
+					font-size: rem(12.6);
+					line-height: rem(21);
+					left: 0.7em;
+					top: 0.85em;
+				}
+				
+				&:hover {
+					background-color: #e5e5e5;
+					color: $elon-maroon;
+					
+					&:before { color: $elon-maroon; }
+									
+				}
+			}
+		}
+	}
+}
+
+/*---------------------------------------------
+                     ::4.5 Footer Navigation
+----------------------------------------------*/
+
+
+.showOnMobile { display: none; }

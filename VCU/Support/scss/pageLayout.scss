@@ -153,7 +153,7 @@ header {
 			padding: 0;
 			
 			a {
-				font-size: 1.45rem;
+				font-size: rem(27);
 				line-height: rem(20);
 				color: #fff;
 				margin: 0;
@@ -166,9 +166,15 @@ header {
 					text-decoration: none;
 				}
 				
+				@media (max-width: 950px) {
+					font-size: 2vw;	
+				}
+				
 				@media (max-width: 767px) {
 					font-size: rem(22.4);
 					padding: 0 15px;
+					display: inline-block;
+					float: left;
 					
 				}
 			}
@@ -204,10 +210,10 @@ header {
 		}
 	}
 	
-	@media (max-width: 320px) {
-		background-color: #dedcdd;
+	//@media (max-width: 320px) {
+	//	background-color: #dedcdd;
 		
-	}
+	//}
 	
 }
 
@@ -221,12 +227,15 @@ header {
 	section {
 		width: 66.6667%;
 		float: left;
-		padding: 20px 10px 0 0;
+		padding: 20px 10px 2rem 0;
 		position: relative;
+		overflow: hidden;
 		
 		@media (max-width:767px) {
 			width: 100%;
-			float: none;
+			clear: both;
+			margin-top: 1.25rem;
+			padding-right: 0;
 		}
 		
 		&.returnUser {
@@ -240,12 +249,24 @@ header {
 				width: 50%;
 				float: left;
 				padding-right: 15px;
+				
+				@media (max-width: 767px) {
+					width: 100%;
+					float: none;
+					padding-right: 0;
+				}
 			}
 			
 			.right {
 				width: 50%;
 				float: right;
 				padding-left: 15px;
+				
+				@media (max-width: 767px) {
+					width: 100%;
+					float: none;
+					padding-left: 0;
+				}
 				
 				.BBDesignationSearchResult {
 					display: none;
@@ -261,6 +282,24 @@ header {
 				position: relative;
 				float: left;
 			}
+			
+			@media (max-width: 767px) {
+				width: 100%;
+				float: none;
+				clear: both;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+	}
+	
+	&.oneCol section { 
+		width: 100%;
+		padding-left: 10px;
+		
+		@media (max-width: 767px) {
+			padding-left: 0;
+			padding-bottom: 2rem;
 		}
 	}
 }
@@ -275,8 +314,8 @@ aside {
 	
 	@media (max-width: 767px) {
 		width: 100%;
-		float: none;
 		padding-left: 0;
+		clear: both;
 	}
 	
 	nav {
@@ -297,6 +336,14 @@ aside {
 		float: left;
 		width: 33.33333%;
 		padding-left: 42px;
+		padding-bottom: 2rem;
+		
+		@media (max-width: 767px) {
+			width: 100%;
+			float: none;
+			padding-left: 0;
+			clear: both;
+		}
 	}
 		
 }

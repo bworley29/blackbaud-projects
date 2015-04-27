@@ -3,133 +3,108 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="css/creditCard.css" type="text/css">
-    <style type="text/css">
-.inline {display: inline-block;}
-    .hide {display: none;}
-    .step.two, .step.three { display: none; }
-    </style>
-    <script src="js/vendor/modernizr.js" type="text/javascript">
-</script>
 </head>
 
 <body>
-    <div id="wrapSingleGivingForm"><fieldset class="step one donateAmount">
-        <h1>Make a Gift</h1>
+    <div id="wrapSingleGivingForm">
+        <fieldset class="step one donateAmount">
+            <h1>Make a Gift</h1>
 
-        <p>To make your gift to any school or unit at Virginia Commonwealth University, please complete and submit this form. You will receive an acknowledgment of your gift by email. If you have any problems or questions, please email <a href="mailto:Giving@vcu.edu">giving@vcu.edu</a>. Thank you!</p>
+            <p>To make your gift to any school or unit at Virginia Commonwealth University, please complete and submit this form. You will receive an acknowledgment of your gift by email. If you have any problems or questions, please email <a href="mailto:Giving@vcu.edu">giving@vcu.edu</a>. Thank you!</p>
 
-        <h3>Step 1 - Giving Details</h3>
+            <h3>Step 1 - Giving Details</h3>
 
-        <h4>I'd like to support:</h4>
+            <h4>I'd like to support:</h4>
 
-        <ul class="fundDesignation">
-            <li class="fundDesignationList">&nbsp;</li>
+            <ul class="fundDesignation">
+                <li class="fundDesignationList">&nbsp;</li>
 
-            <li class="searchAllFundsLink"><a href="#" data-reveal-id="myModal">Search All Funds</a></li>
-        </ul>
+                <li class="searchAllFundsLink"><a href="#" data-reveal-id="myModal">Search All Funds</a></li>
+            </ul>
 
-        <h4>By donating:</h4>
+            <h4>By donating:</h4>
 
-        <ul class="givingAmountOptions">
-            <li><input type="radio" name="pokemon" value="Red" id="optOne"><label for="optOne">$30</label></li>
+            <ul class="givingAmountOptions required">
+                <li class="rdoAmount"><input type="radio" name="pokemon" value="Red" id="optOne"><label for="optOne">$30</label></li>
 
-            <li><input type="radio" name="pokemon" value="Blue" id="optTwo" checked="true"><label for="optTwo">$75</label></li>
+                <li class="rdoAmount"><input type="radio" name="pokemon" value="Blue" id="optTwo"><label for="optTwo">$75</label></li>
 
-            <li><input type="radio" name="pokemon" value="Blue" id="optThree"><label for="optThree">$150</label></li>
+                <li class="rdoAmount"><input type="radio" name="pokemon" value="Blue" id="optThree"><label for="optThree">$150</label></li>
 
-            <li class="otherAmount"><label class="hide inline">Other Amount</label><input class="inline" type="text" placeholder="Other Amount..."></li>
-        </ul>
+                <li class="otherAmount"><input type="radio" name="otherAmount" value="Other" id="otherAmount"><label class="hide inline" for="otherAmount">Other Amount</label><input class="inline" type="text" placeholder="Other Amount..."></li>
+                <li class="hide requiredText">Required - giving amount</li>
+            </ul>
 
-        <h4>Please make this a:</h4>
+            <h4>Please make this a:</h4>
 
-        <ul class="giftType">
-            <li><input type="checkbox" name="pokemon" value="Red" id="oneTime"><label for="oneTime">One-time gift</label></li>
+            <ul class="giftType required">
+                <li><input type="checkbox" name="pokemon" value="Red" id="oneTime"><label for="oneTime">One-time gift</label></li>
 
-            <li><input type="checkbox" name="pokemon" value="Blue" id="recGift"><label for="recGift">Recurring gift</label></li>
+                <li><input type="checkbox" name="pokemon" value="Blue" id="recGift"><label for="recGift">Recurring gift</label></li>
 
-            <li><input type="checkbox" name="pokemon" value="Blue" id="pledgeGift"><label for="pledgeGift">Pledge gift</label></li>
-        </ul>
-    </fieldset>
+                <li><input type="checkbox" name="pokemon" value="Blue" id="pledgeGift"><label for="pledgeGift">Pledge gift</label></li>
+                <li class="hide requiredText">Required - gift type</li>
+            </ul>
+        </fieldset>
 
-    <fieldset class="step two donorInfo">
-        <h3>Step 2 - Donor Info</h3>
+        <fieldset class="step two donorInfo">
+            <h3>Step 2 - Donor Info</h3>
 
-        <ul class="personalInfoList">
-            <li><label class="nameTitle">Title:</label><select id="nameTitleList" class="inline title">
-                </select><label class="inline hide">First Name:</label> <input id="billingFirstName" class="inline billFirstName" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your first name"> <label class="inline hide">Last Name:</label> <input id="billingLastName" class="inline billLastName" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your last name"></li>
+            <ul class="personalInfoList hide required">
+                <li>
+                	<div class="donorTitle"><label class="nameTitle">Title:</label><select id="nameTitleList" class="inline title">
+                    </select></div>
+                    <div class="donorFirstName"><label class="inline hide">First Name:</label> <input id="billingFirstName" class="inline billFirstName" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your first name"></div> 
+                    <div class="donorLastName"><label class="inline hide">Last Name:</label> <input id="billingLastName" class="inline billLastName" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your last name"></div>
+                </li>
+                <li class="hide requiredText">Required - </li>
 
-            <li><label class="inline">Address:</label> <input id="billingAddress" class="inline addressLine" type="text" required="true" placeholder="Street address"></li>
+                <li><label class="inline">Address:</label> <input id="billingAddress" class="inline addressLine" type="text" required="true" placeholder="Street address"></li>
+                <li class="hide requiredText">Required - address</li>
 
-            <li><label class="inline">Country:</label> <select id="billingCountry" class="inline country">
-                </select></li>
+                <li><label class="inline">Country:</label> <select id="billingCountry" class="inline country">
+                    </select></li>
+                <li>
+                    <div class="wrapCity">
+                        <label class="inline">City:</label> <input id="billingCity" class="inline city" type="text" required="true" placeholder="Your first name">
+                    </div>
 
-            <li>
-                <div class="wrapCity">
-                    <label class="inline">City:</label> <input id="billingCity" class="inline city" type="text" required="true" placeholder="Your first name">
-                </div>
+                    <div class="wrapState">
+                        <label class="inline">State:</label> <select id="billingState" class="inline state">
+                            </select>
+                    </div>
+                </li>
+                <li class="hide requiredText">Required - </li>
 
-                <div class="wrapState">
-                    <label class="inline">State:</label> <select id="billingState" class="inline state">
-                        </select>
-                </div>
-            </li>
+                <li><label class="inline">ZIP:</label> <input class="inline zip" type="tel" required="true" maxlength="10" name="zip" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" id="zip" placeholder="Postal or ZIP code"></li>
+                <li class="hide requiredText">Required - zip</li>
 
-            <li><label class="inline">ZIP:</label> <input class="inline zip" type="tel" required="true" maxlength="10" name="zip" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" id="zip" placeholder="Postal or ZIP code"></li>
+                <li><label class="inline">Phone Number:</label> <input id="billingPhone" class="inline" required="true" type="tel" placeholder="Your daytime phone number"></li>
 
-            <li><label class="inline">Phone Number:</label> <input id="billingPhone" class="inline" required="true" type="tel" placeholder="Your daytime phone number"></li>
+                <li><label class="inline">Email:</label> <input type="email" required="true" name="amount" id="email" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" placeholder="Your email address"></li>
+                <li class="hide requiredText">Required - valid email</li>
+            </ul>
+        </fieldset>
 
-            <li><label class="inline">Email:</label> <input type="email" required="true" name="amount" id="email" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" placeholder="Your email address"></li>
-        </ul>
-    </fieldset>
+        <fieldset class="step three credit-card-group paymentInfo">
+        <h3>Step 3 - Payment Info</h3>
 
-    <fieldset class="step three credit-card-group paymentInfo">
-        <legend>Credit Card Information</legend> <label for="card-number">Credit Card Number</label> <input placeholder="1234 5678 9012 3456" pattern="[0-9]*" type="text" class="card-number" id="card-number"> <label for="card-number">Expiration Date</label> <input placeholder="MM/YY" pattern="[0-9]*" type="text" class="card-expiration" id="card-expiration"> <label for="card-number">CVV Number</label> <input placeholder="CVV" pattern="[0-9]*" type="text" class="card-cvv" id="card-cvv"> <label for="card-number">Billing Zip Code</label> <input placeholder="ZIP" pattern="[0-9]*" type="text" class="card-zip" id="card-zip">
-    </fieldset></div>
-            <script src="js/vendor/jquery.js" type="text/javascript">
-</script><script src="js/foundation.min.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-$(document).foundation();
+            <ul class="paymentInfo hide">
+                <li><label class="inline">Cardholder Name</label> <input id="cardholder" class="inline" type="text" required="true" pattern="^[a-zA-Z\. ]+$" placeholder="Your full name"></li>
+                <li class="hide requiredText">Required - cardholder name</li>
 
-        $(document).ready(function(){
+                <li class="cardNumber"><label for="cardNumber">Card Number</label> <input type="tel" required="true" name="cardNumber" maxlength="16" autocomplete="off" pattern="[0-9]{15,16}" id="cardNumber" placeholder="Your card number"><span class="cardTypeEnt">&nbsp;</span></li>
+                <li class="hide requiredText">Required - card number</li>
 
-        $('.giftType input[type="checkbox"]').click(function() {
-            
-            //$('.donateAmount').slideUp();
-            $('.donorInfo').slideDown();
-            $('.donateAmount').prev().find('h3').removeClass().addClass('complete');
-            $('#fullName').focus();
-        });
+                <li class="cardExp"><label>Expiry Date</label> <select id="cardExpMonth">
+                    </select> <select id="cardExpYr">
+                    </select></li>
+                    <li class="hide requiredText">Required - </li>
 
-
-        $('input#email[type="email"]').blur(function() {
-
-            var emailValidator = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
-
-            if ($(this).val().match(emailValidator)) {
-
-                $('.paymentInfo').slideDown();
-                //$('.donorInfo').slideUp();
-                $('.donorInfo').prev().find('h3').removeClass().addClass('complete');;
-                $('#cardholder').focus();
-
-            } 
-
-        });
-
-        $('h3.complete').click(function(){
-           
-           $(this).addClass('active');
-           
-           $(this).parent().parent().next().slideDown();
-            
-        });
-        });
-        </script> <script src="js/inputMask.js" type="text/javascript">
-</script> <script src="js/date.js" type="text/javascript">
-</script> <script src="js/app.js" type="text/javascript">
-</script>
-
+                <li class="cardCsc"><label for="cscCode">CSC</label> <input class="shorter" type="tel" required="true" name="cscCode" maxlength="4" pattern="[0-9]{3,4}" id="cscCode" placeholder="123"></li>
+                <li class="hide requiredText">Required - valid card security code</li>
+            </ul>
+        </fieldset>
+    </div>
 </body>
 </html>

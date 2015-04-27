@@ -9,11 +9,6 @@ body {
 	font-family: $body-font-family;
 }
 
-// Font size overrides for existing stylesheet
-#wrapContent section[role="content"], .LoginLink {
-	font-size: $body-font-size;
-}
-
 /*---------------------------------------------
                      ::5.1 Headers
 ----------------------------------------------*/
@@ -41,33 +36,9 @@ h1  {
 		style: normal;
 		size: rem(44);
 	}
-	letter-spacing: -0.015em;
 	display: block;
 	line-height: rem(48);
-	
-	@media (max-width: 767px) {
-		font-size: rem(33.85);
-		line-height: rem(42);
-	}
 }
-  
-.wrapPageHeader h1 {
-	margin: 0;
-	padding: 0;
-	display: block;
-	width: 100%;
-	clear: both;
-	
-	&:empty { display: none;}
-	
-	@media (max-width: 767px) {
-		font-size: rem(33.85);
-		line-height: rem(42);
-		letter-spacing: -0.5px;
-		margin: 0;	
-	}
-}
-
 
 
 h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.LoginSectionHeader, *.DonationListingHeading,  *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, .Ev2_TitleLabel, .Ev2_RegistrationEventTitle, .DiscussionGroupFormTitle, .EventItemTitleName, .SummaryGridEventTitle, .NewsChannelItemTitle, .EventCalendarPartContainer .DetailEventTitle, *.LoginSectionHeader, .DonorGrantListingHeading, .headerOneStyle  {
@@ -80,11 +51,6 @@ h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
 	line-height: rem(42);
 	font-weight: normal;
 	font-family: $header-font-family;
-	
-	@media (max-width: 767px) {
-		font-size: rem(30);
-		line-height: rem(36);
-	}
 }
 
 *.BBFormTitle, *.SurveyTitle, *.ReportTitle, *.NCC_Forms_Title, *.SearchFormTitle, *.EventCalendarName, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.DiscussionGroupFormTitle, *.JobBoardFormTitle, *.EventSectionHeader, *.LoginSectionHeader, *.LoginFormTitle, *.DonationListingHeading, *.CalendarFormLegend, *.DirectoryFormTitle, *.CalendarFormLegend, *.ProfileFormTitle, *.DiscussionGroupHeadingCell, *.BBPollsFormTitle, *.NewsChannelFormTitle, *.FRSectionHeader, .NewsChannelItemTitle, .DonorGrantListingHeading {
@@ -95,15 +61,10 @@ h2, *.BBFormTitle, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.Login
 h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet .FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.SearchFormTable .SearchFormTitle, *.CHFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.myHomeBox th, *.SearchJobHeading, *.PostJobHeading, *.PostDiscussionTopicHeadingCell, .AdditionalDonation_Heading, .Ev2_SummaryHeader, .Ev2_RegistrantAddressHeader label, .Ev2_RegistrantHeader, .EventItemTitleDescription, .EventTicketsHeaderCell {
   background: inherit;
   height: auto;
-  font-size: rem(28);
+  font-size:  rem(24); // rem(28);
   line-height: rem(36);
   font-weight: normal;
   font-family: $header-font-family;
-  
-  @media (max-width: 767px) {
-		font-size: rem(25.45);
-		line-height: rem(30);
-	}
 }
 
 /*
@@ -114,16 +75,10 @@ h3, *.EventCalendarName, *.SpellFormTitle, *.ReportTitle, *.DonationListingHeadi
 
 h4, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName,  *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading,  *.SpellHeading, table.ReportFormTable legend, fieldset .CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.ClassPageHeaderPageName, .SurveyQuestion {
 	color: $header-color;
-	letter-spacing: -0.01em;
 	font-size: rem(24);
 	line-height: rem(30);
 	font-weight: normal;
 	font-family: $header-font-family;
-	
-	@media (max-width: 767px) {
-		font-size: rem(21.8167);
-		line-height: rem(30);
-	}
 }
 
 h5, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
@@ -131,11 +86,6 @@ h5, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderTeacherName, *.Cla
 	line-height: rem(30);
 	font-weight: normal;
 	font-family: $header-font-family;
-	
-	@media (max-width: 767px) {
-		font-size: rem(20.95);
-		line-height: rem(30);
-	}
 }
 
 
@@ -286,10 +236,16 @@ ul, ol {
 	
 }
 
-.wrapContent ul, .wrapContent ol
+.mainContent ul, .mainContent ol
 {
 	padding: 0 0 0 1.15em;
-	font-weight: 300;
+	font-weight: normal;
+	font-size: $body-font-size;
+	
+	li {
+		font-size: $body-font-size;
+	}
+	
 	ul, ol {
 		padding-top: .75em;
 		padding-bottom: .75em;

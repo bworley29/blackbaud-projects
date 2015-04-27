@@ -560,13 +560,73 @@ table.wrapLoginFormTable {
 	tr[id*="trSignInBody"] table.taLeft {
 		width: 100%;
 	}
+	
+	.LoginFormTable {
+		.LoginFormTitle, .LoginSectionHeader {
+			display: table-cell;
+			text-align: left;
+			white-space: nowrap;
+			
+			@media (max-width: 767px) {
+				display: block;
+				text-align: left;
+			}
+			
+			span {
+				display: block;
+				width: 100%;
+				white-space: nowrap;
+				padding-bottom: 1.2rem;
+			}
+		}
+		
+		.LoginSectionHeader span { padding-top: 1rem; }
+		
+		[id*="tdNewPasswordMessage"].BBFieldCaption.LoginFieldMessage {
+			padding: 0 0 14px;
+			text-align: center;
+		}
+				
+		@media (max-width: 767px) {
+			.emptyTD { display: none; }
+			
+			.rememberLoginContainer {
+				display: block;
+				width: 100%;
+				text-align: left;
+				float: left;
+				position: relative;
+				white-space: nowrap;
+				left: -130px;
+				padding: 0;
+			}
+		}
+	}
 }
 
 .LoginFormCheckListContainer .LoginFormCheckList input[type="checkbox"] + label { padding-left: .7rem; }
 
-.LoginFormTable .taCenter {padding-bottom: .65rem;}
+.LoginFormTable .taCenter {
+	padding-bottom: .65rem;
 
-.LoginFormTable .BBFormButtonCell { padding-left: 2rem;}
+	@media (max-width: 767px) {
+		display: block;
+		text-align: left;
+		padding-bottom: 0;
+		width: 100%;
+	}
+}
+
+.LoginFormTable .BBFormButtonCell { 
+	padding-left: 2rem;
+	
+	@media (max-width: 767px) {
+		display: block;
+		text-align: left;
+		padding-left: 0;
+		padding-top: 1rem;
+	}
+}
 
 
 /*---------------------------------------------
@@ -682,6 +742,20 @@ ul.myHomeProfileLinks {
 		margin-bottom: 1.25rem;
 		}
 	input[id*="btnExportResults"] {margin-right: 1.25rem;}
+	
+	tr > td { width: auto; }
+	
+	.SurveyErrorMessage {
+		background-color: transparent;
+		
+		&:empty { display: none; }
+	}
+	
+	table.SurveyAnswerTable { width: 100%;}
+	
+	.SurveyAnswerRequiredMessage, .BBFormRequiredFieldMarker { display: inline-block; }
+	
+	table[id*="rptQuestions"] input[type="radio"] { margin-right: 7px; }
 }
 
 /* Survey Print Preview */
@@ -813,6 +887,8 @@ aside {
     
 // Return User Landing
 
+[id*="divProfilePhotoForm"].taCenter { text-align: left; }
+
 .returnUser table.ProfilePhotoFormTable {
 	tr {
 		&:nth-child(4), &:nth-child(5), &:nth-child(6) { display: none; }
@@ -836,6 +912,8 @@ aside {
 		line-height: 1;
 	}
 	
+	.PhotoLink { position: relative; }
+	
 	.PhotoLink.fa-edit:hover img { opacity: 0.5; }
 	
 	.PhotoLink.fa-times-circle::before { color: rgba(255, 0, 0, 0.7); }
@@ -843,11 +921,27 @@ aside {
 	.PhotoLink.active { padding-bottom: 1rem; }
 }
 
+#imgPhoto {
+	width: 220px;
+	height: 220px;
+	padding-top: 4vw;
+	border-radius: 100%;
+	text-align: center;
+	background-color: #f5f5f5;
+	margin:30px 0 11px;
+	
+	.fa-camera {
+		position: relative;
+		font-size: 5vw;
+	}
+}
+
 // Multi-Step Giving Form Styles
 
 .donationForm {
 	padding: 0 20px;
 	width: 100%;
+	max-width: 800px;
 	
 	fieldset {
 		border: 0;
@@ -940,6 +1034,8 @@ aside {
 			position: relative;
 		}
 		
+		p { max-width: 92%; }
+		
 		input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
 			background-color: #ffffff;
 		    border-color: #cccccc;
@@ -957,7 +1053,7 @@ aside {
 		    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
 		}
 		
-		input.mediumWidth { width: 50%; }
+		.mediumWidth { width: 50%; max-width: 260px !important; }
 		
 		&.row {
 			width: 100%;
@@ -988,11 +1084,10 @@ aside {
 				margin-bottom: .5rem;
 				
 				label {
-					padding: 10px 10px 0 0;
+					padding: 10px 0 0 0;
 					font-weight: bold;
 					width: 20%;
-					
-					text-align: right;
+					text-align: left;
 				}
 				
 			}
@@ -1023,6 +1118,8 @@ aside {
 			}
 			
 		}
+		
+		#tribute li:first-child { margin-bottom: 1.5rem; }
 	}
 	
 	input[type="button"]#donate {
@@ -1038,8 +1135,13 @@ aside {
 
 #wrapSingleGivingForm {
 	margin-bottom: 2.5rem;
+	
+	@media (min-width: 1025px) {
+		max-width: 70%; 	
+	}
+	
 	fieldset {
-		margin: 0;
+		margin: 0 0 1.2rem;
 		padding: 0;
 		border: 0;
 		
@@ -1055,6 +1157,27 @@ aside {
 		display: inline-block;
 		margin-left: 1rem;
 		font-size: 23px;
+	}
+	
+	.fa-asterisk { 
+		//color: #F8B800;
+		position: relative;
+		z-index: 100;
+		font-size: 11px;
+		line-height: 1;
+		opacity: 0.7;
+		padding: 2px 2px 3px;
+		color: #555;
+		background-color: #D4D4D4;
+		
+	}
+	
+	input[type="text"] + .fa-asterisk, input[type="tel"] + .fa-asterisk {
+		position: absolute;
+		z-index: 100;
+		font-size: 11px;
+		right: 1px;
+		top: 1px;
 	}
 	
 	.siblingsComplete { opacity: .4; }
@@ -1125,10 +1248,44 @@ aside {
 		&.fundDesignation { margin-bottom: 1.5rem; }
 		
 		
-		&.givingAmountOptions .otherAmount input + label + input[type="text"] {
-			margin-left: 15px;
-			position: relative;
-			top: -10px;
+		&.givingAmountOptions {
+			
+			@media (max-width:767px) {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				
+				li {
+					width: 100%;
+					display: block;
+					margin-bottom: 15px;
+					
+					&.otherAmount {
+						margin-top: 10px;
+						margin-bottom: 0;
+					}					
+				}
+			}
+			
+			.otherAmount input + label + input[type="text"] {
+				margin-left: 15px;
+				position: relative;
+				top: -12px;
+				margin-bottom: 0;
+			}
+			
+			.amountReqText {
+				width: 100%;
+				font-size: 14px;
+				position: relative;
+				top: -9px;
+				font-style: italic;
+				
+				.fa-asterisk {
+					position: relative;
+					top: 2px;
+				}
+			}
 		}
 		
 		&.personalInfoList {
@@ -1143,6 +1300,7 @@ aside {
 				position: relative;
 				float: left;
 				width: 30%;
+				//margin-top: 1.4rem;
 				
 				input[type="text"] {
 					width: 100%;
@@ -1152,9 +1310,11 @@ aside {
 			.donorFirstName { margin-right: 2rem; }
 			
 			.donorTitle {
-				width: 20%;
+				margin-top: 0;
+				width: auto;
+				//max-width: 20%;
 				
-				select#nameTitleList { max-width: 80%; }
+				select#nameTitleList { max-width: 100%; margin-right: 2rem; }
 			}
 			
 			.wrapCity, .wrapState, .wrapZip {
@@ -1164,14 +1324,36 @@ aside {
 				width: 40%;
 			}
 			
-			.wrapCity input#billingCity { width: 87%; }
+			.wrapCity input#billingCity { 
+				width: 87%;
+				
+				+ .fa-asterisk {
+					right: 2.1rem;
+					top: 0;
+				}
+			}
 			
-			.wrapState { width: 28%; }
+			.wrapState { 
+				width: 17%;
+				
+				.fa-asterisk {
+					position: absolute;
+					left: 2.5rem;
+					background-color: transparent;
+				}
+			}
 			
 			.wrapZip {
 				width: 25%;
 				
-				input#zip { width: 88%; }
+				input#zip { 
+					width: 88%;
+					
+					+ .fa-asterisk {
+						top: 0;
+						right: 1.2rem;
+					}
+				}
 			}
 		}
 	}
@@ -1180,6 +1362,41 @@ aside {
 		display: inline-block;
 		float: left;
 		position: relative;
+	}
+	
+	#billingCountry { margin-bottom: 1rem; }
+	
+	#billingAddress + .fa-asterisk {
+		left: 20.95rem;
+		right: auto;
+		top: 0;
+	}
+	
+	#billingPhone + .fa-asterisk {
+		left: 9.75rem;
+		right: auto;
+		top: 0;	
+	}
+	
+	#email + .fa-asterisk {
+		top: 0;
+		position: absolute;
+		right: auto;
+		left: 9.75rem;	
+	}
+	
+	#cardholder + .fa-asterisk {
+		right: auto;
+		left: 21rem;
+	}
+	
+	#cardNumber + .fa-asterisk {
+		right: auto;
+		left: 12.9rem;
+	}
+	
+	#cscCode + .fa-asterisk {
+		right: 2.95rem;
 	}
 	
 	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
@@ -1198,9 +1415,10 @@ aside {
 	    padding: 0.5rem;
 	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
 	    max-width: 350px;
+	    position: relative;
 	}
 	
-	input.mediumWidth { width: 50%; }
+	input.mediumWidth { width: 50%; max-width: 260px;  }
 
 	fieldset.credit-card-group {
 		position: relative;
@@ -1259,13 +1477,29 @@ legend {
 					float: left;
 					display: inline-block;
 					width: 40%;
+					
+					@media (max-width:767px) {
+						width: 100%;
+					}
 				}
 				
-				&.cardNumber input#cardNumber { width: 87%; }
+				&.cardNumber {
+					input#cardNumber { width: 87%; }
+					
+					@media (max-width:767px) {
+						margin-bottom: 10px;
+					}
+					
+				}
 				
 				&.cardExp { 
 					width: 29%; 
 					clear: none;
+					
+					@media (max-width:767px) {
+						width: 100%;
+						margin-bottom: 21px;
+					}
 					
 					#cardExpMonth { margin-right: 10px; }
 				}
@@ -1273,6 +1507,10 @@ legend {
 				&.cardCsc { 
 					width: 20%;
 					clear: none;
+					
+					@media (max-width:767px) {
+						width: 100%;
+					}
 					
 					input#cscCode { width: 63%; }
 				}
@@ -1292,7 +1530,7 @@ legend {
 	}
 	
 	input[type="submit"].DonationSubmitButton {
-		margin: 1.5rem 0 2rem 0;
+		margin: 1.5rem 7.3rem 2rem 0;
 		float: right;
 		padding: 12px 15px;
 		background-color: $link-color;
@@ -1303,12 +1541,24 @@ legend {
 
 // Profile Update Form
 
-.bbformbuilder-form-part > div[style] { width: 100% !important; }
+.bbformbuilder-form-part > div[style], .bbformbuilder-form-part div[style] { width: 100% !important; }
 
 .bbformbuilder-form-part { 
 	margin:0 0 2rem 1.5rem;
 	width: 100%; 
 	float: left;
+	
+	div { background-color: transparent !important; }
+}
+
+.bbProfilePhotoChange, .bbProfilePhotoRemove {
+	text-decoration: none !important;
+	color: $link-color !important;
+	
+	&:hover {
+		color: $link-hover-color !important;
+		text-decoration: underline !important;
+	}
 }
 
 .bbformbuilder-form-part .BBSequenceMapContentContainer {
@@ -1318,7 +1568,7 @@ legend {
 	.bbformbuilder-section {
 		margin: 0;
 		padding: 0;
-		
+				
 		[class*="ManagementContainer"][style], .bbformbuilder-float-none { width: 100% !important; }
 		
 		.bbformbuilder-float-none { padding: 0;}
@@ -1327,6 +1577,8 @@ legend {
 				
 		.bbformbuilder-section-column1 { width: 100% !important; }
 		
+		input[type="text"] + input[id*="PrivacyCheckBox"][type="checkbox"], select + input[id*="PrivacyCheckBox"][type="checkbox"] { margin-left: 1rem; }
+		
 		.bbformbuilder-element-row { 
 			padding: 0;
 			
@@ -1334,10 +1586,13 @@ legend {
 			
 			label {
 				display: inline-block;
-				padding: 13px 8px 0 0;
-				text-align: right;
+				padding: 4px 8px 0 0;
+				text-align: left;
 				font-weight: bold;
 				font-size: 14px;
+				line-height: 1;
+				vertical-align: top;
+				margin-bottom: 15px;
 			}
 			
 			input + label  { margin-left: 8px; }
@@ -1345,9 +1600,9 @@ legend {
 	
 		.bbformbuilder-float-lalign {
 			padding: 0;
-			text-align: right;
+			text-align: left; // adjusted 03/25
 			float: left;
-			width: 25% !important;
+			width: 30% !important;
 			
 			+ div {
 				float: left;
@@ -1479,17 +1734,65 @@ legend {
 			
 			+ div { width: 58%; }
 		}
+		
 	}
 	
 	#item > div {
-		width: 3%;
+		width: 3% !important;
 		
 		+ div + div {
 			width: 35%;
 			
+			&[id*="commPrefs_rptPrefs"] { width: 90% !important;}
+			
 			+ div { width: 58%; }
 		}
 	}
+}
+
+// Employment Info
+
+.BBFormOrganizationEmploymentFieldsContainer {
+	display: block;
+	clear: both;
+	margin-bottom: 2rem;
+}
+
+// Affiliations
+
+.bbformbuilder-form-part {
+	.bbformbuilder-section .bbformbuilder-element-row {
+	
+		table[id*="CheckBoxList"] { 
+			width: 100% !important;
+			
+			label {
+				padding: 4px 0 0;
+				margin-bottom: 15px;
+				width: 92%;
+				text-align: left;
+			}
+		}
+	}
+}
+
+// Involvements form
+
+.BBFormOrganizationFieldsContainer {
+	clear: both;
+	margin-bottom: 3rem;
+	
+	+ a + a[id*="CancelLink"] { margin-left: 1rem; }
+}
+
+.BBFormOrganizationContainer [id*="pnlPrivacy"] {
+	margin-top: 1.5rem;
+	
+	[id*="lblPrivacy"] {
+		display: block;
+		padding-bottom: 1rem;
+	}
+	
 }
 
 
@@ -1568,21 +1871,22 @@ legend {
 // Designation Search 
 
 .wrapMainContent .BBDesignationSearchResultContainer {
-	float: left;
 	clear: both;
+	float: left;
+	position: relative;
 	width: 100%;
 	margin: 1.5rem 0;
 
 	.BBDesignationSearchResult {
-		display: inline-block;
-		float: left;
 		width: 47%;
+		float: left;
+		display: inline-block;
 		position: relative;
 		margin-bottom: 1.85rem;
 		background: rgba(240, 240, 240, 0.8);
 		padding: 2% 3%;
 		box-shadow: 0 2px 1px #ccc;
-		min-height: 142px;		
+		min-height: 142px;
 
 		p {
 			font-size: rem(14);
@@ -2204,12 +2508,268 @@ textarea.coer {
 .step4-label --> .DonationFieldCaption / .BBFieldCaption
 */
 
-.matchingGiftText { display: none; }
+.matchingGiftText { display: none; clear: both; }
 
 [id*="tbdyMatchingGifts"] {
 	.matchingGiftText { margin-top: .75rem; }
 	.DonationCaptureListingHeading { padding-bottom: 0; }
 }
 
+// Payment Part 2.0
 
-.PaymentPart_FormContainer { overflow: auto; }
+.PaymentPart_Cart { font-size: $body-font-size !important; }
+
+.PaymentPart_CartList { border: 0 !important; }
+
+.PaymentPart_FormContainer { 
+	overflow: auto; 
+	clear: both;
+	
+	.DCTextboxWide, .BBFormTextArea { width: 300px !important; }
+	
+	.BBFormRequiredFieldMarker { display: inline-block; }
+	
+	.PaymentPart_SectionHeading {
+		background-color: transparent;
+		border: 0;
+		@extend h4;
+	}
+}
+
+.PaymentPart_PesonalInfoCheckbox {
+	margin-left: 0;
+	display: block;
+	
+	input {
+		margin-right: 7px; 
+		
+		+ label { display: inline-block; }
+	}
+}
+
+// Custom Event Calendar
+
+#calendar {
+	.fc-header {
+		
+		@media (max-width: 767px) {
+			
+			[class*="fc-header"] {
+				text-align: center;
+				display: block;
+				width: 100%;
+			}
+			
+			.fc-header-title h2 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+		}
+		
+		.fc-button-prev {
+			position: relative;
+			
+			.fc-text-arrow:before {
+				font-family: $icon-font-family;
+				display: block;
+				position: relative;
+				content: '\f104';
+				font-size: 18px;
+				line-height: 1;
+				top: -27px;
+			}
+		}
+		.fc-button-next {
+			position: relative;
+			
+			.fc-text-arrow:before {
+				font-family: $icon-font-family;
+				display: block;
+				position: relative;
+				content: '\f105';
+				font-size: 18px;
+				line-height: 1;
+				top: -27px;
+			}
+		}
+	}
+}
+
+// Transaction Manager
+
+.TransactionManagerAccDD .acc-section {
+	width: 168px;
+	
+	.acc-content {
+		padding: 5px 10px;
+		background-color: #fff;
+		
+		.TransactionManagerGridEditGiftDiv {
+			margin-right: 0;
+			white-space: normal;
+		}
+		
+		.TransactionManagerGridEditGiftLink {
+			@include link-style;
+		}
+	}
+	
+	
+}
+
+// Sidebar Mini Donation Form CTA Styles
+
+.blackCallOutBoxTitle {
+	border: 1px solid #7d7c7c;
+    margin: 0 auto;
+    padding: 6px;
+    text-align: center;
+    
+    h2 {
+	    color: #fdb813;
+	    font-size: rem(40.6);
+	    margin-bottom: 0;
+	    margin-top: 0;
+	    text-align: center;
+    }
+    
+    p {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 13px;
+	    color: #fff;
+    }
+}
+
+.blackCallOutBox {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	margin-top: 20px;
+	
+	dl#givingRdoList {
+		margin: 0;
+		padding: 0;
+		
+		dd { 
+			
+			margin: 0;
+			
+			input#amountLevelOther {
+				margin: 0;
+				width: 170px;
+				background-color: #ffffff;
+			    background-image: none;
+			    border: 1px solid #cccccc;
+			    border-radius: 4px;
+			    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+			    color: #555555;
+			    display: inline-block;
+			    font-size: 14px;
+			    height: 34px;
+			    line-height: 1.42857;
+			    padding: 6px 12px;
+			    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+				}
+			    
+		    input[type="submit"], input[disabled="disabled"] {
+			    background-color: #7d7c7c;
+			    background-image: none;
+			    border: 1px solid rgba(0, 0, 0, 0);
+			    border-radius: 4px;
+			    cursor: pointer;
+			    display: inline-block;
+			    font-size: 14px;
+			    font-weight: normal;
+			    line-height: 1.42857;
+			    margin-bottom: 0;
+			    padding: 6px 12px;
+			    text-align: center;
+			    vertical-align: middle;
+			    white-space: nowrap;
+			    float: right;
+			    text-transform: none;
+			    color: #fff;
+			    
+			    &:hover {
+				    background-color: #fdb813;
+				    color:#fff;
+			    }
+				   
+			}
+			
+			&:first-child { margin: 10px 0; }
+			
+			span.invalid { 
+				display: block;
+				color: red;
+				text-align: left;
+			}
+		}
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		
+		li {
+			border-bottom: 1px solid #7d7c7c;
+			margin: 0;
+			padding: 0;
+			display: block;
+			float: none;
+			color: #fff;
+			
+			a {
+				color: #fff;
+				text-decoration: none;
+				font-size: 1rem;
+				line-height: rem(20);
+				padding: 10px 15px;
+				display: block;
+				width: 100%;
+				
+				&:hover {background-color: #333; }
+				
+				&:after {
+					content: '\f054';
+					font-family: $icon-font-family;
+					display: inline-block;
+					float: right;
+					position: relative;
+					line-height: 1;
+					top: 1px;
+				}
+			}
+			
+			&:first-child { border-top: 1px solid #7d7c7c; }
+		}
+	}
+}
+
+
+// Profile Photo 
+
+[id*="PROFILEIMAGECOMPOSIT_imageSelector"] { 
+	text-align: left;
+	float: left;
+}
+
+.bbformbuilder-element-row {
+	label.bbformbuilder-label {
+		display: inline-block;
+		
+		+ .bbformbuilder-required-mark { display: inline-block !important; }
+	}
+}
+
+
+.bbformbuilder-element-block.bbformbuilder-text {
+	font-family: $body-font-family !important;
+	font-size: $body-font-size !important;
+}

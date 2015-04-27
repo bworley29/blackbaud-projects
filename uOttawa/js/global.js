@@ -39,6 +39,7 @@ BBI_Global = {
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.donationAmount.otherAmount();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.donationAmount.wrapLiAmounts();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.donationAmount.amountTitle();
+                BBI_Global.uOttawa.bbnc.customSingleDonationForm.donationAmount.reformatGiveAmounts();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.personalInfo.matchingGiftOpt();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.personalInfo.tableWrapper();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.personalInfo.userTypeOptions();
@@ -47,7 +48,7 @@ BBI_Global = {
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.tributeInfo();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.paymentInfo.tableWrapper();
 				BBI_Global.uOttawa.bbnc.customSingleDonationForm.paymentInfo.paymentTitle();
-				BBI_Global.uOttawa.bbnc.customSingleDonationForm.paymentInfo.cardType();
+				//BBI_Global.uOttawa.bbnc.customSingleDonationForm.paymentInfo.cardType();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.fundDesignation();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.userAttributeList();
                 BBI_Global.uOttawa.bbnc.customSingleDonationForm.selectListDefaultText();
@@ -558,6 +559,16 @@ BBI_Global = {
 						
 						$('<label class="otherAmtRdoLbl" for="' + otherInputId + '">Other</label>').insertAfter('ul.amountRdoList li:last-child .radioAmount input[type="radio"][id*="rdoOther"]');
 						
+						$('.otherAmount input[id*="txtAmount"]').keydown(function (e) {
+
+						  var keycode = e.charCode || e.keyCode;
+						  if (keycode  === 188 || keycode  === 190 || keycode  === 110) { //Enter key's keycode
+							  //alert('Comma not allowed');
+						    return false;
+						  }
+						
+						});
+						
 					},
 					
 					wrapLiAmounts: function () {
@@ -565,6 +576,18 @@ BBI_Global = {
 						$('.givingAmount_5, .givingAmount_6, .givingAmount_7').wrapAll('<div class="liAmountWrapper">');
 						$('.givingAmount_1').wrapAll('<div class="liAmountWrapper">');
 						$('.liAmountWrapper:eq(1)').addClass('middle');
+					},
+					
+					reformatGiveAmounts: function () {
+						
+						if($('.otherAmtRdoLbl').text() === 'Other') {
+							$('.amountRdoList .radioAmount input + span').each(function(){
+								var currentGiveAmt = $(this).text();
+							    currentGiveAmt = currentGiveAmt.replace('.00', '');
+							    $(this).text(currentGiveAmt);
+								
+							});
+						}
 					},
 
 					amountTitle: function () {
@@ -714,6 +737,7 @@ BBI_Global = {
 	                            $('.cardTypeEnt').text('');
 	                        }
 	                    });
+
 	
 	                    // Get Card Type Based on Card Number
 	                    $('.cardTypeEnt').text(cardTypeEnt);

@@ -51,7 +51,7 @@ label, .BBFieldCaption, select.BBFormSelectList
 {
 	color: #867f8c;
     font:{ 
-    	size:1rem; 
+    	size: $body-font-size; 
     	family: $body-font-family;
     }
     line-height:$body-font-size;
@@ -64,9 +64,7 @@ label, .BBFieldCaption, select.BBFormSelectList
 	vertical-align: top;
 	text-align: right;
 	padding: 7px 2% 0 0;
-	font-weight: 400;
-	text-transform: lowercase;
-	font-variant: small-caps;
+	text-transform: none;
 	color: $body-font-color;
 	font-weight: normal;
 	text-align: left;
@@ -75,13 +73,14 @@ label, .BBFieldCaption, select.BBFormSelectList
 select.BBFormSelectList, select
 {
 	margin-bottom: $form-input-bottom-margin;
-	padding: 1%;
+	padding: 0 5px;
+	line-height: 21px;
 	width: auto;
 	max-width:95%;
 	@include border-radius(0);
 	border:1px solid #cccacc;
 	outline: 0;
-	color: #867f8c;
+	color: $body-font-color;
 }
 
 
