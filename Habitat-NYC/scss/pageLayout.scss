@@ -1,0 +1,247 @@
+	/*=========================================================================================
+                     ::3. PAGE LAYOUT & STRUCTURE
+==========================================================================================*/
+
+body {
+	background-color: #fff;
+}
+
+
+/*---------------------------------------------
+                     ::3.1 Responsive Grid
+----------------------------------------------*/
+
+
+// Box sizing, applying only to container to avoid issues in BBIS/NC admin bar
+.container *,
+.container *:before,
+.container *:after {
+ box-sizing: border-box; }
+  
+/*
+.container *::before, .container *::after {
+	content:" ";
+	display:table;
+}
+*/
+
+form[action*="pagedesign.aspx"] .container *::before, form[action*="pagedesign.aspx"] .container *::after { display: none; }
+
+
+/* Admin Fixes to Box Sizing rendering issue */
+
+.bb_mainMenu img {
+	box-sizing: content-box;
+}
+
+
+/*---------------------------------------------
+                     ::3.2 Layout
+----------------------------------------------*/
+
+.container {
+	width: 1002px;
+	margin: 0 auto;
+	position: relative;
+	line-height: 0;
+}
+
+.wrapHeader {
+	background:#E9E9E9 url(../image/headerbg.jpg) repeat-x 0 0;
+	height: 86px;
+	position: relative;
+	clear: both;
+}
+
+.wrapUtility {
+	width: 200px;
+	float: right;
+	text-align: right;
+	margin: 38px 30px 0px 0px;
+	position: relative;	
+}
+
+.wrapLogo {
+	background: url(../image/logo-bg.png) no-repeat 0 0;
+	width: 223px;
+	height: 173px;
+	left: 0px;
+	top: -6px;
+	position: absolute;
+	float: left;
+	z-index: 10;
+	
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.logo { margin: 38px 0px 0px 12px; }
+}
+
+.wrapNav {
+	background: url(../image/nav-bg.jpg) repeat-x 0 0;
+	height: 61px;
+	clear: both;
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+.wrapContentOuter {
+	clear: both;
+	width: 100%;
+	position: relative;
+	background: url(../image/body-bg.jpg) repeat-x 0 0;
+	padding-top: 13px;
+	top: -12px;
+	
+	.wrapInnerContent {
+		background: url(../image/page-body.png) repeat-y 0 0;
+	}
+	
+	.wrapBanner {
+		clear: both;
+		width: 973px;
+		margin: 0 auto;
+		padding: 3px 0 5px;
+		background-color: #fff;
+		overflow: hidden;
+		
+		.bannerImg {
+			width: 648px;
+			float: left;
+			
+			p {
+				margin: 0;
+				padding: 0;
+			}
+		}
+		
+		.ctaButtons {
+			width: 325px;
+			float: left;
+		}
+		
+	}
+	
+	.wrapContent {
+		clear: both;
+		width: 971px;
+		margin: 0 auto;
+		position: relative;
+		background-color: #EDF4FA;
+		overflow: hidden;
+		
+		.mainContent {
+			width: 637px;
+			padding: 13px 0px 0px 12px;
+			float: left;
+			
+			.content {
+				padding: 0px 17px;
+				border-right: 1px solid #C8D8E6;
+				border-left: 1px solid #C8D8E6;
+				background-color: #FFF;
+				line-height: 14.5px;
+				font-size: 12px;
+				float: left;
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+		
+		.greenCTA {
+			background: transparent url("../image/ft-green-holder.png") no-repeat scroll 0px 0px;
+			width: 605px;
+			height: 60px;
+			margin: 12px 0px 0px 12px;
+			padding: 17px;
+			font-size: 15px;
+			line-height: 15px;
+			color: #FFF;
+			clear: both;
+		}
+		
+		.wrapSidebar {
+			float: right;
+			width: 309px;
+			padding-top: 13px;
+		}
+	}
+}
+
+.wrapFooter {
+	background: transparent url("../image/footerbg.png") repeat-x scroll 0px 0px;
+	height: 120px;
+	width: 990px;
+	margin: 0px auto;
+	
+	.footerContentLeft {
+		width: 382px;
+		float: left;
+		font-size: 11px;
+		color: #FFF;
+		margin: 31px 0px 0px 33px;
+		
+		.address {
+			width: 213px;
+			height: 64px;
+			border-right: 1px solid #fff;
+			float: left;
+		}
+		
+		.contact {
+			float: right;
+			width: 141px;
+		}
+	}
+	
+	.footerContentRight {
+		width: 287px;
+		float: right;
+		padding-top: 29px;
+		margin-right: 14px;
+	}
+}
+
+.bgGreenFooterBar {
+	background-color: #34AE23;
+	height: 23px;
+	clear: both;
+	width: 100%;
+	position: relative;
+	line-height: 0;
+}
+
+/*---------------------------------------------
+                     ::3.4 Utility Area
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.5 Quick Search
+----------------------------------------------*/
+
+/*---------------------------------------------
+                     ::3.6 Skip Link
+----------------------------------------------*/
+p.skip {
+height:0;
+padding:0;
+margin:0;
+}
+a.skip {
+position: absolute;
+top: -50em;
+}
+a.skip:hover,a.skip:active,a.skip:focus {
+position: absolute;
+left: 50%;
+top: 0;
+display: block;
+background: $content-primary-background-color;
+padding: .5em;
+text-align: center;
+margin: 0 auto 0 -10em;
+width: 20em;
+}
